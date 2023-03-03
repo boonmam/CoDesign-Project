@@ -105,6 +105,10 @@ def plotAll(angle, distance, objects, meanObjects ='True'):
 
 
 sampleSets = os.listdir('./LidarData')
+for folders in sampleSets:
+    if folders.startswith('.DS'):
+        sampleSets.remove(folders)
+
 for i in range(len(sampleSets)):
     print('('+str(i) +') ' + sampleSets[i])
 
@@ -114,6 +118,7 @@ selectedSample = sampleSets[selectNum]
 samplePath = os.path.join('./LidarData/', selectedSample)
 
 files = []
+
 for filename in os.listdir(samplePath):
     files.append(filename)
 
