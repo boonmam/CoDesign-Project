@@ -11,6 +11,27 @@ This is a class project for EECE 4632 Hardware Software Codesign (Northeastern U
  
  clusterProtoSim.py will playback the data and cluster the raw LIDAR sensor stored as CSV files.
  
+ ### Description of Functions
+ **clusterOps**
+ 
+ Inputs - distance[list] and angle[list]
+ Output - objects[set]
+ 
+ Evaluate the point at the zero angle, determine the dsitance to the adjacent point. If the distance to the adjacent point is outside of threshold distance, move onto the next point. 
+ 
+ If the distance IS within the threshold distance, add the adjacent point to the current cluster list, add point to a set of grouped points, and finally sets the adjacent point as point under test. Repeat test over remaining sample set. After all points have been tested, add the cluster list of the set of objects.
+ 
+ Repeat tests for any points not already grouped into a cluster (check if point is in set of grouped points). Discard clusters that consist of 3 or less points. This in effect, crudely removes noise. Return set of objects. 
+ 
+
+ 
+ **plotAll**
+ 
+ Inputs - object[set], distance[list], and angle[list]
+
+ This function calculates the mean distance and angle of each object.
+ 
+ This function plots distance and angle on a polar subplot. In the other polar subplot, the function plots each object in different colors and all the mean location of objects.
   
  ### Running Demonstration of Project Update 1 (clusterProtoSim.py)
  1. Ensure LidarData in the same directory as clusterProtoSim.py
