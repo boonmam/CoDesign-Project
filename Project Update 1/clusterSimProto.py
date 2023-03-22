@@ -25,7 +25,6 @@ def clusterOp(angle, distance, D_th = 100, minGroupSize = 4):
 
         #Test in counter clockwise direction
         for i in range(0,360):
-            #print(point)
             dTheta = angle[i] - angle[point]
             d1 = distance[point]
             d2 = distance[i]
@@ -145,6 +144,10 @@ for files in sorted(files):
             distance.append(int(point[1]))
 
     objects = clusterOp(angle,distance)
+
+    #print("Number of Clusters: " + str(len(objects)))
+    #for i in range(len(objects)):
+    #    print(objects[i])
     plotAll(angle, distance, objects)
     plt.pause(0.1)
     time.sleep(1)
