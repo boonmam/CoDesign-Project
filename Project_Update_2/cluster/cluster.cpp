@@ -1,41 +1,35 @@
 #include <hls_stream.h>
 #include <ap_axi_sdata.h>
-#include <math.h>
 
 #define MAX_POINTS 360
 #define MAX_CLUSTERS 20
 
 typedef struct {
     int num_points;
-    int points[MAX_POINTS];
+    std::vector<int> points;
 } cluster_t;
 
-typedef ap_axis<32, 2, 5, 6> stream_axis;
+typedef ap_axis<32, 2, 5, 6> AXI_T;
 
-void clusterOp(hls::stream<stream_axis> &in_angle, hls::stream<stream_axis> &in_distance, hls::stream<stream_axis> &out_clusters) {
-#pragma HLS INTERFACE axis port=in_angle
-#pragma HLS INTERFACE axis port=in_distance
+void clusterOp(hls::stream<AXI_T>& angles, hls::stream<AXI_T>& distances, hls::stream<AXI_T>& clusters) {
+#pragma HLS INTERFACE axis port=in_angles
+#pragma HLS INTERFACE axis port=in_distances
 #pragma HLS INTERFACE axis port=out_clusters
-
-    const int D_th = 100;
+	const double D_th = 200.0;
     const int minGroupSize = 4;
 
-    int angle[MAX_POINTS];
-    int distance[MAX_POINTS];
-    cluster_t clusters[MAX_CLUSTERS];
-    int num_clusters = 0;
-    int grouped[MAX_POINTS] = {0};
-
-    // Read data from input streams
-    for (int i = 0; i < MAX_POINTS; i++) {
-        stream_axis angle_axis = in_angle.read();
-        stream_axis distance_axis = in_distance.read();
-        angle[i] = angle_axis.data;
-        distance[i] = distance_axis.data;
-    }
+    int num_points = MAX_POINTS;
+    std::vector<bool> grouped(num_points, false);
 
     // Process LIDAR data into clusters
-    for (int point = 0; point < MAX_POINTS; point++) {
+    for (int point = 0; point < num_points; point++) {
+        // Read in the angle and distance values from the input streams
+        AXI_T angle = angles.read();
+        AXI_T distance = distances.read();
+
+        // Extract the angle and distance values from the AXI stream payload
+        double angle_value = angle.data.to_float();
+        double distance_value = distance.data.to_float();
 
         // If point has already been grouped, move onto the next point
         if (grouped[point]) {
@@ -44,38 +38,52 @@ void clusterOp(hls::stream<stream_axis> &in_angle, hls::stream<stream_axis> &in_
 
         cluster_t cluster;
         cluster.num_points = 0;
-        cluster.points[cluster.num_points++] = point;
+
+        // Initialize the points vector of the cluster_t struct
+        cluster.points.clear();
+        //cluster.points.push_back(point);
 
         // Test in counter clockwise direction
-        for (int i = 0; i < MAX_POINTS; i++) {
-            int dTheta = angle[i] - angle[point];
-            int d1 = distance[point];
-            int d2 = distance[i];
-            int d3 = sqrt(d1*d1 + d2*d2 - 2*d1*d2*cos(dTheta));
+        int test_point = point;
+        for (int i = 0; i < num_points; i++) {
+            if (grouped[i]) {
+                continue;
+            }
 
-            if (d3 < D_th) {
-                cluster.points[cluster.num_points++] = i;
-                grouped[i] = 1;
-                point = i;
+            // Read in the angle and distance values from the input streams
+            AXI_T candidate_angle = angles.read();
+            AXI_T candidate_distance = distances.read();
+
+            // Extract the angle and distance values from the AXI stream payload
+            double candidate_angle_value = candidate_angle.data.to_float();
+            double candidate_distance_value = candidate_distance.data.to_float();
+
+            double dTheta = candidate_angle_value - angle_value;
+            double d1 = distance_value;
+            double d2 = candidate_distance_value;
+            double d3 = sqrt(d1*d1 + d2*d2 - 2*d1*d2*cos(dTheta));
+
+            if (d3 < D_th && !grouped[i]) {
+                std::cout << i << " ";
+                cluster.num_points++;
+                cluster.points.push_back(i);
+                grouped[i] = true;
+                test_point = i;
             }
         }
 
         if (cluster.num_points >= minGroupSize) {
-            clusters[num_clusters++] = cluster;
-            if (num_clusters == MAX_CLUSTERS) {
+            // Create a new AXI stream payload for the output cluster
+            AXI_T cluster_output;
+            cluster_output.data.range(31, 0) = cluster.num_points;
+            cluster_output.data.range(63, 32) = 0;
+
+            // Write the output cluster to the output stream
+            clusters.write(cluster_output);
+
+            if (clusters.size() == MAX_CLUSTERS && num_points > MAX_CLUSTERS) {
                 break;
             }
-        }
-    }
-
-    // Write clusters to output stream
-    for (int i = 0; i < num_clusters; i++) {
-        for (int j = 0; j < clusters[i].num_points; j++) {
-            stream_axis cluster_axis;
-            cluster_axis.data = clusters[i].points[j];
-            cluster_axis.keep = 1;
-            cluster_axis.last = (j == clusters[i].num_points-1 && i == num_clusters-1);
-            out_clusters.write(cluster_axis);
         }
     }
 }
