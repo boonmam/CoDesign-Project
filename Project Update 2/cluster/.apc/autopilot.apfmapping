@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="cluster.cpp" path="Z:\Documents\CodesignProject\cluster\cluster.cpp"/>
+    <originFiles name="cluster.h" path="Z:\Documents\CodesignProject\cluster\cluster.h"/>
+  </source>
+  <testbench>
+    <originFiles name="cluster_test.cpp" path="Z:\Documents\CodesignProject\cluster\cluster_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

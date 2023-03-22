@@ -1,0 +1,58 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'mboonma' on host 'x22-27' (Windows NT_amd64 version 6.2) on Wed Mar 22 03:21:08 -0400 2023
+INFO: [HLS 200-10] In directory 'Z:/Documents/CodesignProject'
+Sourcing Tcl script 'Z:/Documents/CodesignProject/cluster/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source Z:/Documents/CodesignProject/cluster/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project cluster 
+INFO: [HLS 200-10] Opening project 'Z:/Documents/CodesignProject/cluster'.
+INFO: [HLS 200-1510] Running: set_top clusterOp 
+INFO: [HLS 200-1510] Running: add_files cluster/cluster.cpp 
+INFO: [HLS 200-10] Adding design file 'cluster/cluster.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files cluster/cluster.h 
+INFO: [HLS 200-10] Adding design file 'cluster/cluster.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb cluster/cluster_test.cpp 
+INFO: [HLS 200-10] Adding test bench file 'cluster/cluster_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'Z:/Documents/CodesignProject/cluster/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../cluster_test.cpp in debug mode
+   Generating csim.exe
+In file included from C:/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_fpo.h:189,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/etc/ap_private.h:98,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_common.h:710,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_int.h:56,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_axi_sdata.h:88,
+                 from ../../../cluster_test.cpp:2:
+C:/Xilinx/Vitis_HLS/2022.1/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2022.1/include/hls_fpo.h:189:0,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/etc/ap_private.h:98,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_common.h:710,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_int.h:56,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_axi_sdata.h:88,
+                 from ../../../cluster_test.cpp:2:
+C:/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.347 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 8.451 seconds; peak allocated memory: 1.643 GB.

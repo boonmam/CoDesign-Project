@@ -1,0 +1,157 @@
+
+
+================================================================
+== Vitis HLS Report for 'clusterOp_Pipeline_VITIS_LOOP_73_5'
+================================================================
+* Date:           Wed Mar 22 02:30:39 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        cluster
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.934 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_73_5  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     95|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     45|    -|
+|Register         |        -|    -|      36|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      36|    140|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |         Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |add_ln73_fu_152_p2             |         +|   0|  0|  39|          32|           1|
+    |add_ln75_fu_162_p2             |         +|   0|  0|  14|          13|          13|
+    |ap_block_pp0_stage0_01001      |       and|   0|  0|   2|           1|           1|
+    |cluster_axis_last_V_fu_179_p2  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln73_fu_146_p2            |      icmp|   0|  0|  18|          32|          32|
+    |icmp_ln77_fu_173_p2            |      icmp|   0|  0|  18|          32|          32|
+    |ap_enable_pp0                  |       xor|   0|  0|   2|           1|           2|
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |Total                          |          |   0|  0|  95|         112|          82|
+    +-------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_done_int               |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1   |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j_1      |   9|          2|   32|         64|
+    |j_fu_66                   |   9|          2|   32|         64|
+    |out_clusters_TDATA_blk_n  |   9|          2|    1|          2|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     |  45|         10|   67|        134|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   1|   0|    1|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |cluster_axis_last_V_reg_205  |   1|   0|    1|          0|
+    |j_fu_66                      |  32|   0|   32|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        |  36|   0|   36|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+------------------------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |            Source Object           |    C Type    |
++--------------------------+-----+-----+------------+------------------------------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_73_5|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_73_5|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_73_5|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_73_5|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_73_5|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_73_5|  return value|
+|out_clusters_TREADY       |   in|    1|        axis|               out_clusters_V_data_V|       pointer|
+|out_clusters_TDATA        |  out|   32|        axis|               out_clusters_V_data_V|       pointer|
+|clusters_num_points_load  |   in|   32|     ap_none|            clusters_num_points_load|        scalar|
+|phi_mul                   |   in|   13|     ap_none|                             phi_mul|        scalar|
+|clusters_points_address0  |  out|   13|   ap_memory|                     clusters_points|         array|
+|clusters_points_ce0       |  out|    1|   ap_memory|                     clusters_points|         array|
+|clusters_points_q0        |   in|   32|   ap_memory|                     clusters_points|         array|
+|sub88                     |   in|   32|     ap_none|                               sub88|        scalar|
+|cmp91                     |   in|    1|     ap_none|                               cmp91|        scalar|
+|out_clusters_TVALID       |  out|    1|        axis|               out_clusters_V_dest_V|       pointer|
+|out_clusters_TDEST        |  out|    6|        axis|               out_clusters_V_dest_V|       pointer|
+|out_clusters_TKEEP        |  out|    4|        axis|               out_clusters_V_keep_V|       pointer|
+|out_clusters_TSTRB        |  out|    4|        axis|               out_clusters_V_strb_V|       pointer|
+|out_clusters_TUSER        |  out|    2|        axis|               out_clusters_V_user_V|       pointer|
+|out_clusters_TLAST        |  out|    1|        axis|               out_clusters_V_last_V|       pointer|
+|out_clusters_TID          |  out|    5|        axis|                 out_clusters_V_id_V|       pointer|
++--------------------------+-----+-----+------------+------------------------------------+--------------+
+

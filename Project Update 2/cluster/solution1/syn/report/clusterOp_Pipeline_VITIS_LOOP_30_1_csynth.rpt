@@ -1,0 +1,162 @@
+
+
+================================================================
+== Vitis HLS Report for 'clusterOp_Pipeline_VITIS_LOOP_30_1'
+================================================================
+* Date:           Wed Mar 22 02:30:24 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        cluster
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.915 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      362|      362|  3.620 us|  3.620 us|  362|  362|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_30_1  |      360|      360|         1|          1|          1|   360|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     29|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     45|    -|
+|Register         |        -|    -|      11|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      11|     74|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln30_fu_148_p2                |         +|   0|  0|  14|           9|           1|
+    |ap_condition_156                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln30_fu_142_p2               |      icmp|   0|  0|  11|           9|           9|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  29|          20|          12|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1     |   9|          2|    9|         18|
+    |i_fu_68                  |   9|          2|    9|         18|
+    |in_angle_TDATA_blk_n     |   9|          2|    1|          2|
+    |in_distance_TDATA_blk_n  |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  45|         10|   21|         42|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    |i_fu_68      |  9|   0|    9|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        | 11|   0|   11|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+------------------------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |            Source Object           |    C Type    |
++--------------------+-----+-----+------------+------------------------------------+--------------+
+|ap_clk              |   in|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_30_1|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_30_1|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_30_1|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_30_1|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_30_1|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_30_1|  return value|
+|in_angle_TVALID     |   in|    1|        axis|                   in_angle_V_data_V|       pointer|
+|in_angle_TDATA      |   in|   32|        axis|                   in_angle_V_data_V|       pointer|
+|in_distance_TVALID  |   in|    1|        axis|                in_distance_V_data_V|       pointer|
+|in_distance_TDATA   |   in|   32|        axis|                in_distance_V_data_V|       pointer|
+|in_angle_TREADY     |  out|    1|        axis|                   in_angle_V_dest_V|       pointer|
+|in_angle_TDEST      |   in|    6|        axis|                   in_angle_V_dest_V|       pointer|
+|in_angle_TKEEP      |   in|    4|        axis|                   in_angle_V_keep_V|       pointer|
+|in_angle_TSTRB      |   in|    4|        axis|                   in_angle_V_strb_V|       pointer|
+|in_angle_TUSER      |   in|    2|        axis|                   in_angle_V_user_V|       pointer|
+|in_angle_TLAST      |   in|    1|        axis|                   in_angle_V_last_V|       pointer|
+|in_angle_TID        |   in|    5|        axis|                     in_angle_V_id_V|       pointer|
+|in_distance_TREADY  |  out|    1|        axis|                in_distance_V_dest_V|       pointer|
+|in_distance_TDEST   |   in|    6|        axis|                in_distance_V_dest_V|       pointer|
+|in_distance_TKEEP   |   in|    4|        axis|                in_distance_V_keep_V|       pointer|
+|in_distance_TSTRB   |   in|    4|        axis|                in_distance_V_strb_V|       pointer|
+|in_distance_TUSER   |   in|    2|        axis|                in_distance_V_user_V|       pointer|
+|in_distance_TLAST   |   in|    1|        axis|                in_distance_V_last_V|       pointer|
+|in_distance_TID     |   in|    5|        axis|                  in_distance_V_id_V|       pointer|
+|angle_address0      |  out|    9|   ap_memory|                               angle|         array|
+|angle_ce0           |  out|    1|   ap_memory|                               angle|         array|
+|angle_we0           |  out|    1|   ap_memory|                               angle|         array|
+|angle_d0            |  out|   32|   ap_memory|                               angle|         array|
+|distance_address0   |  out|    9|   ap_memory|                            distance|         array|
+|distance_ce0        |  out|    1|   ap_memory|                            distance|         array|
+|distance_we0        |  out|    1|   ap_memory|                            distance|         array|
+|distance_d0         |  out|   32|   ap_memory|                            distance|         array|
++--------------------+-----+-----+------------+------------------------------------+--------------+
+
