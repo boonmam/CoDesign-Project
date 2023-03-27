@@ -37,85 +37,165 @@
          <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp//AESL_inst_clusterOp_activity.dataflowTxWaveData.Cycles</obj_property>
          <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp//AESL_inst_clusterOp_activity.dataflowTxWaveData.OutStanding</obj_property>
          <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp//AESL_inst_clusterOp_activity.dataflowTxTooltipData</obj_property>
-         <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_6698/grp_clusterOp_Pipeline_1_fu_6698_activity">
-            <obj_property name="label">grp_clusterOp_Pipeline_1_fu_6698_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_239/grp_clusterOp_Pipeline_1_fu_239_activity">
+            <obj_property name="label">grp_clusterOp_Pipeline_1_fu_239_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_clusterOp_Pipeline_1_fu_6698_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_1_fu_6698_activity</obj_property>
+            <obj_property name="ElementShortName">grp_clusterOp_Pipeline_1_fu_239_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_1_fu_239_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_6698/grp_clusterOp_Pipeline_1_fu_6698_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_6698/grp_clusterOp_Pipeline_1_fu_6698_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_6698/grp_clusterOp_Pipeline_1_fu_6698_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_239/grp_clusterOp_Pipeline_1_fu_239_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_239/grp_clusterOp_Pipeline_1_fu_239_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_239/grp_clusterOp_Pipeline_1_fu_239_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704/grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704_activity">
-            <obj_property name="label">grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245/grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245_activity">
+            <obj_property name="label">grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704_activity</obj_property>
+            <obj_property name="ElementShortName">grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704/grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704/grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704/grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245/grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245/grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245/grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738_activity">
-            <obj_property name="label">grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_activity">
+            <obj_property name="label">grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738_activity</obj_property>
+            <obj_property name="ElementShortName">grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738_activity.dataflowTxTooltipData</obj_property>
-            <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/grp_sin_or_cos_double_s_fu_203/grp_sin_or_cos_double_s_fu_203_activity">
-               <obj_property name="label">grp_sin_or_cos_double_s_fu_203_activity</obj_property>
+            <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_pow_32_32_s_fu_177_activity">
+               <obj_property name="label">grp_pow_32_32_s_fu_177_activity</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <obj_property name="UseFullPath">true</obj_property>
-               <obj_property name="ElementShortName">grp_sin_or_cos_double_s_fu_203_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_sin_or_cos_double_s_fu_203_activity</obj_property>
+               <obj_property name="ElementShortName">grp_pow_32_32_s_fu_177_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_pow_32_32_s_fu_177_activity</obj_property>
                <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
                <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
                <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
                <obj_property name="UseCustomSignalColor">true</obj_property>
                <obj_property name="CustomSignalColor">turquoise</obj_property>
                <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-               <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/grp_sin_or_cos_double_s_fu_203/grp_sin_or_cos_double_s_fu_203_activity.dataflowTxWaveData.Cycles</obj_property>
-               <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/grp_sin_or_cos_double_s_fu_203/grp_sin_or_cos_double_s_fu_203_activity.dataflowTxWaveData.OutStanding</obj_property>
-               <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/grp_sin_or_cos_double_s_fu_203/grp_sin_or_cos_double_s_fu_203_activity.dataflowTxTooltipData</obj_property>
+               <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_pow_32_32_s_fu_177_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_pow_32_32_s_fu_177_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_pow_32_32_s_fu_177_activity.dataflowTxTooltipData</obj_property>
+               <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_log_99_33_s_fu_73/grp_log_99_33_s_fu_73_activity">
+                  <obj_property name="label">grp_log_99_33_s_fu_73_activity</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="UseFullPath">true</obj_property>
+                  <obj_property name="ElementShortName">grp_log_99_33_s_fu_73_activity</obj_property>
+                  <obj_property name="ObjectShortName">grp_log_99_33_s_fu_73_activity</obj_property>
+                  <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+                  <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                  <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+                  <obj_property name="CustomSignalColor">turquoise</obj_property>
+                  <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+                  <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_log_99_33_s_fu_73/grp_log_99_33_s_fu_73_activity.dataflowTxWaveData.Cycles</obj_property>
+                  <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_log_99_33_s_fu_73/grp_log_99_33_s_fu_73_activity.dataflowTxWaveData.OutStanding</obj_property>
+                  <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_log_99_33_s_fu_73/grp_log_99_33_s_fu_73_activity.dataflowTxTooltipData</obj_property>
+               </wvobject>
+               <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_exp_core_32_32_66_s_fu_92/grp_exp_core_32_32_66_s_fu_92_activity">
+                  <obj_property name="label">grp_exp_core_32_32_66_s_fu_92_activity</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="UseFullPath">true</obj_property>
+                  <obj_property name="ElementShortName">grp_exp_core_32_32_66_s_fu_92_activity</obj_property>
+                  <obj_property name="ObjectShortName">grp_exp_core_32_32_66_s_fu_92_activity</obj_property>
+                  <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+                  <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                  <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+                  <obj_property name="CustomSignalColor">turquoise</obj_property>
+                  <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+                  <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_exp_core_32_32_66_s_fu_92/grp_exp_core_32_32_66_s_fu_92_activity.dataflowTxWaveData.Cycles</obj_property>
+                  <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_exp_core_32_32_66_s_fu_92/grp_exp_core_32_32_66_s_fu_92_activity.dataflowTxWaveData.OutStanding</obj_property>
+                  <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_exp_core_32_32_66_s_fu_92/grp_exp_core_32_32_66_s_fu_92_activity.dataflowTxTooltipData</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_pow_32_32_s_fu_206_activity">
+               <obj_property name="label">grp_pow_32_32_s_fu_206_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_pow_32_32_s_fu_206_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_pow_32_32_s_fu_206_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_pow_32_32_s_fu_206_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_pow_32_32_s_fu_206_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_pow_32_32_s_fu_206_activity.dataflowTxTooltipData</obj_property>
+               <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_log_99_33_s_fu_73/grp_log_99_33_s_fu_73_activity">
+                  <obj_property name="label">grp_log_99_33_s_fu_73_activity</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="UseFullPath">true</obj_property>
+                  <obj_property name="ElementShortName">grp_log_99_33_s_fu_73_activity</obj_property>
+                  <obj_property name="ObjectShortName">grp_log_99_33_s_fu_73_activity</obj_property>
+                  <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+                  <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                  <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+                  <obj_property name="CustomSignalColor">turquoise</obj_property>
+                  <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+                  <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_log_99_33_s_fu_73/grp_log_99_33_s_fu_73_activity.dataflowTxWaveData.Cycles</obj_property>
+                  <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_log_99_33_s_fu_73/grp_log_99_33_s_fu_73_activity.dataflowTxWaveData.OutStanding</obj_property>
+                  <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_log_99_33_s_fu_73/grp_log_99_33_s_fu_73_activity.dataflowTxTooltipData</obj_property>
+               </wvobject>
+               <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_exp_core_32_32_66_s_fu_92/grp_exp_core_32_32_66_s_fu_92_activity">
+                  <obj_property name="label">grp_exp_core_32_32_66_s_fu_92_activity</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="UseFullPath">true</obj_property>
+                  <obj_property name="ElementShortName">grp_exp_core_32_32_66_s_fu_92_activity</obj_property>
+                  <obj_property name="ObjectShortName">grp_exp_core_32_32_66_s_fu_92_activity</obj_property>
+                  <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+                  <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                  <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+                  <obj_property name="CustomSignalColor">turquoise</obj_property>
+                  <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+                  <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_exp_core_32_32_66_s_fu_92/grp_exp_core_32_32_66_s_fu_92_activity.dataflowTxWaveData.Cycles</obj_property>
+                  <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_exp_core_32_32_66_s_fu_92/grp_exp_core_32_32_66_s_fu_92_activity.dataflowTxWaveData.OutStanding</obj_property>
+                  <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_exp_core_32_32_66_s_fu_92/grp_exp_core_32_32_66_s_fu_92_activity.dataflowTxTooltipData</obj_property>
+               </wvobject>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761/grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761_activity">
-            <obj_property name="label">grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300/grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_activity">
+            <obj_property name="label">grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761_activity</obj_property>
+            <obj_property name="ElementShortName">grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761/grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761/grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761/grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300/grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300/grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300/grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
       </wvobject>
    </wvobject>
@@ -126,21 +206,21 @@
    <wvobject type="group" fp_name="AESL_inst_clusterOp_group">
       <obj_property name="label">AESL_inst_clusterOp</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_6698/grp_clusterOp_Pipeline_1_fu_6698_activity">
-         <obj_property name="ElementShortName">grp_clusterOp_Pipeline_1_fu_6698_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_1_fu_6698_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_239/grp_clusterOp_Pipeline_1_fu_239_activity">
+         <obj_property name="ElementShortName">grp_clusterOp_Pipeline_1_fu_239_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_1_fu_239_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704/grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704_activity">
-         <obj_property name="ElementShortName">grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245/grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245_activity">
+         <obj_property name="ElementShortName">grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738_activity">
-         <obj_property name="ElementShortName">grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_activity">
+         <obj_property name="ElementShortName">grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761/grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761_activity">
-         <obj_property name="ElementShortName">grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300/grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_activity">
+         <obj_property name="ElementShortName">grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_activity</obj_property>
       </wvobject>
       <wvobject type="group" fp_name="AESL_inst_clusterOp_Handshake_group">
          <obj_property name="label">Block-level handshake</obj_property>
@@ -158,105 +238,225 @@
             <obj_property name="ObjectShortName">ap_done</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_clusterOp_Pipeline_1_fu_6698_group">
-         <obj_property name="label">grp_clusterOp_Pipeline_1_fu_6698</obj_property>
+      <wvobject type="group" fp_name="grp_clusterOp_Pipeline_1_fu_239_group">
+         <obj_property name="label">grp_clusterOp_Pipeline_1_fu_239</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_clusterOp_Pipeline_1_fu_6698_Handshake_group">
+         <wvobject type="group" fp_name="grp_clusterOp_Pipeline_1_fu_239_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_6698/ap_start">
+            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_239/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_6698/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_239/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_6698/ap_done">
+            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_1_fu_239/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704_group">
-         <obj_property name="label">grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704</obj_property>
+      <wvobject type="group" fp_name="grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245_group">
+         <obj_property name="label">grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704_Handshake_group">
+         <wvobject type="group" fp_name="grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704/ap_start">
+            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_30_1_fu_6704/ap_done">
+            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738_group">
-         <obj_property name="label">grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738</obj_property>
+      <wvobject type="group" fp_name="grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_group">
+         <obj_property name="label">grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/grp_sin_or_cos_double_s_fu_203/grp_sin_or_cos_double_s_fu_203_activity">
-            <obj_property name="ElementShortName">grp_sin_or_cos_double_s_fu_203_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_sin_or_cos_double_s_fu_203_activity</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_pow_32_32_s_fu_177_activity">
+            <obj_property name="ElementShortName">grp_pow_32_32_s_fu_177_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pow_32_32_s_fu_177_activity</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738_Handshake_group">
+         <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_pow_32_32_s_fu_206_activity">
+            <obj_property name="ElementShortName">grp_pow_32_32_s_fu_206_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pow_32_32_s_fu_206_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/ap_start">
+            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/ap_done">
+            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="grp_sin_or_cos_double_s_fu_203_group">
-            <obj_property name="label">grp_sin_or_cos_double_s_fu_203</obj_property>
+         <wvobject type="group" fp_name="grp_pow_32_32_s_fu_177_group">
+            <obj_property name="label">grp_pow_32_32_s_fu_177</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="grp_sin_or_cos_double_s_fu_203_Handshake_group">
+            <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_log_99_33_s_fu_73/grp_log_99_33_s_fu_73_activity">
+               <obj_property name="ElementShortName">grp_log_99_33_s_fu_73_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_log_99_33_s_fu_73_activity</obj_property>
+            </wvobject>
+            <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_exp_core_32_32_66_s_fu_92/grp_exp_core_32_32_66_s_fu_92_activity">
+               <obj_property name="ElementShortName">grp_exp_core_32_32_66_s_fu_92_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_exp_core_32_32_66_s_fu_92_activity</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="grp_pow_32_32_s_fu_177_Handshake_group">
                <obj_property name="label">Block-level handshake</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/grp_sin_or_cos_double_s_fu_203/ap_start">
+               <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/ap_start">
                   <obj_property name="ElementShortName">ap_start</obj_property>
                   <obj_property name="ObjectShortName">ap_start</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/grp_sin_or_cos_double_s_fu_203/ap_ready">
+               <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/ap_ready">
                   <obj_property name="ElementShortName">ap_ready</obj_property>
                   <obj_property name="ObjectShortName">ap_ready</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_50_3_fu_6738/grp_sin_or_cos_double_s_fu_203/ap_done">
+               <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/ap_done">
                   <obj_property name="ElementShortName">ap_done</obj_property>
                   <obj_property name="ObjectShortName">ap_done</obj_property>
                </wvobject>
             </wvobject>
+            <wvobject type="group" fp_name="grp_log_99_33_s_fu_73_group">
+               <obj_property name="label">grp_log_99_33_s_fu_73</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="grp_log_99_33_s_fu_73_Handshake_group">
+                  <obj_property name="label">Block-level handshake</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_log_99_33_s_fu_73/ap_start">
+                     <obj_property name="ElementShortName">ap_start</obj_property>
+                     <obj_property name="ObjectShortName">ap_start</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_log_99_33_s_fu_73/ap_ready">
+                     <obj_property name="ElementShortName">ap_ready</obj_property>
+                     <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_log_99_33_s_fu_73/ap_done">
+                     <obj_property name="ElementShortName">ap_done</obj_property>
+                     <obj_property name="ObjectShortName">ap_done</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="grp_exp_core_32_32_66_s_fu_92_group">
+               <obj_property name="label">grp_exp_core_32_32_66_s_fu_92</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="grp_exp_core_32_32_66_s_fu_92_Handshake_group">
+                  <obj_property name="label">Block-level handshake</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_exp_core_32_32_66_s_fu_92/ap_start">
+                     <obj_property name="ElementShortName">ap_start</obj_property>
+                     <obj_property name="ObjectShortName">ap_start</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_exp_core_32_32_66_s_fu_92/ap_ready">
+                     <obj_property name="ElementShortName">ap_ready</obj_property>
+                     <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_177/grp_exp_core_32_32_66_s_fu_92/ap_done">
+                     <obj_property name="ElementShortName">ap_done</obj_property>
+                     <obj_property name="ObjectShortName">ap_done</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_pow_32_32_s_fu_206_group">
+            <obj_property name="label">grp_pow_32_32_s_fu_206</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_log_99_33_s_fu_73/grp_log_99_33_s_fu_73_activity">
+               <obj_property name="ElementShortName">grp_log_99_33_s_fu_73_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_log_99_33_s_fu_73_activity</obj_property>
+            </wvobject>
+            <wvobject type="protoinst" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_exp_core_32_32_66_s_fu_92/grp_exp_core_32_32_66_s_fu_92_activity">
+               <obj_property name="ElementShortName">grp_exp_core_32_32_66_s_fu_92_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_exp_core_32_32_66_s_fu_92_activity</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="grp_pow_32_32_s_fu_206_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="grp_log_99_33_s_fu_73_group">
+               <obj_property name="label">grp_log_99_33_s_fu_73</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="grp_log_99_33_s_fu_73_Handshake_group">
+                  <obj_property name="label">Block-level handshake</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_log_99_33_s_fu_73/ap_start">
+                     <obj_property name="ElementShortName">ap_start</obj_property>
+                     <obj_property name="ObjectShortName">ap_start</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_log_99_33_s_fu_73/ap_ready">
+                     <obj_property name="ElementShortName">ap_ready</obj_property>
+                     <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_log_99_33_s_fu_73/ap_done">
+                     <obj_property name="ElementShortName">ap_done</obj_property>
+                     <obj_property name="ObjectShortName">ap_done</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="grp_exp_core_32_32_66_s_fu_92_group">
+               <obj_property name="label">grp_exp_core_32_32_66_s_fu_92</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="grp_exp_core_32_32_66_s_fu_92_Handshake_group">
+                  <obj_property name="label">Block-level handshake</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_exp_core_32_32_66_s_fu_92/ap_start">
+                     <obj_property name="ElementShortName">ap_start</obj_property>
+                     <obj_property name="ObjectShortName">ap_start</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_exp_core_32_32_66_s_fu_92/ap_ready">
+                     <obj_property name="ElementShortName">ap_ready</obj_property>
+                     <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264/grp_pow_32_32_s_fu_206/grp_exp_core_32_32_66_s_fu_92/ap_done">
+                     <obj_property name="ElementShortName">ap_done</obj_property>
+                     <obj_property name="ObjectShortName">ap_done</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761_group">
-         <obj_property name="label">grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761</obj_property>
+      <wvobject type="group" fp_name="grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_group">
+         <obj_property name="label">grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761_Handshake_group">
+         <wvobject type="group" fp_name="grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761/ap_start">
+            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_73_5_fu_6761/ap_done">
+            <wvobject type="logic" fp_name="/apatb_clusterOp_top/AESL_inst_clusterOp/grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>

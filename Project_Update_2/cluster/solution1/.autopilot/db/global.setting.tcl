@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../cluster.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile Z:/Documents/CodesignProject/cluster/solution1/solution1.directive
+set DirectiveFile E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/solution1.directive
 set TBFiles {verilog ../cluster_test.cpp bc ../cluster_test.cpp vhdl ../cluster_test.cpp sc ../cluster_test.cpp cas ../cluster_test.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

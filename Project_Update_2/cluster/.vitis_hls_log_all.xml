@@ -11,7 +11,19 @@
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="cluster" solutionName="solution1" date="2023-03-27T01:29:41.210-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-67] Unable to satisfy pipeline directive for loop 'VITIS_LOOP_42_3': contains subfunction 'pow&lt;32, 32>' which is not pipelined." projectName="cluster" solutionName="solution1" date="2023-03-27T01:29:31.771-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-67] Unable to satisfy pipeline directive for function 'pow&lt;32, 32>': contains subfunction 'log&lt;99, 33>' which is not pipelined." projectName="cluster" solutionName="solution1" date="2023-03-27T01:29:29.851-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'log&lt;99, 33>': contains subloop(s) that are not unrolled." projectName="cluster" solutionName="solution1" date="2023-03-27T01:29:27.714-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed&lt;32, 32>' to 'sqrt_fixed_32_32_s'." projectName="cluster" solutionName="solution1" date="2023-03-27T01:29:25.942-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'pow&lt;32, 32>' to 'pow_32_32_s'." projectName="cluster" solutionName="solution1" date="2023-03-27T01:29:25.891-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'exp_core&lt;32, 32, 66>' to 'exp_core_32_32_66_s'." projectName="cluster" solutionName="solution1" date="2023-03-27T01:29:25.839-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'log&lt;99, 33>' to 'log_99_33_s'." projectName="cluster" solutionName="solution1" date="2023-03-27T01:29:25.789-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_66_4' (cluster/cluster.cpp:66:31) in function 'clusterOp' the outer loop is not a perfect loop because either the parent loop or the sub loop has no invariant trip count.&#xD;&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html" projectName="cluster" solutionName="solution1" date="2023-03-27T01:29:24.886-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_33_2' (cluster/cluster.cpp:33:31) in function 'clusterOp' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.&#xD;&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html" projectName="cluster" solutionName="solution1" date="2023-03-27T01:29:24.786-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-932] Cannot unroll loop 'Loop-1' (C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_log_apfixed.h:731) in function 'log_apfixed_reduce::log&lt;99, 33>' completely: variable loop bound." projectName="cluster" solutionName="solution1" date="2023-03-27T01:29:23.751-0400" type="Warning"/>
+      </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>

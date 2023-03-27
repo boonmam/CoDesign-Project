@@ -1,0 +1,148 @@
+
+
+================================================================
+== Vitis HLS Report for 'clusterOp_Pipeline_VITIS_LOOP_27_1'
+================================================================
+* Date:           Mon Mar 27 01:29:35 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        cluster
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.915 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      362|      362|  3.620 us|  3.620 us|  362|  362|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_27_1  |      360|      360|         1|          1|          1|   360|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     29|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     36|    -|
+|Register         |        -|    -|      11|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      11|     65|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln27_fu_105_p2                |         +|   0|  0|  14|           9|           1|
+    |ap_condition_118                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln27_fu_99_p2                |      icmp|   0|  0|  11|           9|           9|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  29|          20|          12|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_done_int           |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1  |   9|          2|    9|         18|
+    |i_fu_56               |   9|          2|    9|         18|
+    |inStream_TDATA_blk_n  |   9|          2|    1|          2|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  36|          8|   20|         40|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    |i_fu_56      |  9|   0|    9|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        | 11|   0|   11|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+------------------------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |            Source Object           |    C Type    |
++--------------------+-----+-----+------------+------------------------------------+--------------+
+|ap_clk              |   in|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_27_1|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_27_1|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_27_1|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_27_1|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_27_1|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  clusterOp_Pipeline_VITIS_LOOP_27_1|  return value|
+|inStream_TVALID     |   in|    1|        axis|                   inStream_V_data_V|       pointer|
+|inStream_TDATA      |   in|   32|        axis|                   inStream_V_data_V|       pointer|
+|inStream_TREADY     |  out|    1|        axis|                   inStream_V_dest_V|       pointer|
+|inStream_TDEST      |   in|    6|        axis|                   inStream_V_dest_V|       pointer|
+|inStream_TKEEP      |   in|    4|        axis|                   inStream_V_keep_V|       pointer|
+|inStream_TSTRB      |   in|    4|        axis|                   inStream_V_strb_V|       pointer|
+|inStream_TUSER      |   in|    2|        axis|                   inStream_V_user_V|       pointer|
+|inStream_TLAST      |   in|    1|        axis|                   inStream_V_last_V|       pointer|
+|inStream_TID        |   in|    5|        axis|                     inStream_V_id_V|       pointer|
+|distances_address0  |  out|    9|   ap_memory|                           distances|         array|
+|distances_ce0       |  out|    1|   ap_memory|                           distances|         array|
+|distances_we0       |  out|    1|   ap_memory|                           distances|         array|
+|distances_d0        |  out|   32|   ap_memory|                           distances|         array|
++--------------------+-----+-----+------------+------------------------------------+--------------+
+
