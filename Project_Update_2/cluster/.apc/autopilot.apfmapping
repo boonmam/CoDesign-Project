@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="cluster.cpp" path="E:\Github\CoDesign-Project\Project_Update_2\cluster\cluster.cpp"/>
     <originFiles name="cluster.h" path="E:\Github\CoDesign-Project\Project_Update_2\cluster\cluster.h"/>
+    <originFiles name="cluster.cpp" path="E:\Github\CoDesign-Project\Project_Update_2\cluster\cluster.cpp"/>
   </source>
   <testbench>
     <originFiles name="cluster_test.cpp" path="E:\Github\CoDesign-Project\Project_Update_2\cluster\cluster_test.cpp"/>
