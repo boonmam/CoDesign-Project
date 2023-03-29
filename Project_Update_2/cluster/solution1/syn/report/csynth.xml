@@ -51,8 +51,8 @@
         <Resources>
             <BRAM_18K>121</BRAM_18K>
             <DSP>91</DSP>
-            <FF>20385</FF>
-            <LUT>15754</LUT>
+            <FF>20418</FF>
+            <LUT>15813</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -586,10 +586,10 @@
                     <ModuleName>clusterOp_Pipeline_VITIS_LOOP_67_5</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>300</ID>
-                    <BindInstances>add_ln67_fu_155_p2 add_ln69_fu_165_p2</BindInstances>
+                    <BindInstances>add_ln67_fu_165_p2 add_ln69_fu_175_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>distances_U grouped_U clusters_id_U clusters_members_U clusters_member_count_U add_ln33_fu_345_p2 mul_mul_17s_9ns_17_4_1_U76 cluster_count_1_fu_374_p2 add_ln66_1_fu_412_p2 add_ln66_fu_428_p2 sub89_fu_450_p2</BindInstances>
+            <BindInstances>distances_U grouped_U clusters_id_U clusters_members_U clusters_member_count_U add_ln33_fu_346_p2 mul_mul_17s_9ns_17_4_1_U77 cluster_count_1_fu_381_p2 sub91_fu_357_p2 add_ln66_1_fu_419_p2 add_ln66_fu_435_p2 sub88_fu_462_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -1061,7 +1061,7 @@
                     <FF>36</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>164</LUT>
+                    <LUT>166</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1076,8 +1076,8 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_67_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_fu_155_p2" SOURCE="cluster/cluster.cpp:67" URAM="0" VARIABLE="add_ln67"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_67_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_fu_165_p2" SOURCE="cluster/cluster.cpp:69" URAM="0" VARIABLE="add_ln69"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_67_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_fu_165_p2" SOURCE="cluster/cluster.cpp:67" URAM="0" VARIABLE="add_ln67"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_67_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_fu_175_p2" SOURCE="cluster/cluster.cpp:69" URAM="0" VARIABLE="add_ln69"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1139,10 +1139,10 @@
                     <DSP>91</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>41</UTIL_DSP>
-                    <FF>20385</FF>
+                    <FF>20418</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>19</UTIL_FF>
-                    <LUT>15754</LUT>
+                    <LUT>15813</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>29</UTIL_LUT>
                     <URAM>0</URAM>
@@ -1156,12 +1156,13 @@
                 <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="clusters_id_U" SOURCE="cluster/cluster.cpp:23" URAM="0" VARIABLE="clusters_id"/>
                 <BindNode BINDTYPE="storage" BRAM="72" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="clusters_members_U" SOURCE="cluster/cluster.cpp:23" URAM="0" VARIABLE="clusters_members"/>
                 <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="clusters_member_count_U" SOURCE="cluster/cluster.cpp:23" URAM="0" VARIABLE="clusters_member_count"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln33_fu_345_p2" SOURCE="cluster/cluster.cpp:33" URAM="0" VARIABLE="add_ln33"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_33_2" OPTYPE="mul" PRAGMA="" RTLNAME="mul_mul_17s_9ns_17_4_1_U76" SOURCE="cluster/cluster.cpp:37" URAM="0" VARIABLE="mul_ln37"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_2" OPTYPE="add" PRAGMA="" RTLNAME="cluster_count_1_fu_374_p2" SOURCE="cluster/cluster.cpp:61" URAM="0" VARIABLE="cluster_count_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_66_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln66_1_fu_412_p2" SOURCE="cluster/cluster.cpp:66" URAM="0" VARIABLE="add_ln66_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_66_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln66_fu_428_p2" SOURCE="cluster/cluster.cpp:66" URAM="0" VARIABLE="add_ln66"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_66_4" OPTYPE="add" PRAGMA="" RTLNAME="sub89_fu_450_p2" SOURCE="cluster/cluster.cpp:66" URAM="0" VARIABLE="sub89"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln33_fu_346_p2" SOURCE="cluster/cluster.cpp:33" URAM="0" VARIABLE="add_ln33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_33_2" OPTYPE="mul" PRAGMA="" RTLNAME="mul_mul_17s_9ns_17_4_1_U77" SOURCE="cluster/cluster.cpp:37" URAM="0" VARIABLE="mul_ln37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_2" OPTYPE="add" PRAGMA="" RTLNAME="cluster_count_1_fu_381_p2" SOURCE="cluster/cluster.cpp:61" URAM="0" VARIABLE="cluster_count_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="sub91_fu_357_p2" SOURCE="" URAM="0" VARIABLE="sub91"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_66_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln66_1_fu_419_p2" SOURCE="cluster/cluster.cpp:66" URAM="0" VARIABLE="add_ln66_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_66_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln66_fu_435_p2" SOURCE="cluster/cluster.cpp:66" URAM="0" VARIABLE="add_ln66"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_66_4" OPTYPE="add" PRAGMA="" RTLNAME="sub88_fu_462_p2" SOURCE="cluster/cluster.cpp:66" URAM="0" VARIABLE="sub88"/>
             </BindNodes>
         </Module>
     </ModuleInformation>

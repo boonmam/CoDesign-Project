@@ -70,7 +70,14 @@ void clusterOp(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
             tmp.keep = -1; // All bytes are valid
             tmp.strb = -1; // All bytes are valid
             tmp.user = (j == 0) ? 1 : 0; // Indicate start of a new cluster
-            tmp.last = (j == clusters[i].member_count-1) ? 1 : 0; // Indicate end of a cluster
+
+            if (j == clusters[i].member_count-1 & i == cluster_count-1){
+            	tmp.last = 1; // Indicate end of a cluster
+            }
+
+            else{
+            	tmp.last = 0;
+            }
             tmp.id = clusters[i].id;
             tmp.dest = 0;
 

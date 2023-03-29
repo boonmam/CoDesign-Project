@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1 opened at Mon Mar 27 01:27:16 -0400 2023
+INFO-FLOW: Workspace E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1 opened at Mon Mar 27 20:46:48 -0400 2023
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xc7z020-clg400-1 
@@ -7,7 +7,7 @@ DBG:HLSDevice: Trying to load device library: E:/Xilinx/Vitis_HLS/2022.2\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: E:/Xilinx/Vivado/2022.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-Command       create_platform done; 2.225 sec.
+Command       create_platform done; 2.257 sec.
 Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
@@ -22,7 +22,7 @@ Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xf
 Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.334 sec.
+Command     set_part done; 2.364 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
@@ -34,7 +34,7 @@ Execute     config_export -rtl=verilog
 Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=10 
 INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
 Execute     config_export -vivado_clock=10 
-Command   open_solution done; 2.418 sec.
+Command   open_solution done; 2.452 sec.
 Execute   set_part xc7z020-clg400-1 
 INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
 Execute     create_platform xc7z020-clg400-1 -board  
@@ -52,7 +52,7 @@ Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir
 Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.124 sec.
+Command   set_part done; 0.125 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 Execute   config_export -format ip_catalog -rtl verilog -vivado_clock 10 
@@ -64,7 +64,7 @@ INFO: [HLS 200-1510] Running: set_directive_top -name clusterOp clusterOp
 Execute   csynth_design 
 INFO: [HLS 200-1510] Running: csynth_design 
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.029 seconds; current allocated memory: 676.934 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.029 seconds; current allocated memory: 677.785 MB.
 INFO: [HLS 200-10] Analyzing design file 'cluster/cluster.cpp' ... 
 INFO-FLOW: Compiling one TU...
 INFO-FLOW: Handling cluster/cluster.cpp as C++
@@ -72,74 +72,78 @@ Execute       ap_part_info -name xc7z020-clg400-1 -data info
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 Execute       ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang cluster/cluster.cpp -foptimization-record-file=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot E:/Xilinx/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I E:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp {-hls-platform-db-name=E:/Xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.cpp.clang.out.log 2> E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.cpp.clang.err.log 
-Command       ap_eval done; 0.179 sec.
-INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
+Command       ap_eval done; 2.047 sec.
+INFO-FLOW: Done: GCC PP 39 time: 2.1 seconds per iteration
 Execute       set_directive_top clusterOp -name=clusterOp 
 Execute       source E:/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source E:/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 INFO-FLOW: Source syntax check for synthesis
 Execute       ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp {-hls-platform-db-name=E:/Xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clang.out.log 2> E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clang.err.log 
-Command       ap_eval done; 2.376 sec.
+Command       ap_eval done; 2.665 sec.
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp std=gnu++14 -target fpga  -directive=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/.systemc_flag -fix-errors E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 2.438 sec.
+Command       clang_tidy done; 2.886 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp std=gnu++14 -target fpga  -directive=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/all.directive.json -fix-errors E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 2.727 sec.
+Command       clang_tidy done; 2.762 sec.
 Execute       clang_tidy xilinx-remove-assert -desc remove-assert E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: exec E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 2.427 sec.
+Command       clang_tidy done; 2.445 sec.
 INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 5.2 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp std=gnu++14 -target fpga  
 Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp.clang-tidy.loop-label.out.log 2> E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp.clang-tidy.loop-label.err.log 
-Command         ap_eval done; 4.652 sec.
+Command         ap_eval done; 4.719 sec.
 Execute         source E:/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command       clang_tidy done; 5.066 sec.
+Command       clang_tidy done; 5.171 sec.
 Execute       ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
-Command       ap_eval done; 2.338 sec.
+Command       ap_eval done; 2.824 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 INFO-FLOW: compiling source code to llvm bc
 Execute       ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I E:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.bc {-hls-platform-db-name=E:/Xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp.clang.out.log 2> E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.pp.0.cpp.clang.err.log 
-Command       ap_eval done; 2.421 sec.
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 20.263 seconds; current allocated memory: 681.859 MB.
+Command       ap_eval done; 2.655 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 23.878 seconds; current allocated memory: 683.699 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute       run_link_or_opt -out E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.0.bc -args  "E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.g.bc"  
 Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/llvm-link E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/cluster.g.bc -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.0.bc > E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+Command         ap_eval done; 0.154 sec.
 INFO-FLOW: 
+Command       run_link_or_opt done; 0.156 sec.
 Execute       run_link_or_opt -opt -out E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.1.lower.bc -args E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
 Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.1.lower.bc > E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+Command         ap_eval done; 0.479 sec.
 INFO-FLOW: 
+Command       run_link_or_opt done; 0.48 sec.
 INFO-FLOW: Linking math bc lib
 Execute       run_link_or_opt -out E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.2.m1.bc -args E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed E:/Xilinx/Vitis_HLS/2022.2/win64/lib/libhlsm_39.bc E:/Xilinx/Vitis_HLS/2022.2/win64/lib/libhlsmc++_39.bc 
 Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/llvm-link E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed E:/Xilinx/Vitis_HLS/2022.2/win64/lib/libhlsm_39.bc E:/Xilinx/Vitis_HLS/2022.2/win64/lib/libhlsmc++_39.bc -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.2.m1.bc > E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
-Command         ap_eval done; 2.115 sec.
+Command         ap_eval done; 3.601 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 2.116 sec.
+Command       run_link_or_opt done; 3.602 sec.
 Execute       run_link_or_opt -opt -out E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=clusterOp -reflow-float-conversion 
 Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=clusterOp -reflow-float-conversion -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.3.fpc.bc > E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
-Command         ap_eval done; 1.232 sec.
+Command         ap_eval done; 1.366 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 1.233 sec.
+Command       run_link_or_opt done; 1.367 sec.
 Execute       run_link_or_opt -out E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.4.m2.bc -args E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed E:/Xilinx/Vitis_HLS/2022.2/win64/lib/libfloatconversion_39.bc 
 Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/llvm-link E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed E:/Xilinx/Vitis_HLS/2022.2/win64/lib/libfloatconversion_39.bc -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.4.m2.bc > E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
-Command         ap_eval done; 0.577 sec.
+Command         ap_eval done; 0.681 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.579 sec.
+Command       run_link_or_opt done; 0.683 sec.
 Execute       run_link_or_opt -opt -out E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=clusterOp 
 Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=clusterOp -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.5.gdce.bc > E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
-Command         ap_eval done; 0.585 sec.
+Command         ap_eval done; 0.636 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.586 sec.
+Command       run_link_or_opt done; 0.638 sec.
 Execute       send_msg_by_id INFO @200-777@%s Vivado 
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 Execute       is_m_axi_addr64 
 INFO-FLOW: Doing LTO.
 Execute       ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=clusterOp -mllvm -hls-db-dir -mllvm E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-assume-no-address-wrap=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.lto.bc {-hls-platform-db-name=E:/Xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
-Command       ap_eval done; 5.27 sec.
+Command       ap_eval done; 5.696 sec.
 INFO: [HLS 214-131] Inlining function 'ap_fixed_base<29, 7, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(char const*)' into 'ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(char const*)'
 INFO: [HLS 214-131] Inlining function 'ap_fixed_base<44, 7, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(char const*)' into 'ap_fixed<44, 7, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(char const*)'
 INFO: [HLS 214-131] Inlining function 'ap_fixed_base<59, 7, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(char const*)' into 'ap_fixed<59, 7, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(char const*)'
@@ -2710,7 +2714,7 @@ INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 2ul, 5ul, 6ul>::get
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 2ul, 5ul, 6ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>::write(hls::axis<ap_int<32>, 2ul, 5ul, 6ul> const&)' (E:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_axi_sdata.h:259:40)
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 2ul, 5ul, 6ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>::write(hls::axis<ap_int<32>, 2ul, 5ul, 6ul> const&)' (E:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_axi_sdata.h:259:24)
 INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>::read()' into 'clusterOp(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)' (cluster/cluster.cpp:28:31)
-INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>::write(hls::axis<ap_int<32>, 2ul, 5ul, 6ul> const&)' into 'clusterOp(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)' (cluster/cluster.cpp:77:23)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>::write(hls::axis<ap_int<32>, 2ul, 5ul, 6ul> const&)' into 'clusterOp(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)' (cluster/cluster.cpp:84:23)
 INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'clusterOp(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)' (cluster/cluster.cpp:29:33)
 INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include\hls_sqrt_apfixed.h:294:9)
 INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include\hls_sqrt_apfixed.h:266:9)
@@ -2741,24 +2745,24 @@ INFO: [HLS 214-178] Inlining function 'ap_int<32> sqrt_fixed<32>(ap_int<32>)' in
 INFO: [HLS 214-178] Inlining function 'hls::pow(int, int)' into 'clusterOp(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)' (cluster/cluster.cpp:16:0)
 INFO: [HLS 214-178] Inlining function 'hls::sqrt(int)' into 'clusterOp(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)' (cluster/cluster.cpp:16:0)
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 52 seconds. CPU system time: 3 seconds. Elapsed time: 92.467 seconds; current allocated memory: 737.809 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 739.211 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 53 seconds. CPU system time: 3 seconds. Elapsed time: 95.313 seconds; current allocated memory: 739.801 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 740.691 MB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top clusterOp -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.0.bc -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command         transform done; 0.367 sec.
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 816.500 MB.
+Command         transform done; 0.802 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.866 seconds; current allocated memory: 818.359 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.1.bc -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.2.prechk.bc -f 
 INFO: [XFORM 203-602] Inlining function 'log_apfixed_reduce::log_traits<6>::range_reduction<81>' into 'log_apfixed_reduce::log<99, 33>' (C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_log_apfixed.h:772) automatically.
-Command         transform done; 0.457 sec.
+Command         transform done; 0.653 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.2.prechk.bc -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-Command         transform done; 0.268 sec.
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.775 seconds; current allocated memory: 903.930 MB.
+Command         transform done; 0.251 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.954 seconds; current allocated memory: 902.703 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.g.1.bc to E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -2770,7 +2774,7 @@ INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_67_5' (cluster/cluster.cpp:67)
 INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'log_apfixed_reduce::log<99, 33>' (C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_log_apfixed.h:501:17).
 WARNING: [HLS 200-932] Cannot unroll loop 'Loop-1' (C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_log_apfixed.h:731) in function 'log_apfixed_reduce::log<99, 33>' completely: variable loop bound.
 INFO: [XFORM 203-602] Inlining function 'log_apfixed_reduce::log_traits<6>::range_reduction<81>' into 'log_apfixed_reduce::log<99, 33>' (C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_log_apfixed.h:772) automatically.
-Command         transform done; 0.907 sec.
+Command         transform done; 1.001 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.o.1.tmp.bc -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include\hls_sqrt_apfixed.h:44:9) to (C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include\hls_sqrt_apfixed.h:372:1) in function 'sqrt_fixed<32, 32>'... converting 35 basic blocks.
@@ -2778,8 +2782,8 @@ INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:\scratch\20
 INFO: [XFORM 203-11] Balancing expressions in function 'pow_apfixed_reduce::pow<32, 32>' (C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include\hls_pow_apfixed.h:65:5)...9 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'log_apfixed_reduce::log<99, 33>' (C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_log_apfixed.h:186:33)...13 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'exp_reduce::exp_core<32, 32, 66>' (C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_exp_apfixed.h:959:1)...28 expression(s) balanced.
-Command         transform done; 0.571 sec.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.483 seconds; current allocated memory: 1022.242 MB.
+Command         transform done; 0.568 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.573 seconds; current allocated memory: 1021.727 MB.
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.o.2.bc -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_33_2' (cluster/cluster.cpp:33:31) in function 'clusterOp' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
@@ -2792,13 +2796,13 @@ INFO: [HLS 200-472] Inferring partial write operation for 'grouped' (cluster/clu
 INFO: [HLS 200-472] Inferring partial write operation for 'clusters.members' (cluster/cluster.cpp:54:95)
 INFO: [HLS 200-472] Inferring partial write operation for 'grouped' (cluster/cluster.cpp:56:44)
 INFO: [HLS 200-472] Inferring partial write operation for 'clusters.member_count' (cluster/cluster.cpp:54:81)
-Command         transform done; 0.939 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.941 seconds; current allocated memory: 1.082 GB.
+Command         transform done; 0.997 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.998 seconds; current allocated memory: 1.079 GB.
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 3.769 sec.
-Command     elaborate done; 116.586 sec.
+Command       opt_and_import_c done; 4.532 sec.
+Command     elaborate done; 123.813 sec.
 Execute     ap_eval exec zip -j E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
-Command     ap_eval done; 0.117 sec.
+Command     ap_eval done; 0.209 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -2808,7 +2812,7 @@ WARNING: [SYN 201-103] Legalizing function name 'log<99, 33>' to 'log_99_33_s'.
 WARNING: [SYN 201-103] Legalizing function name 'exp_core<32, 32, 66>' to 'exp_core_32_32_66_s'.
 WARNING: [SYN 201-103] Legalizing function name 'pow<32, 32>' to 'pow_32_32_s'.
 WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed<32, 32>' to 'sqrt_fixed_32_32_s'.
-Command       ap_set_top_model done; 0.201 sec.
+Command       ap_set_top_model done; 0.2 sec.
 Execute       get_model_list clusterOp -filter all-wo-channel -topdown 
 Execute       preproc_iomode -model clusterOp 
 Execute       preproc_iomode -model clusterOp_Pipeline_VITIS_LOOP_67_5 
@@ -2895,8 +2899,8 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.203 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.762 seconds; current allocated memory: 1.094 GB.
+Command       schedule done; 0.534 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.193 seconds; current allocated memory: 1.090 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_1.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_1.sched.adb -f 
@@ -2908,8 +2912,8 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.245 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.253 seconds; current allocated memory: 1.095 GB.
+Command       bind done; 0.236 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.092 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_1.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_1.bind.adb -f 
@@ -2924,7 +2928,7 @@ INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_27_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_27_1'
 INFO: [SCHED 204-11] Finished scheduling.
 Command       schedule done; 0.201 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.351 seconds; current allocated memory: 1.095 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.353 seconds; current allocated memory: 1.092 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_27_1.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_27_1.sched.adb -f 
@@ -2937,7 +2941,7 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
 Command       bind done; 0.242 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.251 seconds; current allocated memory: 1.096 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.251 seconds; current allocated memory: 1.092 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_27_1.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_27_1.bind.adb -f 
@@ -2951,11 +2955,11 @@ INFO: [SCHED 204-11] Starting scheduling ...
 WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'log<99, 33>': contains subloop(s) that are not unrolled.
 WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'log<99, 33>': contains subloop(s) that are not unrolled.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.3 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.45 seconds; current allocated memory: 1.096 GB.
+Command       schedule done; 0.306 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.461 seconds; current allocated memory: 1.093 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/log_99_33_s.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.27 sec.
+Command       syn_report done; 0.127 sec.
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/log_99_33_s.sched.adb -f 
 INFO-FLOW: Finish scheduling log<99, 33>.
 Execute       set_default_model log<99, 33> 
@@ -2965,8 +2969,8 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.303 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.596 seconds; current allocated memory: 1.097 GB.
+Command       bind done; 0.306 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.456 seconds; current allocated memory: 1.094 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/log_99_33_s.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Command       syn_report done; 0.137 sec.
@@ -2983,7 +2987,7 @@ INFO: [SCHED 204-61] Pipelining function 'exp_core<32, 32, 66>'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 24, function 'exp_core<32, 32, 66>'
 INFO: [SCHED 204-11] Finished scheduling.
 Command       schedule done; 0.293 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.595 seconds; current allocated memory: 1.098 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.595 seconds; current allocated memory: 1.095 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/exp_core_32_32_66_s.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/exp_core_32_32_66_s.sched.adb -f 
@@ -2995,8 +2999,8 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.265 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.347 seconds; current allocated memory: 1.099 GB.
+Command       bind done; 0.268 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.348 seconds; current allocated memory: 1.096 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/exp_core_32_32_66_s.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/exp_core_32_32_66_s.bind.adb -f 
@@ -3010,7 +3014,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 WARNING: [SCHED 204-67] Unable to satisfy pipeline directive for function 'pow<32, 32>': contains subfunction 'log<99, 33>' which is not pipelined.
 INFO: [SCHED 204-11] Finished scheduling.
 Command       schedule done; 0.169 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.411 seconds; current allocated memory: 1.099 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.416 seconds; current allocated memory: 1.096 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/pow_32_32_s.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/pow_32_32_s.sched.adb -f 
@@ -3022,11 +3026,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.297 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.351 seconds; current allocated memory: 1.099 GB.
+Command       bind done; 0.302 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.355 seconds; current allocated memory: 1.096 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/pow_32_32_s.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.156 sec.
+Command       syn_report done; 0.155 sec.
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/pow_32_32_s.bind.adb -f 
 INFO-FLOW: Finish binding pow<32, 32>.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3038,8 +3042,8 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'sqrt_fixed<32, 32>'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, function 'sqrt_fixed<32, 32>'
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.267 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.562 seconds; current allocated memory: 1.100 GB.
+Command       schedule done; 0.269 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.565 seconds; current allocated memory: 1.098 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/sqrt_fixed_32_32_s.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/sqrt_fixed_32_32_s.sched.adb -f 
@@ -3051,11 +3055,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.272 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.337 seconds; current allocated memory: 1.100 GB.
+Command       bind done; 0.273 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.338 seconds; current allocated memory: 1.098 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/sqrt_fixed_32_32_s.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.156 sec.
+Command       syn_report done; 0.159 sec.
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/sqrt_fixed_32_32_s.bind.adb -f 
 INFO-FLOW: Finish binding sqrt_fixed<32, 32>.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3066,8 +3070,8 @@ Execute       schedule -model clusterOp_Pipeline_VITIS_LOOP_42_3
 INFO: [SCHED 204-11] Starting scheduling ...
 WARNING: [SCHED 204-67] Unable to satisfy pipeline directive for loop 'VITIS_LOOP_42_3': contains subfunction 'pow<32, 32>' which is not pipelined.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.178 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.493 seconds; current allocated memory: 1.101 GB.
+Command       schedule done; 0.181 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.501 seconds; current allocated memory: 1.098 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_42_3.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_42_3.sched.adb -f 
@@ -3079,11 +3083,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.395 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.464 seconds; current allocated memory: 1.101 GB.
+Command       bind done; 0.399 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.469 seconds; current allocated memory: 1.098 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_42_3.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.464 sec.
+Command       syn_report done; 0.469 sec.
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_42_3.bind.adb -f 
 INFO-FLOW: Finish binding clusterOp_Pipeline_VITIS_LOOP_42_3.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3095,8 +3099,8 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_67_5'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_67_5'
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.203 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.813 seconds; current allocated memory: 1.101 GB.
+Command       schedule done; 0.206 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.823 seconds; current allocated memory: 1.099 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_67_5.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_67_5.sched.adb -f 
@@ -3109,7 +3113,7 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
 Command       bind done; 0.239 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.253 seconds; current allocated memory: 1.102 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.254 seconds; current allocated memory: 1.099 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_67_5.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_67_5.bind.adb -f 
@@ -3122,8 +3126,8 @@ Execute       schedule -model clusterOp
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [HLS 200-486] Changing DSP latency (root=mul_ln37) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.182 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.339 seconds; current allocated memory: 1.102 GB.
+Command       schedule done; 0.183 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.343 seconds; current allocated memory: 1.099 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.sched.adb -f 
@@ -3135,11 +3139,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.41 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.461 seconds; current allocated memory: 1.102 GB.
+Command       bind done; 0.414 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.466 seconds; current allocated memory: 1.100 GB.
 Execute       syn_report -verbosereport -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.487 sec.
+Command       syn_report done; 0.496 sec.
 Execute       db_write -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.bind.adb -f 
 INFO-FLOW: Finish binding clusterOp.
 Execute       get_model_list clusterOp -filter all-wo-channel 
@@ -3159,7 +3163,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'clusterOp_Pipeline_1'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model clusterOp_Pipeline_1 -top_prefix clusterOp_ -sub_prefix clusterOp_ -mg_file E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_1.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'clusterOp_Pipeline_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.695 seconds; current allocated memory: 1.104 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.714 seconds; current allocated memory: 1.101 GB.
 Execute       source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
 Execute       gen_rtl clusterOp_Pipeline_1 -style xilinx -f -lang vhdl -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/vhdl/clusterOp_clusterOp_Pipeline_1 
 Execute       gen_rtl clusterOp_Pipeline_1 -style xilinx -f -lang vlog -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/verilog/clusterOp_clusterOp_Pipeline_1 
@@ -3176,7 +3180,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'clusterOp_Pipeline_VITIS_LOOP_2
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model clusterOp_Pipeline_VITIS_LOOP_27_1 -top_prefix clusterOp_ -sub_prefix clusterOp_ -mg_file E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_27_1.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'clusterOp_Pipeline_VITIS_LOOP_27_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.224 seconds; current allocated memory: 1.105 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.263 seconds; current allocated memory: 1.103 GB.
 Execute       source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
 Execute       gen_rtl clusterOp_Pipeline_VITIS_LOOP_27_1 -style xilinx -f -lang vhdl -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/vhdl/clusterOp_clusterOp_Pipeline_VITIS_LOOP_27_1 
 Execute       gen_rtl clusterOp_Pipeline_VITIS_LOOP_27_1 -style xilinx -f -lang vlog -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/verilog/clusterOp_clusterOp_Pipeline_VITIS_LOOP_27_1 
@@ -3214,13 +3218,14 @@ INFO: [RTMG 210-279] Implementing memory 'clusterOp_log_99_33_s_log_apfixed_redu
 INFO: [RTMG 210-279] Implementing memory 'clusterOp_log_99_33_s_log_apfixed_reduce_log_lut_table_ap_fixed_12_6_64_array_V_ROM_AUTeOg' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'clusterOp_log_99_33_s_log_apfixed_reduce_log_lut_table_ap_fixed_17_6_64_array_V_ROM_AUTfYi' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'clusterOp_log_99_33_s_log_apfixed_reduce_log_lut_table_ap_fixed_22_6_64_array_V_ROM_AUTg8j' using auto ROMs.
-Command       create_rtl_model done; 1.229 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.413 seconds; current allocated memory: 1.108 GB.
+Command       create_rtl_model done; 1.333 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.519 seconds; current allocated memory: 1.105 GB.
 Execute       source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
 Execute       gen_rtl log<99, 33> -style xilinx -f -lang vhdl -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/vhdl/clusterOp_log_99_33_s 
 Execute       gen_rtl log<99, 33> -style xilinx -f -lang vlog -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/verilog/clusterOp_log_99_33_s 
 Execute       syn_report -csynth -model log<99, 33> -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/report/log_99_33_s_csynth.rpt 
 Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.143 sec.
 Execute       syn_report -rtlxml -model log<99, 33> -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/report/log_99_33_s_csynth.xml 
 Execute       syn_report -verbosereport -model log<99, 33> -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/log_99_33_s.verbose.rpt 
 Execute         AP::get_flow_target_display_name
@@ -3244,8 +3249,8 @@ INFO: [RTMG 210-279] Implementing memory 'clusterOp_exp_core_32_32_66_s_f_x_msb_
 INFO: [RTMG 210-279] Implementing memory 'clusterOp_exp_core_32_32_66_s_f_x_msb_3_table_V_ROM_AUTO_1R' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'clusterOp_exp_core_32_32_66_s_f_x_msb_2_table_V_ROM_AUTO_1R' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'clusterOp_exp_core_32_32_66_s_exp_x_msb_1_table_V_ROM_AUTO_1R' using auto ROMs.
-Command       create_rtl_model done; 0.626 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.124 seconds; current allocated memory: 1.112 GB.
+Command       create_rtl_model done; 0.641 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.229 seconds; current allocated memory: 1.109 GB.
 Execute       source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
 Execute       gen_rtl exp_core<32, 32, 66> -style xilinx -f -lang vhdl -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/vhdl/clusterOp_exp_core_32_32_66_s 
 Execute       gen_rtl exp_core<32, 32, 66> -style xilinx -f -lang vlog -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/verilog/clusterOp_exp_core_32_32_66_s 
@@ -3254,7 +3259,7 @@ Execute         AP::get_flow_target_display_name
 Execute       syn_report -rtlxml -model exp_core<32, 32, 66> -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/report/exp_core_32_32_66_s_csynth.xml 
 Execute       syn_report -verbosereport -model exp_core<32, 32, 66> -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/exp_core_32_32_66_s.verbose.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.121 sec.
+Command       syn_report done; 0.123 sec.
 Execute       db_write -model exp_core<32, 32, 66> -f -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/exp_core_32_32_66_s.adb 
 Execute       db_write -model exp_core<32, 32, 66> -bindview -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info exp_core<32, 32, 66> -p E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/exp_core_32_32_66_s 
@@ -3263,10 +3268,9 @@ INFO: [HLS 200-10] -- Generating RTL for module 'pow_32_32_s'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model pow<32, 32> -top_prefix clusterOp_ -sub_prefix clusterOp_ -mg_file E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/pow_32_32_s.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'pow_32_32_s'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.487 seconds; current allocated memory: 1.113 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.496 seconds; current allocated memory: 1.111 GB.
 Execute       source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
 Execute       gen_rtl pow<32, 32> -style xilinx -f -lang vhdl -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/vhdl/clusterOp_pow_32_32_s 
-Command       gen_rtl done; 0.148 sec.
 Execute       gen_rtl pow<32, 32> -style xilinx -f -lang vlog -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/verilog/clusterOp_pow_32_32_s 
 Execute       syn_report -csynth -model pow<32, 32> -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/report/pow_32_32_s_csynth.rpt 
 Execute         AP::get_flow_target_display_name
@@ -3282,7 +3286,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'sqrt_fixed_32_32_s'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model sqrt_fixed<32, 32> -top_prefix clusterOp_ -sub_prefix clusterOp_ -mg_file E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/sqrt_fixed_32_32_s.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sqrt_fixed_32_32_s'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.539 seconds; current allocated memory: 1.115 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.396 seconds; current allocated memory: 1.112 GB.
 Execute       source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
 Execute       gen_rtl sqrt_fixed<32, 32> -style xilinx -f -lang vhdl -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/vhdl/clusterOp_sqrt_fixed_32_32_s 
 Execute       gen_rtl sqrt_fixed<32, 32> -style xilinx -f -lang vlog -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/verilog/clusterOp_sqrt_fixed_32_32_s 
@@ -3291,7 +3295,7 @@ Execute         AP::get_flow_target_display_name
 Execute       syn_report -rtlxml -model sqrt_fixed<32, 32> -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/report/sqrt_fixed_32_32_s_csynth.xml 
 Execute       syn_report -verbosereport -model sqrt_fixed<32, 32> -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/sqrt_fixed_32_32_s.verbose.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.202 sec.
+Command       syn_report done; 0.226 sec.
 Execute       db_write -model sqrt_fixed<32, 32> -f -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/sqrt_fixed_32_32_s.adb 
 Execute       db_write -model sqrt_fixed<32, 32> -bindview -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info sqrt_fixed<32, 32> -p E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/sqrt_fixed_32_32_s 
@@ -3302,8 +3306,8 @@ Execute       create_rtl_model clusterOp_Pipeline_VITIS_LOOP_42_3 -top_prefix cl
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_6_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'clusterOp_Pipeline_VITIS_LOOP_42_3'.
-Command       create_rtl_model done; 0.158 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.746 seconds; current allocated memory: 1.121 GB.
+Command       create_rtl_model done; 0.267 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.882 seconds; current allocated memory: 1.116 GB.
 Execute       source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
 Execute       gen_rtl clusterOp_Pipeline_VITIS_LOOP_42_3 -style xilinx -f -lang vhdl -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/vhdl/clusterOp_clusterOp_Pipeline_VITIS_LOOP_42_3 
 Execute       gen_rtl clusterOp_Pipeline_VITIS_LOOP_42_3 -style xilinx -f -lang vlog -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/verilog/clusterOp_clusterOp_Pipeline_VITIS_LOOP_42_3 
@@ -3312,7 +3316,7 @@ Execute         AP::get_flow_target_display_name
 Execute       syn_report -rtlxml -model clusterOp_Pipeline_VITIS_LOOP_42_3 -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/report/clusterOp_Pipeline_VITIS_LOOP_42_3_csynth.xml 
 Execute       syn_report -verbosereport -model clusterOp_Pipeline_VITIS_LOOP_42_3 -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_42_3.verbose.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.48 sec.
+Command       syn_report done; 0.482 sec.
 Execute       db_write -model clusterOp_Pipeline_VITIS_LOOP_42_3 -f -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_42_3.adb 
 Execute       db_write -model clusterOp_Pipeline_VITIS_LOOP_42_3 -bindview -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info clusterOp_Pipeline_VITIS_LOOP_42_3 -p E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_42_3 
@@ -3322,8 +3326,8 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       create_rtl_model clusterOp_Pipeline_VITIS_LOOP_67_5 -top_prefix clusterOp_ -sub_prefix clusterOp_ -mg_file E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_67_5.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'clusterOp_Pipeline_VITIS_LOOP_67_5' pipeline 'VITIS_LOOP_67_5' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'clusterOp_Pipeline_VITIS_LOOP_67_5'.
-Command       create_rtl_model done; 0.104 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.873 seconds; current allocated memory: 1.122 GB.
+Command       create_rtl_model done; 0.103 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.833 seconds; current allocated memory: 1.118 GB.
 Execute       source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
 Execute       gen_rtl clusterOp_Pipeline_VITIS_LOOP_67_5 -style xilinx -f -lang vhdl -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/vhdl/clusterOp_clusterOp_Pipeline_VITIS_LOOP_67_5 
 Execute       gen_rtl clusterOp_Pipeline_VITIS_LOOP_67_5 -style xilinx -f -lang vlog -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/verilog/clusterOp_clusterOp_Pipeline_VITIS_LOOP_67_5 
@@ -3362,8 +3366,8 @@ INFO: [RTMG 210-278] Implementing memory 'clusterOp_distances_RAM_AUTO_1R1W' usi
 INFO: [RTMG 210-278] Implementing memory 'clusterOp_grouped_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'clusterOp_clusters_id_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'clusterOp_clusters_members_RAM_AUTO_1R1W' using auto RAMs.
-Command       create_rtl_model done; 1.197 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.406 seconds; current allocated memory: 1.124 GB.
+Command       create_rtl_model done; 1.228 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.442 seconds; current allocated memory: 1.121 GB.
 Execute       source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
 Execute       gen_rtl clusterOp -istop -style xilinx -f -lang vhdl -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/vhdl/clusterOp 
 Execute       gen_rtl clusterOp -istop -style xilinx -f -lang vlog -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/verilog/clusterOp 
@@ -3372,13 +3376,13 @@ Execute         AP::get_flow_target_display_name
 Execute       syn_report -rtlxml -model clusterOp -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/report/clusterOp_csynth.xml 
 Execute       syn_report -verbosereport -model clusterOp -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.verbose.rpt 
 Execute         AP::get_flow_target_display_name
-Command       syn_report done; 0.491 sec.
+Command       syn_report done; 0.5 sec.
 Execute       db_write -model clusterOp -f -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.adb 
 Execute       db_write -model clusterOp -bindview -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info clusterOp -p E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp 
 Execute       export_constraint_db -f -tool general -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.constraint.tcl 
 Execute       syn_report -designview -model clusterOp -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.design.xml 
-Command       syn_report done; 0.263 sec.
+Command       syn_report done; 0.268 sec.
 Execute       syn_report -csynthDesign -model clusterOp -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/syn/report/csynth.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       syn_report -wcfg -model clusterOp -o E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_dataflow_ana.wcfg 
@@ -3682,7 +3686,7 @@ Execute       source E:/Github/CoDesign-Project/Project_Update_2/cluster/solutio
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute         source ./CTRL_BUS.slave.tcl 
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.335 seconds; current allocated memory: 1.124 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.45 seconds; current allocated memory: 1.121 GB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='clusterOp_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
@@ -3778,25 +3782,25 @@ Execute       sc_get_clocks clusterOp
 Execute       source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
 Execute       source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/impl/misc/clusterOp_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl 
 Execute       source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/impl/misc/clusterOp_sitofp_32ns_32_6_no_dsp_1_ip.tcl 
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME CTRL_BUS_s_axi_U SOURCE {} VARIABLE {} MODULE clusterOp LOOP {} BUNDLEDNAME CTRL_BUS DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST clusterOp MODULE2INSTS {clusterOp clusterOp clusterOp_Pipeline_1 grp_clusterOp_Pipeline_1_fu_239 clusterOp_Pipeline_VITIS_LOOP_27_1 grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245 clusterOp_Pipeline_VITIS_LOOP_42_3 grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264 pow_32_32_s {grp_pow_32_32_s_fu_177 grp_pow_32_32_s_fu_206} log_99_33_s {grp_log_99_33_s_fu_73 grp_log_99_33_s_fu_73} exp_core_32_32_66_s {grp_exp_core_32_32_66_s_fu_92 grp_exp_core_32_32_66_s_fu_92} sqrt_fixed_32_32_s grp_sqrt_fixed_32_32_s_fu_235 clusterOp_Pipeline_VITIS_LOOP_67_5 grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300} INST2MODULE {clusterOp clusterOp grp_clusterOp_Pipeline_1_fu_239 clusterOp_Pipeline_1 grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245 clusterOp_Pipeline_VITIS_LOOP_27_1 grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264 clusterOp_Pipeline_VITIS_LOOP_42_3 grp_pow_32_32_s_fu_177 pow_32_32_s grp_log_99_33_s_fu_73 log_99_33_s grp_exp_core_32_32_66_s_fu_92 exp_core_32_32_66_s grp_pow_32_32_s_fu_206 pow_32_32_s grp_sqrt_fixed_32_32_s_fu_235 sqrt_fixed_32_32_s grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300 clusterOp_Pipeline_VITIS_LOOP_67_5} INSTDATA {clusterOp {DEPTH 1 CHILDREN {grp_clusterOp_Pipeline_1_fu_239 grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245 grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264 grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300}} grp_clusterOp_Pipeline_1_fu_239 {DEPTH 2 CHILDREN {}} grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245 {DEPTH 2 CHILDREN {}} grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264 {DEPTH 2 CHILDREN {grp_pow_32_32_s_fu_177 grp_pow_32_32_s_fu_206 grp_sqrt_fixed_32_32_s_fu_235}} grp_pow_32_32_s_fu_177 {DEPTH 3 CHILDREN {grp_log_99_33_s_fu_73 grp_exp_core_32_32_66_s_fu_92}} grp_log_99_33_s_fu_73 {DEPTH 4 CHILDREN {}} grp_exp_core_32_32_66_s_fu_92 {DEPTH 4 CHILDREN {}} grp_pow_32_32_s_fu_206 {DEPTH 3 CHILDREN {grp_log_99_33_s_fu_73 grp_exp_core_32_32_66_s_fu_92}} grp_sqrt_fixed_32_32_s_fu_235 {DEPTH 3 CHILDREN {}} grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300 {DEPTH 2 CHILDREN {}}} MODULEDATA {clusterOp_Pipeline_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_114_fu_58_p2 SOURCE {} VARIABLE empty_114 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} clusterOp_Pipeline_VITIS_LOOP_27_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln27_fu_105_p2 SOURCE cluster/cluster.cpp:27 VARIABLE add_ln27 LOOP VITIS_LOOP_27_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} log_99_33_s {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME b_exp_V_3_fu_478_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_int_base.h:841} VARIABLE b_exp_V_3 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_7s_83ns_88_5_1_U10 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE mul_ln1273 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_110s_6ns_110_5_1_U11 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_3 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_81ns_4ns_85_5_1_U12 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_75ns_6ns_81_5_1_U13 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_15 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_70ns_6ns_76_5_1_U14 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_16 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_65ns_6ns_71_5_1_U15 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_17 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_60ns_6ns_66_5_1_U16 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_18 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_29ns_29ns_58_2_1_U17 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_19 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME ret_V_fu_1161_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1348} VARIABLE ret_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln813_fu_1177_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE add_ln813 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln813_3_fu_1183_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE add_ln813_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln813_4_fu_1224_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE add_ln813_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_inverse_lut_table_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log_inverse_lut_table_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 3 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 3 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 3 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_lut_table_ap_fixed_12_6_64_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log_lut_table_ap_fixed_12_6_64_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_lut_table_ap_fixed_17_6_64_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log_lut_table_ap_fixed_17_6_64_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_lut_table_ap_fixed_22_6_64_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log_lut_table_ap_fixed_22_6_64_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 21 BRAM 15 URAM 0}} exp_core_32_32_66_s {BINDINFO {{BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_25ns_8ns_33_4_1_U38 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_21 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32ns_8ns_40_2_1_U34 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_23 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME exp_x_msb_4_5_lsb_m_1_m3_V_1_fu_433_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE exp_x_msb_4_5_lsb_m_1_m3_V_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME exp_x_msb_4_5_lsb_m_1_m4_V_fu_443_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE exp_x_msb_4_5_lsb_m_1_m4_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME exp_x_msb_4_5_lsb_m_1_m5_V_fu_455_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE exp_x_msb_4_5_lsb_m_1_m5_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_51ns_50ns_101_5_1_U35 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_24 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ret_V_fu_573_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1347} VARIABLE ret_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_67ns_63ns_130_5_1_U36 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_28 LOOP {} BUNDLEDNAME {} DSP 9 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln813_11_fu_641_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE add_ln813_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME exp_x_msb_2_3_4_5_lsb_m_1_V_fu_651_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE exp_x_msb_2_3_4_5_lsb_m_1_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_72ns_68ns_140_5_1_U37 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_29 LOOP {} BUNDLEDNAME {} DSP 9 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_l_V_fu_692_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE y_l_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_Val2_44_fu_720_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE p_Val2_44 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln58_fu_726_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:58} VARIABLE add_ln58 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME f_x_msb_4_table_V_U SOURCE {} VARIABLE f_x_msb_4_table_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME f_x_msb_5_table_V_U SOURCE {} VARIABLE f_x_msb_5_table_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME f_x_msb_3_table_V_U SOURCE {} VARIABLE f_x_msb_3_table_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME f_x_msb_2_table_V_U SOURCE {} VARIABLE f_x_msb_2_table_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME exp_x_msb_1_table_V_U SOURCE {} VARIABLE exp_x_msb_1_table_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 24 BRAM 8 URAM 0}} pow_32_32_s {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME p_Val2_s_fu_126_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE p_Val2_s LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}}} AREA {DSP 45 BRAM 23 URAM 0}} sqrt_fixed_32_32_s {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln277_fu_246_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE add_ln277 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_fu_318_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_1_fu_400_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_2_fu_475_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_3_fu_557_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_4_fu_632_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_5_fu_714_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_6_fu_789_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_7_fu_871_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_8_fu_946_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_9_fu_1028_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_10_fu_1108_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_11_fu_1185_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_12_fu_1265_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_13_fu_1342_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_14_fu_1413_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_I_V_30_fu_1470_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE res_I_V_30 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} clusterOp_Pipeline_VITIS_LOOP_42_3 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln42_fu_275_p2 SOURCE cluster/cluster.cpp:42 VARIABLE add_ln42 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln44_fu_299_p2 SOURCE cluster/cluster.cpp:44 VARIABLE sub_ln44 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME neg_fu_304_p2 SOURCE cluster/cluster.cpp:44 VARIABLE neg LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln46_fu_331_p2 SOURCE cluster/cluster.cpp:46 VARIABLE sub_ln46 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME xf_V_1_fu_321_p2 SOURCE cluster/cluster.cpp:50 VARIABLE xf_V_1 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME xf_V_2_fu_354_p2 SOURCE cluster/cluster.cpp:50 VARIABLE xf_V_2 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln54_fu_407_p2 SOURCE cluster/cluster.cpp:54 VARIABLE add_ln54 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln55_fu_417_p2 SOURCE cluster/cluster.cpp:55 VARIABLE add_ln55 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 90 BRAM 46 URAM 0}} clusterOp_Pipeline_VITIS_LOOP_67_5 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln67_fu_155_p2 SOURCE cluster/cluster.cpp:67 VARIABLE add_ln67 LOOP VITIS_LOOP_67_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln69_fu_165_p2 SOURCE cluster/cluster.cpp:69 VARIABLE add_ln69 LOOP VITIS_LOOP_67_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} clusterOp {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME distances_U SOURCE cluster/cluster.cpp:21 VARIABLE distances LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME grouped_U SOURCE cluster/cluster.cpp:22 VARIABLE grouped LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME clusters_id_U SOURCE cluster/cluster.cpp:23 VARIABLE clusters_id LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME clusters_members_U SOURCE cluster/cluster.cpp:23 VARIABLE clusters_members LOOP {} BUNDLEDNAME {} DSP 0 BRAM 72 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME clusters_member_count_U SOURCE cluster/cluster.cpp:23 VARIABLE clusters_member_count LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln33_fu_345_p2 SOURCE cluster/cluster.cpp:33 VARIABLE add_ln33 LOOP VITIS_LOOP_33_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_17s_9ns_17_4_1_U76 SOURCE cluster/cluster.cpp:37 VARIABLE mul_ln37 LOOP VITIS_LOOP_33_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME cluster_count_1_fu_374_p2 SOURCE cluster/cluster.cpp:61 VARIABLE cluster_count_1 LOOP VITIS_LOOP_33_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln66_1_fu_412_p2 SOURCE cluster/cluster.cpp:66 VARIABLE add_ln66_1 LOOP VITIS_LOOP_66_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln66_fu_428_p2 SOURCE cluster/cluster.cpp:66 VARIABLE add_ln66 LOOP VITIS_LOOP_66_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub89_fu_450_p2 SOURCE cluster/cluster.cpp:66 VARIABLE sub89 LOOP VITIS_LOOP_66_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 91 BRAM 121 URAM 0}}}}'
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME CTRL_BUS_s_axi_U SOURCE {} VARIABLE {} MODULE clusterOp LOOP {} BUNDLEDNAME CTRL_BUS DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST clusterOp MODULE2INSTS {clusterOp clusterOp clusterOp_Pipeline_1 grp_clusterOp_Pipeline_1_fu_239 clusterOp_Pipeline_VITIS_LOOP_27_1 grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245 clusterOp_Pipeline_VITIS_LOOP_42_3 grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264 pow_32_32_s {grp_pow_32_32_s_fu_177 grp_pow_32_32_s_fu_206} log_99_33_s {grp_log_99_33_s_fu_73 grp_log_99_33_s_fu_73} exp_core_32_32_66_s {grp_exp_core_32_32_66_s_fu_92 grp_exp_core_32_32_66_s_fu_92} sqrt_fixed_32_32_s grp_sqrt_fixed_32_32_s_fu_235 clusterOp_Pipeline_VITIS_LOOP_67_5 grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300} INST2MODULE {clusterOp clusterOp grp_clusterOp_Pipeline_1_fu_239 clusterOp_Pipeline_1 grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245 clusterOp_Pipeline_VITIS_LOOP_27_1 grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264 clusterOp_Pipeline_VITIS_LOOP_42_3 grp_pow_32_32_s_fu_177 pow_32_32_s grp_log_99_33_s_fu_73 log_99_33_s grp_exp_core_32_32_66_s_fu_92 exp_core_32_32_66_s grp_pow_32_32_s_fu_206 pow_32_32_s grp_sqrt_fixed_32_32_s_fu_235 sqrt_fixed_32_32_s grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300 clusterOp_Pipeline_VITIS_LOOP_67_5} INSTDATA {clusterOp {DEPTH 1 CHILDREN {grp_clusterOp_Pipeline_1_fu_239 grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245 grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264 grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300}} grp_clusterOp_Pipeline_1_fu_239 {DEPTH 2 CHILDREN {}} grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245 {DEPTH 2 CHILDREN {}} grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264 {DEPTH 2 CHILDREN {grp_pow_32_32_s_fu_177 grp_pow_32_32_s_fu_206 grp_sqrt_fixed_32_32_s_fu_235}} grp_pow_32_32_s_fu_177 {DEPTH 3 CHILDREN {grp_log_99_33_s_fu_73 grp_exp_core_32_32_66_s_fu_92}} grp_log_99_33_s_fu_73 {DEPTH 4 CHILDREN {}} grp_exp_core_32_32_66_s_fu_92 {DEPTH 4 CHILDREN {}} grp_pow_32_32_s_fu_206 {DEPTH 3 CHILDREN {grp_log_99_33_s_fu_73 grp_exp_core_32_32_66_s_fu_92}} grp_sqrt_fixed_32_32_s_fu_235 {DEPTH 3 CHILDREN {}} grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300 {DEPTH 2 CHILDREN {}}} MODULEDATA {clusterOp_Pipeline_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_114_fu_58_p2 SOURCE {} VARIABLE empty_114 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} clusterOp_Pipeline_VITIS_LOOP_27_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln27_fu_105_p2 SOURCE cluster/cluster.cpp:27 VARIABLE add_ln27 LOOP VITIS_LOOP_27_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} log_99_33_s {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME b_exp_V_3_fu_478_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_int_base.h:841} VARIABLE b_exp_V_3 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_7s_83ns_88_5_1_U10 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE mul_ln1273 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_110s_6ns_110_5_1_U11 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_3 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_81ns_4ns_85_5_1_U12 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_75ns_6ns_81_5_1_U13 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_15 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_70ns_6ns_76_5_1_U14 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_16 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_65ns_6ns_71_5_1_U15 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_17 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_60ns_6ns_66_5_1_U16 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_18 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_29ns_29ns_58_2_1_U17 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_19 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME ret_V_fu_1161_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1348} VARIABLE ret_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln813_fu_1177_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE add_ln813 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln813_3_fu_1183_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE add_ln813_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln813_4_fu_1224_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE add_ln813_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_inverse_lut_table_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log_inverse_lut_table_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 3 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 3 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 3 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_lut_table_ap_fixed_12_6_64_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log_lut_table_ap_fixed_12_6_64_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_lut_table_ap_fixed_17_6_64_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log_lut_table_ap_fixed_17_6_64_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME log_apfixed_reduce_log_lut_table_ap_fixed_22_6_64_array_V_U SOURCE {} VARIABLE log_apfixed_reduce_log_lut_table_ap_fixed_22_6_64_array_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 21 BRAM 15 URAM 0}} exp_core_32_32_66_s {BINDINFO {{BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_25ns_8ns_33_4_1_U38 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_21 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32ns_8ns_40_2_1_U34 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_23 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME exp_x_msb_4_5_lsb_m_1_m3_V_1_fu_433_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE exp_x_msb_4_5_lsb_m_1_m3_V_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME exp_x_msb_4_5_lsb_m_1_m4_V_fu_443_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE exp_x_msb_4_5_lsb_m_1_m4_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME exp_x_msb_4_5_lsb_m_1_m5_V_fu_455_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE exp_x_msb_4_5_lsb_m_1_m5_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_51ns_50ns_101_5_1_U35 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_24 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ret_V_fu_573_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1347} VARIABLE ret_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_67ns_63ns_130_5_1_U36 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_28 LOOP {} BUNDLEDNAME {} DSP 9 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln813_11_fu_641_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE add_ln813_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME exp_x_msb_2_3_4_5_lsb_m_1_V_fu_651_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE exp_x_msb_2_3_4_5_lsb_m_1_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_72ns_68ns_140_5_1_U37 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_29 LOOP {} BUNDLEDNAME {} DSP 9 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_l_V_fu_692_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE y_l_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_Val2_44_fu_720_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE p_Val2_44 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln58_fu_726_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:58} VARIABLE add_ln58 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME f_x_msb_4_table_V_U SOURCE {} VARIABLE f_x_msb_4_table_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME f_x_msb_5_table_V_U SOURCE {} VARIABLE f_x_msb_5_table_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME f_x_msb_3_table_V_U SOURCE {} VARIABLE f_x_msb_3_table_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME f_x_msb_2_table_V_U SOURCE {} VARIABLE f_x_msb_2_table_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME exp_x_msb_1_table_V_U SOURCE {} VARIABLE exp_x_msb_1_table_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 24 BRAM 8 URAM 0}} pow_32_32_s {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME p_Val2_s_fu_126_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE p_Val2_s LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}}} AREA {DSP 45 BRAM 23 URAM 0}} sqrt_fixed_32_32_s {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln277_fu_246_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE add_ln277 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_fu_318_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_1_fu_400_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_2_fu_475_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_3_fu_557_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_4_fu_632_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_5_fu_714_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_6_fu_789_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_7_fu_871_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_8_fu_946_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_9_fu_1028_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_10_fu_1108_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_11_fu_1185_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_12_fu_1265_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_13_fu_1342_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln277_14_fu_1413_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h:277} VARIABLE sub_ln277_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_I_V_30_fu_1470_p2 SOURCE {C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h:813} VARIABLE res_I_V_30 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} clusterOp_Pipeline_VITIS_LOOP_42_3 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln42_fu_275_p2 SOURCE cluster/cluster.cpp:42 VARIABLE add_ln42 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln44_fu_299_p2 SOURCE cluster/cluster.cpp:44 VARIABLE sub_ln44 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME neg_fu_304_p2 SOURCE cluster/cluster.cpp:44 VARIABLE neg LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln46_fu_331_p2 SOURCE cluster/cluster.cpp:46 VARIABLE sub_ln46 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME xf_V_1_fu_321_p2 SOURCE cluster/cluster.cpp:50 VARIABLE xf_V_1 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME xf_V_2_fu_354_p2 SOURCE cluster/cluster.cpp:50 VARIABLE xf_V_2 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln54_fu_407_p2 SOURCE cluster/cluster.cpp:54 VARIABLE add_ln54 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln55_fu_417_p2 SOURCE cluster/cluster.cpp:55 VARIABLE add_ln55 LOOP VITIS_LOOP_42_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 90 BRAM 46 URAM 0}} clusterOp_Pipeline_VITIS_LOOP_67_5 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln67_fu_165_p2 SOURCE cluster/cluster.cpp:67 VARIABLE add_ln67 LOOP VITIS_LOOP_67_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln69_fu_175_p2 SOURCE cluster/cluster.cpp:69 VARIABLE add_ln69 LOOP VITIS_LOOP_67_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} clusterOp {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME distances_U SOURCE cluster/cluster.cpp:21 VARIABLE distances LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME grouped_U SOURCE cluster/cluster.cpp:22 VARIABLE grouped LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME clusters_id_U SOURCE cluster/cluster.cpp:23 VARIABLE clusters_id LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME clusters_members_U SOURCE cluster/cluster.cpp:23 VARIABLE clusters_members LOOP {} BUNDLEDNAME {} DSP 0 BRAM 72 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME clusters_member_count_U SOURCE cluster/cluster.cpp:23 VARIABLE clusters_member_count LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln33_fu_346_p2 SOURCE cluster/cluster.cpp:33 VARIABLE add_ln33 LOOP VITIS_LOOP_33_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_17s_9ns_17_4_1_U77 SOURCE cluster/cluster.cpp:37 VARIABLE mul_ln37 LOOP VITIS_LOOP_33_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME cluster_count_1_fu_381_p2 SOURCE cluster/cluster.cpp:61 VARIABLE cluster_count_1 LOOP VITIS_LOOP_33_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub91_fu_357_p2 SOURCE {} VARIABLE sub91 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln66_1_fu_419_p2 SOURCE cluster/cluster.cpp:66 VARIABLE add_ln66_1 LOOP VITIS_LOOP_66_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln66_fu_435_p2 SOURCE cluster/cluster.cpp:66 VARIABLE add_ln66 LOOP VITIS_LOOP_66_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub88_fu_462_p2 SOURCE cluster/cluster.cpp:66 VARIABLE sub88 LOOP VITIS_LOOP_66_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 91 BRAM 121 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0.3 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.111 seconds; current allocated memory: 1.131 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.12 seconds; current allocated memory: 1.128 GB.
 INFO: [VHDL 208-304] Generating VHDL RTL for clusterOp.
 INFO: [VLOG 209-307] Generating Verilog RTL for clusterOp.
 Execute       syn_report -model clusterOp -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 137.19 MHz
-Command       syn_report done; 0.107 sec.
-Command     autosyn done; 19.49 sec.
-Command   csynth_design done; 136.198 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 71 seconds. CPU system time: 5 seconds. Elapsed time: 136.198 seconds; current allocated memory: 483.828 MB.
-Command ap_source done; 148.832 sec.
+Command       syn_report done; 0.106 sec.
+Command     autosyn done; 20.163 sec.
+Command   csynth_design done; 144.191 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 72 seconds. CPU system time: 6 seconds. Elapsed time: 144.191 seconds; current allocated memory: 480.461 MB.
+Command ap_source done; 156.865 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1 opened at Mon Mar 27 01:30:08 -0400 2023
+INFO-FLOW: Workspace E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1 opened at Mon Mar 27 20:49:41 -0400 2023
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xc7z020-clg400-1 
@@ -3805,7 +3809,7 @@ DBG:HLSDevice: Trying to load device library: E:/Xilinx/Vitis_HLS/2022.2\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: E:/Xilinx/Vivado/2022.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-Command       create_platform done; 2.253 sec.
+Command       create_platform done; 2.256 sec.
 Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
@@ -3820,7 +3824,7 @@ Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xf
 Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.357 sec.
+Command     set_part done; 2.364 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
@@ -3832,7 +3836,7 @@ Execute     config_export -rtl=verilog
 Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=10 
 INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
 Execute     config_export -vivado_clock=10 
-Command   open_solution done; 2.434 sec.
+Command   open_solution done; 2.45 sec.
 Execute   set_part xc7z020-clg400-1 
 INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
 Execute     create_platform xc7z020-clg400-1 -board  
@@ -3850,7 +3854,7 @@ Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir
 Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.127 sec.
+Command   set_part done; 0.122 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 Execute   config_export -format ip_catalog -rtl verilog -vivado_clock 10 
@@ -3867,14 +3871,14 @@ INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 Execute     source csim/.lst_opt.tcl 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     source run_sim.tcl 
-Command     ap_source done; 0.14 sec.
+Command     ap_source done; 0.13 sec.
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-Command   csim_design done; 5.138 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.138 seconds; current allocated memory: 0.309 MB.
-Command ap_source done; 17.74 sec.
+Command   csim_design done; 6.452 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.452 seconds; current allocated memory: 0.352 MB.
+Command ap_source done; 19.064 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1 opened at Mon Mar 27 20:37:08 -0400 2023
+INFO-FLOW: Workspace E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1 opened at Mon Mar 27 20:52:29 -0400 2023
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xc7z020-clg400-1 
@@ -3883,7 +3887,7 @@ DBG:HLSDevice: Trying to load device library: E:/Xilinx/Vitis_HLS/2022.2\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: E:/Xilinx/Vivado/2022.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-Command       create_platform done; 2.635 sec.
+Command       create_platform done; 2.252 sec.
 Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
@@ -3896,22 +3900,27 @@ Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/ut
 Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
 Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.225 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.904 sec.
+Command     set_part done; 2.367 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1464@%s config_export -display_name=clusterOp 
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=clusterOp
+Execute     config_export -display_name=clusterOp 
 Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
 INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
 Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -output=E:/Github/CoDesign-Project/Project_Update_2 
+INFO: [HLS 200-1464] Running solution command: config_export -output=E:/Github/CoDesign-Project/Project_Update_2
+Execute     config_export -output=E:/Github/CoDesign-Project/Project_Update_2 
 Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
 INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
 Execute     config_export -rtl=verilog 
 Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=10 
 INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
 Execute     config_export -vivado_clock=10 
-Command   open_solution done; 3.083 sec.
+Command   open_solution done; 2.453 sec.
 Execute   set_part xc7z020-clg400-1 
 INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
 Execute     create_platform xc7z020-clg400-1 -board  
@@ -3929,27 +3938,225 @@ Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir
 Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.157 sec.
+Command   set_part done; 0.128 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-Execute   config_export -format ip_catalog -rtl verilog -vivado_clock 10 
-INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+Execute   config_export -display_name clusterOp -format ip_catalog -output E:/Github/CoDesign-Project/Project_Update_2 -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: config_export -display_name clusterOp -format ip_catalog -output E:/Github/CoDesign-Project/Project_Update_2 -rtl verilog -vivado_clock 10 
 Execute   source ./cluster/solution1/directives.tcl 
 INFO: [HLS 200-1510] Running: source ./cluster/solution1/directives.tcl
 Execute     set_directive_top -name clusterOp clusterOp 
 INFO: [HLS 200-1510] Running: set_directive_top -name clusterOp clusterOp 
-Execute   csim_design -quiet 
-INFO: [HLS 200-1510] Running: csim_design -quiet 
+Execute   export_design -rtl verilog -format ip_catalog -output E:/Github/CoDesign-Project/Project_Update_2 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output E:/Github/CoDesign-Project/Project_Update_2 
+Execute     config_export -format=ip_catalog -output=E:/Github/CoDesign-Project/Project_Update_2 -rtl=verilog 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog -display_name clusterOp
 Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-Execute     source csim/.lst_opt.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info 
-Execute     source run_sim.tcl 
-Command     ap_source done; 0.285 sec.
-INFO: [SIM 211-1] CSim done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
-Command   csim_design done; 7.856 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 7.856 seconds; current allocated memory: 0.426 MB.
-Command ap_source done; 21.349 sec.
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl
+Execute     source E:/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/common.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source E:/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op.gen 
+Execute     source E:/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source E:/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10 (was NA)
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=clusterOp xml_exists=0
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to clusterOp
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=14
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=59 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='clusterOp_flow_control_loop_pipe_sequential_init
+clusterOp_flow_control_loop_pipe_sequential_init
+clusterOp_mul_7s_83ns_88_5_1
+clusterOp_mul_110s_6ns_110_5_1
+clusterOp_mul_81ns_4ns_85_5_1
+clusterOp_mul_75ns_6ns_81_5_1
+clusterOp_mul_70ns_6ns_76_5_1
+clusterOp_mul_65ns_6ns_71_5_1
+clusterOp_mul_60ns_6ns_66_5_1
+clusterOp_mul_29ns_29ns_58_2_1
+clusterOp_log_99_33_s_log_apfixed_reduce_log_inverse_lut_table_array_V_ROM_AUTO_1R
+clusterOp_log_99_33_s_log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_V_ROM_AUTbkb
+clusterOp_log_99_33_s_log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_V_ROM_AUTOcud
+clusterOp_log_99_33_s_log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array_V_ROM_AUTOdEe
+clusterOp_log_99_33_s_log_apfixed_reduce_log_lut_table_ap_fixed_12_6_64_array_V_ROM_AUTeOg
+clusterOp_log_99_33_s_log_apfixed_reduce_log_lut_table_ap_fixed_17_6_64_array_V_ROM_AUTfYi
+clusterOp_log_99_33_s_log_apfixed_reduce_log_lut_table_ap_fixed_22_6_64_array_V_ROM_AUTg8j
+clusterOp_mul_32ns_8ns_40_2_1
+clusterOp_mul_51ns_50ns_101_5_1
+clusterOp_mul_67ns_63ns_130_5_1
+clusterOp_mul_72ns_68ns_140_5_1
+clusterOp_mul_mul_25ns_8ns_33_4_1
+clusterOp_exp_core_32_32_66_s_f_x_msb_4_table_V_ROM_AUTO_1R
+clusterOp_exp_core_32_32_66_s_f_x_msb_5_table_V_ROM_AUTO_1R
+clusterOp_exp_core_32_32_66_s_f_x_msb_3_table_V_ROM_AUTO_1R
+clusterOp_exp_core_32_32_66_s_f_x_msb_2_table_V_ROM_AUTO_1R
+clusterOp_exp_core_32_32_66_s_exp_x_msb_1_table_V_ROM_AUTO_1R
+clusterOp_sitofp_32ns_32_6_no_dsp_1
+clusterOp_fcmp_32ns_32ns_1_2_no_dsp_1
+clusterOp_flow_control_loop_pipe_sequential_init
+clusterOp_mul_mul_17s_9ns_17_4_1
+clusterOp_distances_RAM_AUTO_1R1W
+clusterOp_grouped_RAM_AUTO_1R1W
+clusterOp_clusters_id_RAM_AUTO_1R1W
+clusterOp_clusters_members_RAM_AUTO_1R1W
+clusterOp_CTRL_BUS_s_axi
+clusterOp_regslice_both
+clusterOp_regslice_both
+clusterOp_regslice_both
+clusterOp_regslice_both
+clusterOp_regslice_both
+clusterOp_regslice_both
+clusterOp_regslice_both
+clusterOp_regslice_both
+clusterOp_regslice_both
+clusterOp_regslice_both
+clusterOp_regslice_both
+clusterOp_regslice_both
+clusterOp_regslice_both
+clusterOp_regslice_both
+clusterOp_Pipeline_1
+clusterOp_Pipeline_VITIS_LOOP_27_1
+log_99_33_s
+exp_core_32_32_66_s
+pow_32_32_s
+sqrt_fixed_32_32_s
+clusterOp_Pipeline_VITIS_LOOP_42_3
+clusterOp_Pipeline_VITIS_LOOP_67_5
+clusterOp
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute     source E:/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source E:/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/top-io-be.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.compgen.dataonly.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.compgen.dataonly.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.compgen.dataonly.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_1.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_27_1.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/log_99_33_s.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/exp_core_32_32_66_s.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/pow_32_32_s.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/sqrt_fixed_32_32_s.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_42_3.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp_Pipeline_VITIS_LOOP_67_5.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.constraint.tcl 
+Execute     sc_get_clocks clusterOp 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/impl/misc/clusterOp_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/impl/misc/clusterOp_sitofp_32ns_32_6_no_dsp_1_ip.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to clusterOp
+INFO-FLOW: DBG:PUTS:       copy ip_driver_dir 1_0 E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/driver
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.compgen.dataonly.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.compgen.dataonly.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=clusterOp
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.rtl_wrap.cfg.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_ipi_example_script
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.constraint.tcl 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/clusterOp.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl
+Execute     source E:/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/common.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source E:/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op.gen 
+Execute     source E:/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source E:/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:     IP package: exec E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/impl/ip/pack.bat
+INFO-FLOW: DBG:PUTS:     IP package: success E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/impl/ip/pack.bat
+Execute     send_msg_by_id INFO @200-802@%s export.zip 
+INFO: [HLS 200-802] Generated output file export.zip
+Command   export_design done; 53.638 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 53.638 seconds; current allocated memory: 9.477 MB.
+Command ap_source done; 66.267 sec.
 Execute cleanup_all 

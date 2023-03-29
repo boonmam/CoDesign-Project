@@ -7,7 +7,7 @@
     </downStreamTool>
     <synthesis askAgain="true"/>
     <config>
-        <config_export format="ip_catalog" rtl="verilog" vivado_clock="10"/>
+        <config_export display_name="clusterOp" format="ip_catalog" output="E:/Github/CoDesign-Project/Project_Update_2" rtl="verilog" vivado_clock="10"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
@@ -40,8 +40,8 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="true" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="true" rtlCombo="verilog">
-        <Format formatName="ip_catalog"/>
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="E:/Github/CoDesign-Project/Project_Update_2" rtl="verilog" rtlButton="true" rtlCombo="verilog">
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="clusterOp" version="" display_name="clusterOp" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>

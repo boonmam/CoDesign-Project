@@ -26934,7 +26934,14 @@ __attribute__((sdx_kernel("clusterOp", 0))) void clusterOp(hls::stream<axis_t>& 
             tmp.keep = -1;
             tmp.strb = -1;
             tmp.user = (j == 0) ? 1 : 0;
-            tmp.last = (j == clusters[i].member_count-1) ? 1 : 0;
+
+            if (j == clusters[i].member_count-1 & i == cluster_count-1){
+             tmp.last = 1;
+            }
+
+            else{
+             tmp.last = 0;
+            }
             tmp.id = clusters[i].id;
             tmp.dest = 0;
 

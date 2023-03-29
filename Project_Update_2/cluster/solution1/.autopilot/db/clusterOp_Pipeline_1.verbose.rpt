@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'clusterOp_Pipeline_1'
 ================================================================
-* Date:           Mon Mar 27 01:29:35 2023
+* Date:           Mon Mar 27 20:49:15 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        cluster
@@ -86,7 +86,7 @@
     |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +-----------------------+----------+----+---+----+------------+------------+
     |empty_114_fu_58_p2     |         +|   0|  0|  14|           9|           1|
-    |exitcond2246_fu_52_p2  |      icmp|   0|  0|  11|           9|           9|
+    |exitcond2366_fu_52_p2  |      icmp|   0|  0|  11|           9|           9|
     +-----------------------+----------+----+---+----+------------+------------+
     |Total                  |          |   0|  0|  25|          18|          10|
     +-----------------------+----------+----+---+----+------------+------------+
@@ -179,16 +179,16 @@ ST_1 : Operation 5 [1/1] (1.58ns)   --->   "%store_ln0 = store i9 0, i9 %empty" 
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%br_ln0 = br void %memset.loop"   --->   Operation 6 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_load = load i9 %empty"   --->   Operation 7 'load' 'p_load' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 8 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (1.66ns)   --->   "%exitcond2246 = icmp_eq  i9 %p_load, i9 360"   --->   Operation 9 'icmp' 'exitcond2246' <Predicate = true> <Delay = 1.66> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [1/1] (1.66ns)   --->   "%exitcond2366 = icmp_eq  i9 %p_load, i9 360"   --->   Operation 9 'icmp' 'exitcond2366' <Predicate = true> <Delay = 1.66> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%empty_113 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 360, i64 360, i64 360"   --->   Operation 10 'speclooptripcount' 'empty_113' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 11 [1/1] (1.82ns)   --->   "%empty_114 = add i9 %p_load, i9 1"   --->   Operation 11 'add' 'empty_114' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond2246, void %memset.loop.split, void %for.inc.preheader.exitStub"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_cast = zext i9 %p_load"   --->   Operation 13 'zext' 'p_cast' <Predicate = (!exitcond2246)> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%grouped_addr = getelementptr i1 %grouped, i64 0, i64 %p_cast"   --->   Operation 14 'getelementptr' 'grouped_addr' <Predicate = (!exitcond2246)> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (2.32ns)   --->   "%store_ln0 = store i1 0, i9 %grouped_addr"   --->   Operation 15 'store' 'store_ln0' <Predicate = (!exitcond2246)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 360> <RAM>
-ST_1 : Operation 16 [1/1] (1.58ns)   --->   "%store_ln0 = store i9 %empty_114, i9 %empty"   --->   Operation 16 'store' 'store_ln0' <Predicate = (!exitcond2246)> <Delay = 1.58>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln0 = br void %memset.loop"   --->   Operation 17 'br' 'br_ln0' <Predicate = (!exitcond2246)> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 18 'ret' 'ret_ln0' <Predicate = (exitcond2246)> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond2366, void %memset.loop.split, void %for.inc.preheader.exitStub"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_cast = zext i9 %p_load"   --->   Operation 13 'zext' 'p_cast' <Predicate = (!exitcond2366)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%grouped_addr = getelementptr i1 %grouped, i64 0, i64 %p_cast"   --->   Operation 14 'getelementptr' 'grouped_addr' <Predicate = (!exitcond2366)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (2.32ns)   --->   "%store_ln0 = store i1 0, i9 %grouped_addr"   --->   Operation 15 'store' 'store_ln0' <Predicate = (!exitcond2366)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 360> <RAM>
+ST_1 : Operation 16 [1/1] (1.58ns)   --->   "%store_ln0 = store i9 %empty_114, i9 %empty"   --->   Operation 16 'store' 'store_ln0' <Predicate = (!exitcond2366)> <Delay = 1.58>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln0 = br void %memset.loop"   --->   Operation 17 'br' 'br_ln0' <Predicate = (!exitcond2366)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 18 'ret' 'ret_ln0' <Predicate = (exitcond2366)> <Delay = 0.00>
 
 
 ============================================================
@@ -214,7 +214,7 @@ store_ln0        (store            ) [ 00]
 br_ln0           (br               ) [ 00]
 p_load           (load             ) [ 00]
 specpipeline_ln0 (specpipeline     ) [ 00]
-exitcond2246     (icmp             ) [ 01]
+exitcond2366     (icmp             ) [ 01]
 empty_113        (speclooptripcount) [ 00]
 empty_114        (add              ) [ 00]
 br_ln0           (br               ) [ 00]
@@ -407,7 +407,7 @@ ret_ln0          (ret              ) [ 00]
 </bind>
 </comp>
 
-<comp id="52" class="1004" name="exitcond2246_fu_52">
+<comp id="52" class="1004" name="exitcond2366_fu_52">
 <pin_list>
 <pin id="53" dir="0" index="0" bw="9" slack="0"/>
 <pin id="54" dir="0" index="1" bw="9" slack="0"/>
@@ -415,7 +415,7 @@ ret_ln0          (ret              ) [ 00]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="exitcond2246/1 "/>
+<opset="exitcond2366/1 "/>
 </bind>
 </comp>
 
@@ -514,7 +514,7 @@ ret_ln0          (ret              ) [ 00]
 	State 1
 		store_ln0 : 1
 		p_load : 1
-		exitcond2246 : 2
+		exitcond2366 : 2
 		empty_114 : 2
 		br_ln0 : 3
 		p_cast : 2
@@ -533,7 +533,7 @@ ret_ln0          (ret              ) [ 00]
 |----------|--------------------|---------|---------|
 |    add   |   empty_114_fu_58  |    0    |    14   |
 |----------|--------------------|---------|---------|
-|   icmp   | exitcond2246_fu_52 |    0    |    11   |
+|   icmp   | exitcond2366_fu_52 |    0    |    11   |
 |----------|--------------------|---------|---------|
 |   zext   |    p_cast_fu_64    |    0    |    0    |
 |----------|--------------------|---------|---------|

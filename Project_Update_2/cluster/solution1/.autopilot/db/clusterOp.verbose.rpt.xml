@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'clusterOp'" level="0">
-<item name = "Date">Mon Mar 27 01:29:42 2023
+<item name = "Date">Mon Mar 27 20:49:22 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">cluster</item>
@@ -53,12 +53,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, 1, -, -, -</column>
-<column name="Expression">-, -, 0, 208, -</column>
+<column name="Expression">-, -, 0, 265, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">46, 90, 20018, 15172, -</column>
+<column name="Instance">46, 90, 20018, 15174, -</column>
 <column name="Memory">75, -, 1, 6, 0</column>
 <column name="Multiplexer">-, -, -, 368, -</column>
-<column name="Register">-, -, 366, -, -</column>
+<column name="Register">-, -, 399, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">43, 41, 19, 29, 0</specialColumn>
 </table>
@@ -71,12 +71,12 @@
 <column name="grp_clusterOp_Pipeline_1_fu_239">clusterOp_Pipeline_1, 0, 0, 11, 52, 0</column>
 <column name="grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245">clusterOp_Pipeline_VITIS_LOOP_27_1, 0, 0, 11, 65, 0</column>
 <column name="grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264">clusterOp_Pipeline_VITIS_LOOP_42_3, 46, 90, 19924, 14851, 0</column>
-<column name="grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300">clusterOp_Pipeline_VITIS_LOOP_67_5, 0, 0, 36, 164, 0</column>
+<column name="grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300">clusterOp_Pipeline_VITIS_LOOP_67_5, 0, 0, 36, 166, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="mul_mul_17s_9ns_17_4_1_U76">mul_mul_17s_9ns_17_4_1, i0 * i1</column>
+<column name="mul_mul_17s_9ns_17_4_1_U77">mul_mul_17s_9ns_17_4_1, i0 * i1</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -94,14 +94,16 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln33_fu_345_p2">+, 0, 0, 14, 9, 1</column>
-<column name="add_ln66_1_fu_412_p2">+, 0, 0, 47, 40, 9</column>
-<column name="add_ln66_fu_428_p2">+, 0, 0, 38, 31, 1</column>
-<column name="cluster_count_1_fu_374_p2">+, 0, 0, 39, 32, 1</column>
-<column name="sub89_fu_450_p2">+, 0, 0, 39, 32, 2</column>
+<column name="add_ln33_fu_346_p2">+, 0, 0, 14, 9, 1</column>
+<column name="add_ln66_1_fu_419_p2">+, 0, 0, 47, 40, 9</column>
+<column name="add_ln66_fu_435_p2">+, 0, 0, 38, 31, 1</column>
+<column name="cluster_count_1_fu_381_p2">+, 0, 0, 39, 32, 1</column>
+<column name="sub88_fu_462_p2">+, 0, 0, 39, 32, 2</column>
+<column name="sub91_fu_357_p2">+, 0, 0, 39, 32, 2</column>
 <column name="grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_outStream_TREADY">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln33_fu_339_p2">icmp, 0, 0, 11, 9, 9</column>
-<column name="icmp_ln66_fu_422_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="cmp92_fu_447_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="icmp_ln33_fu_340_p2">icmp, 0, 0, 11, 9, 9</column>
+<column name="icmp_ln66_fu_429_p2">icmp, 0, 0, 18, 32, 32</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -129,28 +131,30 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln33_reg_489">9, 0, 9, 0</column>
+<column name="add_ln33_reg_501">9, 0, 9, 0</column>
 <column name="ap_CS_fsm">18, 0, 18, 0</column>
 <column name="cluster_count_fu_128">32, 0, 32, 0</column>
-<column name="cluster_count_load_reg_518">32, 0, 32, 0</column>
-<column name="clusters_id_load_reg_580">5, 0, 5, 0</column>
-<column name="clusters_member_count_load_reg_570">32, 0, 32, 0</column>
-<column name="distances_load_reg_542">32, 0, 32, 0</column>
-<column name="grouped_addr_reg_499">9, 0, 9, 0</column>
-<column name="grouped_load_reg_528">1, 0, 1, 0</column>
+<column name="cluster_count_load_1_reg_535">32, 0, 32, 0</column>
+<column name="clusters_id_load_reg_602">5, 0, 5, 0</column>
+<column name="clusters_member_count_load_reg_592">32, 0, 32, 0</column>
+<column name="cmp92_reg_582">1, 0, 1, 0</column>
+<column name="distances_load_reg_559">32, 0, 32, 0</column>
+<column name="grouped_addr_reg_511">9, 0, 9, 0</column>
+<column name="grouped_load_reg_545">1, 0, 1, 0</column>
 <column name="grp_clusterOp_Pipeline_1_fu_239_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_clusterOp_Pipeline_VITIS_LOOP_27_1_fu_245_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_ap_start_reg">1, 0, 1, 0</column>
 <column name="i_1_fu_160">31, 0, 31, 0</column>
-<column name="mul_ln37_reg_547">17, 0, 17, 0</column>
+<column name="mul_ln37_reg_564">17, 0, 17, 0</column>
 <column name="p_loc_fu_132">32, 0, 32, 0</column>
 <column name="phi_mul_fu_156">40, 0, 40, 0</column>
 <column name="put_fu_124">9, 0, 9, 0</column>
-<column name="sub89_reg_575">32, 0, 32, 0</column>
-<column name="trunc_ln33_reg_523">5, 0, 5, 0</column>
-<column name="trunc_ln66_reg_552">17, 0, 17, 0</column>
-<column name="zext_ln33_reg_494">9, 0, 64, 55</column>
+<column name="sub88_reg_597">32, 0, 32, 0</column>
+<column name="sub91_reg_530">32, 0, 32, 0</column>
+<column name="trunc_ln33_reg_540">5, 0, 5, 0</column>
+<column name="trunc_ln66_reg_569">17, 0, 17, 0</column>
+<column name="zext_ln33_reg_506">9, 0, 64, 55</column>
 </table>
 </item>
 </section>

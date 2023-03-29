@@ -94,10 +94,10 @@ memset.loop:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 
 
 <Node id="8" bw="1" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-memset.loop:2 %exitcond2246 = icmp_eq  i9 %p_load, i9 360
+memset.loop:2 %exitcond2366 = icmp_eq  i9 %p_load, i9 360
 
 ]]></Node>
-<StgValue><ssdm name="exitcond2246"/></StgValue>
+<StgValue><ssdm name="exitcond2366"/></StgValue>
 </operation>
 
 <operation id="10" st_id="1" stage="1" lat="1">
@@ -139,7 +139,7 @@ memset.loop:4 %empty_114 = add i9 %p_load, i9 1
 
 <Node id="11" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-memset.loop:5 %br_ln0 = br i1 %exitcond2246, void %memset.loop.split, void %for.inc.preheader.exitStub
+memset.loop:5 %br_ln0 = br i1 %exitcond2366, void %memset.loop.split, void %for.inc.preheader.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -149,7 +149,7 @@ memset.loop:5 %br_ln0 = br i1 %exitcond2246, void %memset.loop.split, void %for.
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond2246" val="0"/>
+<or_exp><and_exp><literal name="exitcond2366" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -165,7 +165,7 @@ memset.loop.split:0 %p_cast = zext i9 %p_load
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond2246" val="0"/>
+<or_exp><and_exp><literal name="exitcond2366" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -181,7 +181,7 @@ memset.loop.split:1 %grouped_addr = getelementptr i1 %grouped, i64 0, i64 %p_cas
 <core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond2246" val="0"/>
+<or_exp><and_exp><literal name="exitcond2366" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -197,7 +197,7 @@ memset.loop.split:2 %store_ln0 = store i1 0, i9 %grouped_addr
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond2246" val="0"/>
+<or_exp><and_exp><literal name="exitcond2366" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -213,7 +213,7 @@ memset.loop.split:3 %store_ln0 = store i9 %empty_114, i9 %empty
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond2246" val="0"/>
+<or_exp><and_exp><literal name="exitcond2366" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -229,7 +229,7 @@ memset.loop.split:4 %br_ln0 = br void %memset.loop
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond2246" val="1"/>
+<or_exp><and_exp><literal name="exitcond2366" val="1"/>
 </and_exp></or_exp>
 </condition>
 

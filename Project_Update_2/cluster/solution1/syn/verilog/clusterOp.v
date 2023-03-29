@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="clusterOp_clusterOp,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.289300,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=121,HLS_SYN_DSP=0,HLS_SYN_FF=20385,HLS_SYN_LUT=15754,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="clusterOp_clusterOp,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.289300,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=121,HLS_SYN_DSP=0,HLS_SYN_FF=20418,HLS_SYN_LUT=15813,HLS_VERSION=2022_2}" *)
 
 module clusterOp (
         ap_clk,
@@ -121,36 +121,40 @@ reg    ap_idle;
 (* fsm_encoding = "none" *) reg   [17:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_ready;
-wire   [8:0] add_ln33_fu_345_p2;
-reg   [8:0] add_ln33_reg_489;
+wire   [8:0] add_ln33_fu_346_p2;
+reg   [8:0] add_ln33_reg_501;
 wire    ap_CS_fsm_state6;
-wire   [63:0] zext_ln33_fu_351_p1;
-reg   [63:0] zext_ln33_reg_494;
-wire   [0:0] icmp_ln33_fu_339_p2;
-reg   [8:0] grouped_addr_reg_499;
-reg   [31:0] cluster_count_load_reg_518;
+wire   [63:0] zext_ln33_fu_352_p1;
+reg   [63:0] zext_ln33_reg_506;
+wire   [0:0] icmp_ln33_fu_340_p2;
+reg   [8:0] grouped_addr_reg_511;
+wire   [31:0] sub91_fu_357_p2;
+reg   [31:0] sub91_reg_530;
+reg   [31:0] cluster_count_load_1_reg_535;
 wire    ap_CS_fsm_state7;
-wire   [4:0] trunc_ln33_fu_366_p1;
-reg   [4:0] trunc_ln33_reg_523;
+wire   [4:0] trunc_ln33_fu_373_p1;
+reg   [4:0] trunc_ln33_reg_540;
 wire   [0:0] grouped_q0;
-reg   [0:0] grouped_load_reg_528;
+reg   [0:0] grouped_load_reg_545;
 wire   [31:0] distances_q0;
-reg   [31:0] distances_load_reg_542;
+reg   [31:0] distances_load_reg_559;
 wire    ap_CS_fsm_state8;
-wire   [16:0] grp_fu_456_p2;
-reg   [16:0] mul_ln37_reg_547;
+wire   [16:0] grp_fu_468_p2;
+reg   [16:0] mul_ln37_reg_564;
 wire    ap_CS_fsm_state10;
-wire   [16:0] trunc_ln66_fu_408_p1;
-reg   [16:0] trunc_ln66_reg_552;
+wire   [16:0] trunc_ln66_fu_415_p1;
+reg   [16:0] trunc_ln66_reg_569;
 wire    ap_CS_fsm_state14;
-wire   [0:0] icmp_ln66_fu_422_p2;
+wire   [0:0] icmp_ln66_fu_429_p2;
+wire   [0:0] cmp92_fu_447_p2;
+reg   [0:0] cmp92_reg_582;
 wire   [31:0] clusters_member_count_q0;
-reg   [31:0] clusters_member_count_load_reg_570;
+reg   [31:0] clusters_member_count_load_reg_592;
 wire    ap_CS_fsm_state15;
-wire   [31:0] sub89_fu_450_p2;
-reg   [31:0] sub89_reg_575;
+wire   [31:0] sub88_fu_462_p2;
+reg   [31:0] sub88_reg_597;
 wire   [4:0] clusters_id_q0;
-reg   [4:0] clusters_id_load_reg_580;
+reg   [4:0] clusters_id_load_reg_602;
 reg   [8:0] distances_address0;
 reg    distances_ce0;
 reg    distances_we0;
@@ -229,21 +233,21 @@ reg   [31:0] p_loc_fu_132;
 reg    grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_ap_start_reg;
 wire    ap_CS_fsm_state16;
 wire    ap_CS_fsm_state17;
-wire   [63:0] zext_ln37_fu_385_p1;
-wire   [63:0] zext_ln36_fu_389_p1;
+wire   [63:0] zext_ln37_fu_392_p1;
+wire   [63:0] zext_ln36_fu_396_p1;
 wire    ap_CS_fsm_state13;
-wire   [63:0] zext_ln66_fu_434_p1;
+wire   [63:0] zext_ln66_fu_441_p1;
 reg   [8:0] put_fu_124;
 reg   [31:0] cluster_count_fu_128;
-wire   [31:0] cluster_count_1_fu_374_p2;
+wire   [31:0] cluster_count_1_fu_381_p2;
 reg   [39:0] phi_mul_fu_156;
-wire   [39:0] add_ln66_1_fu_412_p2;
+wire   [39:0] add_ln66_1_fu_419_p2;
 reg   [30:0] i_1_fu_160;
-wire   [30:0] add_ln66_fu_428_p2;
-wire  signed [16:0] zext_ln37_fu_385_p0;
-wire   [31:0] zext_ln66_1_fu_418_p1;
-wire  signed [16:0] grp_fu_456_p0;
-wire   [8:0] grp_fu_456_p1;
+wire   [30:0] add_ln66_fu_435_p2;
+wire  signed [16:0] zext_ln37_fu_392_p0;
+wire   [31:0] zext_ln66_1_fu_425_p1;
+wire  signed [16:0] grp_fu_468_p0;
+wire   [8:0] grp_fu_468_p1;
 wire    ap_CS_fsm_state18;
 wire    regslice_both_outStream_V_data_V_U_apdone_blk;
 reg   [17:0] ap_NS_fsm;
@@ -364,7 +368,7 @@ clusters_id_U(
     .address0(clusters_id_address0),
     .ce0(clusters_id_ce0),
     .we0(clusters_id_we0),
-    .d0(trunc_ln33_reg_523),
+    .d0(trunc_ln33_reg_540),
     .q0(clusters_id_q0)
 );
 
@@ -448,8 +452,8 @@ clusterOp_clusterOp_Pipeline_VITIS_LOOP_42_3 grp_clusterOp_Pipeline_VITIS_LOOP_4
     .distances_address0(grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_distances_address0),
     .distances_ce0(grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_distances_ce0),
     .distances_q0(distances_q0),
-    .distances_load(distances_load_reg_542),
-    .mul_ln37(mul_ln37_reg_547),
+    .distances_load(distances_load_reg_559),
+    .mul_ln37(mul_ln37_reg_564),
     .clusters_members_address0(grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_clusters_members_address0),
     .clusters_members_ce0(grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_clusters_members_ce0),
     .clusters_members_we0(grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_clusters_members_we0),
@@ -466,13 +470,14 @@ clusterOp_clusterOp_Pipeline_VITIS_LOOP_67_5 grp_clusterOp_Pipeline_VITIS_LOOP_6
     .ap_idle(grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_ap_idle),
     .ap_ready(grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_ap_ready),
     .outStream_TREADY(grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_outStream_TREADY),
-    .clusters_member_count_load(clusters_member_count_load_reg_570),
-    .phi_mul(trunc_ln66_reg_552),
+    .clusters_member_count_load(clusters_member_count_load_reg_592),
+    .phi_mul(trunc_ln66_reg_569),
     .clusters_members_address0(grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_clusters_members_address0),
     .clusters_members_ce0(grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_clusters_members_ce0),
     .clusters_members_q0(clusters_members_q0),
-    .sub89(sub89_reg_575),
-    .tmp_id_V(clusters_id_load_reg_580),
+    .sub88(sub88_reg_597),
+    .cmp92(cmp92_reg_582),
+    .tmp_id_V(clusters_id_load_reg_602),
     .outStream_TDATA(grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_outStream_TDATA),
     .outStream_TVALID(grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_outStream_TVALID),
     .outStream_TKEEP(grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_outStream_TKEEP),
@@ -520,13 +525,13 @@ clusterOp_mul_mul_17s_9ns_17_4_1 #(
     .din0_WIDTH( 17 ),
     .din1_WIDTH( 9 ),
     .dout_WIDTH( 17 ))
-mul_mul_17s_9ns_17_4_1_U76(
+mul_mul_17s_9ns_17_4_1_U77(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .din0(grp_fu_456_p0),
-    .din1(grp_fu_456_p1),
+    .din0(grp_fu_468_p0),
+    .din1(grp_fu_468_p1),
     .ce(1'b1),
-    .dout(grp_fu_456_p2)
+    .dout(grp_fu_468_p2)
 );
 
 clusterOp_regslice_both #(
@@ -785,23 +790,23 @@ always @ (posedge ap_clk) begin
     if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         cluster_count_fu_128 <= 32'd0;
     end else if (((grouped_q0 == 1'd0) & (1'b1 == ap_CS_fsm_state7))) begin
-        cluster_count_fu_128 <= cluster_count_1_fu_374_p2;
+        cluster_count_fu_128 <= cluster_count_1_fu_381_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln33_fu_339_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state6))) begin
+    if (((icmp_ln33_fu_340_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state6))) begin
         i_1_fu_160 <= 31'd0;
-    end else if (((1'b1 == ap_CS_fsm_state14) & (icmp_ln66_fu_422_p2 == 1'd1))) begin
-        i_1_fu_160 <= add_ln66_fu_428_p2;
+    end else if (((1'b1 == ap_CS_fsm_state14) & (icmp_ln66_fu_429_p2 == 1'd1))) begin
+        i_1_fu_160 <= add_ln66_fu_435_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln33_fu_339_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state6))) begin
+    if (((icmp_ln33_fu_340_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state6))) begin
         phi_mul_fu_156 <= 40'd0;
-    end else if (((1'b1 == ap_CS_fsm_state14) & (icmp_ln66_fu_422_p2 == 1'd1))) begin
-        phi_mul_fu_156 <= add_ln66_1_fu_412_p2;
+    end else if (((1'b1 == ap_CS_fsm_state14) & (icmp_ln66_fu_429_p2 == 1'd1))) begin
+        phi_mul_fu_156 <= add_ln66_1_fu_419_p2;
     end
 end
 
@@ -809,48 +814,54 @@ always @ (posedge ap_clk) begin
     if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         put_fu_124 <= 9'd0;
     end else if ((1'b1 == ap_CS_fsm_state13)) begin
-        put_fu_124 <= add_ln33_reg_489;
+        put_fu_124 <= add_ln33_reg_501;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state6)) begin
-        add_ln33_reg_489 <= add_ln33_fu_345_p2;
+        add_ln33_reg_501 <= add_ln33_fu_346_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state7)) begin
-        cluster_count_load_reg_518 <= cluster_count_fu_128;
-        grouped_load_reg_528 <= grouped_q0;
-        trunc_ln33_reg_523 <= trunc_ln33_fu_366_p1;
+        cluster_count_load_1_reg_535 <= cluster_count_fu_128;
+        grouped_load_reg_545 <= grouped_q0;
+        trunc_ln33_reg_540 <= trunc_ln33_fu_373_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state15)) begin
-        clusters_id_load_reg_580 <= clusters_id_q0;
-        clusters_member_count_load_reg_570 <= clusters_member_count_q0;
-        sub89_reg_575 <= sub89_fu_450_p2;
+        clusters_id_load_reg_602 <= clusters_id_q0;
+        clusters_member_count_load_reg_592 <= clusters_member_count_q0;
+        sub88_reg_597 <= sub88_fu_462_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state14) & (icmp_ln66_fu_429_p2 == 1'd1))) begin
+        cmp92_reg_582 <= cmp92_fu_447_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state8)) begin
-        distances_load_reg_542 <= distances_q0;
+        distances_load_reg_559 <= distances_q0;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln33_fu_339_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state6))) begin
-        grouped_addr_reg_499 <= zext_ln33_fu_351_p1;
-        zext_ln33_reg_494[8 : 0] <= zext_ln33_fu_351_p1[8 : 0];
+    if (((icmp_ln33_fu_340_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state6))) begin
+        grouped_addr_reg_511 <= zext_ln33_fu_352_p1;
+        zext_ln33_reg_506[8 : 0] <= zext_ln33_fu_352_p1[8 : 0];
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state10)) begin
-        mul_ln37_reg_547 <= grp_fu_456_p2;
+        mul_ln37_reg_564 <= grp_fu_468_p2;
     end
 end
 
@@ -861,8 +872,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
+    if (((icmp_ln33_fu_340_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state6))) begin
+        sub91_reg_530 <= sub91_fu_357_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state14)) begin
-        trunc_ln66_reg_552 <= trunc_ln66_fu_408_p1;
+        trunc_ln66_reg_569 <= trunc_ln66_fu_415_p1;
     end
 end
 
@@ -964,9 +981,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state14)) begin
-        clusters_id_address0 = zext_ln66_fu_434_p1;
+        clusters_id_address0 = zext_ln66_fu_441_p1;
     end else if ((1'b1 == ap_CS_fsm_state13)) begin
-        clusters_id_address0 = zext_ln36_fu_389_p1;
+        clusters_id_address0 = zext_ln36_fu_396_p1;
     end else begin
         clusters_id_address0 = 'bx;
     end
@@ -981,7 +998,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((grouped_load_reg_528 == 1'd0) & (1'b1 == ap_CS_fsm_state13))) begin
+    if (((grouped_load_reg_545 == 1'd0) & (1'b1 == ap_CS_fsm_state13))) begin
         clusters_id_we0 = 1'b1;
     end else begin
         clusters_id_we0 = 1'b0;
@@ -990,9 +1007,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state14)) begin
-        clusters_member_count_address0 = zext_ln66_fu_434_p1;
+        clusters_member_count_address0 = zext_ln66_fu_441_p1;
     end else if ((1'b1 == ap_CS_fsm_state13)) begin
-        clusters_member_count_address0 = zext_ln36_fu_389_p1;
+        clusters_member_count_address0 = zext_ln36_fu_396_p1;
     end else begin
         clusters_member_count_address0 = 'bx;
     end
@@ -1007,7 +1024,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((grouped_load_reg_528 == 1'd0) & (1'b1 == ap_CS_fsm_state13))) begin
+    if (((grouped_load_reg_545 == 1'd0) & (1'b1 == ap_CS_fsm_state13))) begin
         clusters_member_count_we0 = 1'b1;
     end else begin
         clusters_member_count_we0 = 1'b0;
@@ -1016,7 +1033,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state10)) begin
-        clusters_members_address0 = zext_ln37_fu_385_p1;
+        clusters_members_address0 = zext_ln37_fu_392_p1;
     end else if ((1'b1 == ap_CS_fsm_state17)) begin
         clusters_members_address0 = grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_clusters_members_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
@@ -1060,7 +1077,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state7)) begin
-        distances_address0 = zext_ln33_reg_494;
+        distances_address0 = zext_ln33_reg_506;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         distances_address0 = grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_distances_address0;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
@@ -1092,9 +1109,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state7)) begin
-        grouped_address0 = grouped_addr_reg_499;
+        grouped_address0 = grouped_addr_reg_511;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        grouped_address0 = zext_ln33_fu_351_p1;
+        grouped_address0 = zext_ln33_fu_352_p1;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         grouped_address0 = grp_clusterOp_Pipeline_VITIS_LOOP_42_3_fu_264_grouped_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -1178,7 +1195,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state6;
         end
         ap_ST_fsm_state6 : begin
-            if (((icmp_ln33_fu_339_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state6))) begin
+            if (((icmp_ln33_fu_340_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state6))) begin
                 ap_NS_fsm = ap_ST_fsm_state14;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state7;
@@ -1214,7 +1231,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state6;
         end
         ap_ST_fsm_state14 : begin
-            if (((1'b1 == ap_CS_fsm_state14) & (icmp_ln66_fu_422_p2 == 1'd0))) begin
+            if (((1'b1 == ap_CS_fsm_state14) & (icmp_ln66_fu_429_p2 == 1'd0))) begin
                 ap_NS_fsm = ap_ST_fsm_state18;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state15;
@@ -1246,11 +1263,11 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln33_fu_345_p2 = (put_fu_124 + 9'd1);
+assign add_ln33_fu_346_p2 = (put_fu_124 + 9'd1);
 
-assign add_ln66_1_fu_412_p2 = (phi_mul_fu_156 + 40'd360);
+assign add_ln66_1_fu_419_p2 = (phi_mul_fu_156 + 40'd360);
 
-assign add_ln66_fu_428_p2 = (i_1_fu_160 + 31'd1);
+assign add_ln66_fu_435_p2 = (i_1_fu_160 + 31'd1);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -1288,7 +1305,9 @@ always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign cluster_count_1_fu_374_p2 = (cluster_count_fu_128 + 32'd1);
+assign cluster_count_1_fu_381_p2 = (cluster_count_fu_128 + 32'd1);
+
+assign cmp92_fu_447_p2 = ((zext_ln66_1_fu_425_p1 == sub91_reg_530) ? 1'b1 : 1'b0);
 
 assign grp_clusterOp_Pipeline_1_fu_239_ap_start = grp_clusterOp_Pipeline_1_fu_239_ap_start_reg;
 
@@ -1300,13 +1319,13 @@ assign grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_ap_start = grp_clusterOp_Pi
 
 assign grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_outStream_TREADY = (outStream_TREADY_int_regslice & ap_CS_fsm_state17);
 
-assign grp_fu_456_p0 = cluster_count_fu_128[16:0];
+assign grp_fu_468_p0 = cluster_count_fu_128[16:0];
 
-assign grp_fu_456_p1 = 17'd360;
+assign grp_fu_468_p1 = 17'd360;
 
-assign icmp_ln33_fu_339_p2 = ((put_fu_124 == 9'd360) ? 1'b1 : 1'b0);
+assign icmp_ln33_fu_340_p2 = ((put_fu_124 == 9'd360) ? 1'b1 : 1'b0);
 
-assign icmp_ln66_fu_422_p2 = (($signed(zext_ln66_1_fu_418_p1) < $signed(cluster_count_fu_128)) ? 1'b1 : 1'b0);
+assign icmp_ln66_fu_429_p2 = (($signed(zext_ln66_1_fu_425_p1) < $signed(cluster_count_fu_128)) ? 1'b1 : 1'b0);
 
 assign inStream_TREADY = regslice_both_inStream_V_data_V_U_ack_in;
 
@@ -1314,26 +1333,28 @@ assign outStream_TVALID = regslice_both_outStream_V_data_V_U_vld_out;
 
 assign outStream_TVALID_int_regslice = grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300_outStream_TVALID;
 
-assign sub89_fu_450_p2 = ($signed(clusters_member_count_q0) + $signed(32'd4294967295));
+assign sub88_fu_462_p2 = ($signed(clusters_member_count_q0) + $signed(32'd4294967295));
 
-assign trunc_ln33_fu_366_p1 = cluster_count_fu_128[4:0];
+assign sub91_fu_357_p2 = ($signed(cluster_count_fu_128) + $signed(32'd4294967295));
 
-assign trunc_ln66_fu_408_p1 = phi_mul_fu_156[16:0];
+assign trunc_ln33_fu_373_p1 = cluster_count_fu_128[4:0];
 
-assign zext_ln33_fu_351_p1 = put_fu_124;
+assign trunc_ln66_fu_415_p1 = phi_mul_fu_156[16:0];
 
-assign zext_ln36_fu_389_p1 = cluster_count_load_reg_518;
+assign zext_ln33_fu_352_p1 = put_fu_124;
 
-assign zext_ln37_fu_385_p0 = grp_fu_456_p2;
+assign zext_ln36_fu_396_p1 = cluster_count_load_1_reg_535;
 
-assign zext_ln37_fu_385_p1 = $unsigned(zext_ln37_fu_385_p0);
+assign zext_ln37_fu_392_p0 = grp_fu_468_p2;
 
-assign zext_ln66_1_fu_418_p1 = i_1_fu_160;
+assign zext_ln37_fu_392_p1 = $unsigned(zext_ln37_fu_392_p0);
 
-assign zext_ln66_fu_434_p1 = i_1_fu_160;
+assign zext_ln66_1_fu_425_p1 = i_1_fu_160;
+
+assign zext_ln66_fu_441_p1 = i_1_fu_160;
 
 always @ (posedge ap_clk) begin
-    zext_ln33_reg_494[63:9] <= 55'b0000000000000000000000000000000000000000000000000000000;
+    zext_ln33_reg_506[63:9] <= 55'b0000000000000000000000000000000000000000000000000000000;
 end
 
 endmodule //clusterOp

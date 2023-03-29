@@ -20,7 +20,8 @@ module clusterOp_clusterOp_Pipeline_VITIS_LOOP_67_5 (
         clusters_members_address0,
         clusters_members_ce0,
         clusters_members_q0,
-        sub89,
+        sub88,
+        cmp92,
         tmp_id_V,
         outStream_TDATA,
         outStream_TVALID,
@@ -46,7 +47,8 @@ input  [16:0] phi_mul;
 output  [16:0] clusters_members_address0;
 output   clusters_members_ce0;
 input  [8:0] clusters_members_q0;
-input  [31:0] sub89;
+input  [31:0] sub88;
+input  [0:0] cmp92;
 input  [4:0] tmp_id_V;
 output  [31:0] outStream_TDATA;
 output   outStream_TVALID;
@@ -69,26 +71,27 @@ reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 reg    ap_block_state2_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] icmp_ln67_fu_149_p2;
+wire   [0:0] icmp_ln67_fu_159_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 reg    outStream_TDATA_blk_n;
 wire    ap_block_pp0_stage0;
 reg    ap_block_pp0_stage0_11001;
-wire   [0:0] tmp_user_V_fu_176_p2;
-reg   [0:0] tmp_user_V_reg_222;
-wire   [0:0] tmp_last_V_fu_182_p2;
-reg   [0:0] tmp_last_V_reg_227;
-wire   [63:0] zext_ln69_fu_171_p1;
-reg   [30:0] j_fu_68;
-wire   [30:0] add_ln67_fu_155_p2;
+wire   [0:0] tmp_user_V_fu_186_p2;
+reg   [0:0] tmp_user_V_reg_238;
+wire   [0:0] tmp_last_V_fu_198_p2;
+reg   [0:0] tmp_last_V_reg_243;
+wire   [63:0] zext_ln69_fu_181_p1;
+reg   [30:0] j_fu_72;
+wire   [30:0] add_ln67_fu_165_p2;
 wire    ap_loop_init;
 reg   [30:0] ap_sig_allocacmp_j_1;
 reg    ap_block_pp0_stage0_01001;
-wire   [31:0] j_cast_fu_145_p1;
-wire   [16:0] trunc_ln69_fu_161_p1;
-wire   [16:0] add_ln69_fu_165_p2;
+wire   [31:0] j_cast_fu_155_p1;
+wire   [16:0] trunc_ln69_fu_171_p1;
+wire   [16:0] add_ln69_fu_175_p2;
+wire   [0:0] icmp_ln74_fu_192_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -153,23 +156,23 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((icmp_ln67_fu_149_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            j_fu_68 <= add_ln67_fu_155_p2;
+        if (((icmp_ln67_fu_159_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            j_fu_72 <= add_ln67_fu_165_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            j_fu_68 <= 31'd0;
+            j_fu_72 <= 31'd0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln67_fu_149_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        tmp_last_V_reg_227 <= tmp_last_V_fu_182_p2;
-        tmp_user_V_reg_222 <= tmp_user_V_fu_176_p2;
+    if (((icmp_ln67_fu_159_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        tmp_last_V_reg_243 <= tmp_last_V_fu_198_p2;
+        tmp_user_V_reg_238 <= tmp_user_V_fu_186_p2;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln67_fu_149_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln67_fu_159_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -212,7 +215,7 @@ always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_sig_allocacmp_j_1 = 31'd0;
     end else begin
-        ap_sig_allocacmp_j_1 = j_fu_68;
+        ap_sig_allocacmp_j_1 = j_fu_72;
     end
 end
 
@@ -251,9 +254,9 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln67_fu_155_p2 = (ap_sig_allocacmp_j_1 + 31'd1);
+assign add_ln67_fu_165_p2 = (ap_sig_allocacmp_j_1 + 31'd1);
 
-assign add_ln69_fu_165_p2 = (phi_mul + trunc_ln69_fu_161_p1);
+assign add_ln69_fu_175_p2 = (phi_mul + trunc_ln69_fu_171_p1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -283,11 +286,13 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign clusters_members_address0 = zext_ln69_fu_171_p1;
+assign clusters_members_address0 = zext_ln69_fu_181_p1;
 
-assign icmp_ln67_fu_149_p2 = (($signed(j_cast_fu_145_p1) < $signed(clusters_member_count_load)) ? 1'b1 : 1'b0);
+assign icmp_ln67_fu_159_p2 = (($signed(j_cast_fu_155_p1) < $signed(clusters_member_count_load)) ? 1'b1 : 1'b0);
 
-assign j_cast_fu_145_p1 = ap_sig_allocacmp_j_1;
+assign icmp_ln74_fu_192_p2 = ((j_cast_fu_155_p1 == sub88) ? 1'b1 : 1'b0);
+
+assign j_cast_fu_155_p1 = ap_sig_allocacmp_j_1;
 
 assign outStream_TDATA = clusters_members_q0;
 
@@ -297,18 +302,18 @@ assign outStream_TID = tmp_id_V;
 
 assign outStream_TKEEP = 4'd15;
 
-assign outStream_TLAST = tmp_last_V_reg_227;
+assign outStream_TLAST = tmp_last_V_reg_243;
 
 assign outStream_TSTRB = 4'd15;
 
-assign outStream_TUSER = tmp_user_V_reg_222;
+assign outStream_TUSER = tmp_user_V_reg_238;
 
-assign tmp_last_V_fu_182_p2 = ((j_cast_fu_145_p1 == sub89) ? 1'b1 : 1'b0);
+assign tmp_last_V_fu_198_p2 = (icmp_ln74_fu_192_p2 & cmp92);
 
-assign tmp_user_V_fu_176_p2 = ((ap_sig_allocacmp_j_1 == 31'd0) ? 1'b1 : 1'b0);
+assign tmp_user_V_fu_186_p2 = ((ap_sig_allocacmp_j_1 == 31'd0) ? 1'b1 : 1'b0);
 
-assign trunc_ln69_fu_161_p1 = ap_sig_allocacmp_j_1[16:0];
+assign trunc_ln69_fu_171_p1 = ap_sig_allocacmp_j_1[16:0];
 
-assign zext_ln69_fu_171_p1 = add_ln69_fu_165_p2;
+assign zext_ln69_fu_181_p1 = add_ln69_fu_175_p2;
 
 endmodule //clusterOp_clusterOp_Pipeline_VITIS_LOOP_67_5

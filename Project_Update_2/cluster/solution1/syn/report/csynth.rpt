@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'clusterOp'
 ================================================================
 + General Information: 
-    * Date:           Mon Mar 27 01:29:43 2023
+    * Date:           Mon Mar 27 20:49:23 2023
     * Version:        2022.2 (Build 3670227 on Oct 13 2022)
     * Project:        cluster
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -19,7 +19,7 @@
     |                 Modules                | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |           |          |             |             |     |
     |                 & Loops                | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |    DSP   |      FF     |     LUT     | URAM|
     +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+----------+-------------+-------------+-----+
-    |+ clusterOp                             |     -|  0.01|        -|          -|         -|        -|     -|        no|  121 (43%)|  91 (41%)|  20385 (19%)|  15754 (29%)|    -|
+    |+ clusterOp                             |     -|  0.01|        -|          -|         -|        -|     -|        no|  121 (43%)|  91 (41%)|  20418 (19%)|  15813 (29%)|    -|
     | + clusterOp_Pipeline_1                 |     -|  3.32|      362|  3.620e+03|         -|      362|     -|        no|          -|         -|     11 (~0%)|     52 (~0%)|    -|
     |  o Loop 1                              |     -|  7.30|      360|  3.600e+03|         1|        1|   360|       yes|          -|         -|            -|            -|    -|
     | + clusterOp_Pipeline_VITIS_LOOP_27_1   |     -|  2.38|      362|  3.620e+03|         -|      362|     -|        no|          -|         -|     11 (~0%)|     65 (~0%)|    -|
@@ -37,7 +37,7 @@
     |     + exp_core_32_32_66_s              |    II|  0.08|       23|    230.000|         -|        1|     -|       yes|     8 (2%)|  24 (10%)|    3094 (2%)|    1872 (3%)|    -|
     |    + sqrt_fixed_32_32_s                |    II|  0.14|        7|     70.000|         -|        1|     -|       yes|          -|         -|    595 (~0%)|    1354 (2%)|    -|
     | o VITIS_LOOP_66_4                      |     -|  7.30|        -|          -|         -|        -|     -|        no|          -|         -|            -|            -|    -|
-    |  + clusterOp_Pipeline_VITIS_LOOP_67_5  |     -|  1.94|        -|          -|         -|        -|     -|        no|          -|         -|     36 (~0%)|    164 (~0%)|    -|
+    |  + clusterOp_Pipeline_VITIS_LOOP_67_5  |     -|  1.94|        -|          -|         -|        -|     -|        no|          -|         -|     36 (~0%)|    166 (~0%)|    -|
     |   o VITIS_LOOP_67_5                    |     -|  7.30|        -|          -|         2|        1|     -|       yes|          -|         -|            -|            -|    -|
     +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+----------+-------------+-------------+-----+
 
@@ -115,12 +115,13 @@
 | Name                                                     | DSP | Pragma | Variable                     | Op  | Impl   | Latency |
 +----------------------------------------------------------+-----+--------+------------------------------+-----+--------+---------+
 | + clusterOp                                              | 91  |        |                              |     |        |         |
-|   add_ln33_fu_345_p2                                     | -   |        | add_ln33                     | add | fabric | 0       |
-|   mul_mul_17s_9ns_17_4_1_U76                             | 1   |        | mul_ln37                     | mul | dsp48  | 3       |
-|   cluster_count_1_fu_374_p2                              | -   |        | cluster_count_1              | add | fabric | 0       |
-|   add_ln66_1_fu_412_p2                                   | -   |        | add_ln66_1                   | add | fabric | 0       |
-|   add_ln66_fu_428_p2                                     | -   |        | add_ln66                     | add | fabric | 0       |
-|   sub89_fu_450_p2                                        | -   |        | sub89                        | add | fabric | 0       |
+|   add_ln33_fu_346_p2                                     | -   |        | add_ln33                     | add | fabric | 0       |
+|   mul_mul_17s_9ns_17_4_1_U77                             | 1   |        | mul_ln37                     | mul | dsp48  | 3       |
+|   cluster_count_1_fu_381_p2                              | -   |        | cluster_count_1              | add | fabric | 0       |
+|   sub91_fu_357_p2                                        | -   |        | sub91                        | add | fabric | 0       |
+|   add_ln66_1_fu_419_p2                                   | -   |        | add_ln66_1                   | add | fabric | 0       |
+|   add_ln66_fu_435_p2                                     | -   |        | add_ln66                     | add | fabric | 0       |
+|   sub88_fu_462_p2                                        | -   |        | sub88                        | add | fabric | 0       |
 |  + clusterOp_Pipeline_1                                  | 0   |        |                              |     |        |         |
 |    empty_114_fu_58_p2                                    | -   |        | empty_114                    | add | fabric | 0       |
 |  + clusterOp_Pipeline_VITIS_LOOP_27_1                    | 0   |        |                              |     |        |         |
@@ -215,8 +216,8 @@
 |     sub_ln277_14_fu_1413_p2                              | -   |        | sub_ln277_14                 | sub | fabric | 0       |
 |     res_I_V_30_fu_1470_p2                                | -   |        | res_I_V_30                   | add | fabric | 0       |
 |  + clusterOp_Pipeline_VITIS_LOOP_67_5                    | 0   |        |                              |     |        |         |
-|    add_ln67_fu_155_p2                                    | -   |        | add_ln67                     | add | fabric | 0       |
-|    add_ln69_fu_165_p2                                    | -   |        | add_ln69                     | add | fabric | 0       |
+|    add_ln67_fu_165_p2                                    | -   |        | add_ln67                     | add | fabric | 0       |
+|    add_ln69_fu_175_p2                                    | -   |        | add_ln69                     | add | fabric | 0       |
 +----------------------------------------------------------+-----+--------+------------------------------+-----+--------+---------+
 
 

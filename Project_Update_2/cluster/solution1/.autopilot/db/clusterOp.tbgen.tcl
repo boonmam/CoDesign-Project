@@ -634,7 +634,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "clusters_member_count_load", "Type" : "None", "Direction" : "I"},
 			{"Name" : "phi_mul", "Type" : "None", "Direction" : "I"},
 			{"Name" : "clusters_members", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "sub89", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sub88", "Type" : "None", "Direction" : "I"},
+			{"Name" : "cmp92", "Type" : "None", "Direction" : "I"},
 			{"Name" : "tmp_id_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "outStream_V_data_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "outStream",
 				"BlockSignal" : [
@@ -650,7 +651,7 @@ set RtlHierarchyInfo {[
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
 	{"ID" : "71", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_clusterOp_Pipeline_VITIS_LOOP_67_5_fu_300.flow_control_loop_pipe_sequential_init_U", "Parent" : "70"},
 	{"ID" : "72", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.CTRL_BUS_s_axi_U", "Parent" : "0"},
-	{"ID" : "73", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_mul_17s_9ns_17_4_1_U76", "Parent" : "0"},
+	{"ID" : "73", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_mul_17s_9ns_17_4_1_U77", "Parent" : "0"},
 	{"ID" : "74", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_inStream_V_data_V_U", "Parent" : "0"},
 	{"ID" : "75", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_inStream_V_keep_V_U", "Parent" : "0"},
 	{"ID" : "76", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_inStream_V_strb_V_U", "Parent" : "0"},
@@ -793,7 +794,8 @@ set ArgLastReadFirstWriteLatency {
 		clusters_member_count_load {Type I LastRead 0 FirstWrite -1}
 		phi_mul {Type I LastRead 0 FirstWrite -1}
 		clusters_members {Type I LastRead 0 FirstWrite -1}
-		sub89 {Type I LastRead 0 FirstWrite -1}
+		sub88 {Type I LastRead 0 FirstWrite -1}
+		cmp92 {Type I LastRead 0 FirstWrite -1}
 		tmp_id_V {Type I LastRead 0 FirstWrite -1}
 		outStream_V_data_V {Type O LastRead -1 FirstWrite 1}
 		outStream_V_keep_V {Type O LastRead -1 FirstWrite 1}
