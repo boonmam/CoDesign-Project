@@ -26928,12 +26928,23 @@ __attribute__((sdx_kernel("clusterOp", 0))) void clusterOp(hls::stream<axis_t>& 
 
 
     VITIS_LOOP_66_4: for (int i = 0; i < cluster_count; i++) {
-        VITIS_LOOP_67_5: for (int j = 0; j < clusters[i].member_count; j++) {
+
+     axis_t tmp;
+     tmp.data = 720;
+     tmp.keep = -1;
+     tmp.strb = -1;
+     tmp.user = 1;
+     tmp.last = 0;
+     tmp.id = clusters[i].id;
+     tmp.dest = 0;
+     outStream.write(tmp);
+
+        VITIS_LOOP_78_5: for (int j = 0; j < clusters[i].member_count; j++) {
             axis_t tmp;
             tmp.data = clusters[i].members[j];
             tmp.keep = -1;
             tmp.strb = -1;
-            tmp.user = (j == 0) ? 1 : 0;
+            tmp.user = 0;
 
             if (j == clusters[i].member_count-1 & i == cluster_count-1){
              tmp.last = 1;
@@ -26942,6 +26953,7 @@ __attribute__((sdx_kernel("clusterOp", 0))) void clusterOp(hls::stream<axis_t>& 
             else{
              tmp.last = 0;
             }
+
             tmp.id = clusters[i].id;
             tmp.dest = 0;
 

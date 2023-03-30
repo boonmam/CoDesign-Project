@@ -42809,7 +42809,22 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: cluster/cluster.cpp, Line: 84, Column: 23 }
+DebugLoc:        { File: cluster/cluster.cpp, Line: 96, Column: 23 }
+Function:        _Z9clusterOpRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>::write(hls::axis<ap_int<32>, 2ul, 5ul, 6ul> const&)'
+    DebugLoc:        { File: 'E:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_axi_sdata.h', 
+                       Line: 255, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'clusterOp(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)'
+    DebugLoc:        { File: cluster/cluster.cpp, Line: 16, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: cluster/cluster.cpp, Line: 76, Column: 16 }
 Function:        _Z9clusterOpRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_
 Args:            
   - String:          'Inlining function '''

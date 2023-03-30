@@ -40,7 +40,7 @@ reg grouped_we0;
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_block_state1_pp0_stage0_iter0;
-wire   [0:0] exitcond2366_fu_52_p2;
+wire   [0:0] exitcond4126_fu_52_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -100,7 +100,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        if ((exitcond2366_fu_52_p2 == 1'd0)) begin
+        if ((exitcond4126_fu_52_p2 == 1'd0)) begin
             empty_fu_26 <= empty_114_fu_58_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             empty_fu_26 <= 9'd0;
@@ -117,7 +117,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start_int == 1'b1) & (exitcond2366_fu_52_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((ap_start_int == 1'b1) & (exitcond4126_fu_52_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -165,7 +165,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start_int == 1'b1) & (exitcond2366_fu_52_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((ap_start_int == 1'b1) & (exitcond4126_fu_52_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
         grouped_we0 = 1'b1;
     end else begin
         grouped_we0 = 1'b0;
@@ -193,7 +193,7 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign empty_114_fu_58_p2 = (ap_sig_allocacmp_p_load + 9'd1);
 
-assign exitcond2366_fu_52_p2 = ((ap_sig_allocacmp_p_load == 9'd360) ? 1'b1 : 1'b0);
+assign exitcond4126_fu_52_p2 = ((ap_sig_allocacmp_p_load == 9'd360) ? 1'b1 : 1'b0);
 
 assign grouped_address0 = p_cast_fu_64_p1;
 

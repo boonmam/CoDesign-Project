@@ -46,7 +46,7 @@ set SynModuleInfo {
       {MODELNAME clusterOp_fcmp_32ns_32ns_1_2_no_dsp_1 RTLNAME clusterOp_fcmp_32ns_32ns_1_2_no_dsp_1 BINDTYPE op TYPE fcmp IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME clusterOp_Pipeline_VITIS_LOOP_67_5 MODELNAME clusterOp_Pipeline_VITIS_LOOP_67_5 RTLNAME clusterOp_clusterOp_Pipeline_VITIS_LOOP_67_5}
+  {SRCNAME clusterOp_Pipeline_VITIS_LOOP_78_5 MODELNAME clusterOp_Pipeline_VITIS_LOOP_78_5 RTLNAME clusterOp_clusterOp_Pipeline_VITIS_LOOP_78_5}
   {SRCNAME clusterOp MODELNAME clusterOp RTLNAME clusterOp IS_TOP 1
     SUBMODULES {
       {MODELNAME clusterOp_mul_mul_17s_9ns_17_4_1 RTLNAME clusterOp_mul_mul_17s_9ns_17_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}

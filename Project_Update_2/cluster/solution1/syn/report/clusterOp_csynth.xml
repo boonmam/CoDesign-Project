@@ -58,7 +58,7 @@
 <BRAM_18K>121</BRAM_18K>
 <DSP>91</DSP>
 <FF>20418</FF>
-<LUT>15813</LUT>
+<LUT>15924</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

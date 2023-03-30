@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:clusterOp:1.0
-// IP Revision: 2112961552
+// IP Revision: 2112964513
 
 (* X_CORE_INFO = "clusterOp,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_clusterOp_0_0,clusterOp,{}" *)
-(* CORE_GENERATION_INFO = "design_1_clusterOp_0_0,clusterOp,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=clusterOp,x_ipVersion=1.0,x_ipCoreRevision=2112961552,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CTRL_BUS_ADDR_WIDTH=4,C_S_AXI_CTRL_BUS_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "design_1_clusterOp_0_0,clusterOp,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=clusterOp,x_ipVersion=1.0,x_ipCoreRevision=2112964513,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CTRL_BUS_ADDR_WIDTH=4,C_S_AXI_CTRL_BUS_DATA_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_clusterOp_0_0 (

@@ -64,12 +64,23 @@ void clusterOp(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
 
     // Write output data to AXI4-Stream
     for (int i = 0; i < cluster_count; i++) {
+
+    	axis_t tmp;
+    	tmp.data = 720;
+    	tmp.keep = -1; // All bytes are valid
+    	tmp.strb = -1; // All bytes are valid
+    	tmp.user = 1; // Indicate start of a new cluster
+    	tmp.last = 0;
+    	tmp.id = clusters[i].id;
+    	tmp.dest = 0;
+    	outStream.write(tmp);
+
         for (int j = 0; j < clusters[i].member_count; j++) {
             axis_t tmp;
             tmp.data = clusters[i].members[j];
             tmp.keep = -1; // All bytes are valid
             tmp.strb = -1; // All bytes are valid
-            tmp.user = (j == 0) ? 1 : 0; // Indicate start of a new cluster
+            tmp.user = 0; // Indicate start of a new cluster
 
             if (j == clusters[i].member_count-1 & i == cluster_count-1){
             	tmp.last = 1; // Indicate end of a cluster
@@ -78,6 +89,7 @@ void clusterOp(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
             else{
             	tmp.last = 0;
             }
+
             tmp.id = clusters[i].id;
             tmp.dest = 0;
 

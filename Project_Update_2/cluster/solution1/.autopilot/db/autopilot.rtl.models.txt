@@ -55,5 +55,5 @@ exp_core_32_32_66_s
 pow_32_32_s
 sqrt_fixed_32_32_s
 clusterOp_Pipeline_VITIS_LOOP_42_3
-clusterOp_Pipeline_VITIS_LOOP_67_5
+clusterOp_Pipeline_VITIS_LOOP_78_5
 clusterOp
