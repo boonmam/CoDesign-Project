@@ -47,3 +47,6 @@ A Jupyter Notebook has been created to read Lidar Data from a CSV file located i
  1. Ensure a LIDAR csv file in a directory called "data" in the working directory
  2. Ensure the clusterOp Overlay files in a directory named "clusterOp" in the overlay folder
  3. The python notebook will return a series of clusters (as angles)
+ 
+ ## Project Update 2.1 (After Deadline)
+For transparency, the contents of this folder are all updates made just after the project deadline. The major change is a plotting function that actually visually plots the data similar to the python demo. 
