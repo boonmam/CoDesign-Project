@@ -5,9 +5,9 @@
 ############################################################
 open_project cluster
 set_top clusterOp
-add_files cluster/cluster.h
 add_files cluster/cluster.cpp
-add_files -tb cluster/cluster_test.cpp -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files cluster/cluster.h
+add_files -tb cluster/cluster_test.cpp -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
 create_clock -period 10 -name default

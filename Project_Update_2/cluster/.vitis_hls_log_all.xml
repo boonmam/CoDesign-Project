@@ -6,7 +6,9 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="cluster" solutionName="solution1" date="2023-04-03T19:46:37.565-0400"/>
+      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>

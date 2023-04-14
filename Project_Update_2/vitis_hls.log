@@ -1,16 +1,16 @@
 INFO: [HLS 200-10] Running 'E:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'McCain Boonma' on host 'desktop-4oqqii8' (Windows NT_amd64 version 6.2) on Wed Mar 29 22:13:28 -0400 2023
+INFO: [HLS 200-10] For user 'McCain Boonma' on host 'desktop-4oqqii8' (Windows NT_amd64 version 6.2) on Mon Apr 03 19:46:21 -0400 2023
 INFO: [HLS 200-10] In directory 'E:/Github/CoDesign-Project/Project_Update_2'
-Sourcing Tcl script 'E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/export.tcl'
-INFO: [HLS 200-1510] Running: source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/export.tcl
+Sourcing Tcl script 'E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csim.tcl
 INFO: [HLS 200-1510] Running: open_project cluster 
 INFO: [HLS 200-10] Opening project 'E:/Github/CoDesign-Project/Project_Update_2/cluster'.
 INFO: [HLS 200-1510] Running: set_top clusterOp 
-INFO: [HLS 200-1510] Running: add_files cluster/cluster.h 
-INFO: [HLS 200-10] Adding design file 'cluster/cluster.h' to the project
 INFO: [HLS 200-1510] Running: add_files cluster/cluster.cpp 
 INFO: [HLS 200-10] Adding design file 'cluster/cluster.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files -tb cluster/cluster_test.cpp -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-1510] Running: add_files cluster/cluster.h 
+INFO: [HLS 200-10] Adding design file 'cluster/cluster.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb cluster/cluster_test.cpp -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'cluster/cluster_test.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution 'E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1'.
@@ -28,29 +28,48 @@ INFO: [HLS 200-1510] Running: create_clock -period 10 -name default
 INFO: [HLS 200-1510] Running: config_export -display_name clusterOp -format ip_catalog -output E:/Github/CoDesign-Project/Project_Update_2 -rtl verilog -vivado_clock 10 
 INFO: [HLS 200-1510] Running: source ./cluster/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name clusterOp clusterOp 
-INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output E:/Github/CoDesign-Project/Project_Update_2 
-Running Dispatch Server on port: 61371
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-
-****** Vivado v2022.2 (64-bit)
-  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
-  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2022.2/data/ip'.
-WARNING: [IP_Flow 19-4832] The IP name 'clusterOp_fcmp_32ns_32ns_1_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clusterOp_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clusterOp_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
-WARNING: [IP_Flow 19-4832] The IP name 'clusterOp_sitofp_32ns_32_6_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clusterOp_sitofp_32ns_32_6_no_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clusterOp_sitofp_32ns_32_6_no_dsp_1_ip'...
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2022.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 29 22:13:57 2023...
-INFO: [HLS 200-802] Generated output file export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 16.997 seconds; current allocated memory: 9.797 MB.
-INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 29.979 seconds; peak allocated memory: 687.129 MB.
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+Running Dispatch Server on port: 57992
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../cluster_test.cpp in debug mode
+   Generating csim.exe
+In file included from E:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from E:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143,
+                 from E:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from E:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from E:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from E:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from E:/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h:9,
+                 from ../../../cluster_test.cpp:3:
+E:/Xilinx/Vitis_HLS/2022.2/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from E:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143:0,
+                 from E:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from E:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from E:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from E:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from E:/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h:9,
+                 from ../../../cluster_test.cpp:3:
+E:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  stoi
+@E Simulation failed: Function 'main' returns nonzero value '3'.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.812 seconds; current allocated memory: 0.309 MB.
+4
+    while executing
+"source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csim.tcl"
+    invoked from within
+"hls::main E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 0 seconds. Total elapsed time: 15.954 seconds; peak allocated memory: 683.113 MB.
