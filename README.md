@@ -50,3 +50,12 @@ A Jupyter Notebook has been created to read Lidar Data from a CSV file located i
  
  ## Project Update 2.1 (After Deadline)
 For transparency, the contents of this folder are all updates made just after the project deadline. The major change is a plotting function that actually visually plots the data similar to the python demo. 
+
+## Preliminary Report
+In this update, there is no longer a requirement to have a laptop connect to the LIDAR sensor, collect the data, then move the data onto the PYNQ board. The LIDAR sensor is interfaced with the PYNQ board directly. Although the PYNQ board does need to be connected to the internet to install the neccessary python packages (PyLidar3 and pykalman), an active internet connection is not required for normal operation.
+
+In the Preliminary Report folder, there are two Jupyter Notebooks. "LIDAR_STABLE" is the current stable (relatively) version, in which the room is scanned, raw LIDAR data is clustered, and the raw LIDAR data and clusters are plotted. This repeats for a user-specified number of iterations. Additionally the stable notebook has an attempt at a Kalman filter. 
+
+![](https://github.com/boonmam/CoDesign-Project/blob/main/Preliminary_Report/CLUSTER.gif)
+
+"LIDAR_EXPERIMENTAL" has a prototype data association algorithm was quickly thrown together and needs significant debugging and refinement.
