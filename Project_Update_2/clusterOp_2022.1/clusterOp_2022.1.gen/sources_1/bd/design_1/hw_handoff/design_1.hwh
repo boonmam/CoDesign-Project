@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 27 03:49:32 2023" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 27 06:57:13 2023" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -2663,7 +2663,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2113005143" FULLNAME="/clusterOp2_0" HWVERSION="1.0" INSTANCE="clusterOp2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clusterOp2" VLNV="xilinx.com:hls:clusterOp2:1.0">
+    <MODULE COREREVISION="2113005341" FULLNAME="/clusterOp2_0" HWVERSION="1.0" INSTANCE="clusterOp2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clusterOp2" VLNV="xilinx.com:hls:clusterOp2:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_CTRL_BUS" NAME="Reg" RANGE="65536" USAGE="register">
@@ -2884,7 +2884,7 @@
       <PARAMETERS>
         <PARAMETER NAME="C_S_AXI_CTRL_BUS_ADDR_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_S_AXI_CTRL_BUS_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_clusterOp2_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_clusterOp2_0_2"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>

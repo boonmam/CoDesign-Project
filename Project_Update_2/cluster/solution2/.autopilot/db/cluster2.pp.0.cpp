@@ -26870,12 +26870,72 @@ struct Cluster {
     int member_count;
 };
 
-void dbscan(int data[], bool visited[], Cluster clusters[], int &cluster_count, int n, int eps);
+void dbscan(int data[], bool visited[], Cluster clusters[], int &cluster_count, int n, int eps, int min_points) {
+    VITIS_LOOP_18_1: for (int i = 0; i < n; i++) {
+        if (visited[i]) {
+            continue;
+        }
+
+        visited[i] = true;
+
+        int neighbor_count = 0;
+        int neighbors[360];
+
+        VITIS_LOOP_28_2: for (int j = 0; j < n; j++) {
+            if (i == j) {
+                continue;
+            }
+
+            int dx = data[i] * hls::sin(i * 3.14159265358979323846 / 180) - data[j] * hls::sin(j * 3.14159265358979323846 / 180);
+            int dy = data[i] * hls::cos(i * 3.14159265358979323846 / 180) - data[j] * hls::cos(j * 3.14159265358979323846 / 180);
+            int distance = hls::sqrt(dx * dx + dy * dy);
+
+            if (distance <= eps) {
+                neighbors[neighbor_count++] = j;
+            }
+        }
+
+        if (neighbor_count >= min_points) {
+            Cluster &cluster = clusters[cluster_count++];
+            cluster.id = cluster_count - 1;
+            cluster.member_count = 0;
+
+            VITIS_LOOP_47_3: for (int k = 0; k < neighbor_count; k++) {
+                int neighbor_id = neighbors[k];
+
+                if (!visited[neighbor_id]) {
+                    visited[neighbor_id] = true;
+
+                    int new_neighbor_count = 0;
+                    VITIS_LOOP_54_4: for (int l = 0; l < n; l++) {
+                        if (neighbor_id == l) {
+                            continue;
+                        }
+
+                        int dx = data[neighbor_id] * hls::sin(neighbor_id * 3.14159265358979323846 / 180) - data[l] * hls::sin(l * 3.14159265358979323846 / 180);
+                        int dy = data[neighbor_id] * hls::cos(neighbor_id * 3.14159265358979323846 / 180) - data[l] * hls::cos(l * 3.14159265358979323846 / 180);
+                        int distance = hls::sqrt(dx * dx + dy * dy);
+
+                        if (distance <= eps) {
+                            new_neighbor_count++;
+                        }
+                    }
+
+                    if (new_neighbor_count >= min_points) {
+                        cluster.members[cluster.member_count++] = neighbor_id;
+                    } else {
+                        visited[neighbor_id] = false;
+                    }
+                }
+            }
+        }
+    }
+}
 
 __attribute__((sdx_kernel("clusterOp2", 0))) void clusterOp2(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
 #line 17 "E:/Github/CoDesign-Project/Project_Update_2/cluster/solution2/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=clusterOp2
-# 19 "cluster2.cpp"
+# 79 "cluster2.cpp"
 
 #pragma HLS INTERFACE axis port=inStream
 #pragma HLS INTERFACE axis port=outStream
@@ -26887,16 +26947,16 @@ __attribute__((sdx_kernel("clusterOp2", 0))) void clusterOp2(hls::stream<axis_t>
     int cluster_count = 0;
 
 
-    VITIS_LOOP_30_1: for (int i = 0; i < 360; i++) {
+    VITIS_LOOP_90_1: for (int i = 0; i < 360; i++) {
         axis_t tmp = inStream.read();
         distances[i] = tmp.data.to_int();
     }
 
 
-    dbscan(distances, visited, clusters, cluster_count, 360, 200);
+    dbscan(distances, visited, clusters, cluster_count, 360, 200, 5);
 
 
-    VITIS_LOOP_39_2: for (int i = 0; i < cluster_count; i++) {
+    VITIS_LOOP_99_2: for (int i = 0; i < cluster_count; i++) {
 
         axis_t tmp;
         tmp.data = 720;
@@ -26908,7 +26968,7 @@ __attribute__((sdx_kernel("clusterOp2", 0))) void clusterOp2(hls::stream<axis_t>
         tmp.dest = 0;
         outStream.write(tmp);
 
-        VITIS_LOOP_51_3: for (int j = 0; j < clusters[i].member_count; j++) {
+        VITIS_LOOP_111_3: for (int j = 0; j < clusters[i].member_count; j++) {
             axis_t tmp;
             tmp.data = clusters[i].members[j];
             tmp.keep = -1;
@@ -26925,82 +26985,6 @@ __attribute__((sdx_kernel("clusterOp2", 0))) void clusterOp2(hls::stream<axis_t>
             tmp.dest = 0;
 
             outStream.write(tmp);
-        }
-    }
-}
-
-void dbscan(int data[], bool visited[], Cluster clusters[], int &cluster_count, int n, int eps) {
-
-    VITIS_LOOP_74_1: for (int i = 0; i < n; i++) {
-
-        if (visited[i]) {
-            continue;
-        }
-
-        visited[i] = 1;
-        int neighbors[360];
-        int neighbor_count = 0;
-
-
-        VITIS_LOOP_85_2: for (int j = 0; j < n; j++) {
-            if (i == j) {
-                continue;
-            }
-
-            int dx = data[i] * hls::sin(i * 3.14159265358979323846 / 180) - data[j] * hls::sin(j * 3.14159265358979323846 / 180);
-            int dy = data[i] * hls::cos(i * 3.14159265358979323846 / 180) - data[j] * hls::cos(j * 3.14159265358979323846 / 180);
-            int distance = hls::sqrt(dx*dx + dy*dy);
-
-            if (distance <= eps) {
-                neighbors[neighbor_count++] = j;
-            }
-        }
-
-
-        if (neighbor_count >= 3) {
-            clusters[cluster_count].id = cluster_count;
-            clusters[cluster_count].members[0] = i;
-            clusters[cluster_count].member_count = 1;
-
-
-            VITIS_LOOP_106_3: for (int k = 0; k < neighbor_count; k++) {
-                int neighbor_id = neighbors[k];
-
-                if (!visited[neighbor_id]) {
-                    visited[neighbor_id] = 1;
-                    clusters[cluster_count].members[clusters[cluster_count].member_count++] = neighbor_id;
-                    int new_neighbors[360];
-                    int new_neighbor_count = 0;
-
-
-                    VITIS_LOOP_116_4: for (int l = 0; l < n; l++) {
-                        if (neighbor_id == l) {
-                            continue;
-                        }
-
-                        int dx = data[neighbor_id] * hls::sin(neighbor_id * 3.14159265358979323846 / 180) - data[l] * hls::sin(l * 3.14159265358979323846 / 180);
-                        int dy = data[neighbor_id] * hls::cos(neighbor_id * 3.14159265358979323846 / 180) - data[l] * hls::cos(l * 3.14159265358979323846 / 180);
-                        int distance = hls::sqrt(dx*dx + dy*dy);
-
-                        if (distance <= eps) {
-                            new_neighbors[new_neighbor_count++] = l;
-                        }
-                    }
-
-
-                    if (new_neighbor_count >= 2) {
-                        VITIS_LOOP_132_5: for (int m = 0; m < new_neighbor_count; m++) {
-                            int new_neighbor_id = new_neighbors[m];
-                            if (!visited[new_neighbor_id]) {
-                                neighbors[neighbor_count++] = new_neighbor_id;
-                            }
-                        }
-                    }
-                }
-            }
-
-
-            cluster_count++;
         }
     }
 }

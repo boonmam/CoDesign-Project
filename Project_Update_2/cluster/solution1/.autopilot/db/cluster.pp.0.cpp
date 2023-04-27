@@ -26869,15 +26869,7 @@ struct Cluster {
     int member_count;
 };
 
-__attribute__((sdx_kernel("clusterOp", 0))) void clusterOp(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
-#line 17 "E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csynth.tcl"
-#pragma HLSDIRECTIVE TOP name=clusterOp
-# 16 "cluster/cluster.cpp"
-
-#line 6 "E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/directives.tcl"
-#pragma HLSDIRECTIVE TOP name=clusterOp
-# 16 "cluster/cluster.cpp"
-
+void clusterOp(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
 #pragma HLS INTERFACE axis port=inStream
 #pragma HLS INTERFACE axis port=outStream
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL_BUS
@@ -26895,10 +26887,6 @@ __attribute__((sdx_kernel("clusterOp", 0))) void clusterOp(hls::stream<axis_t>& 
 
 
     clusterOp_label0:for (int put = 0; put < 360; put++) {
-#line 7 "E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/directives.tcl"
-#pragma HLSDIRECTIVE UNROLL
-# 33 "cluster/cluster.cpp"
-
         if (!grouped[put]) {
 
             clusters[cluster_count].id = cluster_count;

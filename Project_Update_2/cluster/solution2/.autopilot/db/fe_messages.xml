@@ -716,13 +716,13 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="E:/Github/CoDesign-Project/Project_Update_2/cluster/solution2/csynth.tcl:17:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="clusterOp2" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=clusterOp2" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="cluster2.cpp:20:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="cluster2.cpp:80:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="clusterOp2" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=inStream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="cluster2.cpp:21:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="cluster2.cpp:81:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="clusterOp2" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=outStream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="cluster2.cpp:22:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="cluster2.cpp:82:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="clusterOp2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CTRL_BUS" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="E:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:678:9" msg_body="HLS pragma dump">
@@ -4043,16 +4043,16 @@
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="E:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_axi_sdata.h:259:24" msg_body="Inlining function 'hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;::get_id_ptr()' into 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)'">
         <args Callee="hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;::get_id_ptr()" Caller="hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="cluster2.cpp:31:31" msg_body="Inlining function 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::read()' into 'clusterOp2(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;)'">
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="cluster2.cpp:91:31" msg_body="Inlining function 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::read()' into 'clusterOp2(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;)'">
         <args Callee="hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::read()" Caller="clusterOp2(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="cluster2.cpp:67:23" msg_body="Inlining function 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)' into 'clusterOp2(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;)'">
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="cluster2.cpp:127:23" msg_body="Inlining function 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)' into 'clusterOp2(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;)'">
         <args Callee="hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)" Caller="clusterOp2(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="cluster2.cpp:49:19" msg_body="Inlining function 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)' into 'clusterOp2(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;)'">
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="cluster2.cpp:109:19" msg_body="Inlining function 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)' into 'clusterOp2(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;)'">
         <args Callee="hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)" Caller="clusterOp2(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="cluster2.cpp:32:33" msg_body="Inlining function 'ap_int_base&lt;32, true&gt;::to_int() const' into 'clusterOp2(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;)'">
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="cluster2.cpp:92:33" msg_body="Inlining function 'ap_int_base&lt;32, true&gt;::to_int() const' into 'clusterOp2(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;)'">
         <args Callee="ap_int_base&lt;32, true&gt;::to_int() const" Caller="clusterOp2(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;)"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include\hls_sqrt_apfixed.h:294:9" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
@@ -4142,14 +4142,14 @@
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib\hlsmath\src\c++\sqrtint32.cpp:7:0" msg_body="Inlining function 'ap_int&lt;32&gt; sqrt_fixed&lt;32&gt;(ap_int&lt;32&gt;)' into 'hls::sqrt(int)'">
         <args Callee="ap_int&lt;32&gt; sqrt_fixed&lt;32&gt;(ap_int&lt;32&gt;)" Caller="hls::sqrt(int)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cluster2.cpp:72:0" msg_body="Inlining function 'hls::sin(double)' into 'dbscan(int*, bool*, Cluster*, int&amp;, int, int)'">
-        <args Callee="hls::sin(double)" Caller="dbscan(int*, bool*, Cluster*, int&amp;, int, int)"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cluster2.cpp:17:0" msg_body="Inlining function 'hls::sin(double)' into 'dbscan(int*, bool*, Cluster*, int&amp;, int, int, int)'">
+        <args Callee="hls::sin(double)" Caller="dbscan(int*, bool*, Cluster*, int&amp;, int, int, int)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cluster2.cpp:72:0" msg_body="Inlining function 'hls::cos(double)' into 'dbscan(int*, bool*, Cluster*, int&amp;, int, int)'">
-        <args Callee="hls::cos(double)" Caller="dbscan(int*, bool*, Cluster*, int&amp;, int, int)"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cluster2.cpp:17:0" msg_body="Inlining function 'hls::cos(double)' into 'dbscan(int*, bool*, Cluster*, int&amp;, int, int, int)'">
+        <args Callee="hls::cos(double)" Caller="dbscan(int*, bool*, Cluster*, int&amp;, int, int, int)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cluster2.cpp:72:0" msg_body="Inlining function 'hls::sqrt(int)' into 'dbscan(int*, bool*, Cluster*, int&amp;, int, int)'">
-        <args Callee="hls::sqrt(int)" Caller="dbscan(int*, bool*, Cluster*, int&amp;, int, int)"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cluster2.cpp:17:0" msg_body="Inlining function 'hls::sqrt(int)' into 'dbscan(int*, bool*, Cluster*, int&amp;, int, int, int)'">
+        <args Callee="hls::sqrt(int)" Caller="dbscan(int*, bool*, Cluster*, int&amp;, int, int, int)"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_double.cpp:14:0" msg_body="Applying array_partition to '_ZZN6hotbm_10value_listIdE24sin_or_cos_approximationILi63ELi63EEE9ap_ufixedIXT_ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEbR7ap_uintILi3EERS3_IXT_ELi0ELS4_5ELS5_3ELi0EERS3_IXT0_ELi0ELS4_5ELS5_3ELi0EER6ap_intILi11EEE10swap_table': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="_ZZN6hotbm_10value_listIdE24sin_or_cos_approximationILi63ELi63EEE9ap_ufixedIXT_ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEbR7ap_uintILi3EERS3_IXT_ELi0ELS4_5ELS5_3ELi0EERS3_IXT0_ELi0ELS4_5ELS5_3ELi0EER6ap_intILi11EEE10swap_table"/>

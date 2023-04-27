@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'sin_or_cos_double_s'
 ================================================================
-* Date:           Thu Apr 27 03:58:26 2023
+* Date:           Thu Apr 27 04:10:15 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        cluster
@@ -637,8 +637,8 @@ ST_29 : Operation 195 [1/1] (0.00ns)   --->   "%tmp_50_2 = partselect i16 @_ssdm
 ST_29 : Operation 196 [1/1] (0.00ns)   --->   "%tmp_33 = partselect i15 @_ssdm_op_PartSelect.i15.i126.i32.i32, i126 %r_V_14, i32 63, i32 77"   --->   Operation 196 'partselect' 'tmp_33' <Predicate = true> <Delay = 0.00>
 
 State 30 <SV = 29> <Delay = 4.59>
-ST_30 : Operation 197 [1/1] (0.00ns)   --->   "%p_Result_s_102 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i16.i16, i16 %tmp_32, i16 32768"   --->   Operation 197 'bitconcatenate' 'p_Result_s_102' <Predicate = true> <Delay = 0.00>
-ST_30 : Operation 198 [1/1] (0.00ns)   --->   "%p_Result_2 = partselect i32 @llvm.part.select.i32, i32 %p_Result_s_102, i32 31, i32 0"   --->   Operation 198 'partselect' 'p_Result_2' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 197 [1/1] (0.00ns)   --->   "%p_Result_s_101 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i16.i16, i16 %tmp_32, i16 32768"   --->   Operation 197 'bitconcatenate' 'p_Result_s_101' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 198 [1/1] (0.00ns)   --->   "%p_Result_2 = partselect i32 @llvm.part.select.i32, i32 %p_Result_s_101, i32 31, i32 0"   --->   Operation 198 'partselect' 'p_Result_2' <Predicate = true> <Delay = 0.00>
 ST_30 : Operation 199 [1/1] (0.00ns)   --->   "%tmp_34 = cttz i32 @llvm.cttz.i32, i32 %p_Result_2, i1 1"   --->   Operation 199 'cttz' 'tmp_34' <Predicate = true> <Delay = 0.00>
 ST_30 : Operation 200 [1/1] (0.00ns)   --->   "%zext_ln1488_1 = zext i32 %tmp_34"   --->   Operation 200 'zext' 'zext_ln1488_1' <Predicate = true> <Delay = 0.00>
 ST_30 : Operation 201 [1/1] (4.59ns)   --->   "%shl_ln1454 = shl i63 %result_V, i63 %zext_ln1488_1"   --->   Operation 201 'shl' 'shl_ln1454' <Predicate = true> <Delay = 4.59> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.59> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
@@ -866,7 +866,7 @@ tmp_32                                (partselect    ) [ 01000000000000000000000
 tmp_50_1                              (partselect    ) [ 0100000000000000000000000000001100]
 tmp_50_2                              (partselect    ) [ 0100000000000000000000000000001100]
 tmp_33                                (partselect    ) [ 0100000000000000000000000000001110]
-p_Result_s_102                        (bitconcatenate) [ 0000000000000000000000000000000000]
+p_Result_s_101                        (bitconcatenate) [ 0000000000000000000000000000000000]
 p_Result_2                            (partselect    ) [ 0000000000000000000000000000000000]
 tmp_34                                (cttz          ) [ 0100000000000000000000000000000110]
 zext_ln1488_1                         (zext          ) [ 0000000000000000000000000000000000]
@@ -3517,7 +3517,7 @@ ret_ln316                             (ret           ) [ 00000000000000000000000
 </bind>
 </comp>
 
-<comp id="1074" class="1004" name="p_Result_s_102_fu_1074">
+<comp id="1074" class="1004" name="p_Result_s_101_fu_1074">
 <pin_list>
 <pin id="1075" dir="0" index="0" bw="32" slack="0"/>
 <pin id="1076" dir="0" index="1" bw="16" slack="1"/>
@@ -3526,7 +3526,7 @@ ret_ln316                             (ret           ) [ 00000000000000000000000
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="p_Result_s_102/30 "/>
+<opset="p_Result_s_101/30 "/>
 </bind>
 </comp>
 
@@ -6679,7 +6679,7 @@ ret_ln316                             (ret           ) [ 00000000000000000000000
 |          |   p_Result_108_fu_693   |    0    |    0    |    0    |
 |          |   p_Result_109_fu_706   |    0    |    0    |    0    |
 |bitconcatenate|       t1_V_fu_916       |    0    |    0    |    0    |
-|          |  p_Result_s_102_fu_1074 |    0    |    0    |    0    |
+|          |  p_Result_s_101_fu_1074 |    0    |    0    |    0    |
 |          |  p_Result_186_1_fu_1113 |    0    |    0    |    0    |
 |          |  p_Result_186_2_fu_1120 |    0    |    0    |    0    |
 |          |    p_Result_1_fu_1207   |    0    |    0    |    0    |

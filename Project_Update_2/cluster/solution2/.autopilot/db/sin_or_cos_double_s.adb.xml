@@ -2748,10 +2748,10 @@ entry_ifconv:122 %tmp_33 = partselect i15 @_ssdm_op_PartSelect.i15.i126.i32.i32,
 
 <Node id="125" bw="32" op_0_bw="32" op_1_bw="16" op_2_bw="16">
 <![CDATA[
-entry_ifconv:116 %p_Result_s_102 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i16.i16, i16 %tmp_32, i16 32768
+entry_ifconv:116 %p_Result_s_101 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i16.i16, i16 %tmp_32, i16 32768
 
 ]]></Node>
-<StgValue><ssdm name="p_Result_s_102"/></StgValue>
+<StgValue><ssdm name="p_Result_s_101"/></StgValue>
 </operation>
 
 <operation id="198" st_id="30" stage="1" lat="1">
@@ -2763,7 +2763,7 @@ entry_ifconv:116 %p_Result_s_102 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i
 
 <Node id="133" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry_ifconv:124 %p_Result_2 = partselect i32 @llvm.part.select.i32, i32 %p_Result_s_102, i32 31, i32 0
+entry_ifconv:124 %p_Result_2 = partselect i32 @llvm.part.select.i32, i32 %p_Result_s_101, i32 31, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="p_Result_2"/></StgValue>
@@ -4633,15 +4633,15 @@ entry_ifconv:195 %ret_ln316 = ret i64 %bitcast_ln526
 </dataflow>
 <dataflow id="811" from="StgValue_810" to="tmp_33" fromId="810" toId="196">
 </dataflow>
-<dataflow id="813" from="_ssdm_op_BitConcatenate.i32.i16.i16" to="p_Result_s_102" fromId="812" toId="197">
+<dataflow id="813" from="_ssdm_op_BitConcatenate.i32.i16.i16" to="p_Result_s_101" fromId="812" toId="197">
 </dataflow>
-<dataflow id="814" from="tmp_32" to="p_Result_s_102" fromId="193" toId="197">
+<dataflow id="814" from="tmp_32" to="p_Result_s_101" fromId="193" toId="197">
 </dataflow>
-<dataflow id="816" from="StgValue_815" to="p_Result_s_102" fromId="815" toId="197">
+<dataflow id="816" from="StgValue_815" to="p_Result_s_101" fromId="815" toId="197">
 </dataflow>
 <dataflow id="818" from="llvm.part.select.i32" to="p_Result_2" fromId="817" toId="198">
 </dataflow>
-<dataflow id="819" from="p_Result_s_102" to="p_Result_2" fromId="197" toId="198">
+<dataflow id="819" from="p_Result_s_101" to="p_Result_2" fromId="197" toId="198">
 </dataflow>
 <dataflow id="820" from="StgValue_749" to="p_Result_2" fromId="749" toId="198">
 </dataflow>

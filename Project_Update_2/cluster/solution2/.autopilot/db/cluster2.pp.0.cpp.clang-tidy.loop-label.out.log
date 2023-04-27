@@ -726,43 +726,38 @@ E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\clus
        ^~~
        VITIS_LOOP_195_3: 
 E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:24639:8: note: FIX-IT applied suggested code changes
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26890:5: warning: Added loop label VITIS_LOOP_30_1:   [xilinx-label-all-loops]
-    for (int i = 0; i < 360; i++) {
-    ^~~
-    VITIS_LOOP_30_1: 
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26890:5: note: FIX-IT applied suggested code changes
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26899:5: warning: Added loop label VITIS_LOOP_39_2:   [xilinx-label-all-loops]
-    for (int i = 0; i < cluster_count; i++) {
-    ^~~
-    VITIS_LOOP_39_2: 
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26899:5: note: FIX-IT applied suggested code changes
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26911:9: warning: Added loop label VITIS_LOOP_51_3:   [xilinx-label-all-loops]
-        for (int j = 0; j < clusters[i].member_count; j++) {
-        ^~~
-        VITIS_LOOP_51_3: 
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26911:9: note: FIX-IT applied suggested code changes
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26934:5: warning: Added loop label VITIS_LOOP_74_1:   [xilinx-label-all-loops]
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26874:5: warning: Added loop label VITIS_LOOP_18_1:   [xilinx-label-all-loops]
     for (int i = 0; i < n; i++) {
     ^~~
-    VITIS_LOOP_74_1: 
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26934:5: note: FIX-IT applied suggested code changes
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26945:9: warning: Added loop label VITIS_LOOP_85_2:   [xilinx-label-all-loops]
+    VITIS_LOOP_18_1: 
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26874:5: note: FIX-IT applied suggested code changes
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26884:9: warning: Added loop label VITIS_LOOP_28_2:   [xilinx-label-all-loops]
         for (int j = 0; j < n; j++) {
         ^~~
-        VITIS_LOOP_85_2: 
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26945:9: note: FIX-IT applied suggested code changes
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26966:13: warning: Added loop label VITIS_LOOP_106_3:   [xilinx-label-all-loops]
+        VITIS_LOOP_28_2: 
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26884:9: note: FIX-IT applied suggested code changes
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26903:13: warning: Added loop label VITIS_LOOP_47_3:   [xilinx-label-all-loops]
             for (int k = 0; k < neighbor_count; k++) {
             ^~~
-            VITIS_LOOP_106_3: 
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26966:13: note: FIX-IT applied suggested code changes
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26976:21: warning: Added loop label VITIS_LOOP_116_4:   [xilinx-label-all-loops]
+            VITIS_LOOP_47_3: 
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26903:13: note: FIX-IT applied suggested code changes
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26910:21: warning: Added loop label VITIS_LOOP_54_4:   [xilinx-label-all-loops]
                     for (int l = 0; l < n; l++) {
                     ^~~
-                    VITIS_LOOP_116_4: 
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26976:21: note: FIX-IT applied suggested code changes
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26992:25: warning: Added loop label VITIS_LOOP_132_5:   [xilinx-label-all-loops]
-                        for (int m = 0; m < new_neighbor_count; m++) {
-                        ^~~
-                        VITIS_LOOP_132_5: 
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26992:25: note: FIX-IT applied suggested code changes
+                    VITIS_LOOP_54_4: 
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26910:21: note: FIX-IT applied suggested code changes
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26950:5: warning: Added loop label VITIS_LOOP_90_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < 360; i++) {
+    ^~~
+    VITIS_LOOP_90_1: 
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26950:5: note: FIX-IT applied suggested code changes
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26959:5: warning: Added loop label VITIS_LOOP_99_2:   [xilinx-label-all-loops]
+    for (int i = 0; i < cluster_count; i++) {
+    ^~~
+    VITIS_LOOP_99_2: 
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26959:5: note: FIX-IT applied suggested code changes
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26971:9: warning: Added loop label VITIS_LOOP_111_3:   [xilinx-label-all-loops]
+        for (int j = 0; j < clusters[i].member_count; j++) {
+        ^~~
+        VITIS_LOOP_111_3: 
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp:26971:9: note: FIX-IT applied suggested code changes

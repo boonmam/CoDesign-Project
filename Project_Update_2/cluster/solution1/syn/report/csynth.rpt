@@ -1,0 +1,219 @@
+
+
+================================================================
+== Synthesis Summary Report of 'clusterOp2'
+================================================================
++ General Information: 
+    * Date:           Thu Apr 27 06:55:44 2023
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        cluster
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+-----------+-----------+-----+
+    |                  Modules                 | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |          |         |           |           |     |
+    |                  & Loops                 | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |   DSP   |     FF    |    LUT    | URAM|
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+-----------+-----------+-----+
+    |+ clusterOp2                              |     -|  0.14|        -|          -|         -|        -|     -|        no|  78 (27%)|  13 (5%)|  3037 (2%)|  3827 (7%)|    -|
+    | + clusterOp2_Pipeline_1                  |     -|  3.32|      362|  3.620e+03|         -|      362|     -|        no|         -|        -|   11 (~0%)|   52 (~0%)|    -|
+    |  o Loop 1                                |     -|  7.30|      360|  3.600e+03|         1|        1|   360|       yes|         -|        -|          -|          -|    -|
+    | + clusterOp2_Pipeline_VITIS_LOOP_172_1   |     -|  2.38|      362|  3.620e+03|         -|      362|     -|        no|         -|        -|   11 (~0%)|   65 (~0%)|    -|
+    |  o VITIS_LOOP_172_1                      |     -|  7.30|      360|  3.600e+03|         1|        1|   360|       yes|         -|        -|          -|          -|    -|
+    | + dbscan                                 |     -|  0.14|        -|          -|         -|        -|     -|        no|    3 (1%)|  13 (5%)|  2705 (2%)|  2897 (5%)|    -|
+    |  o VITIS_LOOP_103_1                      |     -|  7.30|        -|          -|         -|        -|     -|        no|         -|        -|          -|          -|    -|
+    |   + dbscan_Pipeline_VITIS_LOOP_113_2     |     -|  0.14|      379|  3.790e+03|         -|      379|     -|        no|         -|  2 (~0%)|  477 (~0%)|  311 (~0%)|    -|
+    |    o VITIS_LOOP_113_2                    |     -|  7.30|      377|  3.770e+03|        19|        1|   360|       yes|         -|        -|          -|          -|    -|
+    |     + sqrt_fixed_32_32_s                 |    II|  0.14|        7|     70.000|         -|        1|     -|       yes|         -|        -|  595 (~0%)|  1354 (2%)|    -|
+    |   o VITIS_LOOP_130_3                     |     -|  7.30|        -|          -|       388|        -|     -|        no|         -|        -|          -|          -|    -|
+    |    + dbscan_Pipeline_VITIS_LOOP_137_4    |     -|  0.14|      379|  3.790e+03|         -|      379|     -|        no|         -|  2 (~0%)|  404 (~0%)|  309 (~0%)|    -|
+    |     o VITIS_LOOP_137_4                   |     -|  7.30|      377|  3.770e+03|        19|        1|   360|       yes|         -|        -|          -|          -|    -|
+    |      + sqrt_fixed_32_32_s                |    II|  0.14|        7|     70.000|         -|        1|     -|       yes|         -|        -|  595 (~0%)|  1354 (2%)|    -|
+    | o VITIS_LOOP_182_2                       |     -|  7.30|        -|          -|         -|        -|     -|        no|         -|        -|          -|          -|    -|
+    |  + clusterOp2_Pipeline_VITIS_LOOP_194_3  |     -|  1.94|        -|          -|         -|        -|     -|        no|         -|        -|   35 (~0%)|  149 (~0%)|    -|
+    |   o VITIS_LOOP_194_3                     |     -|  7.30|        -|          -|         2|        1|     -|       yes|         -|        -|          -|          -|    -|
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++----------------+------------+---------------+
+| Interface      | Data Width | Address Width |
++----------------+------------+---------------+
+| s_axi_CTRL_BUS | 32         | 4             |
++----------------+------------+---------------+
+
+* S_AXILITE Registers
++----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface      | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_CTRL_BUS | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CTRL_BUS | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_CTRL_BUS | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CTRL_BUS | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| inStream  | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
+| outStream | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+--------------------------------------------+
+| Argument  | Direction | Datatype                                   |
++-----------+-----------+--------------------------------------------+
+| inStream  | in        | stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>& |
+| outStream | out       | stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>& |
++-----------+-----------+--------------------------------------------+
+
+* SW-to-HW Mapping
++-----------+--------------+-----------+
+| Argument  | HW Interface | HW Type   |
++-----------+--------------+-----------+
+| inStream  | inStream     | interface |
+| outStream | outStream    | interface |
++-----------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------------------------+-----+--------+------------------+-----+--------+---------+
+| Name                                                    | DSP | Pragma | Variable         | Op  | Impl   | Latency |
++---------------------------------------------------------+-----+--------+------------------+-----+--------+---------+
+| + clusterOp2                                            | 13  |        |                  |     |        |         |
+|   sub42_fu_256_p2                                       | -   |        | sub42            | add | fabric | 0       |
+|   next_mul_fu_272_p2                                    | -   |        | next_mul         | add | fabric | 0       |
+|   add_ln182_fu_287_p2                                   | -   |        | add_ln182        | add | fabric | 0       |
+|   sub_fu_314_p2                                         | -   |        | sub              | add | fabric | 0       |
+|  + clusterOp2_Pipeline_1                                | 0   |        |                  |     |        |         |
+|    empty_74_fu_58_p2                                    | -   |        | empty_74         | add | fabric | 0       |
+|  + clusterOp2_Pipeline_VITIS_LOOP_172_1                 | 0   |        |                  |     |        |         |
+|    add_ln172_fu_105_p2                                  | -   |        | add_ln172        | add | fabric | 0       |
+|  + dbscan                                               | 13  |        |                  |     |        |         |
+|    add_ln103_fu_316_p2                                  | -   |        | add_ln103        | add | fabric | 0       |
+|    mul_18s_32s_32_2_1_U36                               | 2   |        | mul_ln97         | mul | auto   | 1       |
+|    mul_18s_32s_32_2_1_U37                               | 2   |        | mul_ln98         | mul | auto   | 1       |
+|    add_ln126_fu_368_p2                                  | -   |        | add_ln126        | add | fabric | 0       |
+|    mul_mul_17s_9ns_17_4_1_U40                           | 1   |        | mul_ln150        | mul | dsp48  | 3       |
+|    add_ln130_fu_383_p2                                  | -   |        | add_ln130        | add | fabric | 0       |
+|    mul_18s_32s_32_2_1_U38                               | 2   |        | mul_ln97_2       | mul | auto   | 1       |
+|    mul_18s_32s_32_2_1_U39                               | 2   |        | mul_ln98_2       | mul | auto   | 1       |
+|    add_ln150_fu_436_p2                                  | -   |        | add_ln150        | add | fabric | 0       |
+|    add_ln150_1_fu_447_p2                                | -   |        | add_ln150_1      | add | fabric | 0       |
+|   + dbscan_Pipeline_VITIS_LOOP_113_2                    | 2   |        |                  |     |        |         |
+|     add_ln113_fu_167_p2                                 | -   |        | add_ln113        | add | fabric | 0       |
+|     sub_ln97_fu_207_p2                                  | -   |        | sub_ln97         | sub | fabric | 0       |
+|     sub_ln98_fu_221_p2                                  | -   |        | sub_ln98         | sub | fabric | 0       |
+|     mac_muladd_16s_16s_32s_32_4_1_U14                   | 1   |        | mul_ln99         | mul | dsp48  | 3       |
+|     mul_mul_16s_16s_32_4_1_U13                          | 1   |        | mul_ln99_1       | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_32s_32_4_1_U14                   | 1   |        | xf_V             | add | dsp48  | 3       |
+|     neighbor_count_1_fu_250_p2                          | -   |        | neighbor_count_1 | add | fabric | 0       |
+|    + sqrt_fixed_32_32_s (grp_sqrt_fixed_32_32_s_fu_143) | 0   |        |                  |     |        |         |
+|      add_ln277_fu_246_p2                                | -   |        | add_ln277        | add | fabric | 0       |
+|      sub_ln277_fu_318_p2                                | -   |        | sub_ln277        | sub | fabric | 0       |
+|      sub_ln277_1_fu_400_p2                              | -   |        | sub_ln277_1      | sub | fabric | 0       |
+|      sub_ln277_2_fu_475_p2                              | -   |        | sub_ln277_2      | sub | fabric | 0       |
+|      sub_ln277_3_fu_557_p2                              | -   |        | sub_ln277_3      | sub | fabric | 0       |
+|      sub_ln277_4_fu_632_p2                              | -   |        | sub_ln277_4      | sub | fabric | 0       |
+|      sub_ln277_5_fu_714_p2                              | -   |        | sub_ln277_5      | sub | fabric | 0       |
+|      sub_ln277_6_fu_789_p2                              | -   |        | sub_ln277_6      | sub | fabric | 0       |
+|      sub_ln277_7_fu_871_p2                              | -   |        | sub_ln277_7      | sub | fabric | 0       |
+|      sub_ln277_8_fu_946_p2                              | -   |        | sub_ln277_8      | sub | fabric | 0       |
+|      sub_ln277_9_fu_1028_p2                             | -   |        | sub_ln277_9      | sub | fabric | 0       |
+|      sub_ln277_10_fu_1108_p2                            | -   |        | sub_ln277_10     | sub | fabric | 0       |
+|      sub_ln277_11_fu_1185_p2                            | -   |        | sub_ln277_11     | sub | fabric | 0       |
+|      sub_ln277_12_fu_1265_p2                            | -   |        | sub_ln277_12     | sub | fabric | 0       |
+|      sub_ln277_13_fu_1342_p2                            | -   |        | sub_ln277_13     | sub | fabric | 0       |
+|      sub_ln277_14_fu_1413_p2                            | -   |        | sub_ln277_14     | sub | fabric | 0       |
+|      res_I_V_30_fu_1470_p2                              | -   |        | res_I_V_30       | add | fabric | 0       |
+|   + dbscan_Pipeline_VITIS_LOOP_137_4                    | 2   |        |                  |     |        |         |
+|     add_ln137_fu_152_p2                                 | -   |        | add_ln137        | add | fabric | 0       |
+|     sub_ln97_fu_192_p2                                  | -   |        | sub_ln97         | sub | fabric | 0       |
+|     sub_ln98_fu_206_p2                                  | -   |        | sub_ln98         | sub | fabric | 0       |
+|     mac_muladd_16s_16s_32s_32_4_1_U28                   | 1   |        | mul_ln99         | mul | dsp48  | 3       |
+|     mul_mul_16s_16s_32_4_1_U27                          | 1   |        | mul_ln99_1       | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_32s_32_4_1_U28                   | 1   |        | xf_V             | add | dsp48  | 3       |
+|     add_ln145_fu_235_p2                                 | -   |        | add_ln145        | add | fabric | 0       |
+|    + sqrt_fixed_32_32_s (grp_sqrt_fixed_32_32_s_fu_128) | 0   |        |                  |     |        |         |
+|      add_ln277_fu_246_p2                                | -   |        | add_ln277        | add | fabric | 0       |
+|      sub_ln277_fu_318_p2                                | -   |        | sub_ln277        | sub | fabric | 0       |
+|      sub_ln277_1_fu_400_p2                              | -   |        | sub_ln277_1      | sub | fabric | 0       |
+|      sub_ln277_2_fu_475_p2                              | -   |        | sub_ln277_2      | sub | fabric | 0       |
+|      sub_ln277_3_fu_557_p2                              | -   |        | sub_ln277_3      | sub | fabric | 0       |
+|      sub_ln277_4_fu_632_p2                              | -   |        | sub_ln277_4      | sub | fabric | 0       |
+|      sub_ln277_5_fu_714_p2                              | -   |        | sub_ln277_5      | sub | fabric | 0       |
+|      sub_ln277_6_fu_789_p2                              | -   |        | sub_ln277_6      | sub | fabric | 0       |
+|      sub_ln277_7_fu_871_p2                              | -   |        | sub_ln277_7      | sub | fabric | 0       |
+|      sub_ln277_8_fu_946_p2                              | -   |        | sub_ln277_8      | sub | fabric | 0       |
+|      sub_ln277_9_fu_1028_p2                             | -   |        | sub_ln277_9      | sub | fabric | 0       |
+|      sub_ln277_10_fu_1108_p2                            | -   |        | sub_ln277_10     | sub | fabric | 0       |
+|      sub_ln277_11_fu_1185_p2                            | -   |        | sub_ln277_11     | sub | fabric | 0       |
+|      sub_ln277_12_fu_1265_p2                            | -   |        | sub_ln277_12     | sub | fabric | 0       |
+|      sub_ln277_13_fu_1342_p2                            | -   |        | sub_ln277_13     | sub | fabric | 0       |
+|      sub_ln277_14_fu_1413_p2                            | -   |        | sub_ln277_14     | sub | fabric | 0       |
+|      res_I_V_30_fu_1470_p2                              | -   |        | res_I_V_30       | add | fabric | 0       |
+|  + clusterOp2_Pipeline_VITIS_LOOP_194_3                 | 0   |        |                  |     |        |         |
+|    add_ln194_fu_168_p2                                  | -   |        | add_ln194        | add | fabric | 0       |
+|    add_ln196_fu_178_p2                                  | -   |        | add_ln196        | add | fabric | 0       |
++---------------------------------------------------------+-----+--------+------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++---------------------------+------+------+--------+-----------------------+---------+------+---------+
+| Name                      | BRAM | URAM | Pragma | Variable              | Storage | Impl | Latency |
++---------------------------+------+------+--------+-----------------------+---------+------+---------+
+| + clusterOp2              | 78   | 0    |        |                       |         |      |         |
+|   distances_U             | 2    | -    |        | distances             | ram_1p  | auto | 1       |
+|   visited_U               | -    | -    |        | visited               | ram_1p  | auto | 1       |
+|   clusters_id_U           | 1    | -    |        | clusters_id           | ram_1p  | auto | 1       |
+|   clusters_members_U      | 72   | -    |        | clusters_members      | ram_1p  | auto | 1       |
+|   clusters_member_count_U | 1    | -    |        | clusters_member_count | ram_1p  | auto | 1       |
+|  + dbscan                 | 3    | 0    |        |                       |         |      |         |
+|    neighbors_U            | 1    | -    |        | neighbors             | ram_1p  | auto | 1       |
+|    sin_values_U           | 1    | -    |        | sin_values            | rom_1p  | auto | 1       |
+|    cos_values_U           | 1    | -    |        | cos_values            | rom_1p  | auto | 1       |
++---------------------------+------+------+--------+-----------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+---------------------------------------+------------------------------------------------+
+| Type      | Options                               | Location                                       |
++-----------+---------------------------------------+------------------------------------------------+
+| interface | axis port=inStream                    | cluster/cluster.cpp:17 in clusterop, inStream  |
+| interface | axis port=outStream                   | cluster/cluster.cpp:18 in clusterop, outStream |
+| interface | s_axilite port=return bundle=CTRL_BUS | cluster/cluster.cpp:19 in clusterop, return    |
+| interface | axis port=inStream                    | cluster2.cpp:161 in clusterop2, inStream       |
+| interface | axis port=outStream                   | cluster2.cpp:162 in clusterop2, outStream      |
+| interface | s_axilite port=return bundle=CTRL_BUS | cluster2.cpp:163 in clusterop2, return         |
++-----------+---------------------------------------+------------------------------------------------+
+
+

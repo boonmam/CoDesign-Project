@@ -3,16 +3,6 @@
         <directive functionName="clusterOp" label="clusterOp_label0" functionLabel="">
             <pragma name="UNROLL"/>
         </directive>
-        <directive functionName="clusterOp2" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="clusterOp2"/>
-            </pragma>
-        </directive>
-        <directive functionName="clusterOp2" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="clusterOp2"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

@@ -7,14 +7,14 @@ input rst;
 input ce;
 input signed [17 - 1 : 0] a;
 input [9 - 1 : 0] b;
-output [17 - 1 : 0] p;
+output signed [17 - 1 : 0] p;
 
-reg [17 - 1 : 0] p_reg; 
+reg signed [17 - 1 : 0] p_reg; 
 
 reg signed [17 - 1 : 0] a_reg; 
 reg [9 - 1 : 0] b_reg; 
 
-reg [17 - 1 : 0] p_reg_tmp; 
+reg signed [17 - 1 : 0] p_reg_tmp; 
 
 always @ (posedge clk) begin
     if (ce) begin

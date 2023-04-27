@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../cluster_test.cpp ../../../cluster.cpp
+HLS_SOURCES = ../../../cluster_test.cpp ../../../../cluster2.cpp ../../../cluster.cpp
 
 override TARGET := csim.exe
 
@@ -75,9 +75,15 @@ all: $(TARGET)
 
 $(ObjDir)/cluster_test.o: ../../../cluster_test.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../cluster_test.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/cluster_test.d
+
+$(ObjDir)/cluster2.o: ../../../../cluster2.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../cluster2.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/cluster2.d
 
 $(ObjDir)/cluster.o: ../../../cluster.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../cluster.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

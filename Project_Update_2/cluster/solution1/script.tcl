@@ -12,7 +12,7 @@ add_files -tb cluster/cluster_test.cpp -cflags "-Wno-unknown-pragmas -Wno-unknow
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
 create_clock -period 10 -name default
-config_export -display_name clusterOp -format ip_catalog -output E:/Github/CoDesign-Project/Project_Update_2 -rtl verilog -vivado_clock 10
+config_export -display_name clusterOp2 -format ip_catalog -output E:/Github/CoDesign-Project/Project_Update_2 -rtl verilog -vivado_clock 10
 source "./cluster/solution1/directives.tcl"
 csim_design
 csynth_design

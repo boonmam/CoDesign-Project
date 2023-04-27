@@ -554,7 +554,7 @@ wire   [63:0] ret_V_8_fu_998_p2;
 wire   [63:0] zext_ln1347_1_fu_1003_p1;
 wire   [62:0] grp_fu_1018_p1;
 wire   [125:0] grp_fu_1018_p2;
-wire   [31:0] p_Result_s_102_fu_1074_p3;
+wire   [31:0] p_Result_s_101_fu_1074_p3;
 reg   [31:0] p_Result_2_fu_1081_p4;
 wire   [62:0] zext_ln1488_1_fu_1099_p1;
 wire   [31:0] p_Result_186_1_fu_1113_p3;
@@ -2003,12 +2003,12 @@ end
 
 integer ap_tvar_int_3;
 
-always @ (p_Result_s_102_fu_1074_p3) begin
+always @ (p_Result_s_101_fu_1074_p3) begin
     for (ap_tvar_int_3 = 32 - 1; ap_tvar_int_3 >= 0; ap_tvar_int_3 = ap_tvar_int_3 - 1) begin
         if (ap_tvar_int_3 > 31 - 0) begin
             p_Result_2_fu_1081_p4[ap_tvar_int_3] = 1'b0;
         end else begin
-            p_Result_2_fu_1081_p4[ap_tvar_int_3] = p_Result_s_102_fu_1074_p3[31 - ap_tvar_int_3];
+            p_Result_2_fu_1081_p4[ap_tvar_int_3] = p_Result_s_101_fu_1074_p3[31 - ap_tvar_int_3];
         end
     end
 end
@@ -2025,7 +2025,7 @@ always @ (p_Result_106_fu_473_p3) begin
     end
 end
 
-assign p_Result_s_102_fu_1074_p3 = {{tmp_32_reg_1821}, {16'd32768}};
+assign p_Result_s_101_fu_1074_p3 = {{tmp_32_reg_1821}, {16'd32768}};
 
 assign p_Result_s_fu_445_p2 = (xor_ln1027_fu_440_p2 & tmp_44_fu_433_p3);
 

@@ -15742,7 +15742,7 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: cluster2.cpp, Line: 31, Column: 31 }
+DebugLoc:        { File: cluster2.cpp, Line: 91, Column: 31 }
 Function:        _Z10clusterOp2RN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_
 Args:            
   - String:          'Inlining function '''
@@ -15751,13 +15751,13 @@ Args:
                        Line: 244, Column: 0 }
   - String:          ''' into '''
   - Caller:          'clusterOp2(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)'
-    DebugLoc:        { File: cluster2.cpp, Line: 19, Column: 0 }
+    DebugLoc:        { File: cluster2.cpp, Line: 79, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: cluster2.cpp, Line: 67, Column: 23 }
+DebugLoc:        { File: cluster2.cpp, Line: 127, Column: 23 }
 Function:        _Z10clusterOp2RN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_
 Args:            
   - String:          'Inlining function '''
@@ -15766,13 +15766,13 @@ Args:
                        Line: 255, Column: 0 }
   - String:          ''' into '''
   - Caller:          'clusterOp2(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)'
-    DebugLoc:        { File: cluster2.cpp, Line: 19, Column: 0 }
+    DebugLoc:        { File: cluster2.cpp, Line: 79, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: cluster2.cpp, Line: 49, Column: 19 }
+DebugLoc:        { File: cluster2.cpp, Line: 109, Column: 19 }
 Function:        _Z10clusterOp2RN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_
 Args:            
   - String:          'Inlining function '''
@@ -15781,13 +15781,13 @@ Args:
                        Line: 255, Column: 0 }
   - String:          ''' into '''
   - Caller:          'clusterOp2(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)'
-    DebugLoc:        { File: cluster2.cpp, Line: 19, Column: 0 }
+    DebugLoc:        { File: cluster2.cpp, Line: 79, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: cluster2.cpp, Line: 32, Column: 33 }
+DebugLoc:        { File: cluster2.cpp, Line: 92, Column: 33 }
 Function:        _Z10clusterOp2RN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_
 Args:            
   - String:          'Inlining function '''
@@ -15796,7 +15796,7 @@ Args:
                        Line: 552, Column: 0 }
   - String:          ''' into '''
   - Caller:          'clusterOp2(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)'
-    DebugLoc:        { File: cluster2.cpp, Line: 19, Column: 0 }
+    DebugLoc:        { File: cluster2.cpp, Line: 79, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -16283,46 +16283,46 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: cluster2.cpp, Line: 72, Column: 0 }
-Function:        _Z6dbscanPiPbP7ClusterRiii
+DebugLoc:        { File: cluster2.cpp, Line: 17, Column: 0 }
+Function:        _Z6dbscanPiPbP7ClusterRiiii
 Args:            
   - String:          'Inlining function '''
   - Callee:          'hls::sin(double)'
     DebugLoc:        { File: 'C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib\hlsmath\src\c++\sincoshotbmdouble.cpp', 
                        Line: 24, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'dbscan(int*, bool*, Cluster*, int&, int, int)'
-    DebugLoc:        { File: cluster2.cpp, Line: 72, Column: 0 }
+  - Caller:          'dbscan(int*, bool*, Cluster*, int&, int, int, int)'
+    DebugLoc:        { File: cluster2.cpp, Line: 17, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: cluster2.cpp, Line: 72, Column: 0 }
-Function:        _Z6dbscanPiPbP7ClusterRiii
+DebugLoc:        { File: cluster2.cpp, Line: 17, Column: 0 }
+Function:        _Z6dbscanPiPbP7ClusterRiiii
 Args:            
   - String:          'Inlining function '''
   - Callee:          'hls::cos(double)'
     DebugLoc:        { File: 'C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib\hlsmath\src\c++\sincoshotbmdouble.cpp', 
                        Line: 28, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'dbscan(int*, bool*, Cluster*, int&, int, int)'
-    DebugLoc:        { File: cluster2.cpp, Line: 72, Column: 0 }
+  - Caller:          'dbscan(int*, bool*, Cluster*, int&, int, int, int)'
+    DebugLoc:        { File: cluster2.cpp, Line: 17, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: cluster2.cpp, Line: 72, Column: 0 }
-Function:        _Z6dbscanPiPbP7ClusterRiii
+DebugLoc:        { File: cluster2.cpp, Line: 17, Column: 0 }
+Function:        _Z6dbscanPiPbP7ClusterRiiii
 Args:            
   - String:          'Inlining function '''
   - Callee:          'hls::sqrt(int)'
     DebugLoc:        { File: 'C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib\hlsmath\src\c++\sqrtint32.cpp', 
                        Line: 7, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'dbscan(int*, bool*, Cluster*, int&, int, int)'
-    DebugLoc:        { File: cluster2.cpp, Line: 72, Column: 0 }
+  - Caller:          'dbscan(int*, bool*, Cluster*, int&, int, int, int)'
+    DebugLoc:        { File: cluster2.cpp, Line: 17, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -16409,22 +16409,6 @@ DebugLoc:        { File: 'C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hl
 Function:        _ZN6hotbm_10sin_or_cosIdEET_S1_bb
 Args:            
   - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            CouldNotAnalyzeBoundsPattern
-DebugLoc:        { File: cluster2.cpp, Line: 106, Column: 31 }
-Function:        _Z6dbscanPiPbP7ClusterRiii
-Args:            
-  - String:          Could not analyze the loop bounds
-  - String:          ' _XLX_SEP_ '
-  - LoopName:        VITIS_LOOP_106_3
-  - String:          ' '
-  - LoopLoc:         'cluster2.cpp:106:31'
-  - String:          ' '
-  - Function:        'dbscan(int*, bool*, Cluster*, int&, int, int)'
-    DebugLoc:        { File: cluster2.cpp, Line: 72, Column: 0 }
-  - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference

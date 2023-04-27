@@ -4,7 +4,7 @@ set SynModuleInfo {
       {MODELNAME clusterOp2_flow_control_loop_pipe_sequential_init RTLNAME clusterOp2_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME clusterOp2_flow_control_loop_pipe_sequential_init_U}
     }
   }
-  {SRCNAME clusterOp2_Pipeline_VITIS_LOOP_30_1 MODELNAME clusterOp2_Pipeline_VITIS_LOOP_30_1 RTLNAME clusterOp2_clusterOp2_Pipeline_VITIS_LOOP_30_1}
+  {SRCNAME clusterOp2_Pipeline_VITIS_LOOP_90_1 MODELNAME clusterOp2_Pipeline_VITIS_LOOP_90_1 RTLNAME clusterOp2_clusterOp2_Pipeline_VITIS_LOOP_90_1}
   {SRCNAME sin_or_cos<double> MODELNAME sin_or_cos_double_s RTLNAME clusterOp2_sin_or_cos_double_s
     SUBMODULES {
       {MODELNAME clusterOp2_mul_170s_53ns_170_5_1 RTLNAME clusterOp2_mul_170s_53ns_170_5_1 BINDTYPE op TYPE mul IMPL auto LATENCY 4 ALLOW_PRAGMA 1}
@@ -25,9 +25,8 @@ set SynModuleInfo {
     }
   }
   {SRCNAME {sqrt_fixed<32, 32>} MODELNAME sqrt_fixed_32_32_s RTLNAME clusterOp2_sqrt_fixed_32_32_s}
-  {SRCNAME dbscan_Pipeline_VITIS_LOOP_85_2 MODELNAME dbscan_Pipeline_VITIS_LOOP_85_2 RTLNAME clusterOp2_dbscan_Pipeline_VITIS_LOOP_85_2}
-  {SRCNAME dbscan_Pipeline_VITIS_LOOP_116_4 MODELNAME dbscan_Pipeline_VITIS_LOOP_116_4 RTLNAME clusterOp2_dbscan_Pipeline_VITIS_LOOP_116_4}
-  {SRCNAME dbscan_Pipeline_VITIS_LOOP_132_5 MODELNAME dbscan_Pipeline_VITIS_LOOP_132_5 RTLNAME clusterOp2_dbscan_Pipeline_VITIS_LOOP_132_5}
+  {SRCNAME dbscan_Pipeline_VITIS_LOOP_28_2 MODELNAME dbscan_Pipeline_VITIS_LOOP_28_2 RTLNAME clusterOp2_dbscan_Pipeline_VITIS_LOOP_28_2}
+  {SRCNAME dbscan_Pipeline_VITIS_LOOP_54_4 MODELNAME dbscan_Pipeline_VITIS_LOOP_54_4 RTLNAME clusterOp2_dbscan_Pipeline_VITIS_LOOP_54_4}
   {SRCNAME dbscan MODELNAME dbscan RTLNAME clusterOp2_dbscan
     SUBMODULES {
       {MODELNAME clusterOp2_dmul_64ns_64ns_64_7_max_dsp_1 RTLNAME clusterOp2_dmul_64ns_64ns_64_7_max_dsp_1 BINDTYPE op TYPE dmul IMPL maxdsp LATENCY 6 ALLOW_PRAGMA 1}
@@ -39,7 +38,7 @@ set SynModuleInfo {
       {MODELNAME clusterOp2_dbscan_neighbors_RAM_AUTO_1R1W RTLNAME clusterOp2_dbscan_neighbors_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME clusterOp2_Pipeline_VITIS_LOOP_51_3 MODELNAME clusterOp2_Pipeline_VITIS_LOOP_51_3 RTLNAME clusterOp2_clusterOp2_Pipeline_VITIS_LOOP_51_3}
+  {SRCNAME clusterOp2_Pipeline_VITIS_LOOP_111_3 MODELNAME clusterOp2_Pipeline_VITIS_LOOP_111_3 RTLNAME clusterOp2_clusterOp2_Pipeline_VITIS_LOOP_111_3}
   {SRCNAME clusterOp2 MODELNAME clusterOp2 RTLNAME clusterOp2 IS_TOP 1
     SUBMODULES {
       {MODELNAME clusterOp2_distances_RAM_AUTO_1R1W RTLNAME clusterOp2_distances_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}

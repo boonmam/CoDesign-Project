@@ -2,7 +2,7 @@
       "name": "",
       "directive": [
         {
-          "functionName": "clusterOp",
+          "functionName": "clusterOp2",
           "label": "",
           "functionLabel": "",
           "id": "1",
@@ -12,21 +12,27 @@
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "clusterOp"
+                "value": "clusterOp2"
               }]
           }
         },
         {
-          "functionName": "clusterOp",
-          "label": "clusterOp_label0",
+          "functionName": "clusterOp2",
+          "label": "",
           "functionLabel": "",
           "id": "2",
-          "sourceFile": "E:\/Github\/CoDesign-Project\/Project_Update_2\/cluster\/solution1\/directives.tcl",
-          "sourceLine": "7",
-          "pragma": {"name": "UNROLL"}
+          "sourceFile": "E:\/Github\/CoDesign-Project\/Project_Update_2\/cluster\/solution1\/csynth.tcl",
+          "sourceLine": "17",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "clusterOp2"
+              }]
+          }
         },
         {
-          "functionName": "clusterOp",
+          "functionName": "clusterOp2",
           "label": "",
           "functionLabel": "",
           "id": "3",
@@ -36,22 +42,7 @@
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "clusterOp"
-              }]
-          }
-        },
-        {
-          "functionName": "clusterOp",
-          "label": "",
-          "functionLabel": "",
-          "id": "4",
-          "sourceFile": "E:\/Github\/CoDesign-Project\/Project_Update_2\/cluster\/solution1\/csynth.tcl",
-          "sourceLine": "17",
-          "pragma": {
-            "name": "TOP",
-            "option": [{
-                "name": "name",
-                "value": "clusterOp"
+                "value": "clusterOp2"
               }]
           }
         }

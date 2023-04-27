@@ -1307,7 +1307,7 @@ Diagnostics:
     FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\cluster.cpp'
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster.pp.0.cpp'
-        Offset:          1599814
+        Offset:          1599463
         Length:          0
         ReplacementText: 'VITIS_LOOP_27_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1316,7 +1316,7 @@ Diagnostics:
     FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\cluster.cpp'
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster.pp.0.cpp'
-        Offset:          1601218
+        Offset:          1600724
         Length:          0
         ReplacementText: 'VITIS_LOOP_66_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1325,7 +1325,7 @@ Diagnostics:
     FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\cluster.cpp'
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster.pp.0.cpp'
-        Offset:          1601462
+        Offset:          1600968
         Length:          0
         ReplacementText: 'VITIS_LOOP_78_3: '
 ...

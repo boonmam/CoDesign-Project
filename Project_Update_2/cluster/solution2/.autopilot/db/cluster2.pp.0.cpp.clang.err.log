@@ -756,13 +756,13 @@ E:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hypot_apfixed.h:196:9
 E:/Github/CoDesign-Project/Project_Update_2/cluster/solution2/csynth.tcl:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=name=clusterOp2_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=clusterOp2
         ^
-cluster2.cpp:20:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=axis port=inStream_XLX_SEP_ [-Wdump-hls-pragmas]
+cluster2.cpp:80:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=axis port=inStream_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE axis port=inStream
         ^
-cluster2.cpp:21:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=axis port=outStream_XLX_SEP_ [-Wdump-hls-pragmas]
+cluster2.cpp:81:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=axis port=outStream_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE axis port=outStream
         ^
-cluster2.cpp:22:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=CTRL_BUS_XLX_SEP_ [-Wdump-hls-pragmas]
+cluster2.cpp:82:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=CTRL_BUS_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL_BUS
         ^
 242 warnings generated.

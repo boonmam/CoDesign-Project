@@ -26862,6 +26862,7 @@ namespace hls {
 
 
 
+
 typedef ap_axis<32,2,5,6> axis_t;
 
 struct Cluster {
@@ -26870,9 +26871,157 @@ struct Cluster {
     int member_count;
 };
 
-void dbscan(int data[], bool visited[], Cluster clusters[], int &cluster_count, int n, int eps);
+const int sin_values[360] = {
+     0, 1143, 2287, 3429, 4571, 5711, 6850, 7986, 9120, 10252,
+ 11380, 12504, 13625, 14742, 15854, 16961, 18064, 19160, 20251, 21336,
+ 22414, 23486, 24550, 25606, 26655, 27696, 28729, 29752, 30767, 31772,
+ 32767, 33753, 34728, 35693, 36647, 37589, 38521, 39440, 40347, 41243,
+ 42125, 42995, 43852, 44695, 45525, 46340, 47142, 47929, 48702, 49460,
+ 50203, 50931, 51643, 52339, 53019, 53683, 54331, 54963, 55577, 56175,
+ 56755, 57319, 57864, 58393, 58903, 59395, 59870, 60326, 60763, 61183,
+ 61583, 61965, 62328, 62672, 62997, 63302, 63589, 63856, 64103, 64331,
+ 64540, 64729, 64898, 65047, 65176, 65286, 65376, 65446, 65496, 65526,
+ 65536, 65526, 65496, 65446, 65376, 65286, 65176, 65047, 64898, 64729,
+ 64540, 64331, 64103, 63856, 63589, 63302, 62997, 62672, 62328, 61965,
+ 61583, 61183, 60763, 60326, 59870, 59395, 58903, 58393, 57864, 57319,
+ 56755, 56175, 55577, 54963, 54331, 53683, 53019, 52339, 51643, 50931,
+ 50203, 49460, 48702, 47929, 47142, 46340, 45525, 44695, 43852, 42995,
+ 42125, 41243, 40347, 39440, 38521, 37589, 36647, 35693, 34728, 33753,
+ 32767, 31772, 30767, 29752, 28729, 27696, 26655, 25606, 24550, 23486,
+ 22414, 21336, 20251, 19160, 18064, 16961, 15854, 14742, 13625, 12504,
+ 11380, 10252, 9120, 7986, 6850, 5711, 4571, 3429, 2287, 1143,
+     0, -1143, -2287, -3429, -4571, -5711, -6850, -7986, -9120, -10252,
+-11380, -12504, -13625, -14742, -15854, -16961, -18064, -19160, -20251, -21336,
+-22414, -23486, -24550, -25606, -26655, -27696, -28729, -29752, -30767, -31772,
+-32768, -33753, -34728, -35693, -36647, -37589, -38521, -39440, -40347, -41243,
+-42125, -42995, -43852, -44695, -45525, -46340, -47142, -47929, -48702, -49460,
+-50203, -50931, -51643, -52339, -53019, -53683, -54331, -54963, -55577, -56175,
+-56755, -57319, -57864, -58393, -58903, -59395, -59870, -60326, -60763, -61183,
+-61583, -61965, -62328, -62672, -62997, -63302, -63589, -63856, -64103, -64331,
+-64540, -64729, -64898, -65047, -65176, -65286, -65376, -65446, -65496, -65526,
+-65536, -65526, -65496, -65446, -65376, -65286, -65176, -65047, -64898, -64729,
+-64540, -64331, -64103, -63856, -63589, -63302, -62997, -62672, -62328, -61965,
+-61583, -61183, -60763, -60326, -59870, -59395, -58903, -58393, -57864, -57319,
+-56755, -56175, -55577, -54963, -54331, -53683, -53019, -52339, -51643, -50931,
+-50203, -49460, -48702, -47929, -47142, -46340, -45525, -44695, -43852, -42995,
+-42125, -41243, -40347, -39440, -38521, -37589, -36647, -35693, -34728, -33753,
+-32768, -31772, -30767, -29752, -28729, -27696, -26655, -25606, -24550, -23486,
+-22414, -21336, -20251, -19160, -18064, -16961, -15854, -14742, -13625, -12504,
+-11380, -10252, -9120, -7986, -6850, -5711, -4571, -3429, -2287, -1143
+};
 
-void clusterOp2(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
+const int cos_values[360] = {
+ 65536, 65526, 65496, 65446, 65376, 65286, 65176, 65047, 64898, 64729,
+ 64540, 64331, 64103, 63856, 63589, 63302, 62997, 62672, 62328, 61965,
+ 61583, 61183, 60763, 60326, 59870, 59395, 58903, 58393, 57864, 57319,
+ 56755, 56175, 55577, 54963, 54331, 53683, 53019, 52339, 51643, 50931,
+ 50203, 49460, 48702, 47929, 47142, 46340, 45525, 44695, 43852, 42995,
+ 42125, 41243, 40347, 39440, 38521, 37589, 36647, 35693, 34728, 33753,
+ 32768, 31772, 30767, 29752, 28729, 27696, 26655, 25606, 24550, 23486,
+ 22414, 21336, 20251, 19160, 18064, 16961, 15854, 14742, 13625, 12504,
+ 11380, 10252, 9120, 7986, 6850, 5711, 4571, 3429, 2287, 1143,
+     0, -1143, -2287, -3429, -4571, -5711, -6850, -7986, -9120, -10252,
+-11380, -12504, -13625, -14742, -15854, -16961, -18064, -19160, -20251, -21336,
+-22414, -23486, -24550, -25606, -26655, -27696, -28729, -29752, -30767, -31772,
+-32767, -33753, -34728, -35693, -36647, -37589, -38521, -39440, -40347, -41243,
+-42125, -42995, -43852, -44695, -45525, -46340, -47142, -47929, -48702, -49460,
+-50203, -50931, -51643, -52339, -53019, -53683, -54331, -54963, -55577, -56175,
+-56755, -57319, -57864, -58393, -58903, -59395, -59870, -60326, -60763, -61183,
+-61583, -61965, -62328, -62672, -62997, -63302, -63589, -63856, -64103, -64331,
+-64540, -64729, -64898, -65047, -65176, -65286, -65376, -65446, -65496, -65526,
+-65536, -65526, -65496, -65446, -65376, -65286, -65176, -65047, -64898, -64729,
+-64540, -64331, -64103, -63856, -63589, -63302, -62997, -62672, -62328, -61965,
+-61583, -61183, -60763, -60326, -59870, -59395, -58903, -58393, -57864, -57319,
+-56755, -56175, -55577, -54963, -54331, -53683, -53019, -52339, -51643, -50931,
+-50203, -49460, -48702, -47929, -47142, -46340, -45525, -44695, -43852, -42995,
+-42125, -41243, -40347, -39440, -38521, -37589, -36647, -35693, -34728, -33753,
+-32768, -31772, -30767, -29752, -28729, -27696, -26655, -25606, -24550, -23486,
+-22414, -21336, -20251, -19160, -18064, -16961, -15854, -14742, -13625, -12504,
+-11380, -10252, -9120, -7986, -6850, -5711, -4571, -3429, -2287, -1143,
+     0, 1143, 2287, 3429, 4571, 5711, 6850, 7986, 9120, 10252,
+ 11380, 12504, 13625, 14742, 15854, 16961, 18064, 19160, 20251, 21336,
+ 22414, 23486, 24550, 25606, 26655, 27696, 28729, 29752, 30767, 31772,
+ 32768, 33753, 34728, 35693, 36647, 37589, 38521, 39440, 40347, 41243,
+ 42125, 42995, 43852, 44695, 45525, 46340, 47142, 47929, 48702, 49460,
+ 50203, 50931, 51643, 52339, 53019, 53683, 54331, 54963, 55577, 56175,
+ 56755, 57319, 57864, 58393, 58903, 59395, 59870, 60326, 60763, 61183,
+ 61583, 61965, 62328, 62672, 62997, 63302, 63589, 63856, 64103, 64331,
+ 64540, 64729, 64898, 65047, 65176, 65286, 65376, 65446, 65496, 65526
+};
+
+int calculate_distance(int data[], const int sin_values[], const int cos_values[], int i, int j) {
+    int dx = (data[i] * sin_values[i] - data[j] * sin_values[j]) >> 16;
+    int dy = (data[i] * cos_values[i] - data[j] * cos_values[j]) >> 16;
+    return hls::sqrt(dx * dx + dy * dy);
+}
+
+void dbscan(int data[], bool visited[], Cluster clusters[], int &cluster_count, int n, int eps, int min_points, const int sin_values[], const int cos_values[]) {
+    VITIS_LOOP_103_1: for (int i = 0; i < n; i++) {
+        if (visited[i]) {
+            continue;
+        }
+
+        visited[i] = true;
+
+        int neighbor_count = 0;
+        int neighbors[360];
+
+        VITIS_LOOP_113_2: for (int j = 0; j < n; j++) {
+            if (i == j) {
+                continue;
+            }
+
+            int distance = calculate_distance(data, sin_values, cos_values, i, j);
+
+            if (distance <= eps) {
+                neighbors[neighbor_count++] = j;
+            }
+        }
+
+        if (neighbor_count >= min_points) {
+            Cluster &cluster = clusters[cluster_count++];
+            cluster.id = cluster_count - 1;
+            cluster.member_count = 0;
+
+            VITIS_LOOP_130_3: for (int k = 0; k < neighbor_count; k++) {
+                int neighbor_id = neighbors[k];
+
+                if (!visited[neighbor_id]) {
+                    visited[neighbor_id] = true;
+
+                    int new_neighbor_count = 0;
+                    VITIS_LOOP_137_4: for (int l = 0; l < n; l++) {
+                        if (neighbor_id == l) {
+                            continue;
+                        }
+
+                        int distance = calculate_distance(data, sin_values, cos_values, neighbor_id, l);
+
+                        if (distance <= eps) {
+                            new_neighbor_count++;
+                        }
+                    }
+
+                    if (new_neighbor_count >= min_points) {
+                        cluster.members[cluster.member_count++] = neighbor_id;
+                    } else {
+                        visited[neighbor_id] = false;
+                    }
+                }
+            }
+        }
+    }
+}
+
+__attribute__((sdx_kernel("clusterOp2", 0))) void clusterOp2(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
+#line 17 "E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csynth.tcl"
+#pragma HLSDIRECTIVE TOP name=clusterOp2
+# 160 "cluster2.cpp"
+
+#line 6 "E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=clusterOp2
+# 160 "cluster2.cpp"
+
 #pragma HLS INTERFACE axis port=inStream
 #pragma HLS INTERFACE axis port=outStream
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL_BUS
@@ -26883,16 +27032,18 @@ void clusterOp2(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
     int cluster_count = 0;
 
 
-    VITIS_LOOP_30_1: for (int i = 0; i < 360; i++) {
+
+    VITIS_LOOP_172_1: for (int i = 0; i < 360; i++) {
         axis_t tmp = inStream.read();
         distances[i] = tmp.data.to_int();
     }
 
 
-    dbscan(distances, visited, clusters, cluster_count, 360, 200);
+    dbscan(distances, visited, clusters, cluster_count, 360, 300, 5, sin_values, cos_values);
 
 
-    VITIS_LOOP_39_2: for (int i = 0; i < cluster_count; i++) {
+
+    VITIS_LOOP_182_2: for (int i = 0; i < cluster_count; i++) {
 
         axis_t tmp;
         tmp.data = 720;
@@ -26904,7 +27055,7 @@ void clusterOp2(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
         tmp.dest = 0;
         outStream.write(tmp);
 
-        VITIS_LOOP_51_3: for (int j = 0; j < clusters[i].member_count; j++) {
+        VITIS_LOOP_194_3: for (int j = 0; j < clusters[i].member_count; j++) {
             axis_t tmp;
             tmp.data = clusters[i].members[j];
             tmp.keep = -1;
@@ -26921,82 +27072,6 @@ void clusterOp2(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
             tmp.dest = 0;
 
             outStream.write(tmp);
-        }
-    }
-}
-
-void dbscan(int data[], bool visited[], Cluster clusters[], int &cluster_count, int n, int eps) {
-
-    VITIS_LOOP_74_1: for (int i = 0; i < n; i++) {
-
-        if (visited[i]) {
-            continue;
-        }
-
-        visited[i] = 1;
-        int neighbors[360];
-        int neighbor_count = 0;
-
-
-        VITIS_LOOP_85_2: for (int j = 0; j < n; j++) {
-            if (i == j) {
-                continue;
-            }
-
-            int dx = data[i] * hls::sin(i * 3.14159265358979323846 / 180) - data[j] * hls::sin(j * 3.14159265358979323846 / 180);
-            int dy = data[i] * hls::cos(i * 3.14159265358979323846 / 180) - data[j] * hls::cos(j * 3.14159265358979323846 / 180);
-            int distance = hls::sqrt(dx*dx + dy*dy);
-
-            if (distance <= eps) {
-                neighbors[neighbor_count++] = j;
-            }
-        }
-
-
-        if (neighbor_count >= 3) {
-            clusters[cluster_count].id = cluster_count;
-            clusters[cluster_count].members[0] = i;
-            clusters[cluster_count].member_count = 1;
-
-
-            VITIS_LOOP_106_3: for (int k = 0; k < neighbor_count; k++) {
-                int neighbor_id = neighbors[k];
-
-                if (!visited[neighbor_id]) {
-                    visited[neighbor_id] = 1;
-                    clusters[cluster_count].members[clusters[cluster_count].member_count++] = neighbor_id;
-                    int new_neighbors[360];
-                    int new_neighbor_count = 0;
-
-
-                    VITIS_LOOP_116_4: for (int l = 0; l < n; l++) {
-                        if (neighbor_id == l) {
-                            continue;
-                        }
-
-                        int dx = data[neighbor_id] * hls::sin(neighbor_id * 3.14159265358979323846 / 180) - data[l] * hls::sin(l * 3.14159265358979323846 / 180);
-                        int dy = data[neighbor_id] * hls::cos(neighbor_id * 3.14159265358979323846 / 180) - data[l] * hls::cos(l * 3.14159265358979323846 / 180);
-                        int distance = hls::sqrt(dx*dx + dy*dy);
-
-                        if (distance <= eps) {
-                            new_neighbors[new_neighbor_count++] = l;
-                        }
-                    }
-
-
-                    if (new_neighbor_count >= 2) {
-                        VITIS_LOOP_132_5: for (int m = 0; m < new_neighbor_count; m++) {
-                            int new_neighbor_id = new_neighbors[m];
-                            if (!visited[new_neighbor_id]) {
-                                neighbors[neighbor_count++] = new_neighbor_id;
-                            }
-                        }
-                    }
-                }
-            }
-
-
-            cluster_count++;
         }
     }
 }

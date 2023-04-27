@@ -1302,75 +1302,66 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_195_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_30_1:  '
-    FileOffset:      30
+    Message:         'Added loop label VITIS_LOOP_18_1:  '
+    FileOffset:      18
     FilePath:        cluster2.cpp
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp'
-        Offset:          1599719
+        Offset:          1599209
         Length:          0
-        ReplacementText: 'VITIS_LOOP_30_1: '
+        ReplacementText: 'VITIS_LOOP_18_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_39_2:  '
-    FileOffset:      39
+    Message:         'Added loop label VITIS_LOOP_28_2:  '
+    FileOffset:      28
     FilePath:        cluster2.cpp
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp'
-        Offset:          1599912
+        Offset:          1599395
         Length:          0
-        ReplacementText: 'VITIS_LOOP_39_2: '
+        ReplacementText: 'VITIS_LOOP_28_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_51_3:  '
-    FileOffset:      51
+    Message:         'Added loop label VITIS_LOOP_47_3:  '
+    FileOffset:      47
     FilePath:        cluster2.cpp
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp'
-        Offset:          1600183
+        Offset:          1600116
         Length:          0
-        ReplacementText: 'VITIS_LOOP_51_3: '
+        ReplacementText: 'VITIS_LOOP_47_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_74_1:  '
-    FileOffset:      74
+    Message:         'Added loop label VITIS_LOOP_54_4:  '
+    FileOffset:      54
     FilePath:        cluster2.cpp
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp'
-        Offset:          1600783
+        Offset:          1600371
         Length:          0
-        ReplacementText: 'VITIS_LOOP_74_1: '
+        ReplacementText: 'VITIS_LOOP_54_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_85_2:  '
-    FileOffset:      85
+    Message:         'Added loop label VITIS_LOOP_90_1:  '
+    FileOffset:      90
     FilePath:        cluster2.cpp
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp'
-        Offset:          1600967
+        Offset:          1601879
         Length:          0
-        ReplacementText: 'VITIS_LOOP_85_2: '
+        ReplacementText: 'VITIS_LOOP_90_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_106_3:  '
-    FileOffset:      106
+    Message:         'Added loop label VITIS_LOOP_99_2:  '
+    FileOffset:      99
     FilePath:        cluster2.cpp
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp'
-        Offset:          1601699
+        Offset:          1602075
         Length:          0
-        ReplacementText: 'VITIS_LOOP_106_3: '
+        ReplacementText: 'VITIS_LOOP_99_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_116_4:  '
-    FileOffset:      116
+    Message:         'Added loop label VITIS_LOOP_111_3:  '
+    FileOffset:      111
     FilePath:        cluster2.cpp
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp'
-        Offset:          1602103
+        Offset:          1602346
         Length:          0
-        ReplacementText: 'VITIS_LOOP_116_4: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_132_5:  '
-    FileOffset:      132
-    FilePath:        cluster2.cpp
-    Replacements:    
-      - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution2\.autopilot\db\cluster2.pp.0.cpp'
-        Offset:          1602877
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_132_5: '
+        ReplacementText: 'VITIS_LOOP_111_3: '
 ...

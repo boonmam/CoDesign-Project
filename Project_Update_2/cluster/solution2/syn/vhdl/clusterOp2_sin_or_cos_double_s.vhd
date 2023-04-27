@@ -606,7 +606,7 @@ attribute shreg_extract : string;
     signal zext_ln1347_1_fu_1003_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal grp_fu_1018_p1 : STD_LOGIC_VECTOR (62 downto 0);
     signal grp_fu_1018_p2 : STD_LOGIC_VECTOR (125 downto 0);
-    signal p_Result_s_102_fu_1074_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal p_Result_s_101_fu_1074_p3 : STD_LOGIC_VECTOR (31 downto 0);
     signal p_Result_2_fu_1081_p4 : STD_LOGIC_VECTOR (31 downto 0);
     signal zext_ln1488_1_fu_1099_p1 : STD_LOGIC_VECTOR (62 downto 0);
     signal p_Result_186_1_fu_1113_p3 : STD_LOGIC_VECTOR (31 downto 0);
@@ -2418,7 +2418,7 @@ begin
     end process;
 
     
-    p_Result_2_fu_1081_p4_proc : process(p_Result_s_102_fu_1074_p3)
+    p_Result_2_fu_1081_p4_proc : process(p_Result_s_101_fu_1074_p3)
     variable vlo_cpy : STD_LOGIC_VECTOR(32+32 - 1 downto 0);
     variable vhi_cpy : STD_LOGIC_VECTOR(32+32 - 1 downto 0);
     variable v0_cpy : STD_LOGIC_VECTOR(32 - 1 downto 0);
@@ -2431,12 +2431,12 @@ begin
         vlo_cpy(5 - 1 downto 0) := ap_const_lv32_1F(5 - 1 downto 0);
         vhi_cpy := (others => '0');
         vhi_cpy(5 - 1 downto 0) := ap_const_lv32_0(5 - 1 downto 0);
-        v0_cpy := p_Result_s_102_fu_1074_p3;
+        v0_cpy := p_Result_s_101_fu_1074_p3;
         if (vlo_cpy(5 - 1 downto 0) > vhi_cpy(5 - 1 downto 0)) then
             vhi_cpy(5-1 downto 0) := std_logic_vector(32-1-unsigned(ap_const_lv32_0(5-1 downto 0)));
             vlo_cpy(5-1 downto 0) := std_logic_vector(32-1-unsigned(ap_const_lv32_1F(5-1 downto 0)));
             for p_Result_2_fu_1081_p4_i in 0 to 32-1 loop
-                v0_cpy(p_Result_2_fu_1081_p4_i) := p_Result_s_102_fu_1074_p3(32-1-p_Result_2_fu_1081_p4_i);
+                v0_cpy(p_Result_2_fu_1081_p4_i) := p_Result_s_101_fu_1074_p3(32-1-p_Result_2_fu_1081_p4_i);
             end loop;
         end if;
         res_value := std_logic_vector(shift_right(unsigned(v0_cpy), to_integer(unsigned('0' & vlo_cpy(5-1 downto 0)))));
@@ -2483,7 +2483,7 @@ begin
         p_Result_5_fu_481_p4 <= resvalue(62-1 downto 0);
     end process;
 
-    p_Result_s_102_fu_1074_p3 <= (tmp_32_reg_1821 & ap_const_lv16_8000);
+    p_Result_s_101_fu_1074_p3 <= (tmp_32_reg_1821 & ap_const_lv16_8000);
     p_Result_s_fu_445_p2 <= (xor_ln1027_fu_440_p2 and tmp_44_fu_433_p3);
     r_V_15_fu_382_p2 <= std_logic_vector(shift_left(unsigned(table_256_V_reg_1525),to_integer(unsigned('0' & zext_ln930_fu_379_p1(31-1 downto 0)))));
     r_V_16_fu_612_p3 <= 

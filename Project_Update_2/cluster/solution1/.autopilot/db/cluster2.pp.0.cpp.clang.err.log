@@ -753,13 +753,19 @@ In file included from E:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\hls
 E:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hypot_apfixed.h:196:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hypot_fixed_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS unroll
         ^
-cluster2.cpp:20:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=axis port=inStream_XLX_SEP_ [-Wdump-hls-pragmas]
+E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csynth.tcl:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=name=clusterOp2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=clusterOp2
+        ^
+E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/directives.tcl:6:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=name=clusterOp2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=clusterOp2
+        ^
+cluster2.cpp:161:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=axis port=inStream_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE axis port=inStream
         ^
-cluster2.cpp:21:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=axis port=outStream_XLX_SEP_ [-Wdump-hls-pragmas]
+cluster2.cpp:162:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=axis port=outStream_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE axis port=outStream
         ^
-cluster2.cpp:22:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=CTRL_BUS_XLX_SEP_ [-Wdump-hls-pragmas]
+cluster2.cpp:163:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clusterOp2_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=CTRL_BUS_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL_BUS
         ^
-241 warnings generated.
+243 warnings generated.

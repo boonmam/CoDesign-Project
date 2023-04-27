@@ -3058,8 +3058,8 @@
       },
       "clusterOp2_0": {
         "vlnv": "xilinx.com:hls:clusterOp2:1.0",
-        "xci_name": "design_1_clusterOp2_0_0",
-        "xci_path": "ip\\design_1_clusterOp2_0_0\\design_1_clusterOp2_0_0.xci",
+        "xci_name": "design_1_clusterOp2_0_2",
+        "xci_path": "ip\\design_1_clusterOp2_0_2\\design_1_clusterOp2_0_2.xci",
         "inst_hier_path": "clusterOp2_0"
       }
     },
