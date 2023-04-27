@@ -33,7 +33,7 @@
         "m00_couplers": {},
         "m01_couplers": {}
       },
-      "clusterOp_0": ""
+      "clusterOp2_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -3056,17 +3056,17 @@
           }
         }
       },
-      "clusterOp_0": {
-        "vlnv": "xilinx.com:hls:clusterOp:1.0",
-        "xci_name": "design_1_clusterOp_0_0",
-        "xci_path": "ip\\design_1_clusterOp_0_0\\design_1_clusterOp_0_0.xci",
-        "inst_hier_path": "clusterOp_0"
+      "clusterOp2_0": {
+        "vlnv": "xilinx.com:hls:clusterOp2:1.0",
+        "xci_name": "design_1_clusterOp2_0_0",
+        "xci_path": "ip\\design_1_clusterOp2_0_0\\design_1_clusterOp2_0_0.xci",
+        "inst_hier_path": "clusterOp2_0"
       }
     },
     "interface_nets": {
       "axi_dma_M_AXIS_MM2S": {
         "interface_ports": [
-          "clusterOp_0/inStream",
+          "clusterOp2_0/inStream",
           "axi_dma/M_AXIS_MM2S"
         ]
       },
@@ -3094,9 +3094,9 @@
           "processing_system7_0/S_AXI_HP0"
         ]
       },
-      "clusterOp_0_outStream": {
+      "clusterOp2_0_outStream": {
         "interface_ports": [
-          "clusterOp_0/outStream",
+          "clusterOp2_0/outStream",
           "axi_dma/S_AXIS_S2MM"
         ]
       },
@@ -3127,7 +3127,7 @@
       "ps7_0_axi_periph_M01_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M01_AXI",
-          "clusterOp_0/s_axi_CTRL_BUS"
+          "clusterOp2_0/s_axi_CTRL_BUS"
         ]
       }
     },
@@ -3152,7 +3152,7 @@
           "ps7_0_axi_periph/S00_ACLK",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/M01_ACLK",
-          "clusterOp_0/ap_clk"
+          "clusterOp2_0/ap_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -3175,7 +3175,7 @@
           "ps7_0_axi_periph/S00_ARESETN",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/M01_ARESETN",
-          "clusterOp_0/ap_rst_n"
+          "clusterOp2_0/ap_rst_n"
         ]
       }
     },
@@ -3189,8 +3189,8 @@
                 "offset": "0x40400000",
                 "range": "64K"
               },
-              "SEG_clusterOp_0_Reg": {
-                "address_block": "/clusterOp_0/s_axi_CTRL_BUS/Reg",
+              "SEG_clusterOp2_0_Reg": {
+                "address_block": "/clusterOp2_0/s_axi_CTRL_BUS/Reg",
                 "offset": "0x40000000",
                 "range": "64K",
                 "offset_base_param": "C_S_AXI_CTRL_BUS_BASEADDR",

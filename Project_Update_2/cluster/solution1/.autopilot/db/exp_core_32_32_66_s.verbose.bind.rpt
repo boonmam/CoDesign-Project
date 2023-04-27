@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'exp_core_32_32_66_s'
 ================================================================
-* Date:           Wed Mar 29 22:11:20 2023
+* Date:           Thu Apr 27 03:41:17 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        cluster
@@ -109,8 +109,8 @@ ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%x_l_fract = bitconcatenate i67 @_s
 ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i41.i32, i41 %x_read, i32 40" [C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_exp_apfixed.h:1629]   --->   Operation 29 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_51 = bitselect i1 @_ssdm_op_BitSelect.i1.i41.i32, i41 %x_read, i32 39"   --->   Operation 30 'bitselect' 'tmp_51' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%and_ln = bitconcatenate i41 @_ssdm_op_BitConcatenate.i41.i1.i1.i39, i1 0, i1 %tmp_51, i39 0"   --->   Operation 31 'bitconcatenate' 'and_ln' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 32 [1/1] (2.57ns)   --->   "%p_Result_102 = icmp_ne  i41 %and_ln, i41 0"   --->   Operation 32 'icmp' 'p_Result_102' <Predicate = true> <Delay = 2.57> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.57> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node or_ln1647_1)   --->   "%overf = xor i1 %p_Result_s, i1 %p_Result_102"   --->   Operation 33 'xor' 'overf' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (2.57ns)   --->   "%p_Result_103 = icmp_ne  i41 %and_ln, i41 0"   --->   Operation 32 'icmp' 'p_Result_103' <Predicate = true> <Delay = 2.57> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.57> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node or_ln1647_1)   --->   "%overf = xor i1 %p_Result_s, i1 %p_Result_103"   --->   Operation 33 'xor' 'overf' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 34 [1/1] (1.42ns)   --->   "%icmp_ln1649 = icmp_sgt  i6 %x_l_int, i6 22"   --->   Operation 34 'icmp' 'icmp_ln1649' <Predicate = true> <Delay = 1.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 35 [1/1] (1.42ns)   --->   "%icmp_ln1653 = icmp_eq  i6 %x_l_int, i6 22"   --->   Operation 35 'icmp' 'icmp_ln1653' <Predicate = true> <Delay = 1.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 36 [1/1] (2.80ns)   --->   "%icmp_ln1651 = icmp_ugt  i67 %x_l_fract, i67 26668056198998764480"   --->   Operation 36 'icmp' 'icmp_ln1651' <Predicate = true> <Delay = 2.80> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.80> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
@@ -190,9 +190,9 @@ ST_10 : Operation 91 [1/1] (0.00ns)   --->   "%f_x_msb_2_table_V_addr = geteleme
 ST_10 : Operation 92 [2/2] (3.25ns)   --->   "%f_x_msb_2_V = load i8 %f_x_msb_2_table_V_addr" [C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_exp_apfixed.h:1992]   --->   Operation 92 'load' 'f_x_msb_2_V' <Predicate = (!or_ln1647_1)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 64> <Depth = 256> <ROM>
 
 State 11 <SV = 10> <Delay = 5.28>
-ST_11 : Operation 93 [1/1] (0.00ns)   --->   "%p_Result_118 = bitconcatenate i62 @_ssdm_op_BitConcatenate.i62.i8.i3.i51, i8 %tmp_59, i3 0, i51 %f_x_msb_3_V"   --->   Operation 93 'bitconcatenate' 'p_Result_118' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
+ST_11 : Operation 93 [1/1] (0.00ns)   --->   "%p_Result_119 = bitconcatenate i62 @_ssdm_op_BitConcatenate.i62.i8.i3.i51, i8 %tmp_59, i3 0, i51 %f_x_msb_3_V"   --->   Operation 93 'bitconcatenate' 'p_Result_119' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
 ST_11 : Operation 94 [1/1] (0.00ns)   --->   "%zext_ln813_9 = zext i44 %tmp_56"   --->   Operation 94 'zext' 'zext_ln813_9' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
-ST_11 : Operation 95 [1/1] (0.00ns)   --->   "%zext_ln813_10 = zext i62 %p_Result_118"   --->   Operation 95 'zext' 'zext_ln813_10' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
+ST_11 : Operation 95 [1/1] (0.00ns)   --->   "%zext_ln813_10 = zext i62 %p_Result_119"   --->   Operation 95 'zext' 'zext_ln813_10' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
 ST_11 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_50 = bitconcatenate i54 @_ssdm_op_BitConcatenate.i54.i16.i2.i33.i3, i16 %trunc_ln813, i2 0, i33 %exp_x_msb_4_5_lsb_m_1_m5_V, i3 0"   --->   Operation 96 'bitconcatenate' 'tmp_50' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
 ST_11 : Operation 97 [1/1] (0.00ns)   --->   "%zext_ln813_11 = zext i54 %tmp_50"   --->   Operation 97 'zext' 'zext_ln813_11' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
 ST_11 : Operation 98 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln813 = add i63 %zext_ln813_10, i63 %zext_ln813_9"   --->   Operation 98 'add' 'add_ln813' <Predicate = (!or_ln1647_1)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.64> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
@@ -205,25 +205,25 @@ ST_11 : Operation 104 [1/1] (1.91ns)   --->   "%ret_V = add i9 %zext_ln813_13, i
 ST_11 : Operation 105 [1/1] (0.00ns)   --->   "%trunc_ln594_2 = trunc i64 %f_x_msb_2_V"   --->   Operation 105 'trunc' 'trunc_ln594_2' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
 
 State 12 <SV = 11> <Delay = 6.97>
-ST_12 : Operation 106 [1/1] (0.00ns)   --->   "%p_Result_119 = bitconcatenate i67 @_ssdm_op_BitConcatenate.i67.i9.i58, i9 %ret_V, i58 %trunc_ln594_2"   --->   Operation 106 'bitconcatenate' 'p_Result_119' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
-ST_12 : Operation 107 [1/1] (0.00ns)   --->   "%zext_ln1271_3 = zext i67 %p_Result_119"   --->   Operation 107 'zext' 'zext_ln1271_3' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
+ST_12 : Operation 106 [1/1] (0.00ns)   --->   "%p_Result_120 = bitconcatenate i67 @_ssdm_op_BitConcatenate.i67.i9.i58, i9 %ret_V, i58 %trunc_ln594_2"   --->   Operation 106 'bitconcatenate' 'p_Result_120' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
+ST_12 : Operation 107 [1/1] (0.00ns)   --->   "%zext_ln1271_3 = zext i67 %p_Result_120"   --->   Operation 107 'zext' 'zext_ln1271_3' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
 ST_12 : Operation 108 [1/1] (0.00ns)   --->   "%zext_ln1273_3 = zext i63 %exp_x_msb_3_4_5_lsb_m_1_V"   --->   Operation 108 'zext' 'zext_ln1273_3' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
-ST_12 : Operation 109 [5/5] (6.97ns)   --->   "%r_V_28 = mul i130 %zext_ln1271_3, i130 %zext_ln1273_3"   --->   Operation 109 'mul' 'r_V_28' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 109 [5/5] (6.97ns)   --->   "%r_V_29 = mul i130 %zext_ln1271_3, i130 %zext_ln1273_3"   --->   Operation 109 'mul' 'r_V_29' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 13 <SV = 12> <Delay = 6.97>
-ST_13 : Operation 110 [4/5] (6.97ns)   --->   "%r_V_28 = mul i130 %zext_ln1271_3, i130 %zext_ln1273_3"   --->   Operation 110 'mul' 'r_V_28' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 110 [4/5] (6.97ns)   --->   "%r_V_29 = mul i130 %zext_ln1271_3, i130 %zext_ln1273_3"   --->   Operation 110 'mul' 'r_V_29' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 14 <SV = 13> <Delay = 6.97>
-ST_14 : Operation 111 [3/5] (6.97ns)   --->   "%r_V_28 = mul i130 %zext_ln1271_3, i130 %zext_ln1273_3"   --->   Operation 111 'mul' 'r_V_28' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 111 [3/5] (6.97ns)   --->   "%r_V_29 = mul i130 %zext_ln1271_3, i130 %zext_ln1273_3"   --->   Operation 111 'mul' 'r_V_29' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 15 <SV = 14> <Delay = 6.97>
-ST_15 : Operation 112 [2/5] (6.97ns)   --->   "%r_V_28 = mul i130 %zext_ln1271_3, i130 %zext_ln1273_3"   --->   Operation 112 'mul' 'r_V_28' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 112 [2/5] (6.97ns)   --->   "%r_V_29 = mul i130 %zext_ln1271_3, i130 %zext_ln1273_3"   --->   Operation 112 'mul' 'r_V_29' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 16 <SV = 15> <Delay = 6.97>
-ST_16 : Operation 113 [1/1] (0.00ns)   --->   "%p_Result_117 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i1.i7, i1 %p_Result_s, i7 %tmp"   --->   Operation 113 'bitconcatenate' 'p_Result_117' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
-ST_16 : Operation 114 [1/5] (6.97ns)   --->   "%r_V_28 = mul i130 %zext_ln1271_3, i130 %zext_ln1273_3"   --->   Operation 114 'mul' 'r_V_28' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_16 : Operation 115 [1/1] (0.00ns)   --->   "%trunc_ln3 = partselect i62 @_ssdm_op_PartSelect.i62.i130.i32.i32, i130 %r_V_28, i32 68, i32 129"   --->   Operation 115 'partselect' 'trunc_ln3' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
-ST_16 : Operation 116 [1/1] (0.00ns)   --->   "%zext_ln541_5 = zext i8 %p_Result_117"   --->   Operation 116 'zext' 'zext_ln541_5' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
+ST_16 : Operation 113 [1/1] (0.00ns)   --->   "%p_Result_118 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i1.i7, i1 %p_Result_s, i7 %tmp"   --->   Operation 113 'bitconcatenate' 'p_Result_118' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
+ST_16 : Operation 114 [1/5] (6.97ns)   --->   "%r_V_29 = mul i130 %zext_ln1271_3, i130 %zext_ln1273_3"   --->   Operation 114 'mul' 'r_V_29' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 115 [1/1] (0.00ns)   --->   "%trunc_ln3 = partselect i62 @_ssdm_op_PartSelect.i62.i130.i32.i32, i130 %r_V_29, i32 68, i32 129"   --->   Operation 115 'partselect' 'trunc_ln3' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
+ST_16 : Operation 116 [1/1] (0.00ns)   --->   "%zext_ln541_5 = zext i8 %p_Result_118"   --->   Operation 116 'zext' 'zext_ln541_5' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
 ST_16 : Operation 117 [1/1] (0.00ns)   --->   "%exp_x_msb_1_table_V_addr = getelementptr i68 %exp_x_msb_1_table_V, i64 0, i64 %zext_ln541_5" [C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_exp_apfixed.h:2070]   --->   Operation 117 'getelementptr' 'exp_x_msb_1_table_V_addr' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
 ST_16 : Operation 118 [2/2] (3.25ns)   --->   "%exp_x_msb_1_V = load i8 %exp_x_msb_1_table_V_addr" [C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_exp_apfixed.h:2070]   --->   Operation 118 'load' 'exp_x_msb_1_V' <Predicate = (!or_ln1647_1)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 68> <Depth = 256> <ROM>
 
@@ -240,20 +240,20 @@ ST_17 : Operation 126 [1/2] (3.25ns)   --->   "%exp_x_msb_1_V = load i8 %exp_x_m
 State 18 <SV = 17> <Delay = 6.97>
 ST_18 : Operation 127 [1/1] (0.00ns)   --->   "%zext_ln1271_4 = zext i68 %exp_x_msb_1_V"   --->   Operation 127 'zext' 'zext_ln1271_4' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
 ST_18 : Operation 128 [1/1] (0.00ns)   --->   "%zext_ln1273_4 = zext i72 %exp_x_msb_2_3_4_5_lsb_m_1_V"   --->   Operation 128 'zext' 'zext_ln1273_4' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
-ST_18 : Operation 129 [5/5] (6.97ns)   --->   "%r_V_29 = mul i140 %zext_ln1273_4, i140 %zext_ln1271_4"   --->   Operation 129 'mul' 'r_V_29' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 129 [5/5] (6.97ns)   --->   "%r_V_30 = mul i140 %zext_ln1273_4, i140 %zext_ln1271_4"   --->   Operation 129 'mul' 'r_V_30' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 19 <SV = 18> <Delay = 6.97>
-ST_19 : Operation 130 [4/5] (6.97ns)   --->   "%r_V_29 = mul i140 %zext_ln1273_4, i140 %zext_ln1271_4"   --->   Operation 130 'mul' 'r_V_29' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 130 [4/5] (6.97ns)   --->   "%r_V_30 = mul i140 %zext_ln1273_4, i140 %zext_ln1271_4"   --->   Operation 130 'mul' 'r_V_30' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 20 <SV = 19> <Delay = 6.97>
-ST_20 : Operation 131 [3/5] (6.97ns)   --->   "%r_V_29 = mul i140 %zext_ln1273_4, i140 %zext_ln1271_4"   --->   Operation 131 'mul' 'r_V_29' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 131 [3/5] (6.97ns)   --->   "%r_V_30 = mul i140 %zext_ln1273_4, i140 %zext_ln1271_4"   --->   Operation 131 'mul' 'r_V_30' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 21 <SV = 20> <Delay = 6.97>
-ST_21 : Operation 132 [2/5] (6.97ns)   --->   "%r_V_29 = mul i140 %zext_ln1273_4, i140 %zext_ln1271_4"   --->   Operation 132 'mul' 'r_V_29' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 132 [2/5] (6.97ns)   --->   "%r_V_30 = mul i140 %zext_ln1273_4, i140 %zext_ln1271_4"   --->   Operation 132 'mul' 'r_V_30' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 22 <SV = 21> <Delay = 6.97>
-ST_22 : Operation 133 [1/5] (6.97ns)   --->   "%r_V_29 = mul i140 %zext_ln1273_4, i140 %zext_ln1271_4"   --->   Operation 133 'mul' 'r_V_29' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_22 : Operation 134 [1/1] (0.00ns)   --->   "%y_lo_s_V = partselect i68 @_ssdm_op_PartSelect.i68.i140.i32.i32, i140 %r_V_29, i32 72, i32 139"   --->   Operation 134 'partselect' 'y_lo_s_V' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
+ST_22 : Operation 133 [1/5] (6.97ns)   --->   "%r_V_30 = mul i140 %zext_ln1273_4, i140 %zext_ln1271_4"   --->   Operation 133 'mul' 'r_V_30' <Predicate = (!or_ln1647_1)> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 134 [1/1] (0.00ns)   --->   "%y_lo_s_V = partselect i68 @_ssdm_op_PartSelect.i68.i140.i32.i32, i140 %r_V_30, i32 72, i32 139"   --->   Operation 134 'partselect' 'y_lo_s_V' <Predicate = (!or_ln1647_1)> <Delay = 0.00>
 
 State 23 <SV = 22> <Delay = 5.11>
 ST_23 : Operation 135 [1/1] (0.00ns) (grouped into LUT with out node y_V_2)   --->   "%y_V = xor i1 %p_Result_s, i1 1" [C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_exp_apfixed.h:1648]   --->   Operation 135 'xor' 'y_V' <Predicate = (or_ln1647_1)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
@@ -266,9 +266,9 @@ ST_23 : Operation 140 [1/1] (0.00ns)   --->   "%trunc_ln813_1 = trunc i64 %y_V_2
 State 24 <SV = 23> <Delay = 5.21>
 ST_24 : Operation 141 [1/1] (0.00ns)   --->   "%specpipeline_ln959 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_1" [C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_exp_apfixed.h:959]   --->   Operation 141 'specpipeline' 'specpipeline_ln959' <Predicate = true> <Delay = 0.00>
 ST_24 : Operation 142 [1/1] (0.00ns)   --->   "%zext_ln1632 = zext i64 %y_V_2" [C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_exp_apfixed.h:1632]   --->   Operation 142 'zext' 'zext_ln1632' <Predicate = true> <Delay = 0.00>
-ST_24 : Operation 143 [1/1] (3.52ns)   --->   "%p_Val2_44 = add i65 %zext_ln1632, i65 2147483648"   --->   Operation 143 'add' 'p_Val2_44' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 143 [1/1] (3.52ns)   --->   "%p_Val2_45 = add i65 %zext_ln1632, i65 2147483648"   --->   Operation 143 'add' 'p_Val2_45' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_24 : Operation 144 [1/1] (3.49ns)   --->   "%add_ln58 = add i63 %trunc_ln813_1, i63 2147483648"   --->   Operation 144 'add' 'add_ln58' <Predicate = true> <Delay = 3.49> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.49> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_24 : Operation 145 [1/1] (0.00ns)   --->   "%tmp_57 = partselect i2 @_ssdm_op_PartSelect.i2.i65.i32.i32, i65 %p_Val2_44, i32 63, i32 64" [C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_exp_apfixed.h:2081]   --->   Operation 145 'partselect' 'tmp_57' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 145 [1/1] (0.00ns)   --->   "%tmp_57 = partselect i2 @_ssdm_op_PartSelect.i2.i65.i32.i32, i65 %p_Val2_45, i32 63, i32 64" [C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_exp_apfixed.h:2081]   --->   Operation 145 'partselect' 'tmp_57' <Predicate = true> <Delay = 0.00>
 ST_24 : Operation 146 [1/1] (0.95ns)   --->   "%overf_1 = icmp_ne  i2 %tmp_57, i2 0" [C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_exp_apfixed.h:2081]   --->   Operation 146 'icmp' 'overf_1' <Predicate = true> <Delay = 0.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_24 : Operation 147 [1/1] (0.00ns)   --->   "%tmp_52 = partselect i31 @_ssdm_op_PartSelect.i31.i63.i32.i32, i63 %add_ln58, i32 32, i32 62"   --->   Operation 147 'partselect' 'tmp_52' <Predicate = true> <Delay = 0.00>
 ST_24 : Operation 148 [1/1] (0.73ns)   --->   "%r_V = select i1 %overf_1, i31 2147483647, i31 %tmp_52" [C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include/hls_exp_apfixed.h:2084]   --->   Operation 148 'select' 'r_V' <Predicate = true> <Delay = 0.73> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
@@ -287,11 +287,11 @@ STG Binding:
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
 Port [ x]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ f_x_msb_4_table_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ f_x_msb_5_table_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ f_x_msb_3_table_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ f_x_msb_2_table_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ exp_x_msb_1_table_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ f_x_msb_4_table_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ f_x_msb_5_table_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ f_x_msb_3_table_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ f_x_msb_2_table_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ exp_x_msb_1_table_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -305,7 +305,7 @@ x_l_fract                    (bitconcatenate) [ 0000000000000000000000000]
 p_Result_s                   (bitselect     ) [ 0111111111111111111111110]
 tmp_51                       (bitselect     ) [ 0000000000000000000000000]
 and_ln                       (bitconcatenate) [ 0000000000000000000000000]
-p_Result_102                 (icmp          ) [ 0000000000000000000000000]
+p_Result_103                 (icmp          ) [ 0000000000000000000000000]
 overf                        (xor           ) [ 0000000000000000000000000]
 icmp_ln1649                  (icmp          ) [ 0000000000000000000000000]
 icmp_ln1653                  (icmp          ) [ 0000000000000000000000000]
@@ -354,7 +354,7 @@ r_V_24                       (mul           ) [ 0000000000000000000000000]
 tmp_56                       (partselect    ) [ 0100000000010000000000000]
 zext_ln541_4                 (zext          ) [ 0000000000000000000000000]
 f_x_msb_2_table_V_addr       (getelementptr ) [ 0100000000010000000000000]
-p_Result_118                 (bitconcatenate) [ 0000000000000000000000000]
+p_Result_119                 (bitconcatenate) [ 0000000000000000000000000]
 zext_ln813_9                 (zext          ) [ 0000000000000000000000000]
 zext_ln813_10                (zext          ) [ 0000000000000000000000000]
 tmp_50                       (bitconcatenate) [ 0000000000000000000000000]
@@ -367,11 +367,11 @@ zext_ln813_12                (zext          ) [ 0000000000000000000000000]
 zext_ln813_13                (zext          ) [ 0000000000000000000000000]
 ret_V                        (add           ) [ 0100000000001111110000000]
 trunc_ln594_2                (trunc         ) [ 0100000000001111110000000]
-p_Result_119                 (bitconcatenate) [ 0000000000000000000000000]
+p_Result_120                 (bitconcatenate) [ 0000000000000000000000000]
 zext_ln1271_3                (zext          ) [ 0100000000000111100000000]
 zext_ln1273_3                (zext          ) [ 0100000000000111100000000]
-p_Result_117                 (bitconcatenate) [ 0000000000000000000000000]
-r_V_28                       (mul           ) [ 0000000000000000000000000]
+p_Result_118                 (bitconcatenate) [ 0000000000000000000000000]
+r_V_29                       (mul           ) [ 0000000000000000000000000]
 trunc_ln3                    (partselect    ) [ 0100000000000000010000000]
 zext_ln541_5                 (zext          ) [ 0000000000000000000000000]
 exp_x_msb_1_table_V_addr     (getelementptr ) [ 0100000000000000010000000]
@@ -385,7 +385,7 @@ exp_x_msb_2_3_4_5_lsb_m_1_V  (add           ) [ 0100000000000000001000000]
 exp_x_msb_1_V                (load          ) [ 0100000000000000001111110]
 zext_ln1271_4                (zext          ) [ 0100000000000000000111100]
 zext_ln1273_4                (zext          ) [ 0100000000000000000111100]
-r_V_29                       (mul           ) [ 0000000000000000000000000]
+r_V_30                       (mul           ) [ 0000000000000000000000000]
 y_lo_s_V                     (partselect    ) [ 0100000000000000000000010]
 y_V                          (xor           ) [ 0000000000000000000000000]
 select_ln1632                (select        ) [ 0000000000000000000000000]
@@ -395,7 +395,7 @@ y_V_2                        (select        ) [ 0100000000000000000000001]
 trunc_ln813_1                (trunc         ) [ 0100000000000000000000001]
 specpipeline_ln959           (specpipeline  ) [ 0000000000000000000000000]
 zext_ln1632                  (zext          ) [ 0000000000000000000000000]
-p_Val2_44                    (add           ) [ 0000000000000000000000000]
+p_Val2_45                    (add           ) [ 0000000000000000000000000]
 add_ln58                     (add           ) [ 0000000000000000000000000]
 tmp_57                       (partselect    ) [ 0000000000000000000000000]
 overf_1                      (icmp          ) [ 0000000000000000000000000]
@@ -1316,7 +1316,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="271" class="1004" name="p_Result_102_fu_271">
+<comp id="271" class="1004" name="p_Result_103_fu_271">
 <pin_list>
 <pin id="272" dir="0" index="0" bw="41" slack="0"/>
 <pin id="273" dir="0" index="1" bw="1" slack="0"/>
@@ -1324,7 +1324,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="p_Result_102/1 "/>
+<opset="p_Result_103/1 "/>
 </bind>
 </comp>
 
@@ -1812,7 +1812,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="515" class="1004" name="p_Result_118_fu_515">
+<comp id="515" class="1004" name="p_Result_119_fu_515">
 <pin_list>
 <pin id="516" dir="0" index="0" bw="62" slack="0"/>
 <pin id="517" dir="0" index="1" bw="8" slack="10"/>
@@ -1822,7 +1822,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="p_Result_118/11 "/>
+<opset="p_Result_119/11 "/>
 </bind>
 </comp>
 
@@ -1957,7 +1957,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="583" class="1004" name="p_Result_119_fu_583">
+<comp id="583" class="1004" name="p_Result_120_fu_583">
 <pin_list>
 <pin id="584" dir="0" index="0" bw="67" slack="0"/>
 <pin id="585" dir="0" index="1" bw="9" slack="1"/>
@@ -1966,7 +1966,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="p_Result_119/12 "/>
+<opset="p_Result_120/12 "/>
 </bind>
 </comp>
 
@@ -2000,11 +2000,11 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="mul(12) " fcode="mul"/>
-<opset="r_V_28/12 "/>
+<opset="r_V_29/12 "/>
 </bind>
 </comp>
 
-<comp id="602" class="1004" name="p_Result_117_fu_602">
+<comp id="602" class="1004" name="p_Result_118_fu_602">
 <pin_list>
 <pin id="603" dir="0" index="0" bw="8" slack="0"/>
 <pin id="604" dir="0" index="1" bw="1" slack="15"/>
@@ -2013,7 +2013,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="p_Result_117/16 "/>
+<opset="p_Result_118/16 "/>
 </bind>
 </comp>
 
@@ -2154,7 +2154,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="mul(12) " fcode="mul"/>
-<opset="r_V_29/18 "/>
+<opset="r_V_30/18 "/>
 </bind>
 </comp>
 
@@ -2258,7 +2258,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="720" class="1004" name="p_Val2_44_fu_720">
+<comp id="720" class="1004" name="p_Val2_45_fu_720">
 <pin_list>
 <pin id="721" dir="0" index="0" bw="64" slack="0"/>
 <pin id="722" dir="0" index="1" bw="33" slack="0"/>
@@ -2266,7 +2266,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="p_Val2_44/24 "/>
+<opset="p_Val2_45/24 "/>
 </bind>
 </comp>
 
@@ -3308,7 +3308,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 	State 1
 		x_l_fract : 1
 		and_ln : 1
-		p_Result_102 : 2
+		p_Result_103 : 2
 		overf : 3
 		icmp_ln1649 : 1
 		icmp_ln1653 : 1
@@ -3362,7 +3362,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 		trunc_ln594_2 : 1
 	State 12
 		zext_ln1271_3 : 1
-		r_V_28 : 2
+		r_V_29 : 2
 	State 13
 	State 14
 	State 15
@@ -3377,7 +3377,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 		zext_ln813_15 : 2
 		exp_x_msb_2_3_4_5_lsb_m_1_V : 3
 	State 18
-		r_V_29 : 1
+		r_V_30 : 1
 	State 19
 	State 20
 	State 21
@@ -3388,7 +3388,7 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 		y_V_2 : 2
 		trunc_ln813_1 : 3
 	State 24
-		p_Val2_44 : 1
+		p_Val2_45 : 1
 		tmp_57 : 2
 		overf_1 : 3
 		tmp_52 : 1
@@ -3419,14 +3419,14 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 |          |         add_ln813_11_fu_641         |    0    |    0    |    70   |
 |          |  exp_x_msb_2_3_4_5_lsb_m_1_V_fu_651 |    0    |    0    |    78   |
 |          |             y_l_V_fu_692            |    0    |    0    |    75   |
-|          |           p_Val2_44_fu_720          |    0    |    0    |    71   |
+|          |           p_Val2_45_fu_720          |    0    |    0    |    71   |
 |          |           add_ln58_fu_726           |    0    |    0    |    70   |
 |----------|-------------------------------------|---------|---------|---------|
 |          |         select_ln1632_fu_684        |    0    |    0    |    2    |
 |  select  |             y_V_2_fu_706            |    0    |    0    |    64   |
 |          |              r_V_fu_757             |    0    |    0    |    31   |
 |----------|-------------------------------------|---------|---------|---------|
-|          |         p_Result_102_fu_271         |    0    |    0    |    21   |
+|          |         p_Result_103_fu_271         |    0    |    0    |    21   |
 |          |          icmp_ln1649_fu_283         |    0    |    0    |    10   |
 |   icmp   |          icmp_ln1653_fu_289         |    0    |    0    |    10   |
 |          |          icmp_ln1651_fu_295         |    0    |    0    |    29   |
@@ -3469,10 +3469,10 @@ ret_ln2098                   (ret           ) [ 0000000000000000000000000]
 |          |         x_msb_5_lsb_V_fu_356        |    0    |    0    |    0    |
 |          |             tmp_s_fu_471            |    0    |    0    |    0    |
 |bitconcatenate|      exp_x_msb_3_m_1_s_V_fu_479     |    0    |    0    |    0    |
-|          |         p_Result_118_fu_515         |    0    |    0    |    0    |
+|          |         p_Result_119_fu_515         |    0    |    0    |    0    |
 |          |            tmp_50_fu_530            |    0    |    0    |    0    |
-|          |         p_Result_119_fu_583         |    0    |    0    |    0    |
-|          |         p_Result_117_fu_602         |    0    |    0    |    0    |
+|          |         p_Result_120_fu_583         |    0    |    0    |    0    |
+|          |         p_Result_118_fu_602         |    0    |    0    |    0    |
 |          |            rhs_14_fu_626            |    0    |    0    |    0    |
 |----------|-------------------------------------|---------|---------|---------|
 | bitselect|          p_Result_s_fu_245          |    0    |    0    |    0    |

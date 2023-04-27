@@ -26870,7 +26870,7 @@ struct Cluster {
 };
 
 __attribute__((sdx_kernel("clusterOp", 0))) void clusterOp(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
-#line 16 "E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csynth.tcl"
+#line 17 "E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=clusterOp
 # 16 "cluster/cluster.cpp"
 
@@ -26894,7 +26894,11 @@ __attribute__((sdx_kernel("clusterOp", 0))) void clusterOp(hls::stream<axis_t>& 
     }
 
 
-    VITIS_LOOP_33_2: for (int put = 0; put < 360; put++) {
+    clusterOp_label0:for (int put = 0; put < 360; put++) {
+#line 7 "E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/directives.tcl"
+#pragma HLSDIRECTIVE UNROLL
+# 33 "cluster/cluster.cpp"
+
         if (!grouped[put]) {
 
             clusters[cluster_count].id = cluster_count;
@@ -26903,7 +26907,7 @@ __attribute__((sdx_kernel("clusterOp", 0))) void clusterOp(hls::stream<axis_t>& 
             grouped[put] = true;
 
 
-            VITIS_LOOP_42_3: for (int candidate = 0; candidate < 360; candidate++) {
+            clusterOp_label1:for (int candidate = 0; candidate < 360; candidate++) {
                 if (!grouped[candidate] && candidate != put) {
                     int delta_angle = abs(candidate - put);
                     if (delta_angle > 180) {
@@ -26927,7 +26931,7 @@ __attribute__((sdx_kernel("clusterOp", 0))) void clusterOp(hls::stream<axis_t>& 
     }
 
 
-    VITIS_LOOP_66_4: for (int i = 0; i < cluster_count; i++) {
+    VITIS_LOOP_66_2: for (int i = 0; i < cluster_count; i++) {
 
      axis_t tmp;
      tmp.data = 720;
@@ -26939,7 +26943,7 @@ __attribute__((sdx_kernel("clusterOp", 0))) void clusterOp(hls::stream<axis_t>& 
      tmp.dest = 0;
      outStream.write(tmp);
 
-        VITIS_LOOP_78_5: for (int j = 0; j < clusters[i].member_count; j++) {
+        VITIS_LOOP_78_3: for (int j = 0; j < clusters[i].member_count; j++) {
             axis_t tmp;
             tmp.data = clusters[i].members[j];
             tmp.keep = -1;

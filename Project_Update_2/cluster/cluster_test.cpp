@@ -14,7 +14,7 @@ struct Cluster {
     int member_count;
 };
 
-void clusterOp(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream);
+void clusterOp2(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream);
 
 int main() {
     hls::stream<axis_t> inStream;
@@ -44,7 +44,7 @@ int main() {
     }
 
     // Call the clusterOp function
-    clusterOp(inStream, outStream);
+    clusterOp2(inStream, outStream);
 
     // Print the output data
     int cluster_id = 0;

@@ -5,6 +5,19 @@
                 <option name="name" value="clusterOp"/>
             </pragma>
         </directive>
+        <directive functionName="clusterOp" label="clusterOp_label0" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="clusterOp" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="clusterOp"/>
+            </pragma>
+        </directive>
+        <directive functionName="clusterOp" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="clusterOp"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

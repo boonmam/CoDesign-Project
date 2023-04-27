@@ -1,75 +1,33 @@
 INFO: [HLS 200-10] Running 'E:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'McCain Boonma' on host 'desktop-4oqqii8' (Windows NT_amd64 version 6.2) on Mon Apr 03 19:46:21 -0400 2023
+INFO: [HLS 200-10] For user 'McCain Boonma' on host 'desktop-4oqqii8' (Windows NT_amd64 version 6.2) on Thu Apr 27 04:04:55 -0400 2023
 INFO: [HLS 200-10] In directory 'E:/Github/CoDesign-Project/Project_Update_2'
-Sourcing Tcl script 'E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csim.tcl'
-INFO: [HLS 200-1510] Running: source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csim.tcl
+Sourcing Tcl script 'E:/Github/CoDesign-Project/Project_Update_2/cluster/solution2/csynth.tcl'
+INFO: [HLS 200-1510] Running: source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution2/csynth.tcl
 INFO: [HLS 200-1510] Running: open_project cluster 
 INFO: [HLS 200-10] Opening project 'E:/Github/CoDesign-Project/Project_Update_2/cluster'.
-INFO: [HLS 200-1510] Running: set_top clusterOp 
+INFO: [HLS 200-1510] Running: set_top clusterOp2 
 INFO: [HLS 200-1510] Running: add_files cluster/cluster.cpp 
 INFO: [HLS 200-10] Adding design file 'cluster/cluster.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files cluster/cluster.h 
 INFO: [HLS 200-10] Adding design file 'cluster/cluster.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb cluster/cluster_test.cpp -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-1510] Running: add_files cluster2.cpp 
+INFO: [HLS 200-10] Adding design file 'cluster2.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb cluster/cluster_test.cpp -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'cluster/cluster_test.cpp' to the project
-INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
-INFO: [HLS 200-10] Opening solution 'E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1'.
+INFO: [HLS 200-1510] Running: open_solution solution2 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'E:/Github/CoDesign-Project/Project_Update_2/cluster/solution2'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
-INFO: [HLS 200-1464] Running solution command: config_export -display_name=clusterOp
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=clusterOp2
 INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
-INFO: [HLS 200-1464] Running solution command: config_export -output=E:/Github/CoDesign-Project/Project_Update_2
+INFO: [HLS 200-1464] Running solution command: config_export -output=E:/Github/CoDesign-Project/Final
 INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
 INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
 INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: config_export -display_name clusterOp -format ip_catalog -output E:/Github/CoDesign-Project/Project_Update_2 -rtl verilog -vivado_clock 10 
-INFO: [HLS 200-1510] Running: source ./cluster/solution1/directives.tcl
-INFO: [HLS 200-1510] Running: set_directive_top -name clusterOp clusterOp 
-INFO: [HLS 200-1510] Running: csim_design -quiet 
-Running Dispatch Server on port: 57992
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-   Compiling ../../../cluster_test.cpp in debug mode
-   Generating csim.exe
-In file included from E:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
-                 from E:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143,
-                 from E:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
-                 from E:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
-                 from E:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
-                 from E:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
-                 from E:/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h:9,
-                 from ../../../cluster_test.cpp:3:
-E:/Xilinx/Vitis_HLS/2022.2/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
- #define __GMP_LIBGMP_DLL  0
- 
-In file included from E:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143:0,
-                 from E:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
-                 from E:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
-                 from E:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
-                 from E:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
-                 from E:/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h:9,
-                 from ../../../cluster_test.cpp:3:
-E:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
- #define __GMP_LIBGMP_DLL 1
- 
-terminate called after throwing an instance of 'std::out_of_range'
-  what():  stoi
-@E Simulation failed: Function 'main' returns nonzero value '3'.
-ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.812 seconds; current allocated memory: 0.309 MB.
-4
-    while executing
-"source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csim.tcl"
-    invoked from within
-"hls::main E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csim.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$newargs"
-    (procedure "hls_proc" line 16)
-    invoked from within
-"hls_proc [info nameofexecutable] $argv"
-INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 0 seconds. Total elapsed time: 15.954 seconds; peak allocated memory: 683.113 MB.
+INFO: [HLS 200-1510] Running: config_export -display_name clusterOp2 -format ip_catalog -output E:/Github/CoDesign-Project/Final -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./cluster/solution2/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_unroll clusterOp/clusterOp_label0 
+INFO: [HLS 200-1510] Running: csynth_design 

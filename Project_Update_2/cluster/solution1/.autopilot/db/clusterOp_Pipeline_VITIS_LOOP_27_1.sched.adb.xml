@@ -169,7 +169,7 @@ for.inc:4 %add_ln27 = add i9 %i_1, i9 1
 
 <Node id="20" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-for.inc:5 %br_ln27 = br i1 %icmp_ln27, void %for.inc.split, void %for.body4.preheader.exitStub
+for.inc:5 %br_ln27 = br i1 %icmp_ln27, void %for.inc.split, void %for.body4.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln27"/></StgValue>
@@ -201,7 +201,7 @@ for.inc.split:0 %i_cast = zext i9 %i_1
 
 <Node id="23" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.split:1 %specloopname_ln28 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11
+for.inc.split:1 %specloopname_ln28 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln28"/></StgValue>
@@ -217,10 +217,10 @@ for.inc.split:1 %specloopname_ln28 = specloopname void @_ssdm_op_SpecLoopName, v
 
 <Node id="24" bw="54" op_0_bw="54" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="2" op_5_bw="1" op_6_bw="5" op_7_bw="6">
 <![CDATA[
-for.inc.split:2 %empty_112 = read i54 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %inStream_V_data_V, i4 %inStream_V_keep_V, i4 %inStream_V_strb_V, i2 %inStream_V_user_V, i1 %inStream_V_last_V, i5 %inStream_V_id_V, i6 %inStream_V_dest_V
+for.inc.split:2 %empty_470 = read i54 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %inStream_V_data_V, i4 %inStream_V_keep_V, i4 %inStream_V_strb_V, i2 %inStream_V_user_V, i1 %inStream_V_last_V, i5 %inStream_V_id_V, i6 %inStream_V_dest_V
 
 ]]></Node>
-<StgValue><ssdm name="empty_112"/></StgValue>
+<StgValue><ssdm name="empty_470"/></StgValue>
 </operation>
 
 <operation id="18" st_id="1" stage="1" lat="1">
@@ -233,7 +233,7 @@ for.inc.split:2 %empty_112 = read i54 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.
 
 <Node id="25" bw="32" op_0_bw="54">
 <![CDATA[
-for.inc.split:3 %tmp_data_V = extractvalue i54 %empty_112
+for.inc.split:3 %tmp_data_V = extractvalue i54 %empty_470
 
 ]]></Node>
 <StgValue><ssdm name="tmp_data_V"/></StgValue>
@@ -313,7 +313,7 @@ for.inc.split:7 %br_ln27 = br void %for.inc
 
 <Node id="31" bw="0">
 <![CDATA[
-for.body4.preheader.exitStub:0 %ret_ln0 = ret
+for.body4.exitStub:0 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>

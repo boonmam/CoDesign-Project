@@ -1311,39 +1311,21 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_27_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_33_2:  '
-    FileOffset:      33
-    FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\cluster.cpp'
-    Replacements:    
-      - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster.pp.0.cpp'
-        Offset:          1599938
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_33_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_42_3:  '
-    FileOffset:      42
-    FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\cluster.cpp'
-    Replacements:    
-      - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster.pp.0.cpp'
-        Offset:          1600217
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_42_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_66_4:  '
+    Message:         'Added loop label VITIS_LOOP_66_2:  '
     FileOffset:      66
     FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\cluster.cpp'
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster.pp.0.cpp'
-        Offset:          1601041
+        Offset:          1601218
         Length:          0
-        ReplacementText: 'VITIS_LOOP_66_4: '
+        ReplacementText: 'VITIS_LOOP_66_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_78_5:  '
+    Message:         'Added loop label VITIS_LOOP_78_3:  '
     FileOffset:      78
     FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\cluster.cpp'
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster.pp.0.cpp'
-        Offset:          1601285
+        Offset:          1601462
         Length:          0
-        ReplacementText: 'VITIS_LOOP_78_5: '
+        ReplacementText: 'VITIS_LOOP_78_3: '
 ...

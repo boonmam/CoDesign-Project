@@ -42942,6 +42942,22 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster/cluster.cpp, Line: 16, Column: 0 }
+Function:        _Z9clusterOpRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        clusterOp_label0
+  - String:          ''' ('
+  - LoopLoc:         'cluster/cluster.cpp:33:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          clusterOp
+  - String:          ''' completely with a factor of '
+  - Factor:          '360'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
 DebugLoc:        { File: 'C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib/hlsmath/include\hls_sqrt_apfixed.h', 
                    Line: 43, Column: 0 }
 Function:        _Z10sqrt_fixedILi32ELi32EE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
@@ -43243,36 +43259,6 @@ Args:
   - Caller:          'hls::sqrt(int)'
     DebugLoc:        { File: 'C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib\hlsmath\src\c++\sqrtint32.cpp', 
                        Line: 7, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: cluster/cluster.cpp, Line: 16, Column: 0 }
-Function:        _Z9clusterOpRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'hls::pow(int, int)'
-    DebugLoc:        { File: 'C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib\hlsmath\src\c++\powint32.cpp', 
-                       Line: 7, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'clusterOp(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)'
-    DebugLoc:        { File: cluster/cluster.cpp, Line: 16, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: cluster/cluster.cpp, Line: 16, Column: 0 }
-Function:        _Z9clusterOpRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'hls::sqrt(int)'
-    DebugLoc:        { File: 'C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib\hlsmath\src\c++\sqrtint32.cpp', 
-                       Line: 7, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'clusterOp(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)'
-    DebugLoc:        { File: cluster/cluster.cpp, Line: 16, Column: 0 }
   - String:          ''''
 ...
 --- !Missed

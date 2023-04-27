@@ -1,0 +1,461 @@
+
+
+================================================================
+== Synthesis Summary Report of 'clusterOp2'
+================================================================
++ General Information: 
+    * Date:           Thu Apr 27 03:58:37 2023
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        cluster
+    * Solution:       solution2 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+------------+-------------+-------------+-----+
+    |                 Modules                 | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |           |            |             |             |     |
+    |                 & Loops                 | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |     DSP    |      FF     |     LUT     | URAM|
+    +-----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+------------+-------------+-------------+-----+
+    |+ clusterOp2                             |     -|  0.00|        -|          -|         -|        -|     -|        no|  109 (38%)|  284 (129%)|  36695 (34%)|  41829 (78%)|    -|
+    | + clusterOp2_Pipeline_1                 |     -|  3.32|      362|  3.620e+03|         -|      362|     -|        no|          -|           -|     11 (~0%)|     52 (~0%)|    -|
+    |  o Loop 1                               |     -|  7.30|      360|  3.600e+03|         1|        1|   360|       yes|          -|           -|            -|            -|    -|
+    | + clusterOp2_Pipeline_VITIS_LOOP_30_1   |     -|  2.38|      362|  3.620e+03|         -|      362|     -|        no|          -|           -|     11 (~0%)|     65 (~0%)|    -|
+    |  o VITIS_LOOP_30_1                      |     -|  7.30|      360|  3.600e+03|         1|        1|   360|       yes|          -|           -|            -|            -|    -|
+    | + dbscan                                |     -|  0.00|        -|          -|         -|        -|     -|        no|   34 (12%)|  284 (129%)|  36363 (34%)|  40899 (76%)|    -|
+    |  o VITIS_LOOP_74_1                      |     -|  7.30|        -|          -|         -|        -|     -|        no|          -|           -|            -|            -|    -|
+    |   + dbscan_Pipeline_VITIS_LOOP_85_2     |     -|  0.00|      494|  4.940e+03|         -|      494|     -|        no|          -|           -|    1685 (1%)|    2390 (4%)|    -|
+    |    o VITIS_LOOP_85_2                    |     -|  7.30|      492|  4.920e+03|       134|        1|   360|       yes|          -|           -|            -|            -|    -|
+    |     + sin_or_cos_double_s               |    II|  0.22|       32|    320.000|         -|        1|     -|       yes|     8 (2%)|    54 (24%)|    7058 (6%)|   6798 (12%)|    -|
+    |     + sin_or_cos_double_s               |    II|  0.22|       32|    320.000|         -|        1|     -|       yes|     8 (2%)|    54 (24%)|    7058 (6%)|   6798 (12%)|    -|
+    |     + sin_or_cos_double_s               |    II|  0.22|       32|    320.000|         -|        1|     -|       yes|     8 (2%)|    54 (24%)|    7058 (6%)|   6798 (12%)|    -|
+    |     + sin_or_cos_double_s               |    II|  0.22|       32|    320.000|         -|        1|     -|       yes|     8 (2%)|    54 (24%)|    7058 (6%)|   6798 (12%)|    -|
+    |     + sqrt_fixed_32_32_s                |    II|  0.14|        7|     70.000|         -|        1|     -|       yes|          -|           -|    595 (~0%)|    1354 (2%)|    -|
+    |   o VITIS_LOOP_106_3                    |     -|  7.30|        -|          -|         -|        -|     -|        no|          -|           -|            -|            -|    -|
+    |    + dbscan_Pipeline_VITIS_LOOP_116_4   |     -|  0.00|      494|  4.940e+03|         -|      494|     -|        no|          -|           -|    1685 (1%)|    2390 (4%)|    -|
+    |     o VITIS_LOOP_116_4                  |     -|  7.30|      492|  4.920e+03|       134|        1|   360|       yes|          -|           -|            -|            -|    -|
+    |      + sin_or_cos_double_s              |    II|  0.22|       32|    320.000|         -|        1|     -|       yes|     8 (2%)|    54 (24%)|    7058 (6%)|   6798 (12%)|    -|
+    |      + sin_or_cos_double_s              |    II|  0.22|       32|    320.000|         -|        1|     -|       yes|     8 (2%)|    54 (24%)|    7058 (6%)|   6798 (12%)|    -|
+    |      + sin_or_cos_double_s              |    II|  0.22|       32|    320.000|         -|        1|     -|       yes|     8 (2%)|    54 (24%)|    7058 (6%)|   6798 (12%)|    -|
+    |      + sin_or_cos_double_s              |    II|  0.22|       32|    320.000|         -|        1|     -|       yes|     8 (2%)|    54 (24%)|    7058 (6%)|   6798 (12%)|    -|
+    |      + sqrt_fixed_32_32_s               |    II|  0.14|        7|     70.000|         -|        1|     -|       yes|          -|           -|    595 (~0%)|    1354 (2%)|    -|
+    |    + dbscan_Pipeline_VITIS_LOOP_132_5   |     -|  1.72|        -|          -|         -|        -|     -|        no|          -|           -|     78 (~0%)|    141 (~0%)|    -|
+    |     o VITIS_LOOP_132_5                  |     -|  7.30|        -|          -|         3|        1|     -|       yes|          -|           -|            -|            -|    -|
+    | o VITIS_LOOP_39_2                       |     -|  7.30|        -|          -|         -|        -|     -|        no|          -|           -|            -|            -|    -|
+    |  + clusterOp2_Pipeline_VITIS_LOOP_51_3  |     -|  1.94|        -|          -|         -|        -|     -|        no|          -|           -|     35 (~0%)|    149 (~0%)|    -|
+    |   o VITIS_LOOP_51_3                     |     -|  7.30|        -|          -|         2|        1|     -|       yes|          -|           -|            -|            -|    -|
+    +-----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+------------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++----------------+------------+---------------+
+| Interface      | Data Width | Address Width |
++----------------+------------+---------------+
+| s_axi_CTRL_BUS | 32         | 4             |
++----------------+------------+---------------+
+
+* S_AXILITE Registers
++----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface      | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_CTRL_BUS | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CTRL_BUS | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_CTRL_BUS | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CTRL_BUS | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| inStream  | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
+| outStream | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+--------------------------------------------+
+| Argument  | Direction | Datatype                                   |
++-----------+-----------+--------------------------------------------+
+| inStream  | in        | stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>& |
+| outStream | out       | stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>& |
++-----------+-----------+--------------------------------------------+
+
+* SW-to-HW Mapping
++-----------+--------------+-----------+
+| Argument  | HW Interface | HW Type   |
++-----------+--------------+-----------+
+| inStream  | inStream     | interface |
+| outStream | outStream    | interface |
++-----------+--------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------------------+-----+--------+----------------------+------+--------+---------+
+| Name                                                      | DSP | Pragma | Variable             | Op   | Impl   | Latency |
++-----------------------------------------------------------+-----+--------+----------------------+------+--------+---------+
+| + clusterOp2                                              | 284 |        |                      |      |        |         |
+|   sub42_fu_272_p2                                         | -   |        | sub42                | add  | fabric | 0       |
+|   next_mul_fu_288_p2                                      | -   |        | next_mul             | add  | fabric | 0       |
+|   add_ln39_fu_303_p2                                      | -   |        | add_ln39             | add  | fabric | 0       |
+|   sub_fu_330_p2                                           | -   |        | sub                  | add  | fabric | 0       |
+|  + clusterOp2_Pipeline_1                                  | 0   |        |                      |      |        |         |
+|    empty_105_fu_58_p2                                     | -   |        | empty_105            | add  | fabric | 0       |
+|  + clusterOp2_Pipeline_VITIS_LOOP_30_1                    | 0   |        |                      |      |        |         |
+|    add_ln30_fu_105_p2                                     | -   |        | add_ln30             | add  | fabric | 0       |
+|  + dbscan                                                 | 284 |        |                      |      |        |         |
+|    add_ln74_fu_352_p2                                     | -   |        | add_ln74             | add  | fabric | 0       |
+|    dmul_64ns_64ns_64_7_max_dsp_1_U83                      | 11  |        | mul                  | dmul | maxdsp | 6       |
+|    ddiv_64ns_64ns_64_59_no_dsp_1_U84                      | -   |        | x_assign             | ddiv | fabric | 58      |
+|    mul_mul_17s_9ns_17_4_1_U86                             | 1   |        | mul_ln102            | mul  | dsp48  | 3       |
+|    add_ln106_fu_404_p2                                    | -   |        | add_ln106            | add  | fabric | 0       |
+|    add_ln111_fu_443_p2                                    | -   |        | add_ln111            | add  | fabric | 0       |
+|    add_ln111_1_fu_438_p2                                  | -   |        | add_ln111_1          | add  | fabric | 0       |
+|    dmul_64ns_64ns_64_7_max_dsp_1_U83                      | 11  |        | mul6                 | dmul | maxdsp | 6       |
+|    ddiv_64ns_64ns_64_59_no_dsp_1_U84                      | -   |        | x_assign_3           | ddiv | fabric | 58      |
+|    add_ln143_fu_410_p2                                    | -   |        | add_ln143            | add  | fabric | 0       |
+|   + dbscan_Pipeline_VITIS_LOOP_85_2                       | 0   |        |                      |      |        |         |
+|     add_ln85_fu_297_p2                                    | -   |        | add_ln85             | add  | fabric | 0       |
+|     add_ln515_fu_366_p2                                   | -   |        | add_ln515            | add  | fabric | 0       |
+|     sub_ln1512_fu_380_p2                                  | -   |        | sub_ln1512           | sub  | fabric | 0       |
+|     result_V_1_fu_573_p2                                  | -   |        | result_V_1           | sub  | fabric | 0       |
+|     add_ln515_1_fu_491_p2                                 | -   |        | add_ln515_1          | add  | fabric | 0       |
+|     sub_ln1512_1_fu_505_p2                                | -   |        | sub_ln1512_1         | sub  | fabric | 0       |
+|     result_V_4_fu_584_p2                                  | -   |        | result_V_4           | sub  | fabric | 0       |
+|     xf_V_fu_603_p2                                        | -   |        | xf_V                 | add  | fabric | 0       |
+|     neighbor_count_1_fu_615_p2                            | -   |        | neighbor_count_1     | add  | fabric | 0       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_157) | 54  |        |                      |      |        |         |
+|      Ex_V_fu_515_p2                                       | -   |        | Ex_V                 | add  | fabric | 0       |
+|      add_ln214_fu_340_p2                                  | -   |        | add_ln214            | add  | fabric | 0       |
+|      mul_170s_53ns_170_5_1_U10                            | 18  |        | ret_V_5              | mul  | auto   | 4       |
+|      Mx_bits_V_1_fu_451_p2                                | -   |        | Mx_bits_V_1          | sub  | fabric | 0       |
+|      Ex_V_3_fu_554_p2                                     | -   |        | Ex_V_3               | sub  | fabric | 0       |
+|      sub_ln1512_fu_581_p2                                 | -   |        | sub_ln1512           | sub  | fabric | 0       |
+|      mul_49ns_49ns_98_5_1_U11                             | 4   |        | r_V_4                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U15                             | 4   |        | r_V_5                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U16                             | 4   |        | r_V_7                | mul  | auto   | 4       |
+|      mul_56ns_52s_108_5_1_U17                             | 5   |        | r_V_9                | mul  | auto   | 4       |
+|      mul_49ns_44s_93_5_1_U18                              | 4   |        | r_V_10               | mul  | auto   | 4       |
+|      mul_42ns_33ns_75_2_1_U19                             | 4   |        | r_V_11               | mul  | auto   | 1       |
+|      mul_35ns_25ns_60_2_1_U20                             | 2   |        | r_V_12               | mul  | auto   | 1       |
+|      mul_64s_63ns_126_5_1_U21                             | 9   |        | r_V_14               | mul  | auto   | 4       |
+|      add_ln451_fu_1168_p2                                 | -   |        | add_ln451            | add  | fabric | 0       |
+|      add_ln451_1_fu_1189_p2                               | -   |        | add_ln451_1          | add  | fabric | 0       |
+|      add_ln451_2_fu_1244_p2                               | -   |        | add_ln451_2          | add  | fabric | 0       |
+|      add_ln461_fu_1294_p2                                 | -   |        | add_ln461            | add  | fabric | 0       |
+|      newexp_fu_1304_p2                                    | -   |        | newexp               | sub  | fabric | 0       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_176) | 54  |        |                      |      |        |         |
+|      Ex_V_fu_515_p2                                       | -   |        | Ex_V                 | add  | fabric | 0       |
+|      add_ln214_fu_340_p2                                  | -   |        | add_ln214            | add  | fabric | 0       |
+|      mul_170s_53ns_170_5_1_U10                            | 18  |        | ret_V_5              | mul  | auto   | 4       |
+|      Mx_bits_V_1_fu_451_p2                                | -   |        | Mx_bits_V_1          | sub  | fabric | 0       |
+|      Ex_V_3_fu_554_p2                                     | -   |        | Ex_V_3               | sub  | fabric | 0       |
+|      sub_ln1512_fu_581_p2                                 | -   |        | sub_ln1512           | sub  | fabric | 0       |
+|      mul_49ns_49ns_98_5_1_U11                             | 4   |        | r_V_4                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U15                             | 4   |        | r_V_5                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U16                             | 4   |        | r_V_7                | mul  | auto   | 4       |
+|      mul_56ns_52s_108_5_1_U17                             | 5   |        | r_V_9                | mul  | auto   | 4       |
+|      mul_49ns_44s_93_5_1_U18                              | 4   |        | r_V_10               | mul  | auto   | 4       |
+|      mul_42ns_33ns_75_2_1_U19                             | 4   |        | r_V_11               | mul  | auto   | 1       |
+|      mul_35ns_25ns_60_2_1_U20                             | 2   |        | r_V_12               | mul  | auto   | 1       |
+|      mul_64s_63ns_126_5_1_U21                             | 9   |        | r_V_14               | mul  | auto   | 4       |
+|      add_ln451_fu_1168_p2                                 | -   |        | add_ln451            | add  | fabric | 0       |
+|      add_ln451_1_fu_1189_p2                               | -   |        | add_ln451_1          | add  | fabric | 0       |
+|      add_ln451_2_fu_1244_p2                               | -   |        | add_ln451_2          | add  | fabric | 0       |
+|      add_ln461_fu_1294_p2                                 | -   |        | add_ln461            | add  | fabric | 0       |
+|      newexp_fu_1304_p2                                    | -   |        | newexp               | sub  | fabric | 0       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_195) | 54  |        |                      |      |        |         |
+|      Ex_V_fu_515_p2                                       | -   |        | Ex_V                 | add  | fabric | 0       |
+|      add_ln214_fu_340_p2                                  | -   |        | add_ln214            | add  | fabric | 0       |
+|      mul_170s_53ns_170_5_1_U10                            | 18  |        | ret_V_5              | mul  | auto   | 4       |
+|      Mx_bits_V_1_fu_451_p2                                | -   |        | Mx_bits_V_1          | sub  | fabric | 0       |
+|      Ex_V_3_fu_554_p2                                     | -   |        | Ex_V_3               | sub  | fabric | 0       |
+|      sub_ln1512_fu_581_p2                                 | -   |        | sub_ln1512           | sub  | fabric | 0       |
+|      mul_49ns_49ns_98_5_1_U11                             | 4   |        | r_V_4                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U15                             | 4   |        | r_V_5                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U16                             | 4   |        | r_V_7                | mul  | auto   | 4       |
+|      mul_56ns_52s_108_5_1_U17                             | 5   |        | r_V_9                | mul  | auto   | 4       |
+|      mul_49ns_44s_93_5_1_U18                              | 4   |        | r_V_10               | mul  | auto   | 4       |
+|      mul_42ns_33ns_75_2_1_U19                             | 4   |        | r_V_11               | mul  | auto   | 1       |
+|      mul_35ns_25ns_60_2_1_U20                             | 2   |        | r_V_12               | mul  | auto   | 1       |
+|      mul_64s_63ns_126_5_1_U21                             | 9   |        | r_V_14               | mul  | auto   | 4       |
+|      add_ln451_fu_1168_p2                                 | -   |        | add_ln451            | add  | fabric | 0       |
+|      add_ln451_1_fu_1189_p2                               | -   |        | add_ln451_1          | add  | fabric | 0       |
+|      add_ln451_2_fu_1244_p2                               | -   |        | add_ln451_2          | add  | fabric | 0       |
+|      add_ln461_fu_1294_p2                                 | -   |        | add_ln461            | add  | fabric | 0       |
+|      newexp_fu_1304_p2                                    | -   |        | newexp               | sub  | fabric | 0       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_214) | 54  |        |                      |      |        |         |
+|      Ex_V_fu_515_p2                                       | -   |        | Ex_V                 | add  | fabric | 0       |
+|      add_ln214_fu_340_p2                                  | -   |        | add_ln214            | add  | fabric | 0       |
+|      mul_170s_53ns_170_5_1_U10                            | 18  |        | ret_V_5              | mul  | auto   | 4       |
+|      Mx_bits_V_1_fu_451_p2                                | -   |        | Mx_bits_V_1          | sub  | fabric | 0       |
+|      Ex_V_3_fu_554_p2                                     | -   |        | Ex_V_3               | sub  | fabric | 0       |
+|      sub_ln1512_fu_581_p2                                 | -   |        | sub_ln1512           | sub  | fabric | 0       |
+|      mul_49ns_49ns_98_5_1_U11                             | 4   |        | r_V_4                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U15                             | 4   |        | r_V_5                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U16                             | 4   |        | r_V_7                | mul  | auto   | 4       |
+|      mul_56ns_52s_108_5_1_U17                             | 5   |        | r_V_9                | mul  | auto   | 4       |
+|      mul_49ns_44s_93_5_1_U18                              | 4   |        | r_V_10               | mul  | auto   | 4       |
+|      mul_42ns_33ns_75_2_1_U19                             | 4   |        | r_V_11               | mul  | auto   | 1       |
+|      mul_35ns_25ns_60_2_1_U20                             | 2   |        | r_V_12               | mul  | auto   | 1       |
+|      mul_64s_63ns_126_5_1_U21                             | 9   |        | r_V_14               | mul  | auto   | 4       |
+|      add_ln451_fu_1168_p2                                 | -   |        | add_ln451            | add  | fabric | 0       |
+|      add_ln451_1_fu_1189_p2                               | -   |        | add_ln451_1          | add  | fabric | 0       |
+|      add_ln451_2_fu_1244_p2                               | -   |        | add_ln451_2          | add  | fabric | 0       |
+|      add_ln461_fu_1294_p2                                 | -   |        | add_ln461            | add  | fabric | 0       |
+|      newexp_fu_1304_p2                                    | -   |        | newexp               | sub  | fabric | 0       |
+|    + sqrt_fixed_32_32_s (grp_sqrt_fixed_32_32_s_fu_233)   | 0   |        |                      |      |        |         |
+|      add_ln277_fu_246_p2                                  | -   |        | add_ln277            | add  | fabric | 0       |
+|      sub_ln277_fu_318_p2                                  | -   |        | sub_ln277            | sub  | fabric | 0       |
+|      sub_ln277_1_fu_400_p2                                | -   |        | sub_ln277_1          | sub  | fabric | 0       |
+|      sub_ln277_2_fu_475_p2                                | -   |        | sub_ln277_2          | sub  | fabric | 0       |
+|      sub_ln277_3_fu_557_p2                                | -   |        | sub_ln277_3          | sub  | fabric | 0       |
+|      sub_ln277_4_fu_632_p2                                | -   |        | sub_ln277_4          | sub  | fabric | 0       |
+|      sub_ln277_5_fu_714_p2                                | -   |        | sub_ln277_5          | sub  | fabric | 0       |
+|      sub_ln277_6_fu_789_p2                                | -   |        | sub_ln277_6          | sub  | fabric | 0       |
+|      sub_ln277_7_fu_871_p2                                | -   |        | sub_ln277_7          | sub  | fabric | 0       |
+|      sub_ln277_8_fu_946_p2                                | -   |        | sub_ln277_8          | sub  | fabric | 0       |
+|      sub_ln277_9_fu_1028_p2                               | -   |        | sub_ln277_9          | sub  | fabric | 0       |
+|      sub_ln277_10_fu_1108_p2                              | -   |        | sub_ln277_10         | sub  | fabric | 0       |
+|      sub_ln277_11_fu_1185_p2                              | -   |        | sub_ln277_11         | sub  | fabric | 0       |
+|      sub_ln277_12_fu_1265_p2                              | -   |        | sub_ln277_12         | sub  | fabric | 0       |
+|      sub_ln277_13_fu_1342_p2                              | -   |        | sub_ln277_13         | sub  | fabric | 0       |
+|      sub_ln277_14_fu_1413_p2                              | -   |        | sub_ln277_14         | sub  | fabric | 0       |
+|      res_I_V_30_fu_1470_p2                                | -   |        | res_I_V_30           | add  | fabric | 0       |
+|   + dbscan_Pipeline_VITIS_LOOP_116_4                      | 0   |        |                      |      |        |         |
+|     add_ln116_fu_297_p2                                   | -   |        | add_ln116            | add  | fabric | 0       |
+|     add_ln515_fu_366_p2                                   | -   |        | add_ln515            | add  | fabric | 0       |
+|     sub_ln1512_fu_380_p2                                  | -   |        | sub_ln1512           | sub  | fabric | 0       |
+|     result_V_9_fu_573_p2                                  | -   |        | result_V_9           | sub  | fabric | 0       |
+|     add_ln515_2_fu_491_p2                                 | -   |        | add_ln515_2          | add  | fabric | 0       |
+|     sub_ln1512_2_fu_505_p2                                | -   |        | sub_ln1512_2         | sub  | fabric | 0       |
+|     result_V_10_fu_584_p2                                 | -   |        | result_V_10          | sub  | fabric | 0       |
+|     xf_V_fu_603_p2                                        | -   |        | xf_V                 | add  | fabric | 0       |
+|     new_neighbor_count_1_fu_615_p2                        | -   |        | new_neighbor_count_1 | add  | fabric | 0       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_157) | 54  |        |                      |      |        |         |
+|      Ex_V_fu_515_p2                                       | -   |        | Ex_V                 | add  | fabric | 0       |
+|      add_ln214_fu_340_p2                                  | -   |        | add_ln214            | add  | fabric | 0       |
+|      mul_170s_53ns_170_5_1_U10                            | 18  |        | ret_V_5              | mul  | auto   | 4       |
+|      Mx_bits_V_1_fu_451_p2                                | -   |        | Mx_bits_V_1          | sub  | fabric | 0       |
+|      Ex_V_3_fu_554_p2                                     | -   |        | Ex_V_3               | sub  | fabric | 0       |
+|      sub_ln1512_fu_581_p2                                 | -   |        | sub_ln1512           | sub  | fabric | 0       |
+|      mul_49ns_49ns_98_5_1_U11                             | 4   |        | r_V_4                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U15                             | 4   |        | r_V_5                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U16                             | 4   |        | r_V_7                | mul  | auto   | 4       |
+|      mul_56ns_52s_108_5_1_U17                             | 5   |        | r_V_9                | mul  | auto   | 4       |
+|      mul_49ns_44s_93_5_1_U18                              | 4   |        | r_V_10               | mul  | auto   | 4       |
+|      mul_42ns_33ns_75_2_1_U19                             | 4   |        | r_V_11               | mul  | auto   | 1       |
+|      mul_35ns_25ns_60_2_1_U20                             | 2   |        | r_V_12               | mul  | auto   | 1       |
+|      mul_64s_63ns_126_5_1_U21                             | 9   |        | r_V_14               | mul  | auto   | 4       |
+|      add_ln451_fu_1168_p2                                 | -   |        | add_ln451            | add  | fabric | 0       |
+|      add_ln451_1_fu_1189_p2                               | -   |        | add_ln451_1          | add  | fabric | 0       |
+|      add_ln451_2_fu_1244_p2                               | -   |        | add_ln451_2          | add  | fabric | 0       |
+|      add_ln461_fu_1294_p2                                 | -   |        | add_ln461            | add  | fabric | 0       |
+|      newexp_fu_1304_p2                                    | -   |        | newexp               | sub  | fabric | 0       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_176) | 54  |        |                      |      |        |         |
+|      Ex_V_fu_515_p2                                       | -   |        | Ex_V                 | add  | fabric | 0       |
+|      add_ln214_fu_340_p2                                  | -   |        | add_ln214            | add  | fabric | 0       |
+|      mul_170s_53ns_170_5_1_U10                            | 18  |        | ret_V_5              | mul  | auto   | 4       |
+|      Mx_bits_V_1_fu_451_p2                                | -   |        | Mx_bits_V_1          | sub  | fabric | 0       |
+|      Ex_V_3_fu_554_p2                                     | -   |        | Ex_V_3               | sub  | fabric | 0       |
+|      sub_ln1512_fu_581_p2                                 | -   |        | sub_ln1512           | sub  | fabric | 0       |
+|      mul_49ns_49ns_98_5_1_U11                             | 4   |        | r_V_4                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U15                             | 4   |        | r_V_5                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U16                             | 4   |        | r_V_7                | mul  | auto   | 4       |
+|      mul_56ns_52s_108_5_1_U17                             | 5   |        | r_V_9                | mul  | auto   | 4       |
+|      mul_49ns_44s_93_5_1_U18                              | 4   |        | r_V_10               | mul  | auto   | 4       |
+|      mul_42ns_33ns_75_2_1_U19                             | 4   |        | r_V_11               | mul  | auto   | 1       |
+|      mul_35ns_25ns_60_2_1_U20                             | 2   |        | r_V_12               | mul  | auto   | 1       |
+|      mul_64s_63ns_126_5_1_U21                             | 9   |        | r_V_14               | mul  | auto   | 4       |
+|      add_ln451_fu_1168_p2                                 | -   |        | add_ln451            | add  | fabric | 0       |
+|      add_ln451_1_fu_1189_p2                               | -   |        | add_ln451_1          | add  | fabric | 0       |
+|      add_ln451_2_fu_1244_p2                               | -   |        | add_ln451_2          | add  | fabric | 0       |
+|      add_ln461_fu_1294_p2                                 | -   |        | add_ln461            | add  | fabric | 0       |
+|      newexp_fu_1304_p2                                    | -   |        | newexp               | sub  | fabric | 0       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_195) | 54  |        |                      |      |        |         |
+|      Ex_V_fu_515_p2                                       | -   |        | Ex_V                 | add  | fabric | 0       |
+|      add_ln214_fu_340_p2                                  | -   |        | add_ln214            | add  | fabric | 0       |
+|      mul_170s_53ns_170_5_1_U10                            | 18  |        | ret_V_5              | mul  | auto   | 4       |
+|      Mx_bits_V_1_fu_451_p2                                | -   |        | Mx_bits_V_1          | sub  | fabric | 0       |
+|      Ex_V_3_fu_554_p2                                     | -   |        | Ex_V_3               | sub  | fabric | 0       |
+|      sub_ln1512_fu_581_p2                                 | -   |        | sub_ln1512           | sub  | fabric | 0       |
+|      mul_49ns_49ns_98_5_1_U11                             | 4   |        | r_V_4                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U15                             | 4   |        | r_V_5                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U16                             | 4   |        | r_V_7                | mul  | auto   | 4       |
+|      mul_56ns_52s_108_5_1_U17                             | 5   |        | r_V_9                | mul  | auto   | 4       |
+|      mul_49ns_44s_93_5_1_U18                              | 4   |        | r_V_10               | mul  | auto   | 4       |
+|      mul_42ns_33ns_75_2_1_U19                             | 4   |        | r_V_11               | mul  | auto   | 1       |
+|      mul_35ns_25ns_60_2_1_U20                             | 2   |        | r_V_12               | mul  | auto   | 1       |
+|      mul_64s_63ns_126_5_1_U21                             | 9   |        | r_V_14               | mul  | auto   | 4       |
+|      add_ln451_fu_1168_p2                                 | -   |        | add_ln451            | add  | fabric | 0       |
+|      add_ln451_1_fu_1189_p2                               | -   |        | add_ln451_1          | add  | fabric | 0       |
+|      add_ln451_2_fu_1244_p2                               | -   |        | add_ln451_2          | add  | fabric | 0       |
+|      add_ln461_fu_1294_p2                                 | -   |        | add_ln461            | add  | fabric | 0       |
+|      newexp_fu_1304_p2                                    | -   |        | newexp               | sub  | fabric | 0       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_214) | 54  |        |                      |      |        |         |
+|      Ex_V_fu_515_p2                                       | -   |        | Ex_V                 | add  | fabric | 0       |
+|      add_ln214_fu_340_p2                                  | -   |        | add_ln214            | add  | fabric | 0       |
+|      mul_170s_53ns_170_5_1_U10                            | 18  |        | ret_V_5              | mul  | auto   | 4       |
+|      Mx_bits_V_1_fu_451_p2                                | -   |        | Mx_bits_V_1          | sub  | fabric | 0       |
+|      Ex_V_3_fu_554_p2                                     | -   |        | Ex_V_3               | sub  | fabric | 0       |
+|      sub_ln1512_fu_581_p2                                 | -   |        | sub_ln1512           | sub  | fabric | 0       |
+|      mul_49ns_49ns_98_5_1_U11                             | 4   |        | r_V_4                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U15                             | 4   |        | r_V_5                | mul  | auto   | 4       |
+|      mul_49ns_49ns_98_5_1_U16                             | 4   |        | r_V_7                | mul  | auto   | 4       |
+|      mul_56ns_52s_108_5_1_U17                             | 5   |        | r_V_9                | mul  | auto   | 4       |
+|      mul_49ns_44s_93_5_1_U18                              | 4   |        | r_V_10               | mul  | auto   | 4       |
+|      mul_42ns_33ns_75_2_1_U19                             | 4   |        | r_V_11               | mul  | auto   | 1       |
+|      mul_35ns_25ns_60_2_1_U20                             | 2   |        | r_V_12               | mul  | auto   | 1       |
+|      mul_64s_63ns_126_5_1_U21                             | 9   |        | r_V_14               | mul  | auto   | 4       |
+|      add_ln451_fu_1168_p2                                 | -   |        | add_ln451            | add  | fabric | 0       |
+|      add_ln451_1_fu_1189_p2                               | -   |        | add_ln451_1          | add  | fabric | 0       |
+|      add_ln451_2_fu_1244_p2                               | -   |        | add_ln451_2          | add  | fabric | 0       |
+|      add_ln461_fu_1294_p2                                 | -   |        | add_ln461            | add  | fabric | 0       |
+|      newexp_fu_1304_p2                                    | -   |        | newexp               | sub  | fabric | 0       |
+|    + sqrt_fixed_32_32_s (grp_sqrt_fixed_32_32_s_fu_233)   | 0   |        |                      |      |        |         |
+|      add_ln277_fu_246_p2                                  | -   |        | add_ln277            | add  | fabric | 0       |
+|      sub_ln277_fu_318_p2                                  | -   |        | sub_ln277            | sub  | fabric | 0       |
+|      sub_ln277_1_fu_400_p2                                | -   |        | sub_ln277_1          | sub  | fabric | 0       |
+|      sub_ln277_2_fu_475_p2                                | -   |        | sub_ln277_2          | sub  | fabric | 0       |
+|      sub_ln277_3_fu_557_p2                                | -   |        | sub_ln277_3          | sub  | fabric | 0       |
+|      sub_ln277_4_fu_632_p2                                | -   |        | sub_ln277_4          | sub  | fabric | 0       |
+|      sub_ln277_5_fu_714_p2                                | -   |        | sub_ln277_5          | sub  | fabric | 0       |
+|      sub_ln277_6_fu_789_p2                                | -   |        | sub_ln277_6          | sub  | fabric | 0       |
+|      sub_ln277_7_fu_871_p2                                | -   |        | sub_ln277_7          | sub  | fabric | 0       |
+|      sub_ln277_8_fu_946_p2                                | -   |        | sub_ln277_8          | sub  | fabric | 0       |
+|      sub_ln277_9_fu_1028_p2                               | -   |        | sub_ln277_9          | sub  | fabric | 0       |
+|      sub_ln277_10_fu_1108_p2                              | -   |        | sub_ln277_10         | sub  | fabric | 0       |
+|      sub_ln277_11_fu_1185_p2                              | -   |        | sub_ln277_11         | sub  | fabric | 0       |
+|      sub_ln277_12_fu_1265_p2                              | -   |        | sub_ln277_12         | sub  | fabric | 0       |
+|      sub_ln277_13_fu_1342_p2                              | -   |        | sub_ln277_13         | sub  | fabric | 0       |
+|      sub_ln277_14_fu_1413_p2                              | -   |        | sub_ln277_14         | sub  | fabric | 0       |
+|      res_I_V_30_fu_1470_p2                                | -   |        | res_I_V_30           | add  | fabric | 0       |
+|   + dbscan_Pipeline_VITIS_LOOP_132_5                      | 0   |        |                      |      |        |         |
+|     add_ln132_fu_129_p2                                   | -   |        | add_ln132            | add  | fabric | 0       |
+|     neighbor_count_2_fu_153_p2                            | -   |        | neighbor_count_2     | add  | fabric | 0       |
+|  + clusterOp2_Pipeline_VITIS_LOOP_51_3                    | 0   |        |                      |      |        |         |
+|    add_ln51_fu_168_p2                                     | -   |        | add_ln51             | add  | fabric | 0       |
+|    add_ln53_fu_178_p2                                     | -   |        | add_ln53             | add  | fabric | 0       |
++-----------------------------------------------------------+-----+--------+----------------------+------+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-----------------------------------------------------------+------+------+--------+----------------------------------+---------+--------+---------+
+| Name                                                      | BRAM | URAM | Pragma | Variable                         | Storage | Impl   | Latency |
++-----------------------------------------------------------+------+------+--------+----------------------------------+---------+--------+---------+
+| + clusterOp2                                              | 109  | 0    |        |                                  |         |        |         |
+|   distances_U                                             | 2    | -    |        | distances                        | ram_1p  | auto   | 1       |
+|   visited_U                                               | -    | -    |        | visited                          | ram_1p  | auto   | 1       |
+|   clusters_id_U                                           | 1    | -    |        | clusters_id                      | ram_1p  | auto   | 1       |
+|   clusters_members_U                                      | 72   | -    |        | clusters_members                 | ram_1p  | auto   | 1       |
+|   clusters_member_count_U                                 | 1    | -    |        | clusters_member_count            | ram_1p  | auto   | 1       |
+|  + dbscan                                                 | 34   | 0    |        |                                  |         |        |         |
+|    neighbors_U                                            | 1    | -    |        | neighbors                        | ram_1p  | auto   | 1       |
+|    new_neighbors_U                                        | 1    | -    |        | new_neighbors                    | ram_1p  | auto   | 1       |
+|   + dbscan_Pipeline_VITIS_LOOP_85_2                       | 0    | 0    |        |                                  |         |        |         |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_157) | 8    | 0    |        |                                  |         |        |         |
+|      ref_4oPi_table_256_V_U                               | 8    | -    |        | ref_4oPi_table_256_V             | rom_1p  | auto   | 1       |
+|      fourth_order_double_sin_cos_K0_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K0_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K1_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K1_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K2_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K2_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K3_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K3_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K4_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K4_V | rom_1p  | lutram | 1       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_176) | 8    | 0    |        |                                  |         |        |         |
+|      ref_4oPi_table_256_V_U                               | 8    | -    |        | ref_4oPi_table_256_V             | rom_1p  | auto   | 1       |
+|      fourth_order_double_sin_cos_K0_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K0_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K1_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K1_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K2_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K2_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K3_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K3_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K4_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K4_V | rom_1p  | lutram | 1       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_195) | 8    | 0    |        |                                  |         |        |         |
+|      ref_4oPi_table_256_V_U                               | 8    | -    |        | ref_4oPi_table_256_V             | rom_1p  | auto   | 1       |
+|      fourth_order_double_sin_cos_K0_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K0_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K1_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K1_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K2_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K2_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K3_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K3_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K4_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K4_V | rom_1p  | lutram | 1       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_214) | 8    | 0    |        |                                  |         |        |         |
+|      ref_4oPi_table_256_V_U                               | 8    | -    |        | ref_4oPi_table_256_V             | rom_1p  | auto   | 1       |
+|      fourth_order_double_sin_cos_K0_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K0_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K1_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K1_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K2_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K2_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K3_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K3_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K4_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K4_V | rom_1p  | lutram | 1       |
+|   + dbscan_Pipeline_VITIS_LOOP_116_4                      | 0    | 0    |        |                                  |         |        |         |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_157) | 8    | 0    |        |                                  |         |        |         |
+|      ref_4oPi_table_256_V_U                               | 8    | -    |        | ref_4oPi_table_256_V             | rom_1p  | auto   | 1       |
+|      fourth_order_double_sin_cos_K0_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K0_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K1_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K1_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K2_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K2_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K3_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K3_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K4_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K4_V | rom_1p  | lutram | 1       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_176) | 8    | 0    |        |                                  |         |        |         |
+|      ref_4oPi_table_256_V_U                               | 8    | -    |        | ref_4oPi_table_256_V             | rom_1p  | auto   | 1       |
+|      fourth_order_double_sin_cos_K0_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K0_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K1_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K1_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K2_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K2_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K3_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K3_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K4_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K4_V | rom_1p  | lutram | 1       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_195) | 8    | 0    |        |                                  |         |        |         |
+|      ref_4oPi_table_256_V_U                               | 8    | -    |        | ref_4oPi_table_256_V             | rom_1p  | auto   | 1       |
+|      fourth_order_double_sin_cos_K0_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K0_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K1_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K1_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K2_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K2_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K3_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K3_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K4_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K4_V | rom_1p  | lutram | 1       |
+|    + sin_or_cos_double_s (grp_sin_or_cos_double_s_fu_214) | 8    | 0    |        |                                  |         |        |         |
+|      ref_4oPi_table_256_V_U                               | 8    | -    |        | ref_4oPi_table_256_V             | rom_1p  | auto   | 1       |
+|      fourth_order_double_sin_cos_K0_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K0_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K1_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K1_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K2_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K2_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K3_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K3_V | rom_1p  | lutram | 1       |
+|      fourth_order_double_sin_cos_K4_V_U                   | -    | -    | pragma | fourth_order_double_sin_cos_K4_V | rom_1p  | lutram | 1       |
++-----------------------------------------------------------+------+------+--------+----------------------------------+---------+--------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+---------------------------------------+-------------------------------------------------+
+| Type      | Options                               | Location                                        |
++-----------+---------------------------------------+-------------------------------------------------+
+| interface | axis port=inStream                    | cluster/cluster.cpp:17 in clusterop, inStream   |
+| interface | axis port=outStream                   | cluster/cluster.cpp:18 in clusterop, outStream  |
+| interface | s_axilite port=return bundle=CTRL_BUS | cluster/cluster.cpp:19 in clusterop, return     |
+| interface | axis port=inStream                    | cluster2.cpp:20 in clusterop2, inStream         |
+| interface | axis port=outStream                   | cluster2.cpp:21 in clusterop2, outStream        |
+| interface | s_axilite port=return bundle=CTRL_BUS | cluster2.cpp:22 in clusterop2, return           |
+| unroll    |                                       | cluster/solution2/directives.tcl:6 in clusterop |
++-----------+---------------------------------------+-------------------------------------------------+
+
+

@@ -30,7 +30,7 @@ void clusterOp(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
     }
 
     // Group distances into clusters
-    for (int put = 0; put < DISTANCE_COUNT; put++) {
+    clusterOp_label0:for (int put = 0; put < DISTANCE_COUNT; put++) {
         if (!grouped[put]) {
             // Create a new cluster and add PUT
             clusters[cluster_count].id = cluster_count;
@@ -39,7 +39,7 @@ void clusterOp(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
             grouped[put] = true;
 
             // Compare candidate points with PUT
-            for (int candidate = 0; candidate < DISTANCE_COUNT; candidate++) {
+            clusterOp_label1:for (int candidate = 0; candidate < DISTANCE_COUNT; candidate++) {
                 if (!grouped[candidate] && candidate != put) {
                     int delta_angle = abs(candidate - put);
                     if (delta_angle > 180) {
