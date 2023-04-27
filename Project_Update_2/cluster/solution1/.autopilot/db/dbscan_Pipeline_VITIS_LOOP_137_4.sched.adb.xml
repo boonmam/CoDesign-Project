@@ -1182,7 +1182,7 @@ if.end38:0 %new_neighbor_count_load = load i32 %new_neighbor_count
 
 <Node id="50" bw="1" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-if.end38:21 %icmp_ln144 = icmp_ult  i16 %p_Val2_s, i16 301
+if.end38:21 %icmp_ln144 = icmp_ult  i16 %p_Val2_s, i16 551
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln144"/></StgValue>

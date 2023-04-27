@@ -4,7 +4,7 @@
     "xci_name": "design_1_clusterOp2_0_2",
     "cell_name": "clusterOp2_0",
     "component_reference": "xilinx.com:hls:clusterOp2:1.0",
-    "ip_revision": "2113005341",
+    "ip_revision": "2113005968",
     "gen_directory": "../../../../../../clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_clusterOp2_0_2",
     "parameters": {
       "component_parameters": {
@@ -36,7 +36,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2113005341" } ],
+        "IPREVISION": [ { "value": "2113005968" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_clusterOp2_0_2" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

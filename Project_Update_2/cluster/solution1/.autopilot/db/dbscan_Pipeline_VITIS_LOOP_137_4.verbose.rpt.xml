@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dbscan_Pipeline_VITIS_LOOP_137_4'" level="0">
-<item name = "Date">Thu Apr 27 06:55:42 2023
+<item name = "Date">Thu Apr 27 17:00:28 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">cluster</item>
@@ -67,8 +67,8 @@
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="mac_muladd_16s_16s_32s_32_4_1_U28">mac_muladd_16s_16s_32s_32_4_1, i0 + i1 * i1</column>
-<column name="mul_mul_16s_16s_32_4_1_U27">mul_mul_16s_16s_32_4_1, i0 * i0</column>
+<column name="mac_muladd_16s_16s_32s_32_4_1_U29">mac_muladd_16s_16s_32s_32_4_1, i0 + i1 * i1</column>
+<column name="mul_mul_16s_16s_32_4_1_U28">mul_mul_16s_16s_32_4_1, i0 * i0</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -87,7 +87,7 @@
 <column name="sub_ln98_fu_206_p2">-, 0, 0, 39, 32, 32</column>
 <column name="icmp_ln137_fu_146_p2">icmp, 0, 0, 11, 9, 9</column>
 <column name="icmp_ln138_fu_165_p2">icmp, 0, 0, 11, 9, 9</column>
-<column name="icmp_ln144_fu_230_p2">icmp, 0, 0, 13, 16, 9</column>
+<column name="icmp_ln144_fu_230_p2">icmp, 0, 0, 13, 16, 10</column>
 <column name="new_neighbor_count_1_fu_241_p3">select, 0, 0, 32, 1, 32</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'clusterOp2'
 ================================================================
-* Date:           Thu Apr 27 06:55:40 2023
+* Date:           Thu Apr 27 17:00:26 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        cluster
@@ -41,7 +41,7 @@
         |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_182_2  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        |- VITIS_LOOP_185_2  |        ?|        ?|     3 ~ ?|          -|          -|     ?|        no|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -70,7 +70,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 12
+* Number of FSM states : 14
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
@@ -81,104 +81,113 @@ IsGatedGlobalClock: 0
 4 --> 5 
 5 --> 6 
 6 --> 7 
-7 --> 8 12 
-8 --> 9 
+7 --> 8 13 
+8 --> 9 12 
 9 --> 10 
 10 --> 11 
-11 --> 7 
-12 --> 
+11 --> 12 
+12 --> 7 
+13 --> 14 
+14 --> 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.58>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%phi_mul = alloca i32 1"   --->   Operation 13 'alloca' 'phi_mul' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%i_1 = alloca i32 1"   --->   Operation 14 'alloca' 'i_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%distances = alloca i64 1" [cluster2.cpp:165]   --->   Operation 15 'alloca' 'distances' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%visited = alloca i64 1" [cluster2.cpp:166]   --->   Operation 16 'alloca' 'visited' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%clusters_id = alloca i64 1"   --->   Operation 17 'alloca' 'clusters_id' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 360> <RAM>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%clusters_members = alloca i64 1" [cluster2.cpp:167]   --->   Operation 18 'alloca' 'clusters_members' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%clusters_member_count = alloca i64 1"   --->   Operation 19 'alloca' 'clusters_member_count' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 360> <RAM>
-ST_1 : Operation 20 [2/2] (0.00ns)   --->   "%call_ln0 = call void @clusterOp2_Pipeline_1, i1 %visited"   --->   Operation 20 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_1 : Operation 21 [1/1] (1.58ns)   --->   "%store_ln182 = store i31 0, i31 %i_1" [cluster2.cpp:182]   --->   Operation 21 'store' 'store_ln182' <Predicate = true> <Delay = 1.58>
-ST_1 : Operation 22 [1/1] (1.58ns)   --->   "%store_ln182 = store i40 0, i40 %phi_mul" [cluster2.cpp:182]   --->   Operation 22 'store' 'store_ln182' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%phi_mul = alloca i32 1"   --->   Operation 15 'alloca' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%i_1 = alloca i32 1"   --->   Operation 16 'alloca' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%distances = alloca i64 1" [cluster2.cpp:165]   --->   Operation 17 'alloca' 'distances' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%visited = alloca i64 1" [cluster2.cpp:166]   --->   Operation 18 'alloca' 'visited' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%clusters_id = alloca i64 1"   --->   Operation 19 'alloca' 'clusters_id' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 360> <RAM>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%clusters_members = alloca i64 1" [cluster2.cpp:167]   --->   Operation 20 'alloca' 'clusters_members' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%clusters_member_count = alloca i64 1"   --->   Operation 21 'alloca' 'clusters_member_count' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 360> <RAM>
+ST_1 : Operation 22 [2/2] (0.00ns)   --->   "%call_ln0 = call void @clusterOp2_Pipeline_1, i1 %visited"   --->   Operation 22 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 23 [1/1] (1.58ns)   --->   "%store_ln185 = store i31 0, i31 %i_1" [cluster2.cpp:185]   --->   Operation 23 'store' 'store_ln185' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 24 [1/1] (1.58ns)   --->   "%store_ln185 = store i40 0, i40 %phi_mul" [cluster2.cpp:185]   --->   Operation 24 'store' 'store_ln185' <Predicate = true> <Delay = 1.58>
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 23 [1/2] (0.00ns)   --->   "%call_ln0 = call void @clusterOp2_Pipeline_1, i1 %visited"   --->   Operation 23 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 25 [1/2] (0.00ns)   --->   "%call_ln0 = call void @clusterOp2_Pipeline_1, i1 %visited"   --->   Operation 25 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 3 <SV = 2> <Delay = 3.25>
-ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 24 'wait' 'empty' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 25 [2/2] (3.25ns)   --->   "%call_ln0 = call void @clusterOp2_Pipeline_VITIS_LOOP_172_1, i32 %inStream_V_data_V, i4 %inStream_V_keep_V, i4 %inStream_V_strb_V, i2 %inStream_V_user_V, i1 %inStream_V_last_V, i5 %inStream_V_id_V, i6 %inStream_V_dest_V, i32 %distances"   --->   Operation 25 'call' 'call_ln0' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+State 3 <SV = 2> <Delay = 4.79>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 26 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [2/2] (4.79ns)   --->   "%call_ln0 = call void @clusterOp2_Pipeline_VITIS_LOOP_172_1, i32 %inStream_V_data_V, i4 %inStream_V_keep_V, i4 %inStream_V_strb_V, i2 %inStream_V_user_V, i1 %inStream_V_last_V, i5 %inStream_V_id_V, i6 %inStream_V_dest_V, i32 %distances, i1 %visited"   --->   Operation 27 'call' 'call_ln0' <Predicate = true> <Delay = 4.79> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 26 [1/2] (0.00ns)   --->   "%call_ln0 = call void @clusterOp2_Pipeline_VITIS_LOOP_172_1, i32 %inStream_V_data_V, i4 %inStream_V_keep_V, i4 %inStream_V_strb_V, i2 %inStream_V_user_V, i1 %inStream_V_last_V, i5 %inStream_V_id_V, i6 %inStream_V_dest_V, i32 %distances"   --->   Operation 26 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 28 [1/2] (0.00ns)   --->   "%call_ln0 = call void @clusterOp2_Pipeline_VITIS_LOOP_172_1, i32 %inStream_V_data_V, i4 %inStream_V_keep_V, i4 %inStream_V_strb_V, i2 %inStream_V_user_V, i1 %inStream_V_last_V, i5 %inStream_V_id_V, i6 %inStream_V_dest_V, i32 %distances, i1 %visited"   --->   Operation 28 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 0.00>
-ST_5 : Operation 27 [1/1] (0.00ns)   --->   "%empty_75 = wait i32 @_ssdm_op_Wait"   --->   Operation 27 'wait' 'empty_75' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 28 [2/2] (0.00ns)   --->   "%cluster_count = call i32 @dbscan, i32 %distances, i1 %visited, i5 %clusters_id, i9 %clusters_members, i32 %clusters_member_count, i18 %sin_values, i18 %cos_values" [cluster2.cpp:178]   --->   Operation 28 'call' 'cluster_count' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%empty_75 = wait i32 @_ssdm_op_Wait"   --->   Operation 29 'wait' 'empty_75' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 30 [2/2] (0.00ns)   --->   "%cluster_count = call i32 @dbscan, i32 %distances, i1 %visited, i5 %clusters_id, i9 %clusters_members, i32 %clusters_member_count, i18 %sin_values, i18 %cos_values" [cluster2.cpp:181]   --->   Operation 30 'call' 'cluster_count' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 6 <SV = 5> <Delay = 2.55>
-ST_6 : Operation 29 [1/1] (0.00ns)   --->   "%spectopmodule_ln160 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_10" [cluster2.cpp:160]   --->   Operation 29 'spectopmodule' 'spectopmodule_ln160' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %inStream_V_data_V, i4 %inStream_V_keep_V, i4 %inStream_V_strb_V, i2 %inStream_V_user_V, i1 %inStream_V_last_V, i5 %inStream_V_id_V, i6 %inStream_V_dest_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %inStream_V_data_V"   --->   Operation 31 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %inStream_V_keep_V"   --->   Operation 32 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 33 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %inStream_V_strb_V"   --->   Operation 33 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 34 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %inStream_V_user_V"   --->   Operation 34 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 35 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %inStream_V_last_V"   --->   Operation 35 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %inStream_V_id_V"   --->   Operation 36 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %inStream_V_dest_V"   --->   Operation 37 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %outStream_V_data_V"   --->   Operation 39 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %outStream_V_keep_V"   --->   Operation 40 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %outStream_V_strb_V"   --->   Operation 41 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %outStream_V_user_V"   --->   Operation 42 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %outStream_V_last_V"   --->   Operation 43 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %outStream_V_id_V"   --->   Operation 44 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %outStream_V_dest_V"   --->   Operation 45 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 47 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln166 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V, void @empty_4" [cluster2.cpp:166]   --->   Operation 47 'specaxissidechannel' 'specaxissidechannel_ln166' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 48 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln166 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %inStream_V_data_V, i4 %inStream_V_keep_V, i4 %inStream_V_strb_V, i2 %inStream_V_user_V, i1 %inStream_V_last_V, i5 %inStream_V_id_V, i6 %inStream_V_dest_V, void @empty_5" [cluster2.cpp:166]   --->   Operation 48 'specaxissidechannel' 'specaxissidechannel_ln166' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 49 [1/2] (0.00ns)   --->   "%cluster_count = call i32 @dbscan, i32 %distances, i1 %visited, i5 %clusters_id, i9 %clusters_members, i32 %clusters_member_count, i18 %sin_values, i18 %cos_values" [cluster2.cpp:178]   --->   Operation 49 'call' 'cluster_count' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_6 : Operation 50 [1/1] (2.55ns)   --->   "%sub42 = add i32 %cluster_count, i32 4294967295" [cluster2.cpp:178]   --->   Operation 50 'add' 'sub42' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln182 = br void %VITIS_LOOP_194_3" [cluster2.cpp:182]   --->   Operation 51 'br' 'br_ln182' <Predicate = true> <Delay = 0.00>
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%spectopmodule_ln160 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_10" [cluster2.cpp:160]   --->   Operation 31 'spectopmodule' 'spectopmodule_ln160' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %inStream_V_data_V, i4 %inStream_V_keep_V, i4 %inStream_V_strb_V, i2 %inStream_V_user_V, i1 %inStream_V_last_V, i5 %inStream_V_id_V, i6 %inStream_V_dest_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 33 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %inStream_V_data_V"   --->   Operation 33 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 34 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %inStream_V_keep_V"   --->   Operation 34 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 35 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %inStream_V_strb_V"   --->   Operation 35 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %inStream_V_user_V"   --->   Operation 36 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %inStream_V_last_V"   --->   Operation 37 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %inStream_V_id_V"   --->   Operation 38 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %inStream_V_dest_V"   --->   Operation 39 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %outStream_V_data_V"   --->   Operation 41 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %outStream_V_keep_V"   --->   Operation 42 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %outStream_V_strb_V"   --->   Operation 43 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %outStream_V_user_V"   --->   Operation 44 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %outStream_V_last_V"   --->   Operation 45 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %outStream_V_id_V"   --->   Operation 46 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 47 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %outStream_V_dest_V"   --->   Operation 47 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln166 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V, void @empty_4" [cluster2.cpp:166]   --->   Operation 49 'specaxissidechannel' 'specaxissidechannel_ln166' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln166 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %inStream_V_data_V, i4 %inStream_V_keep_V, i4 %inStream_V_strb_V, i2 %inStream_V_user_V, i1 %inStream_V_last_V, i5 %inStream_V_id_V, i6 %inStream_V_dest_V, void @empty_5" [cluster2.cpp:166]   --->   Operation 50 'specaxissidechannel' 'specaxissidechannel_ln166' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 51 [1/2] (0.00ns)   --->   "%cluster_count = call i32 @dbscan, i32 %distances, i1 %visited, i5 %clusters_id, i9 %clusters_members, i32 %clusters_member_count, i18 %sin_values, i18 %cos_values" [cluster2.cpp:181]   --->   Operation 51 'call' 'cluster_count' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln185 = br void %for.body12" [cluster2.cpp:185]   --->   Operation 52 'br' 'br_ln185' <Predicate = true> <Delay = 0.00>
 
-State 7 <SV = 6> <Delay = 4.46>
-ST_7 : Operation 52 [1/1] (0.00ns)   --->   "%phi_mul_load = load i40 %phi_mul"   --->   Operation 52 'load' 'phi_mul_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 53 [1/1] (0.00ns)   --->   "%i = load i31 %i_1" [cluster2.cpp:182]   --->   Operation 53 'load' 'i' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 54 [1/1] (0.00ns)   --->   "%empty_76 = trunc i40 %phi_mul_load"   --->   Operation 54 'trunc' 'empty_76' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 55 [1/1] (2.87ns)   --->   "%next_mul = add i40 %phi_mul_load, i40 360"   --->   Operation 55 'add' 'next_mul' <Predicate = true> <Delay = 2.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 56 [1/1] (0.00ns)   --->   "%zext_ln182_1 = zext i31 %i" [cluster2.cpp:182]   --->   Operation 56 'zext' 'zext_ln182_1' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 57 [1/1] (2.47ns)   --->   "%icmp_ln182 = icmp_slt  i32 %zext_ln182_1, i32 %cluster_count" [cluster2.cpp:182]   --->   Operation 57 'icmp' 'icmp_ln182' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 58 [1/1] (2.52ns)   --->   "%add_ln182 = add i31 %i, i31 1" [cluster2.cpp:182]   --->   Operation 58 'add' 'add_ln182' <Predicate = true> <Delay = 2.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln182 = br i1 %icmp_ln182, void %for.end60.loopexit, void %VITIS_LOOP_194_3.split" [cluster2.cpp:182]   --->   Operation 59 'br' 'br_ln182' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 60 [1/1] (0.00ns)   --->   "%zext_ln182 = zext i31 %i" [cluster2.cpp:182]   --->   Operation 60 'zext' 'zext_ln182' <Predicate = (icmp_ln182)> <Delay = 0.00>
-ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%clusters_id_addr = getelementptr i5 %clusters_id, i64 0, i64 %zext_ln182" [cluster2.cpp:190]   --->   Operation 61 'getelementptr' 'clusters_id_addr' <Predicate = (icmp_ln182)> <Delay = 0.00>
-ST_7 : Operation 62 [2/2] (3.25ns)   --->   "%tmp_id_V = load i9 %clusters_id_addr"   --->   Operation 62 'load' 'tmp_id_V' <Predicate = (icmp_ln182)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 360> <RAM>
-ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%clusters_member_count_addr = getelementptr i32 %clusters_member_count, i64 0, i64 %zext_ln182" [cluster2.cpp:182]   --->   Operation 63 'getelementptr' 'clusters_member_count_addr' <Predicate = (icmp_ln182)> <Delay = 0.00>
-ST_7 : Operation 64 [2/2] (3.25ns)   --->   "%clusters_member_count_load = load i9 %clusters_member_count_addr" [cluster2.cpp:182]   --->   Operation 64 'load' 'clusters_member_count_load' <Predicate = (icmp_ln182)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 360> <RAM>
-ST_7 : Operation 65 [1/1] (2.47ns)   --->   "%icmp_ln201 = icmp_eq  i32 %zext_ln182_1, i32 %sub42" [cluster2.cpp:201]   --->   Operation 65 'icmp' 'icmp_ln201' <Predicate = (icmp_ln182)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 66 [1/1] (1.58ns)   --->   "%store_ln182 = store i31 %add_ln182, i31 %i_1" [cluster2.cpp:182]   --->   Operation 66 'store' 'store_ln182' <Predicate = (icmp_ln182)> <Delay = 1.58>
-ST_7 : Operation 67 [1/1] (1.58ns)   --->   "%store_ln182 = store i40 %next_mul, i40 %phi_mul" [cluster2.cpp:182]   --->   Operation 67 'store' 'store_ln182' <Predicate = (icmp_ln182)> <Delay = 1.58>
+State 7 <SV = 6> <Delay = 3.25>
+ST_7 : Operation 53 [1/1] (0.00ns)   --->   "%phi_mul_load = load i40 %phi_mul"   --->   Operation 53 'load' 'phi_mul_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 54 [1/1] (0.00ns)   --->   "%i = load i31 %i_1" [cluster2.cpp:185]   --->   Operation 54 'load' 'i' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 55 [1/1] (0.00ns)   --->   "%empty_76 = trunc i40 %phi_mul_load"   --->   Operation 55 'trunc' 'empty_76' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 56 [1/1] (2.87ns)   --->   "%next_mul = add i40 %phi_mul_load, i40 360"   --->   Operation 56 'add' 'next_mul' <Predicate = true> <Delay = 2.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 57 [1/1] (0.00ns)   --->   "%zext_ln185_1 = zext i31 %i" [cluster2.cpp:185]   --->   Operation 57 'zext' 'zext_ln185_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 58 [1/1] (2.47ns)   --->   "%icmp_ln185 = icmp_slt  i32 %zext_ln185_1, i32 %cluster_count" [cluster2.cpp:185]   --->   Operation 58 'icmp' 'icmp_ln185' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 59 [1/1] (2.52ns)   --->   "%add_ln185 = add i31 %i, i31 1" [cluster2.cpp:185]   --->   Operation 59 'add' 'add_ln185' <Predicate = true> <Delay = 2.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln185 = br i1 %icmp_ln185, void %for.end63.loopexit, void %for.body12.split" [cluster2.cpp:185]   --->   Operation 60 'br' 'br_ln185' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%zext_ln185 = zext i31 %i" [cluster2.cpp:185]   --->   Operation 61 'zext' 'zext_ln185' <Predicate = (icmp_ln185)> <Delay = 0.00>
+ST_7 : Operation 62 [1/1] (0.00ns)   --->   "%clusters_member_count_addr = getelementptr i32 %clusters_member_count, i64 0, i64 %zext_ln185" [cluster2.cpp:187]   --->   Operation 62 'getelementptr' 'clusters_member_count_addr' <Predicate = (icmp_ln185)> <Delay = 0.00>
+ST_7 : Operation 63 [2/2] (3.25ns)   --->   "%clusters_member_count_load = load i9 %clusters_member_count_addr" [cluster2.cpp:187]   --->   Operation 63 'load' 'clusters_member_count_load' <Predicate = (icmp_ln185)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 360> <RAM>
 
-State 8 <SV = 7> <Delay = 3.25>
-ST_8 : Operation 68 [1/2] (3.25ns)   --->   "%tmp_id_V = load i9 %clusters_id_addr"   --->   Operation 68 'load' 'tmp_id_V' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 360> <RAM>
-ST_8 : Operation 69 [2/2] (0.00ns)   --->   "%write_ln258 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V, i32 720, i4 15, i4 15, i2 1, i1 0, i5 %tmp_id_V, i6 0"   --->   Operation 69 'write' 'write_ln258' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_8 : Operation 70 [1/2] (3.25ns)   --->   "%clusters_member_count_load = load i9 %clusters_member_count_addr" [cluster2.cpp:182]   --->   Operation 70 'load' 'clusters_member_count_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 360> <RAM>
+State 8 <SV = 7> <Delay = 5.72>
+ST_8 : Operation 64 [1/1] (0.00ns)   --->   "%specloopname_ln185 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [cluster2.cpp:185]   --->   Operation 64 'specloopname' 'specloopname_ln185' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 65 [1/2] (3.25ns)   --->   "%clusters_member_count_load = load i9 %clusters_member_count_addr" [cluster2.cpp:187]   --->   Operation 65 'load' 'clusters_member_count_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 360> <RAM>
+ST_8 : Operation 66 [1/1] (2.47ns)   --->   "%icmp_ln187 = icmp_slt  i32 %clusters_member_count_load, i32 10" [cluster2.cpp:187]   --->   Operation 66 'icmp' 'icmp_ln187' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 67 [1/1] (0.00ns)   --->   "%br_ln187 = br i1 %icmp_ln187, void %VITIS_LOOP_201_3, void %for.inc61" [cluster2.cpp:187]   --->   Operation 67 'br' 'br_ln187' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 68 [1/1] (0.00ns)   --->   "%clusters_id_addr = getelementptr i5 %clusters_id, i64 0, i64 %zext_ln185" [cluster2.cpp:197]   --->   Operation 68 'getelementptr' 'clusters_id_addr' <Predicate = (!icmp_ln187)> <Delay = 0.00>
+ST_8 : Operation 69 [2/2] (3.25ns)   --->   "%tmp_id_V = load i9 %clusters_id_addr"   --->   Operation 69 'load' 'tmp_id_V' <Predicate = (!icmp_ln187)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 360> <RAM>
+ST_8 : Operation 70 [1/1] (0.00ns)   --->   "%trunc_ln201 = trunc i32 %clusters_member_count_load" [cluster2.cpp:201]   --->   Operation 70 'trunc' 'trunc_ln201' <Predicate = (!icmp_ln187)> <Delay = 0.00>
 
-State 9 <SV = 8> <Delay = 2.55>
-ST_9 : Operation 71 [1/2] (0.00ns)   --->   "%write_ln258 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V, i32 720, i4 15, i4 15, i2 1, i1 0, i5 %tmp_id_V, i6 0"   --->   Operation 71 'write' 'write_ln258' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_9 : Operation 72 [1/1] (2.55ns)   --->   "%sub = add i32 %clusters_member_count_load, i32 4294967295" [cluster2.cpp:182]   --->   Operation 72 'add' 'sub' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 73 [1/1] (0.00ns)   --->   "%empty_77 = wait i32 @_ssdm_op_Wait"   --->   Operation 73 'wait' 'empty_77' <Predicate = true> <Delay = 0.00>
+State 9 <SV = 8> <Delay = 3.25>
+ST_9 : Operation 71 [1/2] (3.25ns)   --->   "%tmp_id_V = load i9 %clusters_id_addr"   --->   Operation 71 'load' 'tmp_id_V' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 360> <RAM>
+ST_9 : Operation 72 [2/2] (0.00ns)   --->   "%write_ln258 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V, i32 720, i4 15, i4 15, i2 1, i1 0, i5 %tmp_id_V, i6 0"   --->   Operation 72 'write' 'write_ln258' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 
-State 10 <SV = 9> <Delay = 5.36>
-ST_10 : Operation 74 [2/2] (5.36ns)   --->   "%call_ln182 = call void @clusterOp2_Pipeline_VITIS_LOOP_194_3, i32 %clusters_member_count_load, i17 %empty_76, i9 %clusters_members, i32 %sub, i1 %icmp_ln201, i5 %tmp_id_V, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V" [cluster2.cpp:182]   --->   Operation 74 'call' 'call_ln182' <Predicate = true> <Delay = 5.36> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 73 [1/2] (0.00ns)   --->   "%write_ln258 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V, i32 720, i4 15, i4 15, i2 1, i1 0, i5 %tmp_id_V, i6 0"   --->   Operation 73 'write' 'write_ln258' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_10 : Operation 74 [1/1] (0.00ns)   --->   "%empty_77 = wait i32 @_ssdm_op_Wait"   --->   Operation 74 'wait' 'empty_77' <Predicate = true> <Delay = 0.00>
 
-State 11 <SV = 10> <Delay = 3.25>
-ST_11 : Operation 75 [1/1] (0.00ns)   --->   "%specloopname_ln182 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [cluster2.cpp:182]   --->   Operation 75 'specloopname' 'specloopname_ln182' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 76 [1/2] (3.25ns)   --->   "%call_ln182 = call void @clusterOp2_Pipeline_VITIS_LOOP_194_3, i32 %clusters_member_count_load, i17 %empty_76, i9 %clusters_members, i32 %sub, i1 %icmp_ln201, i5 %tmp_id_V, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V" [cluster2.cpp:182]   --->   Operation 76 'call' 'call_ln182' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_11 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln182 = br void %VITIS_LOOP_194_3" [cluster2.cpp:182]   --->   Operation 77 'br' 'br_ln182' <Predicate = true> <Delay = 0.00>
+State 11 <SV = 10> <Delay = 5.36>
+ST_11 : Operation 75 [2/2] (5.36ns)   --->   "%call_ln201 = call void @clusterOp2_Pipeline_VITIS_LOOP_201_3, i31 %trunc_ln201, i17 %empty_76, i9 %clusters_members, i5 %tmp_id_V, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V" [cluster2.cpp:201]   --->   Operation 75 'call' 'call_ln201' <Predicate = true> <Delay = 5.36> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 12 <SV = 11> <Delay = 0.00>
-ST_12 : Operation 78 [1/1] (0.00ns)   --->   "%ret_ln213 = ret" [cluster2.cpp:213]   --->   Operation 78 'ret' 'ret_ln213' <Predicate = true> <Delay = 0.00>
+State 12 <SV = 11> <Delay = 3.25>
+ST_12 : Operation 76 [1/2] (3.25ns)   --->   "%call_ln201 = call void @clusterOp2_Pipeline_VITIS_LOOP_201_3, i31 %trunc_ln201, i17 %empty_76, i9 %clusters_members, i5 %tmp_id_V, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V" [cluster2.cpp:201]   --->   Operation 76 'call' 'call_ln201' <Predicate = (!icmp_ln187)> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc61"   --->   Operation 77 'br' 'br_ln0' <Predicate = (!icmp_ln187)> <Delay = 0.00>
+ST_12 : Operation 78 [1/1] (1.58ns)   --->   "%store_ln185 = store i31 %add_ln185, i31 %i_1" [cluster2.cpp:185]   --->   Operation 78 'store' 'store_ln185' <Predicate = true> <Delay = 1.58>
+ST_12 : Operation 79 [1/1] (1.58ns)   --->   "%store_ln185 = store i40 %next_mul, i40 %phi_mul" [cluster2.cpp:185]   --->   Operation 79 'store' 'store_ln185' <Predicate = true> <Delay = 1.58>
+ST_12 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln185 = br void %for.body12" [cluster2.cpp:185]   --->   Operation 80 'br' 'br_ln185' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 11> <Delay = 0.00>
+ST_13 : Operation 81 [2/2] (0.00ns)   --->   "%write_ln258 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V, i32 0, i4 15, i4 15, i2 0, i1 1, i5 0, i6 0"   --->   Operation 81 'write' 'write_ln258' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 14 <SV = 12> <Delay = 0.00>
+ST_14 : Operation 82 [1/2] (0.00ns)   --->   "%write_ln258 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %outStream_V_data_V, i4 %outStream_V_keep_V, i4 %outStream_V_strb_V, i2 %outStream_V_user_V, i1 %outStream_V_last_V, i5 %outStream_V_id_V, i6 %outStream_V_dest_V, i32 0, i4 15, i4 15, i2 0, i1 1, i5 0, i6 0"   --->   Operation 82 'write' 'write_ln258' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_14 : Operation 83 [1/1] (0.00ns)   --->   "%ret_ln223 = ret" [cluster2.cpp:223]   --->   Operation 83 'ret' 'ret_ln223' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -189,14 +198,14 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
  <State 1>: 1.59ns
 The critical path consists of the following:
 	'alloca' operation ('i') [18]  (0 ns)
-	'store' operation ('store_ln182', cluster2.cpp:182) of constant 0 on local variable 'i' [50]  (1.59 ns)
+	'store' operation ('store_ln185', cluster2.cpp:185) of constant 0 on local variable 'i' [49]  (1.59 ns)
 
  <State 2>: 0ns
 The critical path consists of the following:
 
- <State 3>: 3.25ns
+ <State 3>: 4.79ns
 The critical path consists of the following:
-	'call' operation ('call_ln0') to 'clusterOp2_Pipeline_VITIS_LOOP_172_1' [46]  (3.25 ns)
+	'call' operation ('call_ln0') to 'clusterOp2_Pipeline_VITIS_LOOP_172_1' [46]  (4.79 ns)
 
  <State 4>: 0ns
 The critical path consists of the following:
@@ -204,34 +213,39 @@ The critical path consists of the following:
  <State 5>: 0ns
 The critical path consists of the following:
 
- <State 6>: 2.55ns
+ <State 6>: 0ns
 The critical path consists of the following:
-	'call' operation ('cluster_count', cluster2.cpp:178) to 'dbscan' [48]  (0 ns)
-	'add' operation ('sub42', cluster2.cpp:178) [49]  (2.55 ns)
 
- <State 7>: 4.46ns
+ <State 7>: 3.25ns
 The critical path consists of the following:
-	'load' operation ('phi_mul_load') on local variable 'phi_mul' [54]  (0 ns)
-	'add' operation ('next_mul') [57]  (2.88 ns)
-	'store' operation ('store_ln182', cluster2.cpp:182) of variable 'next_mul' on local variable 'phi_mul' [75]  (1.59 ns)
+	'load' operation ('i', cluster2.cpp:185) on local variable 'i' [54]  (0 ns)
+	'getelementptr' operation ('clusters_member_count_addr', cluster2.cpp:187) [64]  (0 ns)
+	'load' operation ('clusters_member_count_load', cluster2.cpp:187) on array 'clusters_member_count' [65]  (3.25 ns)
 
- <State 8>: 3.25ns
+ <State 8>: 5.73ns
 The critical path consists of the following:
-	'load' operation ('op') on array 'clusters_id' [66]  (3.25 ns)
+	'load' operation ('clusters_member_count_load', cluster2.cpp:187) on array 'clusters_member_count' [65]  (3.25 ns)
+	'icmp' operation ('icmp_ln187', cluster2.cpp:187) [66]  (2.47 ns)
 
- <State 9>: 2.55ns
+ <State 9>: 3.25ns
 The critical path consists of the following:
-	'add' operation ('sub', cluster2.cpp:182) [70]  (2.55 ns)
+	'load' operation ('op') on array 'clusters_id' [70]  (3.25 ns)
 
- <State 10>: 5.36ns
+ <State 10>: 0ns
 The critical path consists of the following:
-	'call' operation ('call_ln182', cluster2.cpp:182) to 'clusterOp2_Pipeline_VITIS_LOOP_194_3' [73]  (5.36 ns)
 
- <State 11>: 3.25ns
+ <State 11>: 5.36ns
 The critical path consists of the following:
-	'call' operation ('call_ln182', cluster2.cpp:182) to 'clusterOp2_Pipeline_VITIS_LOOP_194_3' [73]  (3.25 ns)
+	'call' operation ('call_ln201', cluster2.cpp:201) to 'clusterOp2_Pipeline_VITIS_LOOP_201_3' [74]  (5.36 ns)
 
- <State 12>: 0ns
+ <State 12>: 3.25ns
+The critical path consists of the following:
+	'call' operation ('call_ln201', cluster2.cpp:201) to 'clusterOp2_Pipeline_VITIS_LOOP_201_3' [74]  (3.25 ns)
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+ <State 14>: 0ns
 The critical path consists of the following:
 
 
@@ -255,6 +269,8 @@ N/A
 	State 10
 	State 11
 	State 12
+	State 13
+	State 14
 
 
 ============================================================

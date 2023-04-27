@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:hls:clusterOp2:1.0
-// IP Revision: 2113005341
+// IP Revision: 2113005968
 
 `timescale 1ns/1ps
 

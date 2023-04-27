@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Apr 27 06:58:33 2023
-# Process ID: 47708
+# Start of session at: Thu Apr 27 17:12:15 2023
+# Process ID: 96772
 # Current directory: E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/design_1_wrapper.vds
@@ -29,15 +29,15 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10768
+INFO: [Synth 8-7075] Helper process launched with PID 95524
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [E:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1872.516 ; gain = 408.211
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1874.227 ; gain = 410.750
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:12]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_axi_dma_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_axi_dma_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_axi_dma_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_axi_dma_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_1_axi_dma_0' is unconnected for instance 'axi_dma' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:225]
 WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_0' is unconnected for instance 'axi_dma' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:225]
 WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_1_axi_dma_0' is unconnected for instance 'axi_dma' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:225]
@@ -46,28 +46,28 @@ WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0' is 
 WARNING: [Synth 8-7023] instance 'axi_dma' of module 'design_1_axi_dma_0' has 64 connections declared, but only 59 given [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:225]
 INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_0' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:617]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_7HNO1D' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:1946]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_0' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_auto_us_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_0' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_auto_us_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_0' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_auto_us_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_0' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_auto_us_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_7HNO1D' (0#1) [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:1946]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_0' (0#1) [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:617]
 INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_1_0' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:817]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1FI55ZU' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:1783]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_auto_pc_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_auto_pc_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1FI55ZU' (0#1) [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:1783]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_1_0' (0#1) [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:817]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clusterOp2_0_2' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_clusterOp2_0_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clusterOp2_0_2' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_clusterOp2_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clusterOp2_0_2' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_clusterOp2_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clusterOp2_0_2' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_clusterOp2_0_2_stub.v:5]
 WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_clusterOp2_0_2' is unconnected for instance 'clusterOp2_0' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:361]
 WARNING: [Synth 8-7071] port 'outStream_TDEST' of module 'design_1_clusterOp2_0_2' is unconnected for instance 'clusterOp2_0' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:361]
 WARNING: [Synth 8-7071] port 'outStream_TSTRB' of module 'design_1_clusterOp2_0_2' is unconnected for instance 'clusterOp2_0' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:361]
 WARNING: [Synth 8-7071] port 'outStream_TUSER' of module 'design_1_clusterOp2_0_2' is unconnected for instance 'clusterOp2_0' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:361]
 WARNING: [Synth 8-7071] port 'outStream_TID' of module 'design_1_clusterOp2_0_2' is unconnected for instance 'clusterOp2_0' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:361]
 WARNING: [Synth 8-7023] instance 'clusterOp2_0' of module 'design_1_clusterOp2_0_2' has 38 connections declared, but only 33 given [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:361]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_processing_system7_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_processing_system7_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_processing_system7_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_processing_system7_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:395]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:395]
 WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARREADY' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:395]
@@ -98,17 +98,17 @@ INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_15SPJYW' (0#1) [
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_XU9C55' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:1651]
 INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_XU9C55' (0#1) [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:1651]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:2196]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_2' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_auto_pc_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_2' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_auto_pc_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_2' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_auto_pc_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_2' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_auto_pc_2_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (0#1) [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:2196]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_xbar_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_xbar_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:1485]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:1485]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:1485]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (0#1) [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:987]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_rst_ps7_0_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-47708-DESKTOP-4OQQII8/realtime/design_1_rst_ps7_0_100M_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_rst_ps7_0_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (0#1) [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/.Xil/Vivado-96772-DESKTOP-4OQQII8/realtime/design_1_rst_ps7_0_100M_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:608]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:608]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/synth/design_1.v:608]
@@ -141,61 +141,61 @@ WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_7HNO1D is eith
 WARNING: [Synth 8-7129] Port ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1972.270 ; gain = 507.965
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1972.934 ; gain = 509.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1972.270 ; gain = 507.965
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1972.934 ; gain = 509.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1972.270 ; gain = 507.965
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1972.934 ; gain = 509.457
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1972.270 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1972.934 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
 Finished Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
-Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
-Finished Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
-Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0/design_1_axi_dma_0/design_1_axi_dma_0_in_context.xdc] for cell 'design_1_i/axi_dma'
-Finished Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0/design_1_axi_dma_0/design_1_axi_dma_0_in_context.xdc] for cell 'design_1_i/axi_dma'
-Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_pc'
-Finished Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_pc'
+Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc'
+Finished Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc'
+Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_pc'
+Finished Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_pc'
 Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us'
 Finished Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us'
-Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc'
-Finished Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc'
+Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0/design_1_axi_dma_0/design_1_axi_dma_0_in_context.xdc] for cell 'design_1_i/axi_dma'
+Finished Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0/design_1_axi_dma_0/design_1_axi_dma_0_in_context.xdc] for cell 'design_1_i/axi_dma'
 Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/xbar'
 Finished Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/xbar'
 Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
+Finished Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
 Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_clusterOp2_0_2/design_1_clusterOp2_0_2/design_1_clusterOp2_0_2_in_context.xdc] for cell 'design_1_i/clusterOp2_0'
 Finished Parsing XDC File [e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_clusterOp2_0_2/design_1_clusterOp2_0_2/design_1_clusterOp2_0_2_in_context.xdc] for cell 'design_1_i/clusterOp2_0'
 Parsing XDC File [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1972.270 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1972.934 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1972.270 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1972.934 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [E:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1972.270 ; gain = 507.965
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1972.934 ; gain = 509.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1972.270 ; gain = 507.965
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1972.934 ; gain = 509.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -462,22 +462,22 @@ Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint fi
 Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  e:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 261).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/processing_system7_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_dma. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon/s00_couplers/auto_us. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon_1/s00_couplers/auto_pc. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_dma. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clusterOp2_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1972.270 ; gain = 507.965
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1972.934 ; gain = 509.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1972.270 ; gain = 507.965
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1972.934 ; gain = 509.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -514,25 +514,25 @@ WARNING: [Synth 8-7129] Port ARESETN in module design_1_axi_mem_intercon_0 is ei
 WARNING: [Synth 8-7129] Port M00_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M00_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1972.270 ; gain = 507.965
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1972.934 ; gain = 509.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1982.094 ; gain = 517.789
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1977.199 ; gain = 513.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1982.094 ; gain = 517.789
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1977.199 ; gain = 513.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1987.285 ; gain = 522.980
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1996.312 ; gain = 532.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -550,37 +550,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1991.066 ; gain = 526.762
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2001.070 ; gain = 537.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1991.066 ; gain = 526.762
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2001.070 ; gain = 537.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1991.066 ; gain = 526.762
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2001.070 ; gain = 537.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1991.066 ; gain = 526.762
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2001.070 ; gain = 537.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1991.066 ; gain = 526.762
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2001.070 ; gain = 537.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1991.066 ; gain = 526.762
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2001.070 ; gain = 537.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -590,9 +590,9 @@ Report BlackBoxes:
 +------+--------------------------------+----------+
 |      |BlackBox name                   |Instances |
 +------+--------------------------------+----------+
-|1     |design_1_auto_pc_0              |         1|
+|1     |design_1_auto_pc_1              |         1|
 |2     |design_1_auto_us_0              |         1|
-|3     |design_1_auto_pc_1              |         1|
+|3     |design_1_auto_pc_0              |         1|
 |4     |design_1_xbar_0                 |         1|
 |5     |design_1_auto_pc_2              |         1|
 |6     |design_1_axi_dma_0              |         1|
@@ -614,24 +614,24 @@ Report Cell Usage:
 |9     |design_1_xbar                 |     1|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1991.066 ; gain = 526.762
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2001.070 ; gain = 537.594
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1991.066 ; gain = 526.762
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1991.066 ; gain = 526.762
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 2001.070 ; gain = 537.594
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2001.070 ; gain = 537.594
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1991.066 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2001.070 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2008.723 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2018.789 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 1418f52e
+Synth Design complete, checksum: e24fa648
 INFO: [Common 17-83] Releasing license: Synthesis
 62 Infos, 84 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2014.746 ; gain = 958.719
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2022.973 ; gain = 967.594
 INFO: [Common 17-1381] The checkpoint 'E:/Github/CoDesign-Project/Project_Update_2/clusterOp_2022.1/clusterOp_2022.1.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 27 06:59:11 2023...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 27 17:12:52 2023...

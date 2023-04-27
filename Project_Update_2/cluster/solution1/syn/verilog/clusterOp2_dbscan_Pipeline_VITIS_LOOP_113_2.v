@@ -278,7 +278,7 @@ clusterOp2_mul_mul_16s_16s_32_4_1 #(
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 16 ),
     .dout_WIDTH( 32 ))
-mul_mul_16s_16s_32_4_1_U13(
+mul_mul_16s_16s_32_4_1_U14(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_270_p0),
@@ -294,7 +294,7 @@ clusterOp2_mac_muladd_16s_16s_32s_32_4_1 #(
     .din1_WIDTH( 16 ),
     .din2_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-mac_muladd_16s_16s_32s_32_4_1_U14(
+mac_muladd_16s_16s_32s_32_4_1_U15(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_276_p0),
@@ -858,7 +858,7 @@ assign icmp_ln113_fu_161_p2 = ((ap_sig_allocacmp_j_1 == 9'd360) ? 1'b1 : 1'b0);
 
 assign icmp_ln114_fu_180_p2 = ((i == ap_sig_allocacmp_j_1) ? 1'b1 : 1'b0);
 
-assign icmp_ln120_fu_242_p2 = ((p_Val2_s_reg_400 < 16'd301) ? 1'b1 : 1'b0);
+assign icmp_ln120_fu_242_p2 = ((p_Val2_s_reg_400 < 16'd551) ? 1'b1 : 1'b0);
 
 assign neighbor_count_1_fu_250_p2 = (neighbor_count_fu_62 + 32'd1);
 

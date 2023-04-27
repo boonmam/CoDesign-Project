@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.1)  27 APR 2023 06:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.1)  27 APR 2023 07:45
 entering extended mode
 **./BoonmaCodesignProject.tex
 (BoonmaCodesignProject.tex
@@ -378,26 +378,26 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
  <./images//sysOverview.png> <./images//polarLIDAR.png>]
-Underfull \hbox (badness 1360) in paragraph at lines 76--76
+Underfull \hbox (badness 1360) in paragraph at lines 77--77
  \OT1/ptm/m/it/10 C. Con-stant Ve-loc-ity Kalman Fil-ter for Ob-ject Track-ing
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
 []\OT1/ptm/m/n/8 L, Mallidi, "PyL-i-dar3," GitHub, 2020, url:
  []
 
-[3] [4
+[4
 
 ] (BoonmaCodesignProject.aux) ) 
 Here is how much of TeX's memory you used:
  3991 strings out of 478927
  60291 string characters out of 2848707
- 375999 words of memory out of 3000000
+ 373964 words of memory out of 3000000
  21817 multiletter control sequences out of 15000+600000
  437951 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,66p,867b,267s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,6n,66p,867b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/McCain Boonma/AppData/Local/Programs/M
 iKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/McCain Boonma/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/McCain Boonma/AppD
@@ -414,7 +414,7 @@ mes/utmb8a.pfb><C:/Users/McCain Boonma/AppData/Local/Programs/MiKTeX/fonts/type
 1/urw/times/utmbi8a.pfb><C:/Users/McCain Boonma/AppData/Local/Programs/MiKTeX/f
 onts/type1/urw/times/utmr8a.pfb><C:/Users/McCain Boonma/AppData/Local/Programs/
 MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on BoonmaCodesignProject.pdf (4 pages, 214229 bytes).
+Output written on BoonmaCodesignProject.pdf (4 pages, 213829 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

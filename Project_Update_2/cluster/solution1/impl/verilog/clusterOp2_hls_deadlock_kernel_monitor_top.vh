@@ -11,14 +11,14 @@ wire [0:0] inst_block_sigs;
 wire kernel_block;
 
 assign axis_block_sigs[0] = ~outStream_TDATA_blk_n;
-assign axis_block_sigs[1] = ~grp_clusterOp2_Pipeline_VITIS_LOOP_172_1_fu_190.inStream_TDATA_blk_n;
-assign axis_block_sigs[2] = ~grp_clusterOp2_Pipeline_VITIS_LOOP_194_3_fu_222.outStream_TDATA_blk_n;
+assign axis_block_sigs[1] = ~grp_clusterOp2_Pipeline_VITIS_LOOP_172_1_fu_202.inStream_TDATA_blk_n;
+assign axis_block_sigs[2] = ~grp_clusterOp2_Pipeline_VITIS_LOOP_201_3_fu_235.outStream_TDATA_blk_n;
 
 assign inst_block_sigs[0] = 1'b0;
 
 assign inst_idle_sigs[0] = 1'b0;
-assign inst_idle_sigs[1] = grp_clusterOp2_Pipeline_VITIS_LOOP_172_1_fu_190.ap_idle;
-assign inst_idle_sigs[2] = grp_clusterOp2_Pipeline_VITIS_LOOP_194_3_fu_222.ap_idle;
+assign inst_idle_sigs[1] = grp_clusterOp2_Pipeline_VITIS_LOOP_172_1_fu_202.ap_idle;
+assign inst_idle_sigs[2] = grp_clusterOp2_Pipeline_VITIS_LOOP_201_3_fu_235.ap_idle;
 
 clusterOp2_hls_deadlock_idx0_monitor clusterOp2_hls_deadlock_idx0_monitor_U (
     .clock(kernel_monitor_clock),

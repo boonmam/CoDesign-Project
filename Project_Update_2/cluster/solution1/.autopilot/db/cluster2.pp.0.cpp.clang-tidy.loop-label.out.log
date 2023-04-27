@@ -751,13 +751,13 @@ E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\clus
     ^~~
     VITIS_LOOP_172_1: 
 E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster2.pp.0.cpp:27036:5: note: FIX-IT applied suggested code changes
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster2.pp.0.cpp:27046:5: warning: Added loop label VITIS_LOOP_182_2:   [xilinx-label-all-loops]
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster2.pp.0.cpp:27049:5: warning: Added loop label VITIS_LOOP_185_2:   [xilinx-label-all-loops]
     for (int i = 0; i < cluster_count; i++) {
     ^~~
-    VITIS_LOOP_182_2: 
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster2.pp.0.cpp:27046:5: note: FIX-IT applied suggested code changes
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster2.pp.0.cpp:27058:9: warning: Added loop label VITIS_LOOP_194_3:   [xilinx-label-all-loops]
+    VITIS_LOOP_185_2: 
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster2.pp.0.cpp:27049:5: note: FIX-IT applied suggested code changes
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster2.pp.0.cpp:27065:9: warning: Added loop label VITIS_LOOP_201_3:   [xilinx-label-all-loops]
         for (int j = 0; j < clusters[i].member_count; j++) {
         ^~~
-        VITIS_LOOP_194_3: 
-E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster2.pp.0.cpp:27058:9: note: FIX-IT applied suggested code changes
+        VITIS_LOOP_201_3: 
+E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster2.pp.0.cpp:27065:9: note: FIX-IT applied suggested code changes

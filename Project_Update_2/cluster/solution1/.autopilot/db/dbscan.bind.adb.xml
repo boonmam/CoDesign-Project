@@ -849,7 +849,7 @@ VITIS_LOOP_113_2:12 %neighbor_count_loc_load = load i32 %neighbor_count_loc
 
 <Node id="44" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-VITIS_LOOP_113_2:13 %icmp_ln125 = icmp_sgt  i32 %neighbor_count_loc_load, i32 4
+VITIS_LOOP_113_2:13 %icmp_ln125 = icmp_sgt  i32 %neighbor_count_loc_load, i32 9
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln125"/></StgValue>
@@ -1143,7 +1143,7 @@ for.body24:2 %icmp_ln130 = icmp_eq  i31 %k, i31 %trunc_ln130
 
 <Node id="61" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.body24:3 %empty_71 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 5, i64 18446744073709551615, i64 0
+for.body24:3 %empty_71 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 10, i64 18446744073709551615, i64 0
 
 ]]></Node>
 <StgValue><ssdm name="empty_71"/></StgValue>
@@ -1759,7 +1759,7 @@ VITIS_LOOP_137_4:12 %new_neighbor_count_loc_load = load i32 %new_neighbor_count_
 
 <Node id="87" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-VITIS_LOOP_137_4:13 %icmp_ln149 = icmp_sgt  i32 %new_neighbor_count_loc_load, i32 4
+VITIS_LOOP_137_4:13 %icmp_ln149 = icmp_sgt  i32 %new_neighbor_count_loc_load, i32 9
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln149"/></StgValue>

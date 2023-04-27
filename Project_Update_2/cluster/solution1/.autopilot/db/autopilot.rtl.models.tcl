@@ -22,7 +22,7 @@ set SynModuleInfo {
       {MODELNAME clusterOp2_dbscan_neighbors_RAM_AUTO_1R1W RTLNAME clusterOp2_dbscan_neighbors_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME clusterOp2_Pipeline_VITIS_LOOP_194_3 MODELNAME clusterOp2_Pipeline_VITIS_LOOP_194_3 RTLNAME clusterOp2_clusterOp2_Pipeline_VITIS_LOOP_194_3}
+  {SRCNAME clusterOp2_Pipeline_VITIS_LOOP_201_3 MODELNAME clusterOp2_Pipeline_VITIS_LOOP_201_3 RTLNAME clusterOp2_clusterOp2_Pipeline_VITIS_LOOP_201_3}
   {SRCNAME clusterOp2 MODELNAME clusterOp2 RTLNAME clusterOp2 IS_TOP 1
     SUBMODULES {
       {MODELNAME clusterOp2_distances_RAM_AUTO_1R1W RTLNAME clusterOp2_distances_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}

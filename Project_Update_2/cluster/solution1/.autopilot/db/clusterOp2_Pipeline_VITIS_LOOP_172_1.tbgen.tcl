@@ -21,6 +21,7 @@ set C_modelArgList {
 	{ inStream_V_id_V int 5 regular {axi_s 0 volatile  { inStream ID } }  }
 	{ inStream_V_dest_V int 6 regular {axi_s 0 volatile  { inStream Dest } }  }
 	{ distances int 32 regular {array 360 { 0 3 } 0 1 }  }
+	{ visited int 1 regular {array 360 { 0 3 } 0 1 }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "inStream_V_data_V", "interface" : "axis", "bitwidth" : 32, "direction" : "READONLY"} , 
@@ -30,9 +31,10 @@ set C_modelArgMapList {[
  	{ "Name" : "inStream_V_last_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY"} , 
  	{ "Name" : "inStream_V_id_V", "interface" : "axis", "bitwidth" : 5, "direction" : "READONLY"} , 
  	{ "Name" : "inStream_V_dest_V", "interface" : "axis", "bitwidth" : 6, "direction" : "READONLY"} , 
- 	{ "Name" : "distances", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
+ 	{ "Name" : "distances", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "visited", "interface" : "memory", "bitwidth" : 1, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
-set portNum 19
+set portNum 23
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -53,6 +55,10 @@ set portList {
 	{ distances_ce0 sc_out sc_logic 1 signal 7 } 
 	{ distances_we0 sc_out sc_logic 1 signal 7 } 
 	{ distances_d0 sc_out sc_lv 32 signal 7 } 
+	{ visited_address0 sc_out sc_lv 9 signal 8 } 
+	{ visited_ce0 sc_out sc_logic 1 signal 8 } 
+	{ visited_we0 sc_out sc_logic 1 signal 8 } 
+	{ visited_d0 sc_out sc_lv 1 signal 8 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -73,7 +79,11 @@ set NewPortList {[
  	{ "name": "distances_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "distances", "role": "address0" }} , 
  	{ "name": "distances_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "distances", "role": "ce0" }} , 
  	{ "name": "distances_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "distances", "role": "we0" }} , 
- 	{ "name": "distances_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "distances", "role": "d0" }}  ]}
+ 	{ "name": "distances_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "distances", "role": "d0" }} , 
+ 	{ "name": "visited_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "visited", "role": "address0" }} , 
+ 	{ "name": "visited_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "visited", "role": "ce0" }} , 
+ 	{ "name": "visited_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "visited", "role": "we0" }} , 
+ 	{ "name": "visited_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "visited", "role": "d0" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
@@ -100,7 +110,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "inStream_V_last_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "inStream"},
 			{"Name" : "inStream_V_id_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "inStream"},
 			{"Name" : "inStream_V_dest_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "inStream"},
-			{"Name" : "distances", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "distances", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "visited", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_172_1", "PipelineType" : "NotSupport"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
@@ -115,7 +126,8 @@ set ArgLastReadFirstWriteLatency {
 		inStream_V_last_V {Type I LastRead 0 FirstWrite -1}
 		inStream_V_id_V {Type I LastRead 0 FirstWrite -1}
 		inStream_V_dest_V {Type I LastRead 0 FirstWrite -1}
-		distances {Type O LastRead -1 FirstWrite 0}}}
+		distances {Type O LastRead -1 FirstWrite 0}
+		visited {Type O LastRead -1 FirstWrite 0}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -136,4 +148,5 @@ set Spec2ImplPortList {
 	inStream_V_id_V { axis {  { inStream_TID in_data 0 5 } } }
 	inStream_V_dest_V { axis {  { inStream_TREADY in_acc 1 1 }  { inStream_TDEST in_data 0 6 } } }
 	distances { ap_memory {  { distances_address0 mem_address 1 9 }  { distances_ce0 mem_ce 1 1 }  { distances_we0 mem_we 1 1 }  { distances_d0 mem_din 1 32 } } }
+	visited { ap_memory {  { visited_address0 mem_address 1 9 }  { visited_ce0 mem_ce 1 1 }  { visited_we0 mem_we 1 1 }  { visited_d0 mem_din 1 1 } } }
 }

@@ -27036,14 +27036,21 @@ __attribute__((sdx_kernel("clusterOp2", 0))) void clusterOp2(hls::stream<axis_t>
     VITIS_LOOP_172_1: for (int i = 0; i < 360; i++) {
         axis_t tmp = inStream.read();
         distances[i] = tmp.data.to_int();
+        if (distances[i] < 120){
+         visited[i] = true;
+        }
     }
 
 
-    dbscan(distances, visited, clusters, cluster_count, 360, 300, 5, sin_values, cos_values);
+    dbscan(distances, visited, clusters, cluster_count, 360, 550, 10, sin_values, cos_values);
 
 
 
-    VITIS_LOOP_182_2: for (int i = 0; i < cluster_count; i++) {
+    VITIS_LOOP_185_2: for (int i = 0; i < cluster_count; i++) {
+
+     if(clusters[i].member_count < 10){
+      continue;
+     }
 
         axis_t tmp;
         tmp.data = 720;
@@ -27055,23 +27062,26 @@ __attribute__((sdx_kernel("clusterOp2", 0))) void clusterOp2(hls::stream<axis_t>
         tmp.dest = 0;
         outStream.write(tmp);
 
-        VITIS_LOOP_194_3: for (int j = 0; j < clusters[i].member_count; j++) {
+        VITIS_LOOP_201_3: for (int j = 0; j < clusters[i].member_count; j++) {
             axis_t tmp;
             tmp.data = clusters[i].members[j];
             tmp.keep = -1;
             tmp.strb = -1;
             tmp.user = 0;
-
-            if (j == clusters[i].member_count - 1 && i == cluster_count - 1) {
-                tmp.last = 1;
-            } else {
-                tmp.last = 0;
-            }
-
+            tmp.last = 0;
             tmp.id = clusters[i].id;
             tmp.dest = 0;
 
             outStream.write(tmp);
         }
     }
+    axis_t tmp;
+    tmp.data = 0;
+    tmp.keep = -1;
+    tmp.strb = -1;
+    tmp.user = 0;
+    tmp.last = 1;
+    tmp.id = 0;
+    tmp.dest = 0;
+    outStream.write(tmp);
 }

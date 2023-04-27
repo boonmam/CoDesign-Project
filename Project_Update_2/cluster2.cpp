@@ -3,8 +3,8 @@
 #include <hls_math.h>
 
 #define DISTANCE_COUNT 360
-#define EPS 300 // Adjust this value according to the problem
-#define MIN_POINTS 5 // Adjust this value according to the problem
+#define EPS 550 // Adjust this value according to the problem
+#define MIN_POINTS 10 // Adjust this value according to the problem
 #define FIXED_POINT_SHIFT 16
 
 typedef ap_axis<32,2,5,6> axis_t;
@@ -172,6 +172,9 @@ void clusterOp2(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
     for (int i = 0; i < DISTANCE_COUNT; i++) {
         axis_t tmp = inStream.read();
         distances[i] = tmp.data.to_int();
+        if (distances[i] < 120){
+        	visited[i] = true;
+        }
     }
 
     // DBSCAN algorithm
@@ -180,6 +183,10 @@ void clusterOp2(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
 
     // Write output data to AXI4-Stream
     for (int i = 0; i < cluster_count; i++) {
+
+    	if(clusters[i].member_count < MIN_POINTS){
+    		continue;
+    	}
 
         axis_t tmp;
         tmp.data = 720;
@@ -197,19 +204,22 @@ void clusterOp2(hls::stream<axis_t>& inStream, hls::stream<axis_t>& outStream) {
             tmp.keep = -1; // All bytes are valid
             tmp.strb = -1; // All bytes are valid
             tmp.user = 0; // Indicate start of a new cluster
-
-            if (j == clusters[i].member_count - 1 && i == cluster_count - 1) {
-                tmp.last = 1; // Indicate end of a cluster
-            } else {
-                tmp.last = 0;
-            }
-
+            tmp.last = 0;
             tmp.id = clusters[i].id;
             tmp.dest = 0;
 
             outStream.write(tmp);
         }
     }
+    axis_t tmp;
+    tmp.data = 0;
+    tmp.keep = -1; // All bytes are valid
+    tmp.strb = -1; // All bytes are valid
+    tmp.user = 0; // Indicate start of a new cluster
+    tmp.last = 1;
+    tmp.id = 0;
+    tmp.dest = 0;
+    outStream.write(tmp);
 }
 
 

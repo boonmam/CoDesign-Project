@@ -63,7 +63,7 @@ architecture behav of clusterOp2_dbscan_Pipeline_VITIS_LOOP_113_2 is
     constant ap_const_lv9_1 : STD_LOGIC_VECTOR (8 downto 0) := "000000001";
     constant ap_const_lv32_10 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010000";
     constant ap_const_lv32_1F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011111";
-    constant ap_const_lv16_12D : STD_LOGIC_VECTOR (15 downto 0) := "0000000100101101";
+    constant ap_const_lv16_227 : STD_LOGIC_VECTOR (15 downto 0) := "0000001000100111";
 
 attribute shreg_extract : string;
     signal ap_CS_fsm : STD_LOGIC_VECTOR (0 downto 0) := "1";
@@ -309,7 +309,7 @@ attribute shreg_extract : string;
 
 
 begin
-    mul_mul_16s_16s_32_4_1_U13 : component clusterOp2_mul_mul_16s_16s_32_4_1
+    mul_mul_16s_16s_32_4_1_U14 : component clusterOp2_mul_mul_16s_16s_32_4_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -324,7 +324,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_270_p2);
 
-    mac_muladd_16s_16s_32s_32_4_1_U14 : component clusterOp2_mac_muladd_16s_16s_32s_32_4_1
+    mac_muladd_16s_16s_32s_32_4_1_U15 : component clusterOp2_mac_muladd_16s_16s_32s_32_4_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -941,7 +941,7 @@ begin
     grp_sqrt_fixed_32_32_s_fu_664_p_din1 <= xf_V_reg_395;
     icmp_ln113_fu_161_p2 <= "1" when (ap_sig_allocacmp_j_1 = ap_const_lv9_168) else "0";
     icmp_ln114_fu_180_p2 <= "1" when (i = ap_sig_allocacmp_j_1) else "0";
-    icmp_ln120_fu_242_p2 <= "1" when (unsigned(p_Val2_s_reg_400) < unsigned(ap_const_lv16_12D)) else "0";
+    icmp_ln120_fu_242_p2 <= "1" when (unsigned(p_Val2_s_reg_400) < unsigned(ap_const_lv16_227)) else "0";
     neighbor_count_1_fu_250_p2 <= std_logic_vector(unsigned(neighbor_count_fu_62) + unsigned(ap_const_lv32_1));
     neighbor_count_out <= neighbor_count_fu_62;
 

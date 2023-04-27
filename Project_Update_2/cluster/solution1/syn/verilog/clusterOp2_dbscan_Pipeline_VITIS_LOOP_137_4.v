@@ -249,7 +249,7 @@ clusterOp2_mul_mul_16s_16s_32_4_1 #(
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 16 ),
     .dout_WIDTH( 32 ))
-mul_mul_16s_16s_32_4_1_U27(
+mul_mul_16s_16s_32_4_1_U28(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_258_p0),
@@ -265,7 +265,7 @@ clusterOp2_mac_muladd_16s_16s_32s_32_4_1 #(
     .din1_WIDTH( 16 ),
     .din2_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-mac_muladd_16s_16s_32s_32_4_1_U28(
+mac_muladd_16s_16s_32s_32_4_1_U29(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_264_p0),
@@ -793,7 +793,7 @@ assign icmp_ln137_fu_146_p2 = ((ap_sig_allocacmp_l_1 == 9'd360) ? 1'b1 : 1'b0);
 
 assign icmp_ln138_fu_165_p2 = ((ap_sig_allocacmp_l_1 == neighbor_id) ? 1'b1 : 1'b0);
 
-assign icmp_ln144_fu_230_p2 = ((p_Val2_s_reg_383 < 16'd301) ? 1'b1 : 1'b0);
+assign icmp_ln144_fu_230_p2 = ((p_Val2_s_reg_383 < 16'd551) ? 1'b1 : 1'b0);
 
 assign l_cast_fu_158_p1 = ap_sig_allocacmp_l_1;
 

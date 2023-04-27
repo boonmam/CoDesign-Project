@@ -392,7 +392,7 @@ clusterOp2_mul_18s_32s_32_2_1 #(
     .din0_WIDTH( 18 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-mul_18s_32s_32_2_1_U36(
+mul_18s_32s_32_2_1_U37(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_335_p0),
@@ -407,7 +407,7 @@ clusterOp2_mul_18s_32s_32_2_1 #(
     .din0_WIDTH( 18 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-mul_18s_32s_32_2_1_U37(
+mul_18s_32s_32_2_1_U38(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_345_p0),
@@ -422,7 +422,7 @@ clusterOp2_mul_18s_32s_32_2_1 #(
     .din0_WIDTH( 18 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-mul_18s_32s_32_2_1_U38(
+mul_18s_32s_32_2_1_U39(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(reg_289),
@@ -437,7 +437,7 @@ clusterOp2_mul_18s_32s_32_2_1 #(
     .din0_WIDTH( 18 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-mul_18s_32s_32_2_1_U39(
+mul_18s_32s_32_2_1_U40(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(reg_293),
@@ -452,7 +452,7 @@ clusterOp2_mul_mul_17s_9ns_17_4_1 #(
     .din0_WIDTH( 17 ),
     .din1_WIDTH( 9 ),
     .dout_WIDTH( 17 ))
-mul_mul_17s_9ns_17_4_1_U40(
+mul_mul_17s_9ns_17_4_1_U41(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_457_p0),
@@ -1161,11 +1161,11 @@ assign grp_fu_457_p1 = 17'd360;
 
 assign icmp_ln103_fu_310_p2 = ((i_fu_58 == 9'd360) ? 1'b1 : 1'b0);
 
-assign icmp_ln125_fu_354_p2 = (($signed(grp_dbscan_Pipeline_VITIS_LOOP_113_2_fu_253_neighbor_count_out) > $signed(32'd4)) ? 1'b1 : 1'b0);
+assign icmp_ln125_fu_354_p2 = (($signed(grp_dbscan_Pipeline_VITIS_LOOP_113_2_fu_253_neighbor_count_out) > $signed(32'd9)) ? 1'b1 : 1'b0);
 
 assign icmp_ln130_fu_378_p2 = ((k_reg_214 == trunc_ln130_reg_571) ? 1'b1 : 1'b0);
 
-assign icmp_ln149_fu_430_p2 = (($signed(grp_dbscan_Pipeline_VITIS_LOOP_137_4_fu_268_new_neighbor_count_out) > $signed(32'd4)) ? 1'b1 : 1'b0);
+assign icmp_ln149_fu_430_p2 = (($signed(grp_dbscan_Pipeline_VITIS_LOOP_137_4_fu_268_new_neighbor_count_out) > $signed(32'd9)) ? 1'b1 : 1'b0);
 
 assign sext_ln97_fu_331_p1 = reg_289;
 

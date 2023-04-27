@@ -1,8 +1,8 @@
 INFO: [HLS 200-10] Running 'E:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'McCain Boonma' on host 'desktop-4oqqii8' (Windows NT_amd64 version 6.2) on Thu Apr 27 07:04:57 -0400 2023
+INFO: [HLS 200-10] For user 'McCain Boonma' on host 'desktop-4oqqii8' (Windows NT_amd64 version 6.2) on Thu Apr 27 17:08:27 -0400 2023
 INFO: [HLS 200-10] In directory 'E:/Github/CoDesign-Project/Project_Update_2'
-Sourcing Tcl script 'E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csynth.tcl'
-INFO: [HLS 200-1510] Running: source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/csynth.tcl
+Sourcing Tcl script 'E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source E:/Github/CoDesign-Project/Project_Update_2/cluster/solution1/export.tcl
 INFO: [HLS 200-1510] Running: open_project cluster 
 INFO: [HLS 200-10] Opening project 'E:/Github/CoDesign-Project/Project_Update_2/cluster'.
 INFO: [HLS 200-1510] Running: set_top clusterOp2 
@@ -30,4 +30,20 @@ INFO: [HLS 200-1510] Running: create_clock -period 10 -name default
 INFO: [HLS 200-1510] Running: config_export -display_name clusterOp2 -format ip_catalog -output E:/Github/CoDesign-Project/Project_Update_2 -rtl verilog -vivado_clock 10 
 INFO: [HLS 200-1510] Running: source ./cluster/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name clusterOp2 clusterOp2 
-INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output E:/Github/CoDesign-Project/Project_Update_2 
+Running Dispatch Server on port: 56506
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 27 17:08:51 2023...
+INFO: [HLS 200-802] Generated output file export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 10.859 seconds; current allocated memory: 8.965 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 23.872 seconds; peak allocated memory: 686.000 MB.

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 27 06:57:13 2023" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 27 17:10:18 2023" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -2663,7 +2663,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2113005341" FULLNAME="/clusterOp2_0" HWVERSION="1.0" INSTANCE="clusterOp2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clusterOp2" VLNV="xilinx.com:hls:clusterOp2:1.0">
+    <MODULE COREREVISION="2113005968" FULLNAME="/clusterOp2_0" HWVERSION="1.0" INSTANCE="clusterOp2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clusterOp2" VLNV="xilinx.com:hls:clusterOp2:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_CTRL_BUS" NAME="Reg" RANGE="65536" USAGE="register">
@@ -4537,20 +4537,20 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP2_ACLK"/>
-            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="axi_dma" PORT="s_axi_lite_aclk"/>
-            <CONNECTION INSTANCE="axi_dma" PORT="m_axi_mm2s_aclk"/>
-            <CONNECTION INSTANCE="axi_dma" PORT="m_axi_s2mm_aclk"/>
-            <CONNECTION INSTANCE="axi_mem_intercon" PORT="ACLK"/>
-            <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_ACLK"/>
-            <CONNECTION INSTANCE="axi_mem_intercon" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon_1" PORT="ACLK"/>
-            <CONNECTION INSTANCE="axi_mem_intercon_1" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon_1" PORT="M00_ACLK"/>
+            <CONNECTION INSTANCE="axi_mem_intercon_1" PORT="S00_ACLK"/>
+            <CONNECTION INSTANCE="axi_mem_intercon" PORT="ACLK"/>
+            <CONNECTION INSTANCE="axi_mem_intercon" PORT="M00_ACLK"/>
+            <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_ACLK"/>
+            <CONNECTION INSTANCE="axi_dma" PORT="s_axi_lite_aclk"/>
+            <CONNECTION INSTANCE="axi_dma" PORT="m_axi_s2mm_aclk"/>
+            <CONNECTION INSTANCE="axi_dma" PORT="m_axi_mm2s_aclk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ACLK"/>
-            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
-            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ACLK"/>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ACLK"/>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
+            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="clusterOp2_0" PORT="ap_clk"/>
           </CONNECTIONS>
         </PORT>
@@ -5608,12 +5608,12 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_AWVALID">
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_AWVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clusterOp2_0" PORT="s_axi_CTRL_BUS_AWVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_AWREADY">
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_AWREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clusterOp2_0" PORT="s_axi_CTRL_BUS_AWREADY"/>
           </CONNECTIONS>
@@ -5628,12 +5628,12 @@
             <CONNECTION INSTANCE="clusterOp2_0" PORT="s_axi_CTRL_BUS_WSTRB"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_WVALID">
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_WVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clusterOp2_0" PORT="s_axi_CTRL_BUS_WVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_WREADY">
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_WREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clusterOp2_0" PORT="s_axi_CTRL_BUS_WREADY"/>
           </CONNECTIONS>
@@ -5643,12 +5643,12 @@
             <CONNECTION INSTANCE="clusterOp2_0" PORT="s_axi_CTRL_BUS_BRESP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_BVALID">
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_BVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clusterOp2_0" PORT="s_axi_CTRL_BUS_BVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_BREADY">
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_BREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clusterOp2_0" PORT="s_axi_CTRL_BUS_BREADY"/>
           </CONNECTIONS>
@@ -5659,12 +5659,12 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_ARVALID">
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_ARVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clusterOp2_0" PORT="s_axi_CTRL_BUS_ARVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_ARREADY">
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_ARREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clusterOp2_0" PORT="s_axi_CTRL_BUS_ARREADY"/>
           </CONNECTIONS>
@@ -5679,12 +5679,12 @@
             <CONNECTION INSTANCE="clusterOp2_0" PORT="s_axi_CTRL_BUS_RRESP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_RVALID">
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_RVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clusterOp2_0" PORT="s_axi_CTRL_BUS_RVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_RREADY">
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="clusterOp2_0_s_axi_CTRL_BUS_RREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clusterOp2_0" PORT="s_axi_CTRL_BUS_RREADY"/>
           </CONNECTIONS>
@@ -5820,17 +5820,17 @@
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma" PORT="axi_resetn"/>
-            <CONNECTION INSTANCE="axi_mem_intercon" PORT="ARESETN"/>
-            <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_ARESETN"/>
-            <CONNECTION INSTANCE="axi_mem_intercon" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon_1" PORT="ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon_1" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon_1" PORT="M00_ARESETN"/>
+            <CONNECTION INSTANCE="axi_mem_intercon" PORT="ARESETN"/>
+            <CONNECTION INSTANCE="axi_mem_intercon" PORT="M00_ARESETN"/>
+            <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_ARESETN"/>
+            <CONNECTION INSTANCE="axi_dma" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ARESETN"/>
-            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ARESETN"/>
-            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ARESETN"/>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ARESETN"/>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="clusterOp2_0" PORT="ap_rst_n"/>
           </CONNECTIONS>
         </PORT>
