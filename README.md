@@ -59,3 +59,25 @@ In the Preliminary Report folder, there are two Jupyter Notebooks. "LIDAR_STABLE
 ![](https://github.com/boonmam/CoDesign-Project/blob/main/Preliminary_Report/CLUSTER.gif)
 
 "LIDAR_EXPERIMENTAL" has a prototype data association algorithm was quickly thrown together and needs significant debugging and refinement.
+
+## Final
+The project is finally "finished", but really, when is a project ever done. In this latest iteration, we implemented a more accurate, faster, and lighter-weight clustering algorithm using DBSCAN. There is now data association and even a Kalman filter. The data association matches clusters from the previous frame to the current frame. The data association works okay. The Kalman filter is 'working' but the parameters need adjustments for the Kalman filter to be more reliable.
+
+### Jupyter Notebooks
++ Benchmark
+Demonstrates the speed advantage of the new DBSCAN clustering algorithm vs the software benchmark. This Jupyter notebook by default imports the data from a CSV. However, for whatever reason, the software benchmark takes way too much time when reading from a CSV (28s) when compared to streaming from the sensor directly (1s).
+
++ LidarClusteringMultiThreading
+Barebones implementation, no data association, no Kalman filter. Just connects to LiDAR sensor and clusters the points. Pretty fast, from collection to graph is in about 2s.
+
++ LidarClustering_DataAssoc
+Has data association algorithm, will track clusters between frames. Short-term memory
+
++ LidarClustering_Kalman
+Has a Kalman filter, will track clusters over longer periods of time. The Kalman filter is kinda inaccurate, will get most right but 2/3 really bad outliers
+
+### Overlay
+Has the DBSCAN clustering algorithm overlay (clusterOp2).
+
+### HLS
+Has the DBSCAN clustering algorithm .cpp file and a testbench. You can synthesize the clustering algorithm and run a simulation in Vitis (Board: xc7z020clg400-1).
