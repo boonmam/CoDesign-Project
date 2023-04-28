@@ -24,14 +24,20 @@
 \maketitle
 
 \begin{abstract}
-This project explores the implementation of hardware acceleration for real-time processing and analysis of Light Detection and Ranging (LiDAR) data using a Field-Programmable Gate Array (FPGA). A custom hardware implementation of the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm is developed and evaluated, demonstrating significant speedup and reduced resource utilization compared to the software implementation. A constant velocity Kalman filter is used to track clusters over time, with graphical output for visualization of the clustering and tracking results. The project also identifies potential enhancements to the system, such as improving latency, increasing resolution, and transitioning the Kalman filter to hardware. Overall, this project demonstrates the effectiveness of FPGA-based hardware acceleration for real-time LiDAR data processing and analysis, with potential for future optimizations and improvements.
+This project explores the implementation of hardware acceleration for real-time processing and analysis of Light Detection and Ranging (LiDAR) data using a Field-Programmable Gate Array (FPGA). A custom hardware implementation of the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm is developed and evaluated, demonstrating significant speedup and reduced resource utilization compared to the software implementation. A Kalman filter is used to track clusters over time, with graphical output for visualization of the clustering and tracking results. The project also identifies potential enhancements to the system, such as improving latency, increasing resolution, and transitioning the Kalman filter to hardware. Overall, this project demonstrates the effectiveness of FPGA-based hardware acceleration for real-time LiDAR data processing and analysis, with potential for future optimizations and improvements.
 \end{abstract}
 
 \section{Introduction}
-Light Detection and Ranging (LiDAR) sensors are widely used in various applications, including autonomous vehicles, robotics, and environmental monitoring. These sensors generate large amounts of data that require real-time processing to detect and track objects within their field of view. This paper presents an efficient solution for real-time processing and analysis of LiDAR data, leveraging FPGA-based hardware acceleration to perform clustering and a Kalman filter for object tracking. The proposed approach employs a number of hardware optimizations in the point clustering operation, resulting in significant improvements in overall performance. The processed data is visualized using polar plots , providing a clear representation of the raw LiDAR data and the identified clusters.
+LiDAR sensors are becoming increasingly popular for a wide range of applications, including robotics, autonomous vehicles, and environmental sensing. As LiDAR technology continues to evolve, the amount of data collected by these sensors is growing exponentially, presenting a significant challenge for real-time processing and analysis. To address this challenge, we propose a solution that leverages FPGA-based hardware acceleration to perform efficient and real-time clustering and tracking of LiDAR data.\\
+
+In this paper, we describe the implementation of our proposed solution, which consists of a LiDAR sensor, a PYNQ Z2 FPGA board, and a software pipeline that utilizes PyLidar3, PYNQ, Matplotlib, and FilterPy libraries for data collection, FPGA acceleration, visualization, and Kalman filtering, respectively. The FPGA-based clustering operation is performed using a custom DBSCAN algorithm, which is optimized using High-Level Synthesis (HLS) techniques. The Kalman filter is used for cluster tracking, enabling the system to track and identify objects in real-time.\\
+
+We present the results of our experiments, which demonstrate the efficacy of our proposed solution. Our FPGA-based clustering algorithm achieved a 97\% reduction in latency compared to a software benchmark, while the Kalman filter enabled reliable tracking of clusters. Furthermore, we present improvements, including the migration of the Kalman filter to hardware, additional HLS optimization, and the creation of a custom Python LiDAR library.\\
+
+Overall, our proposed solution provides an efficient and reliable method for processing and analyzing LiDAR data in real-time, with potential applications in robotics, autonomous vehicles, and environmental sensing.
 
 \section{System Overview}
-This inclusive system (Fig \ref{fig:sysOverview}) includes LiDAR data collection, point clustering, and object tracking. The primary focus of this paper is the clustering algortihm implemented on the FPGA programmable logic via an overlay and the object tracking using a Kalman filter implemented on the FPGA processing system. 
+This system (Fig \ref{fig:sysOverview}) includes LiDAR data collection, point clustering, and object tracking. The primary focus of this paper is the clustering algortihm implemented on the FPGA programmable logic via an overlay and the object tracking using a Kalman filter implemented on the FPGA processing system. 
 
 \begin{figure}[h]
   \centering
@@ -42,7 +48,7 @@ This inclusive system (Fig \ref{fig:sysOverview}) includes LiDAR data collection
 
 \subsection{LiDAR Data Collection}
 
-The sensor's coordinate system is defined such that 0\textdegree originates from the center of the sensor assembly towards the LiDAR sensor's motor, with data collected in the clockwise direction (as shown in Fig. \ref{fig:polarLiDAR}). The sensor is connected to the processing system of the PYNQ Z2 via a USB port.
+The LiDAR sensor used in this project is the YDLIDAR X4, which provides a maximum range of 10 meters and a 360-degree field of view. The sensor's coordinate system is defined such that 0\textdegree originates from the center of the sensor assembly towards the LiDAR sensor's motor, with data collected in the clockwise direction (as shown in Fig. \ref{fig:polarLiDAR}). The sensor is connected to the processing system of the PYNQ Z2 via a USB port.
 
 \begin{figure}[h]
   \centering
@@ -51,35 +57,34 @@ The sensor's coordinate system is defined such that 0\textdegree originates from
   \label{fig:polarLiDAR}
 \end{figure}
 
- To control the LiDAR sensor and collect LiDAR data, the PyLidar3 library is utilized, which is a python 3 package. The LiDAR sensor is capable of a typical angle resolution of 0.50\textdegree at 7 Hz, but due to software limitations, the PyLidar3 library provides a resolution of only 1\textdegree regardless of the frequency. The collected data is returned in the form of a dictionary, comprising of 360 degrees of angle and corresponding distances in millimeters.\\
+The PyLidar3 library, a Python 3 package, is used to control the LiDAR sensor and collect data. While the LiDAR sensor is capable of a resolution of 0.5 degrees at 7 Hz, the PyLidar3 library only provides a resolution of 1 degree due to software limitations. The collected data is returned as a dictionary with 360 points containing angle and distance information in millimeters.
 
 
 \subsection{Hardware Accelerated Point Clustering}
 
-The point clustering operation was implemented on the programmable logic of the FPGA using an Overlay. To achieve this, the point clustering algorithm was developed in Vitis High-Level Synthesis (HLS). The LiDAR data is transferred from the FPGA processing system to the programmable logic through an AXI Stream interface, while the clustered data is transferred via a separate AXI Stream interface. The implemented clustering algorithm is based on the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm, which is commonly utilized in LiDAR point clustering applications.\\
+The point clustering operation was implemented on the programmable logic of the FPGA using an Overlay. To achieve this, the point clustering algorithm was developed in Vitis High-Level Synthesis (HLS). The LiDAR data is transferred from the FPGA processing system to the programmable logic through an AXI Stream interface, while the clustered data is transferred back to the FPGA processing system via a separate AXI Stream interface. The implemented clustering algorithm is based on the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm, which is commonly utilized in LiDAR point clustering applications.\\
 
-he clustering algorithm utilized in the proposed LiDAR object tracking system is based on the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm. The DBSCAN algorithm takes three parameters: an array of distance data, the number of data points, and the maximum distance between two points in the same neighborhood (epsilon, $\epsilon$).
+The clustering algorithm utilized in the proposed LiDAR object tracking system is based on the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm. The DBSCAN algorithm takes three parameters: an array of distance data, the number of data points, and the maximum distance between two points in the same neighborhood (epsilon, $\epsilon$).\\
 
-The DBSCAN algorithm starts by iterating over all the points in the input data array. For each unvisited point, the algorithm finds all its neighbors within a distance of $\epsilon$ and adds them to a cluster. The algorithm then expands the cluster by adding all reachable neighbors of each point in the cluster. The algorithm stops when no more points can be added to the cluster.
+The DBSCAN algorithm starts by iterating over all the points in the input data array. For each unvisited point, the algorithm finds all its neighbors within a distance of $\epsilon$ and adds them to a cluster. The algorithm then expands the cluster by adding all reachable neighbors of each point in the cluster. The algorithm stops when no more points can be added to the cluster.\\
 
-The distance calculation used in the DBSCAN algorithm takes into account the angle between the LiDAR points, which are represented as distances in an array. Given two points $p_1$ and $p_2$ in the array, the distance calculation between them is as follows:
+The distance calculation used in the DBSCAN algorithm takes into account the angle between the LiDAR points, which are represented as distances in an array. Given two points $p_1$ and $p_2$ in the array, the distance calculation between them is as follows:\\
 
-\[
-distance = \sqrt{(p_{1,x} - p_{2,x})^2 + (p_{1,y} - p_{2,y})^2}
-\]
+\begin{align*}
+dx &= \frac{(data[i] \cdot sin\_values[i] - data[j] \cdot sin\_values[j])}{2^{FIXED\_POINT\_SHIFT}}\\
+dy &= \frac{(data[i] \cdot cos\_values[i] - data[j] \cdot cos\_values[j])}{2^{FIXED\_POINT\_SHIFT}}\\
+distance &= \sqrt{dx^2 + dy^2}
+\end{align*}
 
-Where $p_{1,x}$ and $p_{2,x}$ are the distances of $p_1$ and $p_2$ from the LiDAR sensor along the horizontal axis, and $p_{1,y}$ and $p_{2,y}$ are the distances of $p_1$ and $p_2$ from the LiDAR sensor along the vertical axis. The distance calculation also involves converting the angles of the LiDAR points to radians, and using the sine and cosine functions to compute the horizontal and vertical distances respectively.
 
-The implemented DBSCAN algorithm in the code snippet takes an array of distance data, the number of data points, and the maximum distance between two points in the same neighborhood (epsilon, $\epsilon$) as input. The algorithm iterates over all the points in the input array, finds all the neighbors of each unvisited point, and creates a new cluster if the point has enough neighbors. The algorithm then expands the cluster by adding all reachable neighbors, and continues until no more points can be added to the cluster.
-
-After the raw LiDAR data set has been clustered, a Python helper function calculates each cluster's centroids and stores the clusters as centroid angle, centroid distance, and cluster size. 
+The distance calculation also involves converting the angles of the LiDAR points to radians, and using the sine and cosine functions to compute the horizontal and vertical distances respectively and the resulting distance calculation uses fixed-point arithmetic. After the raw LiDAR data set has been clustered, a Python helper function calculates each cluster's centroids and stores the clusters as centroid angle, centroid distance, and cluster size. 
 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Data Association - Scoring Algorithm}
 
-In this particular application, the noise generated by the LiDAR sensor is significant and the size and location of the clusters varied significantly. Therefore, a robust data association algorithm was needed to match clusters from a previous frame in the current frame. To achieve this, a scoring algorithm was employed to match clusters between frames using the predictions from the Kalman filter.
+In this particular application, the noise generated by the LiDAR sensor is significant and the size and location of the clusters varied significantly. Therefore, a robust data association algorithm was needed to match clusters from a previous frame in the current frame. To achieve this, a scoring algorithm was employed to match clusters between frames using the predictions from the Kalman filter.\\
 
-In the first iteration, the master list was initialized by clustering the first dataset and storing it in the format of cluster centroid angle, cluster centroid distance, and cluster size. Each cluster was assigned a unique ID and stored in a master list. In subsequent iterations, a list of the current clusters, represented by their centroid and size, was generated. The data association algorithm iterated over each cluster in the master list and calculated a score against each cluster in the current frame's clusters. The current cluster with the lowest score was matched with the predicted state of the cluster under test from the Kalman filter.
+In the first iteration, the master list was initialized by clustering the first dataset, initializing the Kalman filters and storing it in the format of cluster centroid angle, cluster centroid distance, and cluster size. Each cluster was assigned a unique ID and stored in a master list. In subsequent iterations, a list of the current clusters, represented by their centroid and size, was generated. The data association algorithm iterated over each cluster in the master list and calculated a score against each cluster in the current frame's clusters. The current cluster with the lowest score was matched with the predicted state of the cluster under test from the Kalman filter.\\
 
 The score was an aggregate score between the size of the cluster and the polar euclidean distance (PED), which is given by the following equation:
 
@@ -90,10 +95,10 @@ The score was an aggregate score between the size of the cluster and the polar e
 The aggregated score was calculated by multiplying the difference in cluster size and euclidean distance with double the weight assigned to the PED, as shown in the following equation:
 
 \[ 
-\text{Score} = \Delta \theta * 2  \text{PED}
+\text{Score} = \Delta \text{Size} * 2  \text{PED}
 \]
 
-Due to the noise, it was possible for the master list to fluctuate in size. The data association algorithm took this into account. If there were more clusters in the current cluster list than in the master list, then the clusters not matched with a cluster from the master list were assigned a new unique ID. On the other hand, if there were more clusters in the master list than in the current cluster list, then the data association algorithm found and removed the excess clusters from the master list. The data association function matched each cluster in the master list, and in this case, multiple clusters in the master list could be matched to the same cluster from the current list. The data association function removed the matched clusters with the highest score, i.e., the worst fit.
+Due to the noise, it was possible for the master list to fluctuate in size. The data association algorithm took this into account. If there were more clusters in the current cluster list than in the master list, then the clusters not matched with a cluster from the master list were assigned a new unique ID. On the other hand, if there were more clusters in the master list than in the current cluster list, then the data association algorithm found and removed the excess clusters from the master list. The data association function matched each cluster in the master list, and in this case, multiple clusters in the master list could be matched to the same cluster from the current list. The data association function removed the matched clusters with the highest score, i.e., the worst fit.\\
 
 The data association function replaced the master list with the newly updated lists. Each matched cluster retains the unique ID of the cluster the scoring algorithm determined was the best fit based on the cluster size and euclidean distance between the centroids. The Kalman filter is then updated with the matched cluster's measurements, improving the accuracy of its predictions in subsequent iterations.
 
@@ -101,7 +106,7 @@ The data association function replaced the master list with the newly updated li
 
 \subsection{Kalman Filter for Cluster Tracking}
 
-In this section, we will focus on the application of the Kalman filter for tracking clusters in addition to the data association. As the clusters in the master list may vary signficantly from frame to frame, implementing the Kalman filter reduces the noise and gives a consistent and reliable view into the true location and size of a cluster. The Kalman filter is a recursive algorithm that provides an optimal estimate of the state of a dynamic system given noisy measurements. In the context of LiDAR cluster tracking, the dynamic system represents the clusters' positions and sizes, while the noisy measurements correspond to noisy LiDAR data collection.
+In this section, we will focus on the application of the Kalman filter for tracking clusters in addition to the data association. As the clusters in the master list may vary signficantly from frame to frame, implementing the Kalman filter reduces the noise and gives a consistent and reliable view into the true location and size of a cluster. The Kalman filter is a recursive algorithm that provides an optimal estimate of the state of a dynamic system given noisy measurements. In the context of LiDAR cluster tracking, the dynamic system represents the clusters' positions and sizes, while the noisy measurements correspond to noisy LiDAR data collection.\\
 
 \subsubsection{Kalman Filter Overview}
 
@@ -143,7 +148,7 @@ Finally, the uncertainty covariance of the updated state is computed:
 P_{k|k} = (I_6 - K_k H_k) P_{k|k-1}
 \]
 
-These steps are repeated for each new measurement to provide continuous tracking and prediction of the clusters in the LiDAR point cloud.
+These steps are repeated for each new measurement to provide continuous tracking and prediction of the clusters over time.\\
 
 \subsubsection{Applying the Kalman Filter to Cluster Tracking}
 
@@ -176,7 +181,7 @@ x_0 = \begin{bmatrix}
 \end{bmatrix}
 \]
 
-5. For each unmatched predicted cluster, consider removing it from the master list based on a predefined criterion, such as a maximum allowed time without detection or a maximum allowed uncertainty in the state estimate.
+5. For each unmatched predicted cluster, consider removing it from the master list based on a predefined criterion, such as a maximum allowed time without detection or a maximum allowed uncertainty in the state estimate.\\
 
 \subsubsection{Parameter Selection}
 
@@ -219,31 +224,27 @@ where $dt$ is the time step and $\sigma^2$ is the variance of the continuous-tim
 
 \subsection{Performance Considerations}
 
-When applying the Kalman filter to LiDAR cluster tracking, several factors can impact its performance, including:
+When applying the Kalman filter to LiDAR cluster tracking, several factors can impact its performance, including:\\
 
-\textbf{Measurement noise}: The accuracy of the LiDAR point cloud data can affect the Kalman filter's ability to track clusters. Higher measurement noise levels may result in increased uncertainty in the state estimate and less reliable tracking.
+\textbf{Measurement noise}: The accuracy of the LiDAR point cloud data can affect the Kalman filter's ability to track clusters. Higher measurement noise levels may result in increased uncertainty in the state estimate and less reliable tracking.\\
 
-\textbf{Cluster dynamics}: The dynamics of the clusters in the LiDAR point cloud, such as their motion and size changes, can also impact the performance of the Kalman filter. If the cluster dynamics are not accurately represented by the state transition matrix and the process noise covariance, the filter's performance may be degraded.
+\textbf{Cluster dynamics}: The dynamics of the clusters over time, such as their motion and size changes, can also impact the performance of the Kalman filter. If the cluster dynamics are not accurately represented by the state transition matrix and the process noise covariance, the filter's performance may be degraded.\\
 
-\textbf{Initialization}: The initial state of the Kalman filter can have a significant impact on its performance. If the initial state is far from the true state of the cluster, it may take the filter several time steps to converge to the correct state. To improve performance, it is crucial to initialize the filter with a reasonable estimate of the cluster's initial properties.
+\textbf{Initialization}: The initial state of the Kalman filter can have a significant impact on its performance. If the initial state is far from the true state of the cluster, it may take the filter several time steps to converge to the correct state. To improve performance, it is crucial to initialize the filter with a reasonable estimate of the cluster's initial properties.\\
 
-\textbf{Parameter tuning}: The parameters of the Kalman filter, such as the process noise covariance and the measurement noise covariance, need to be tuned based on the specific application and the characteristics of the LiDAR point cloud data. Poorly chosen parameters can lead to suboptimal tracking performance or increased uncertainty in the state estimates.
+\textbf{Parameter tuning}: The parameters of the Kalman filter, such as the process noise covariance and the measurement noise covariance, need to be tuned based on the specific application and the characteristics of the LiDAR point cloud data. Poorly chosen parameters can lead to suboptimal tracking performance or increased uncertainty in the state estimates.\\
 
 \textbf{Computational complexity}: The computational complexity of the Kalman filter can be an issue when tracking a large number of clusters in real-time. Optimizations, such as parallel processing or the use of more efficient algorithms for updating the state estimates, can help mitigate this issue.
 
-%-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 \subsection{Visualization}
 
-Visualization plays a crucial role in analyzing the performance of the LiDAR data processing pipeline and understanding the identified clusters and their tracked positions. This project uses the Matplotlib library to generate polar plots for the visualization of raw LiDAR data, identified clusters, and tracked clusters.
+Visualization plays a crucial role in analyzing the performance of the LiDAR data processing pipeline and understanding the identified clusters and their tracked positions. This project uses the Matplotlib library to generate polar plots for the visualization of raw LiDAR data, identified clusters, and tracked clusters. Two polar plots are created for each iteration of the processing loop:
 
-Two polar plots are created for each iteration of the processing loop:
 \begin{itemize}
 
-\item Raw Data Plot: This plot displays the distance values collected by the LiDAR sensor at different angles. It helps to visualize the raw LiDAR data and understand the environment.
+\item Raw Data Plot: This plot displays the distance values collected by the LiDAR sensor at different angles. It helps to visualize the raw LiDAR data and understand the environment.\\
 
-\item Clustered Data Plot: This plot shows the identified clusters and the predicted locations as described by the Kalman filter, represented by red crosses. It is useful for evaluating the performance of the clustering algorithm, data association algorithm, and Kalman Filtering.
+\item Clustered Data Plot: This plot shows the identified clusters and the predicted locations as described by the Kalman filters. It is useful for evaluating the performance of the clustering algorithm and Kalman Filtering.\\
 
 \end{itemize}
 
@@ -252,35 +253,35 @@ The update\_plot function is responsible for updating the polar plots with the r
 \section{Implementation}
 
 \subsection{Hardware}
-In this project, multiple candidates were considered for implementation on the FPGA programmable logic, with several aspects potentially benefiting from hardware acceleration. However, due to time constraints, only the clustering algorithm was selected for implementation on hardware. This choice was made based on the identification of the clustering algorithm as a bottleneck in LIDAR data processing, with the data flow significantly benefiting from acceleration of the clustering process.
+In this project, multiple candidates were considered for implementation on the FPGA programmable logic, with several aspects potentially benefiting from hardware acceleration. However, due to time constraints, only the clustering algorithm was selected for implementation on hardware. This choice was made based on the identification of the clustering algorithm as a bottleneck in LIDAR data processing, with the data flow significantly benefiting from acceleration of the clustering process.\\
 
 \subsubsection{Clustering Algorithm}
-The computational complexity and time consumption of LIDAR clustering algorithms are high due to the requirement of numerous repetitive distance calculations. FPGA hardware acceleration is an efficient approach for accelerating LIDAR clustering algorithms, as FPGAs can potentially execute hundreds of repetitive distance calculations in parallel. Additionally, FPGAs can provide low latency processing, which is essential for real-time applications like LIDAR. By utilizing FPGA hardware acceleration, the processing time for LIDAR sensor data can be significantly reduced, leading to quicker and more precise object detection and tracking. However, note that clustering algorithms frequently need to examine each point, and some clustering algorithms have significant data dependency. Thus, in this project, optimization was focused on resource utilization rather than latency. Threee clustering algorithms were explored in this project but only two were implemented.
+The computational complexity and time consumption of LIDAR clustering algorithms are high due to the requirement of numerous repetitive distance calculations. FPGA hardware acceleration is an efficient approach for accelerating LIDAR clustering algorithms, as FPGAs can potentially execute hundreds of repetitive distance calculations in parallel. Additionally, FPGAs can provide low latency processing, which is essential for real-time applications like LIDAR. By utilizing FPGA hardware acceleration, the processing time for LIDAR sensor data can be significantly reduced, leading to quicker and more precise object detection and tracking. However, note that clustering algorithms frequently need to examine each point, and some clustering algorithms have significant data dependency. Thus, in this project, optimization was focused on resource utilization rather than latency. Threee clustering algorithms were explored in this project but only two were implemented.\\
 
 \paragraph{Custom Algorithm}
-Initally, a custom algorithm was utilized. It groups the LiDAR data points into clusters based on their distance from each other. It uses a threshold distance to determine whether two points should be grouped into the same cluster. If the distance between two points is less than the threshold, they are grouped together. This algorithm was written in an okay manner, where it was relatively optimized using a reasonable amount of resouces. However, the custom clustering algorithm was not robust and often clustered points together that were far apart.
+Initally, a custom algorithm was utilized. It groups the LiDAR data points into clusters based on their distance from each other. It uses a threshold distance to determine whether two points should be grouped into the same cluster. If the distance between two points is less than the threshold, they are grouped together. This algorithm was written in an okay manner, where it was relatively optimized using a reasonable amount of resouces. However, the custom clustering algorithm was not robust and often clustered points together that were far apart.\\
 
 \paragraph{DBSCAN}
-An alternative algorithm was selected, utilizing the established DBSCAN algorithm. Through testing the algorithm with a test bench, a significant improvement in clustering robustness was observed, resulting in more accurate clustering of LiDAR data. However, initial implementations were found to be extremely resource-intensive, even without costly High-Level Synthesis (HLS) parameters such as loop unrolling. The initial DBSCAN implementations employed floating-point arithmetic and expensive sine and cosine functions. Later implementations utilized fixed-point arithmetic and less accurate, but cheaper approximations. In the final implementation, hard-coded fixed-point precomputed lookup tables were used to replace sine and cosine functions, resulting in a cheap and robust clustering algorithm.
+An alternative algorithm was selected, utilizing the established DBSCAN algorithm. Through testing the algorithm with a test bench, a significant improvement in clustering robustness was observed, resulting in more accurate clustering of LiDAR data. However, initial implementations were found to be extremely resource-intensive, even without costly High-Level Synthesis (HLS) parameters such as loop unrolling. The initial DBSCAN implementations employed floating-point arithmetic and expensive sine and cosine functions. Later implementations utilized fixed-point arithmetic and less accurate, but cheaper approximations. In the final implementation, hard-coded fixed-point precomputed lookup tables were used to replace sine and cosine functions, resulting in a cheap and robust clustering algorithm.\\
 
 \paragraph{K-Mean Clustering}
-The proposed clustering algorithm utilizes pre-calculation of all possible distances between LiDAR data points, followed by k-means clustering for partitioning the data into clusters. This approach reduces latency by performing all calculations in parallel and avoiding repetitive distance calculations. However, concerns about its robustness for this specific application persist. Despite being potentially the most expensive clustering algorithm, it offers the greatest potential for least latency with HLS optimizations.
+The proposed clustering algorithm utilizes pre-calculation of all possible distances between LiDAR data points, followed by k-means clustering for partitioning the data into clusters. This approach reduces latency by performing all calculations in parallel and avoiding repetitive distance calculations. However, concerns about its robustness for this specific application persist. Despite being potentially the most expensive clustering algorithm, it offers the greatest potential for least latency with HLS optimizations.\\
 
 \subsection{Software}
 \subsubsection{Clustering Prototype}
-Initially, the clustering algorithms mentioned above were implemented in software, achieving two objectives: first, providing a baseline for comparison with the performance improvements (if any) achieved through hardware acceleration, and second, collecting data and clusters for comparison with the hardware output.
+Initially, the clustering algorithms mentioned above were implemented in software, achieving two objectives: first, providing a baseline for comparison with the performance improvements (if any) achieved through hardware acceleration, and second, collecting data and clusters for comparison with the hardware output.\\
 
 
 \subsubsection{Kalman Filter}
-The Kalman filter was implemented in software using the filterpy library. The function init\_kalman\_filter() initializes the Kalman filter by setting the state transition matrix (F), measurement matrix (H), and covariance matrices for measurement noise (R) and process noise (Q). The function match\_clusters() matches the current clusters to the previous clusters using the master\_list and updates the centroids of the clusters using the Kalman filter. The Kalman filter is updated using the predict() and update() functions of the filterpy library. 
+The Kalman filter was implemented in software using the filterpy library. The function init\_kalman\_filter() initializes the Kalman filter by setting the state transition matrix (F), measurement matrix (H), and covariance matrices for measurement noise (R) and process noise (Q). The function match\_clusters() matches the current clusters to the previous clusters using the master\_list and updates the centroids of the clusters using the Kalman filter. The Kalman filter is updated using the predict() and update() functions of the filterpy library. \\
 
 \subsubsection{Multithreading}
-Multithreading was implemented to fully utilize the speed provided by the hardware-accelerated clustering algorithm. This enabled the PYNQ Z2 to collect and cluster the next frame's data while the previous frame was being plotted. A significant bottleneck in the project implementation is the plotting processing. Plotting in Python is already slow and expensive and is even more so on a low-power board such as the PYNQ Z2. Multithreading reduced the latency caused by the slow plotting.
+Multithreading was implemented to fully utilize the speed provided by the hardware-accelerated clustering algorithm. This enabled the PYNQ Z2 to collect and cluster the next frame's data while the previous frame was being plotted. A significant bottleneck in the project implementation is the plotting processing. Plotting in Python is already slow and expensive and is even more so on a low-power board such as the PYNQ Z2. Multithreading reduced the latency caused by the slow plotting.\\
 
 
 \subsection{Implementation Overview}
 
-The entire processing pipeline is implemented in a Jupyter Notebook, using the PyLidar3 library for LiDAR data collection, the PYNQ library for FPGA acceleration, the Matplotlib library for data visualization, and the FilterPy library for the constant velocity Kalman filter.
+The entire processing pipeline is implemented in a Jupyter Notebook, using the PyLidar3 library for LiDAR data collection, the PYNQ library for FPGA acceleration, the Matplotlib library for data visualization, and the FilterPy library for the Kalman filter.\\
 
 First, the LiDAR sensor is initialized and connected to the PYNQ Z2. Then, the PYNQ overlay is loaded onto the FPGA, and the input and output buffers are allocated for the clustering operation. The processing loop iterates for a user-defined number of times, performing the following steps in each iteration:
 
