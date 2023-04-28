@@ -190,7 +190,7 @@ for.inc58:2 %icmp_ln201 = icmp_eq  i31 %j_2, i31 %trunc_ln_read
 
 <Node id="24" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.inc58:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 10, i64 18446744073709551615, i64 0
+for.inc58:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 7, i64 18446744073709551615, i64 0
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>

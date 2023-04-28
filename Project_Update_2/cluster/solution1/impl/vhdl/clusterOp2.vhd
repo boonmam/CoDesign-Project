@@ -1460,7 +1460,7 @@ begin
     grp_clusterOp2_Pipeline_VITIS_LOOP_201_3_fu_235_outStream_TREADY <= (outStream_TREADY_int_regslice and ap_CS_fsm_state12);
     grp_dbscan_fu_222_ap_start <= grp_dbscan_fu_222_ap_start_reg;
     icmp_ln185_fu_287_p2 <= "1" when (signed(zext_ln185_1_fu_283_p1) < signed(cluster_count_reg_335)) else "0";
-    icmp_ln187_fu_303_p2 <= "1" when (signed(clusters_member_count_q0) < signed(ap_const_lv32_A)) else "0";
+    icmp_ln187_fu_303_p2 <= "1" when (signed(clusters_member_count_q0) < signed(ap_const_lv32_7)) else "0";
     inStream_TREADY <= regslice_both_inStream_V_data_V_U_ack_in;
 
     inStream_TREADY_int_regslice_assign_proc : process(grp_clusterOp2_Pipeline_VITIS_LOOP_172_1_fu_202_inStream_TREADY, ap_CS_fsm_state4)

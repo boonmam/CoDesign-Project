@@ -1352,7 +1352,7 @@ Diagnostics:
     FilePath:        cluster2.cpp
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster2.pp.0.cpp'
-        Offset:          1607576
+        Offset:          1607575
         Length:          0
         ReplacementText: 'VITIS_LOOP_185_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1361,7 +1361,7 @@ Diagnostics:
     FilePath:        cluster2.cpp
     Replacements:    
       - FilePath:        'E:\Github\CoDesign-Project\Project_Update_2\cluster\solution1\.autopilot\db\cluster2.pp.0.cpp'
-        Offset:          1607911
+        Offset:          1607909
         Length:          0
         ReplacementText: 'VITIS_LOOP_201_3: '
 ...

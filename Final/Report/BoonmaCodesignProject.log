@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.1)  28 APR 2023 02:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.1)  28 APR 2023 05:29
 entering extended mode
 **./BoonmaCodesignProject.tex
 (BoonmaCodesignProject.tex
@@ -387,22 +387,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+[3]
+Underfull \hbox (badness 8038) in paragraph at lines 275--276
+\OT1/ptm/m/n/10 in soft-ware us-ing the fil-terpy li-brary. The func-tion
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
+
+ []
+
+<./images//clusterAccuracy.PNG, id=30, 801.74532pt x 435.12563pt>
+File: ./images//clusterAccuracy.PNG Graphic file (type png)
+<use ./images//clusterAccuracy.PNG>
+Package pdftex.def Info: ./images//clusterAccuracy.PNG  used on input line 319.
+
+(pdftex.def)             Requested size: 258.0pt x 140.02649pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 319--320
+ [][] 
+ []
+
+<./images//realWorldScene.png, id=31, 963.6pt x 542.025pt>
+File: ./images//realWorldScene.png Graphic file (type png)
+<use ./images//realWorldScene.png>
+Package pdftex.def Info: ./images//realWorldScene.png  used on input line 326.
+(pdftex.def)             Requested size: 258.0pt x 145.12465pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 326--327
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
+
+ []
+
+[5 <./images//clusterAccuracy.PNG> <./images//realWorldScene.png>]
+<./images//kalmanFilter.PNG, id=36, 805.50937pt x 441.90094pt>
+File: ./images//kalmanFilter.PNG Graphic file (type png)
+<use ./images//kalmanFilter.PNG>
+Package pdftex.def Info: ./images//kalmanFilter.PNG  used on input line 386.
+(pdftex.def)             Requested size: 258.0pt x 141.53929pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 386--387
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 <./images//kalmanFilter.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 428--429
 []\OT1/ptm/m/n/8 L, Mallidi, "PyL-i-dar3," GitHub, 2020, url:
  []
 
-[5
+[7
 
 ] (BoonmaCodesignProject.aux) ) 
 Here is how much of TeX's memory you used:
- 3986 strings out of 478927
- 60238 string characters out of 2848707
- 377964 words of memory out of 3000000
- 21814 multiletter control sequences out of 15000+600000
- 438131 words of font info for 87 fonts, out of 8000000 for 9000
+ 4041 strings out of 478927
+ 61364 string characters out of 2848707
+ 379548 words of memory out of 3000000
+ 21857 multiletter control sequences out of 15000+600000
+ 444062 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,66p,867b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,10n,66p,1018b,243s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/McCain Boonma/AppData/Local/Programs/M
 iKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/McCain Boonma/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/McCain Boonma/AppD
@@ -418,9 +478,9 @@ McCain Boonma/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C
 8a.pfb><C:/Users/McCain Boonma/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ti
 mes/utmr8a.pfb><C:/Users/McCain Boonma/AppData/Local/Programs/MiKTeX/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on BoonmaCodesignProject.pdf (5 pages, 216373 bytes).
+Output written on BoonmaCodesignProject.pdf (7 pages, 2057760 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
+ 92 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

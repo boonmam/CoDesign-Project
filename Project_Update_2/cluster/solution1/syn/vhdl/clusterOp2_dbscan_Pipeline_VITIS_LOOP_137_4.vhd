@@ -59,7 +59,7 @@ architecture behav of clusterOp2_dbscan_Pipeline_VITIS_LOOP_137_4 is
     constant ap_const_lv9_1 : STD_LOGIC_VECTOR (8 downto 0) := "000000001";
     constant ap_const_lv32_10 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010000";
     constant ap_const_lv32_1F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011111";
-    constant ap_const_lv16_227 : STD_LOGIC_VECTOR (15 downto 0) := "0000001000100111";
+    constant ap_const_lv16_259 : STD_LOGIC_VECTOR (15 downto 0) := "0000001001011001";
 
 attribute shreg_extract : string;
     signal ap_CS_fsm : STD_LOGIC_VECTOR (0 downto 0) := "1";
@@ -895,7 +895,7 @@ begin
     grp_sqrt_fixed_32_32_s_fu_664_p_din1 <= xf_V_reg_378;
     icmp_ln137_fu_146_p2 <= "1" when (ap_sig_allocacmp_l_1 = ap_const_lv9_168) else "0";
     icmp_ln138_fu_165_p2 <= "1" when (ap_sig_allocacmp_l_1 = neighbor_id) else "0";
-    icmp_ln144_fu_230_p2 <= "1" when (unsigned(p_Val2_s_reg_383) < unsigned(ap_const_lv16_227)) else "0";
+    icmp_ln144_fu_230_p2 <= "1" when (unsigned(p_Val2_s_reg_383) < unsigned(ap_const_lv16_259)) else "0";
     l_cast_fu_158_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_l_1),64));
     new_neighbor_count_1_fu_241_p3 <= 
         add_ln145_fu_235_p2 when (icmp_ln144_fu_230_p2(0) = '1') else 

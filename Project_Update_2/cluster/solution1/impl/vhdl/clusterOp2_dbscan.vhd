@@ -91,7 +91,6 @@ architecture behav of clusterOp2_dbscan is
     constant ap_const_lv9_0 : STD_LOGIC_VECTOR (8 downto 0) := "000000000";
     constant ap_const_lv9_168 : STD_LOGIC_VECTOR (8 downto 0) := "101101000";
     constant ap_const_lv9_1 : STD_LOGIC_VECTOR (8 downto 0) := "000000001";
-    constant ap_const_lv32_9 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001001";
     constant ap_const_lv31_1 : STD_LOGIC_VECTOR (30 downto 0) := "0000000000000000000000000000001";
     constant ap_const_lv17_168 : STD_LOGIC_VECTOR (16 downto 0) := "00000000101101000";
 
@@ -1268,9 +1267,9 @@ begin
     end process;
 
     icmp_ln103_fu_310_p2 <= "1" when (i_fu_58 = ap_const_lv9_168) else "0";
-    icmp_ln125_fu_354_p2 <= "1" when (signed(grp_dbscan_Pipeline_VITIS_LOOP_113_2_fu_253_neighbor_count_out) > signed(ap_const_lv32_9)) else "0";
+    icmp_ln125_fu_354_p2 <= "1" when (signed(grp_dbscan_Pipeline_VITIS_LOOP_113_2_fu_253_neighbor_count_out) > signed(ap_const_lv32_6)) else "0";
     icmp_ln130_fu_378_p2 <= "1" when (k_reg_214 = trunc_ln130_reg_571) else "0";
-    icmp_ln149_fu_430_p2 <= "1" when (signed(grp_dbscan_Pipeline_VITIS_LOOP_137_4_fu_268_new_neighbor_count_out) > signed(ap_const_lv32_9)) else "0";
+    icmp_ln149_fu_430_p2 <= "1" when (signed(grp_dbscan_Pipeline_VITIS_LOOP_137_4_fu_268_new_neighbor_count_out) > signed(ap_const_lv32_6)) else "0";
 
     neighbors_address0_assign_proc : process(ap_CS_fsm_state13, grp_dbscan_Pipeline_VITIS_LOOP_113_2_fu_253_neighbors_address0, ap_CS_fsm_state8, zext_ln130_fu_389_p1)
     begin

@@ -3,8 +3,8 @@
 #include <hls_math.h>
 
 #define DISTANCE_COUNT 360
-#define EPS 550 // Adjust this value according to the problem
-#define MIN_POINTS 10 // Adjust this value according to the problem
+#define EPS 600 // Adjust this value according to the problem
+#define MIN_POINTS 7 // Adjust this value according to the problem
 #define FIXED_POINT_SHIFT 16
 
 typedef ap_axis<32,2,5,6> axis_t;

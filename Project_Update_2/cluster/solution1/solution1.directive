@@ -5,6 +5,16 @@
                 <option name="name" value="clusterOp2"/>
             </pragma>
         </directive>
+        <directive functionName="clusterOp2" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="clusterOp2"/>
+            </pragma>
+        </directive>
+        <directive functionName="clusterOp2" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="clusterOp2"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

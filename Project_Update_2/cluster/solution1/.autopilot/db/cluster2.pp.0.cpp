@@ -27042,13 +27042,13 @@ __attribute__((sdx_kernel("clusterOp2", 0))) void clusterOp2(hls::stream<axis_t>
     }
 
 
-    dbscan(distances, visited, clusters, cluster_count, 360, 550, 10, sin_values, cos_values);
+    dbscan(distances, visited, clusters, cluster_count, 360, 600, 7, sin_values, cos_values);
 
 
 
     VITIS_LOOP_185_2: for (int i = 0; i < cluster_count; i++) {
 
-     if(clusters[i].member_count < 10){
+     if(clusters[i].member_count < 7){
       continue;
      }
 

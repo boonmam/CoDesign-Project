@@ -1339,7 +1339,7 @@ assign grp_dbscan_fu_222_ap_start = grp_dbscan_fu_222_ap_start_reg;
 
 assign icmp_ln185_fu_287_p2 = (($signed(zext_ln185_1_fu_283_p1) < $signed(cluster_count_reg_335)) ? 1'b1 : 1'b0);
 
-assign icmp_ln187_fu_303_p2 = (($signed(clusters_member_count_q0) < $signed(32'd10)) ? 1'b1 : 1'b0);
+assign icmp_ln187_fu_303_p2 = (($signed(clusters_member_count_q0) < $signed(32'd7)) ? 1'b1 : 1'b0);
 
 assign inStream_TREADY = regslice_both_inStream_V_data_V_U_ack_in;
 
@@ -1357,18 +1357,4 @@ always @ (posedge ap_clk) begin
     zext_ln185_reg_358[63:31] <= 33'b000000000000000000000000000000000;
 end
 
-
-reg find_kernel_block = 0;
-// synthesis translate_off
-`include "clusterOp2_hls_deadlock_kernel_monitor_top.vh"
-// synthesis translate_on
-
-
-reg find_kernel_block = 0;
-// synthesis translate_off
-`include "clusterOp2_hls_deadlock_kernel_monitor_top.vh"
-// synthesis translate_on
-
 endmodule //clusterOp2
-
-

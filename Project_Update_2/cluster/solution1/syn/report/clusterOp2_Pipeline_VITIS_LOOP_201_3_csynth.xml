@@ -22,13 +22,13 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>12</Best-caseLatency>
+<Best-caseLatency>9</Best-caseLatency>
 <Average-caseLatency>undef</Average-caseLatency>
 <Worst-caseLatency>undef</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.120 us</Best-caseRealTimeLatency>
+<Best-caseRealTimeLatency>90.000 ns</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-<Interval-min>12</Interval-min>
+<Interval-min>9</Interval-min>
 <Interval-max>undef</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -37,13 +37,13 @@
 <TripCount>undef</TripCount>
 <Latency>
 <range>
-<min>10</min>
+<min>7</min>
 <max>-1</max>
 </range>
 </Latency>
 <AbsoluteTimeLatency>
 <range>
-<min>100</min>
+<min>70</min>
 <max>-10</max>
 </range>
 </AbsoluteTimeLatency>

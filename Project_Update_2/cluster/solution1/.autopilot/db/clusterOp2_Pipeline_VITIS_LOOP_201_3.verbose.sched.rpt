@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'clusterOp2_Pipeline_VITIS_LOOP_201_3'
 ================================================================
-* Date:           Thu Apr 27 17:00:26 2023
+* Date:           Fri Apr 28 03:36:28 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        cluster
@@ -25,24 +25,24 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-----+-----+---------+
-    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
-    |   min   |   max   |    min   |    max   | min | max |   Type  |
-    +---------+---------+----------+----------+-----+-----+---------+
-    |       12|        ?|  0.120 us|         ?|   12|    ?|       no|
-    +---------+---------+----------+----------+-----+-----+---------+
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        9|        ?|  90.000 ns|         ?|    9|    ?|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
-        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
-        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
-        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
-        |- VITIS_LOOP_201_3  |       10|        ?|         2|          1|          1|  10 ~ ?|       yes|
-        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- VITIS_LOOP_201_3  |        7|        ?|         2|          1|          1|  7 ~ ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -96,7 +96,7 @@ ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc58"   ---
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%j_2 = load i31 %j" [cluster2.cpp:203]   --->   Operation 13 'load' 'j_2' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 14 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 15 [1/1] (2.47ns)   --->   "%icmp_ln201 = icmp_eq  i31 %j_2, i31 %trunc_ln_read" [cluster2.cpp:201]   --->   Operation 15 'icmp' 'icmp_ln201' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 10, i64 18446744073709551615, i64 0"   --->   Operation 16 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 7, i64 18446744073709551615, i64 0"   --->   Operation 16 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (2.52ns)   --->   "%add_ln201 = add i31 %j_2, i31 1" [cluster2.cpp:201]   --->   Operation 17 'add' 'add_ln201' <Predicate = true> <Delay = 2.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln201 = br i1 %icmp_ln201, void %for.inc58.split, void %for.inc61.loopexit.exitStub" [cluster2.cpp:201]   --->   Operation 18 'br' 'br_ln201' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%trunc_ln203 = trunc i31 %j_2" [cluster2.cpp:203]   --->   Operation 19 'trunc' 'trunc_ln203' <Predicate = (!icmp_ln201)> <Delay = 0.00>

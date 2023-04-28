@@ -922,8 +922,8 @@
                             <Name>VITIS_LOOP_130_3</Name>
                             <Slack>7.30</Slack>
                             <TripCount>undef</TripCount>
-                            <Latency>40 ~ ?</Latency>
-                            <AbsoluteTimeLatency>0.400 us ~ ?</AbsoluteTimeLatency>
+                            <Latency>28 ~ ?</Latency>
+                            <AbsoluteTimeLatency>0.280 us ~ ?</AbsoluteTimeLatency>
                             <IterationLatency>
                                 <range>
                                     <min>4</min>
@@ -986,13 +986,13 @@
                     <EstimatedClockPeriod>5.361</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>12</Best-caseLatency>
+                    <Best-caseLatency>9</Best-caseLatency>
                     <Average-caseLatency>undef</Average-caseLatency>
                     <Worst-caseLatency>undef</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.120 us</Best-caseRealTimeLatency>
+                    <Best-caseRealTimeLatency>90.000 ns</Best-caseRealTimeLatency>
                     <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
                     <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>12 ~ -1</PipelineInitiationInterval>
+                    <PipelineInitiationInterval>9 ~ -1</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
@@ -1000,8 +1000,8 @@
                         <Name>VITIS_LOOP_201_3</Name>
                         <Slack>7.30</Slack>
                         <TripCount>undef</TripCount>
-                        <Latency>10 ~ ?</Latency>
-                        <AbsoluteTimeLatency>0.100 us ~ ?</AbsoluteTimeLatency>
+                        <Latency>7 ~ ?</Latency>
+                        <AbsoluteTimeLatency>70.000 ns ~ ?</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'clusterOp2'
 ================================================================
-* Date:           Thu Apr 27 17:00:27 2023
+* Date:           Fri Apr 28 03:36:29 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        cluster
@@ -41,7 +41,7 @@
         |grp_clusterOp2_Pipeline_1_fu_196                 |clusterOp2_Pipeline_1                 |      362|      362|   3.620 us|  3.620 us|   362|  362|       no|
         |grp_clusterOp2_Pipeline_VITIS_LOOP_172_1_fu_202  |clusterOp2_Pipeline_VITIS_LOOP_172_1  |      362|      362|   3.620 us|  3.620 us|   362|  362|       no|
         |grp_dbscan_fu_222                                |dbscan                                |     1081|        ?|  10.810 us|         ?|  1081|    ?|       no|
-        |grp_clusterOp2_Pipeline_VITIS_LOOP_201_3_fu_235  |clusterOp2_Pipeline_VITIS_LOOP_201_3  |       12|        ?|   0.120 us|         ?|    12|    ?|       no|
+        |grp_clusterOp2_Pipeline_VITIS_LOOP_201_3_fu_235  |clusterOp2_Pipeline_VITIS_LOOP_201_3  |        9|        ?|  90.000 ns|         ?|     9|    ?|       no|
         +-------------------------------------------------+--------------------------------------+---------+---------+-----------+----------+------+-----+---------+
 
         * Loop: 
@@ -166,7 +166,7 @@ ST_7 : Operation 63 [2/2] (3.25ns)   --->   "%clusters_member_count_load = load 
 State 8 <SV = 7> <Delay = 5.72>
 ST_8 : Operation 64 [1/1] (0.00ns)   --->   "%specloopname_ln185 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [cluster2.cpp:185]   --->   Operation 64 'specloopname' 'specloopname_ln185' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 65 [1/2] (3.25ns)   --->   "%clusters_member_count_load = load i9 %clusters_member_count_addr" [cluster2.cpp:187]   --->   Operation 65 'load' 'clusters_member_count_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 360> <RAM>
-ST_8 : Operation 66 [1/1] (2.47ns)   --->   "%icmp_ln187 = icmp_slt  i32 %clusters_member_count_load, i32 10" [cluster2.cpp:187]   --->   Operation 66 'icmp' 'icmp_ln187' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 66 [1/1] (2.47ns)   --->   "%icmp_ln187 = icmp_slt  i32 %clusters_member_count_load, i32 7" [cluster2.cpp:187]   --->   Operation 66 'icmp' 'icmp_ln187' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_8 : Operation 67 [1/1] (0.00ns)   --->   "%br_ln187 = br i1 %icmp_ln187, void %VITIS_LOOP_201_3, void %for.inc61" [cluster2.cpp:187]   --->   Operation 67 'br' 'br_ln187' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 68 [1/1] (0.00ns)   --->   "%clusters_id_addr = getelementptr i5 %clusters_id, i64 0, i64 %zext_ln185" [cluster2.cpp:197]   --->   Operation 68 'getelementptr' 'clusters_id_addr' <Predicate = (!icmp_ln187)> <Delay = 0.00>
 ST_8 : Operation 69 [2/2] (3.25ns)   --->   "%tmp_id_V = load i9 %clusters_id_addr"   --->   Operation 69 'load' 'tmp_id_V' <Predicate = (!icmp_ln187)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 360> <RAM>
@@ -1129,7 +1129,7 @@ ret_ln223                  (ret                ) [ 000000000000000]
 <comp id="303" class="1004" name="icmp_ln187_fu_303">
 <pin_list>
 <pin id="304" dir="0" index="0" bw="32" slack="0"/>
-<pin id="305" dir="0" index="1" bw="5" slack="0"/>
+<pin id="305" dir="0" index="1" bw="4" slack="0"/>
 <pin id="306" dir="1" index="2" bw="1" slack="4"/>
 </pin_list>
 <bind>

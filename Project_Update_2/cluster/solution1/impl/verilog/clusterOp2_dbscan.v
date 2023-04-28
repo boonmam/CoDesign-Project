@@ -1161,11 +1161,11 @@ assign grp_fu_457_p1 = 17'd360;
 
 assign icmp_ln103_fu_310_p2 = ((i_fu_58 == 9'd360) ? 1'b1 : 1'b0);
 
-assign icmp_ln125_fu_354_p2 = (($signed(grp_dbscan_Pipeline_VITIS_LOOP_113_2_fu_253_neighbor_count_out) > $signed(32'd9)) ? 1'b1 : 1'b0);
+assign icmp_ln125_fu_354_p2 = (($signed(grp_dbscan_Pipeline_VITIS_LOOP_113_2_fu_253_neighbor_count_out) > $signed(32'd6)) ? 1'b1 : 1'b0);
 
 assign icmp_ln130_fu_378_p2 = ((k_reg_214 == trunc_ln130_reg_571) ? 1'b1 : 1'b0);
 
-assign icmp_ln149_fu_430_p2 = (($signed(grp_dbscan_Pipeline_VITIS_LOOP_137_4_fu_268_new_neighbor_count_out) > $signed(32'd9)) ? 1'b1 : 1'b0);
+assign icmp_ln149_fu_430_p2 = (($signed(grp_dbscan_Pipeline_VITIS_LOOP_137_4_fu_268_new_neighbor_count_out) > $signed(32'd6)) ? 1'b1 : 1'b0);
 
 assign sext_ln97_fu_331_p1 = reg_289;
 

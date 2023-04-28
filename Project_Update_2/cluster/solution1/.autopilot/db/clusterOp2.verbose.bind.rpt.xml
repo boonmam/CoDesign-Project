@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'clusterOp2'" level="0">
-<item name = "Date">Thu Apr 27 17:00:27 2023
+<item name = "Date">Fri Apr 28 03:36:29 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">cluster</item>
@@ -34,7 +34,7 @@
 <column name="grp_clusterOp2_Pipeline_1_fu_196">clusterOp2_Pipeline_1, 362, 362, 3.620 us, 3.620 us, 362, 362, no</column>
 <column name="grp_clusterOp2_Pipeline_VITIS_LOOP_172_1_fu_202">clusterOp2_Pipeline_VITIS_LOOP_172_1, 362, 362, 3.620 us, 3.620 us, 362, 362, no</column>
 <column name="grp_dbscan_fu_222">dbscan, 1081, ?, 10.810 us, ?, 1081, ?, no</column>
-<column name="grp_clusterOp2_Pipeline_VITIS_LOOP_201_3_fu_235">clusterOp2_Pipeline_VITIS_LOOP_201_3, 12, ?, 0.120 us, ?, 12, ?, no</column>
+<column name="grp_clusterOp2_Pipeline_VITIS_LOOP_201_3_fu_235">clusterOp2_Pipeline_VITIS_LOOP_201_3, 9, ?, 90.000 ns, ?, 9, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

@@ -858,7 +858,7 @@ assign icmp_ln113_fu_161_p2 = ((ap_sig_allocacmp_j_1 == 9'd360) ? 1'b1 : 1'b0);
 
 assign icmp_ln114_fu_180_p2 = ((i == ap_sig_allocacmp_j_1) ? 1'b1 : 1'b0);
 
-assign icmp_ln120_fu_242_p2 = ((p_Val2_s_reg_400 < 16'd551) ? 1'b1 : 1'b0);
+assign icmp_ln120_fu_242_p2 = ((p_Val2_s_reg_400 < 16'd601) ? 1'b1 : 1'b0);
 
 assign neighbor_count_1_fu_250_p2 = (neighbor_count_fu_62 + 32'd1);
 

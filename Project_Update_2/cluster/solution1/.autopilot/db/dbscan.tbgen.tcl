@@ -104,20 +104,20 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "data", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_dbscan_Pipeline_VITIS_LOOP_113_2_fu_253", "Port" : "data", "Inst_start_state" : "7", "Inst_end_state" : "8"},
-					{"ID" : "8", "SubInstance" : "grp_dbscan_Pipeline_VITIS_LOOP_137_4_fu_268", "Port" : "data", "Inst_start_state" : "19", "Inst_end_state" : "20"}]},
+					{"ID" : "8", "SubInstance" : "grp_dbscan_Pipeline_VITIS_LOOP_137_4_fu_268", "Port" : "data", "Inst_start_state" : "19", "Inst_end_state" : "20"},
+					{"ID" : "4", "SubInstance" : "grp_dbscan_Pipeline_VITIS_LOOP_113_2_fu_253", "Port" : "data", "Inst_start_state" : "7", "Inst_end_state" : "8"}]},
 			{"Name" : "visited", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "clusters_id", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "clusters_members", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "clusters_member_count", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "sin_values", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_dbscan_Pipeline_VITIS_LOOP_113_2_fu_253", "Port" : "sin_values", "Inst_start_state" : "7", "Inst_end_state" : "8"},
-					{"ID" : "8", "SubInstance" : "grp_dbscan_Pipeline_VITIS_LOOP_137_4_fu_268", "Port" : "sin_values", "Inst_start_state" : "19", "Inst_end_state" : "20"}]},
+					{"ID" : "8", "SubInstance" : "grp_dbscan_Pipeline_VITIS_LOOP_137_4_fu_268", "Port" : "sin_values", "Inst_start_state" : "19", "Inst_end_state" : "20"},
+					{"ID" : "4", "SubInstance" : "grp_dbscan_Pipeline_VITIS_LOOP_113_2_fu_253", "Port" : "sin_values", "Inst_start_state" : "7", "Inst_end_state" : "8"}]},
 			{"Name" : "cos_values", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_dbscan_Pipeline_VITIS_LOOP_113_2_fu_253", "Port" : "cos_values", "Inst_start_state" : "7", "Inst_end_state" : "8"},
-					{"ID" : "8", "SubInstance" : "grp_dbscan_Pipeline_VITIS_LOOP_137_4_fu_268", "Port" : "cos_values", "Inst_start_state" : "19", "Inst_end_state" : "20"}]}],
+					{"ID" : "8", "SubInstance" : "grp_dbscan_Pipeline_VITIS_LOOP_137_4_fu_268", "Port" : "cos_values", "Inst_start_state" : "19", "Inst_end_state" : "20"},
+					{"ID" : "4", "SubInstance" : "grp_dbscan_Pipeline_VITIS_LOOP_113_2_fu_253", "Port" : "cos_values", "Inst_start_state" : "7", "Inst_end_state" : "8"}]}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_130_3", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "21", "FirstState" : "ap_ST_fsm_state13", "LastState" : ["ap_ST_fsm_state21"], "QuitState" : ["ap_ST_fsm_state13"], "PreState" : ["ap_ST_fsm_state3", "ap_ST_fsm_state9", "ap_ST_fsm_state12"], "PostState" : ["ap_ST_fsm_state2"], "OneDepthLoop" : "0", "OneStateBlock": ""}},

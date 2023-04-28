@@ -902,7 +902,7 @@ for.body12.split:3 %clusters_member_count_load = load i9 %clusters_member_count_
 
 <Node id="66" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body12.split:4 %icmp_ln187 = icmp_slt  i32 %clusters_member_count_load, i32 10
+for.body12.split:4 %icmp_ln187 = icmp_slt  i32 %clusters_member_count_load, i32 7
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln187"/></StgValue>

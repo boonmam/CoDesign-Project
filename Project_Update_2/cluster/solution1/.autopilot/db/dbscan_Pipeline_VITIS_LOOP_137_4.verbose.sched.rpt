@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dbscan_Pipeline_VITIS_LOOP_137_4'
 ================================================================
-* Date:           Thu Apr 27 17:00:25 2023
+* Date:           Fri Apr 28 03:36:27 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        cluster
@@ -201,7 +201,7 @@ ST_18 : Operation 89 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation
 
 State 19 <SV = 18> <Delay = 4.83>
 ST_19 : Operation 81 [1/1] (0.00ns)   --->   "%new_neighbor_count_load = load i32 %new_neighbor_count" [cluster2.cpp:145]   --->   Operation 81 'load' 'new_neighbor_count_load' <Predicate = (!icmp_ln138)> <Delay = 0.00>
-ST_19 : Operation 82 [1/1] (2.42ns)   --->   "%icmp_ln144 = icmp_ult  i16 %p_Val2_s, i16 551" [cluster2.cpp:144]   --->   Operation 82 'icmp' 'icmp_ln144' <Predicate = (!icmp_ln138)> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 82 [1/1] (2.42ns)   --->   "%icmp_ln144 = icmp_ult  i16 %p_Val2_s, i16 601" [cluster2.cpp:144]   --->   Operation 82 'icmp' 'icmp_ln144' <Predicate = (!icmp_ln138)> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_19 : Operation 83 [1/1] (2.55ns)   --->   "%add_ln145 = add i32 %new_neighbor_count_load, i32 1" [cluster2.cpp:145]   --->   Operation 83 'add' 'add_ln145' <Predicate = (!icmp_ln138)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_19 : Operation 84 [1/1] (0.69ns)   --->   "%new_neighbor_count_1 = select i1 %icmp_ln144, i32 %add_ln145, i32 %new_neighbor_count_load" [cluster2.cpp:144]   --->   Operation 84 'select' 'new_neighbor_count_1' <Predicate = (!icmp_ln138)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_19 : Operation 85 [1/1] (1.58ns)   --->   "%store_ln147 = store i32 %new_neighbor_count_1, i32 %new_neighbor_count" [cluster2.cpp:147]   --->   Operation 85 'store' 'store_ln147' <Predicate = (!icmp_ln138)> <Delay = 1.58>

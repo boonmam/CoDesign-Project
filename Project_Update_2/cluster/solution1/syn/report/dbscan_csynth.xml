@@ -60,13 +60,13 @@
 <TripCount>undef</TripCount>
 <Latency>
 <range>
-<min>40</min>
+<min>28</min>
 <max>-1</max>
 </range>
 </Latency>
 <AbsoluteTimeLatency>
 <range>
-<min>400</min>
+<min>280</min>
 <max>-10</max>
 </range>
 </AbsoluteTimeLatency>
